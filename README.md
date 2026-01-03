@@ -11,7 +11,7 @@ In addition to the WAVFile class and supporting code, I've included an applicati
 audio files. The compiled application and the full source code are included in the link at the top
 of the article.
 
-This project builds in Visual Studio 2017 (I used the free Community version).  Note that to build
+This project builds in Visual Studio 2017 (I used the free Community editin).  Note that to build
 the project, you will need to have the C++ toolset installed in Visual Studio, along with MFC.  The
 code uses modern C++ features, such as std::thread, a lambda function, std::shared_ptr, and a modern
 way of iterating through a collection.
@@ -121,7 +121,9 @@ In creating the WAVFile class, it was necessary to look up the WAV file format s
 I found many web pages describing the WAV file format. There were 4 URLs I had referenced
 when I originally wrote this, but only one still exists today:
 <ul>
-<li><a href='http://www.ringthis.com/dev/wave_format.htm'_blank'>http://www.ringthis.com/dev/wave_format.htm'_blank</a>
+<li><a href='http://www.ringthis.com/dev/wave_format.htm' target='_blank'>http://www.ringthis.com/dev/wave_format.htm'_blank</a>
 </ul>
 
-I originally hosted this project <a href='https://codeproject.com/articles/Cplusplus-audio-mixing-and-WAV-file-AudioFile-clas#comments-section' target='_blank'>on CodeProject</a>.
+I also have <a href='https://github.com/EricOulashin/audio_mixer_c_sharp' target='_blank'>a C# version of this</a> which I originally wrote in April 2009.
+
+I originally posted this project <a href='https://codeproject.com/articles/Cplusplus-audio-mixing-and-WAV-file-AudioFile-clas' target='_blank'>on CodeProject</a>.
