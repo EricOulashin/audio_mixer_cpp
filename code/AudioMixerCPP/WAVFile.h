@@ -216,7 +216,7 @@ namespace EOUtils
 			{
 				pAudioSample = 0;
 				WAVFile inFile(pFilename);
-				AudioFileResultType result = inFile.openForReading();
+				AudioFileResultType result = inFile.open(AUDIO_FILE_READ);
 				if (result)
 				{
 					inFile.getHighestSampleValue(pAudioSample);
