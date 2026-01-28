@@ -20,14 +20,14 @@ Visual Studio can be downloaded
 <a href='https://visualstudio.microsoft.com/vs/older-downloads/' target='_blank'>here</a>.
 As of this writing (January 2, 2026), that page has versions of Visual Studio from 2015 to 2022.
 
-## Included Applications
+# Included Applications
 The source code includes 2 applications:
 <ul>
 <li>A GUI application (written in MFC, for Windows) for choosing and mixing WAV audio files
 <li>A command-line application (the source being cmdLineApp.cpp) for mixing WAV audio files
 </ul>
 
-# GUI application (Windows)
+## GUI application (Windows)
 The following is a screenshot of the application:
 
 <p align="center">
@@ -37,13 +37,13 @@ The following is a screenshot of the application:
 To add WAV files to the list, you can drag & drop files onto the GUI, or for each line in the list,
 there will be a "..." button that lets you browse and choose a WAV file to add.
 
-# Command-line application
+## Command-line application
 The command-line application source is cmdLineApp.cpp, and there is a makefile to help build everything
 in Linux (g++ is used as the compiler).  The command-line application takes a command-line option which
 specifies a filename containing a list of WAV audio files to mix (and the last line is the output
 filename to use). The command-line also accepts another parameter, -v, to enable verbose output.
 
-## Background
+# Background
 A WAV audio file consists of a header at the beginning of the file, which contains strings to identify
 the file type ("RIFF" and "WAVE"), as well as information about the audio contained in the file
 (number of channels, sample rate, number of bits per channel, size of the data, etc.). Following the
