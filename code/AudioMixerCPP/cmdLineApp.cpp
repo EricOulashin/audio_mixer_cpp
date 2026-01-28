@@ -20,8 +20,6 @@ using EOUtils::WAVFile;
 using EOUtils::mixAudioFiles;
 using EOUtils::AudioFileResultType;
 
-//namespace fs = std::filesystem;
-
 
 // For command-line options
 struct ProgOptions
