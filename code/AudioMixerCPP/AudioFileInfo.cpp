@@ -11,7 +11,7 @@ namespace EOUtils
 		: mFileSize(0),
 		  mNumChannels(pNumChannels),
 		  mSampleRateHz(pSampleRateHz),
-		  mBytesPerSecond(mBytesPerSecond),
+		  mBytesPerSecond(pBytesPerSecond),
 		  mByteRate(pByteRate),
 		  mBitsPerSample(pBitsPerSample)
 	{

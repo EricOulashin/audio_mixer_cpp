@@ -1,6 +1,8 @@
 #ifndef __EO_UTILS_H__
 #define __EO_UTILS_H__
 
+#include <cstddef>
+
 namespace EOUtils
 {
 	bool isBigEndian();
