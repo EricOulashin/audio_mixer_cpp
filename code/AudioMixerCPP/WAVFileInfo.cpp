@@ -1,5 +1,6 @@
 #include "WAVFileInfo.h"
 #include "EOUtils.h"
+#include <cstring> // For memset()
 using std::string;
 using std::fstream;
 using std::ifstream;

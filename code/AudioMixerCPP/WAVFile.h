@@ -88,7 +88,7 @@ namespace EOUtils
 				}
 
 				// If the audio sample size is more than the size of the data type being used, then return an error.
-				if (mWAVFileInfo.BitsPerSample() / BITS_PER_BYTE > sizeof(pAudioSample))
+				if ((size_t)(mWAVFileInfo.BitsPerSample() / BITS_PER_BYTE) > sizeof(pAudioSample))
 				{
 					std::ostringstream oss;
 					oss << "Audio sample size (" << mWAVFileInfo.BitsPerSample() << " bits) is more than data type size (" << (sizeof(SampleType) * BITS_PER_BYTE) << " bits)";
