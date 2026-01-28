@@ -113,6 +113,9 @@ StyleCopReport.xml
 *.svclog
 *.scc
 
+# Object files built on Linux
+*.o
+
 # Chutzpah Test files
 _Chutzpah*
 
@@ -416,3 +419,5 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+code/audioMixer

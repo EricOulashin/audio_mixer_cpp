@@ -166,8 +166,11 @@ AudioFileMixOptions readAudioFileList(const string& pFilename, vector<string>& p
 	string line;
 	while (std::getline(infile, line))
 	{
-		if (!line.empty())
-			fileLines.push_back(line);
+		if (line.empty())
+			continue;
+		if (line[0] == '#' || line[0] == ';')  // Skip comment lines
+			continue;
+		fileLines.push_back(line);
 	}
 	infile.close();
 
