@@ -7,18 +7,26 @@ other audio formats (such as FLAC and AIF) could be added in the future and the 
 would still work.  For mixing audio files, the source audio files will need to have the same sample
 rate and bit rate and same number of channels (mono or stereo).  No external libraries are required.
 
-In addition to the WAVFile class and supporting code, I've included an application for mixing WAV
-audio files. The compiled application and the full source code are included in the link at the top
-of the article.
+In addition to the WAVFile class and supporting code, I've included a couple of applications for
+mixing WAV audio files (a GUI application for Windows and a command-line application
+for Linux). The compiled GUI application for Windows and the full source code are included in the link at the top of the article.
 
-This project builds in Visual Studio 2017 (I used the free Community editin).  Note that to build
+This project builds in Visual Studio 2017 (I used the free Community edition).  Note that to build
 the project, you will need to have the C++ toolset installed in Visual Studio, along with MFC.  The
-code uses modern C++ features, such as std::thread, a lambda function, std::shared_ptr, and a modern
-way of iterating through a collection.
+code uses modern C++ features, such as std::thread, a lambda function, std::shared_ptr, and a modern way of iterating through a collection.
 
 Visual Studio can be downloaded
 <a href='https://visualstudio.microsoft.com/vs/older-downloads/' target='_blank'>here</a>.
 As of this writing (January 2, 2026), that page has versions of Visual Studio from 2015 to 2022.
+
+## Code notes
+In the 'code' directory, there are the following items:
+<ul>
+<li><b>AudioMixerCPP_Win_VisualStudio:</b> Windows-specific source & project files (for use with Visual Studio)
+<li><b>common:</b> Common source files (contains the core audio & mixer code)
+<li><b>AudioMixerCPP.sln:</b> The solution file for use with Visual Studio
+<li><b>Makefile:</b> A makefile for building a command-line executable for Linux
+</ul>
 
 # Included Applications
 The source code includes 2 applications:
