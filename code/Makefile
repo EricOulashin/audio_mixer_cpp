@@ -5,7 +5,7 @@ CXX := g++
 CXXFLAGS := -std=c++17 -O2 -Wall -Wextra
 AUDIO_MIXER_CMDLINE_APP := audioMixer
 
-SRC_DIR := ./AudioMixerCPP
+SRC_DIR := ./common
 SOURCES := \
  	$(SRC_DIR)/AudioFile.cpp \
  	$(SRC_DIR)/AudioFileInfo.cpp \
