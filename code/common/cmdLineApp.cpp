@@ -50,9 +50,6 @@ ProgOptions parseCommandLine(int argc, char* argv[]);
 // Reads the audio file list with the given filename.
 AudioFileMixOptions readAudioFileList(const string& pFilename, vector<string>& pErrorMsgs, vector<string>& pNonexistentFiles);
 
-// Mixes a set of audio files into an output file. Returns an empty string on success or an error message on failure.
-string mixAudioFiles(const vector<string>& pInputFilenames, const string& pOutputFilename);
-
 // Main program function
 int main(int argc, char* argv[])
 {
@@ -98,7 +95,18 @@ int main(int argc, char* argv[])
 		for (const string& filename : mixOpts.inputFilenames)
 			cout << filename << "\n";
 	}
-	string resultMsg = mixAudioFiles(mixOpts.inputFilenames, mixOpts.outputFilename);
+	cout << "Mixing to " << mixOpts.outputFilename << "...\n";
+	string resultMsg;
+	try
+	{
+		AudioFileResultType mixResult = mixAudioFiles(mixOpts.inputFilenames, mixOpts.outputFilename);
+		if (!mixResult)
+			resultMsg = mixResult.getError();
+	}
+	catch (const std::logic_error& e)
+	{
+		resultMsg = e.what();
+	}
 	if (resultMsg.empty())
 		cout << "Mixing completed successfully.  Output file: " << mixOpts.outputFilename << endl;
 	else
@@ -200,35 +208,4 @@ AudioFileMixOptions readAudioFileList(const string& pFilename, vector<string>& p
 	}
 
 	return mixOptions;
-}
-
-string mixAudioFiles(const vector<string>& pInputFilenames, const string& pOutputFilename)
-{
-	string errorMsg;
-	cout << "Mixing to " << pOutputFilename << "...\n";
-
-	// Choose output format based on filename extension
-	const size_t len = pOutputFilename.length();
-	const bool useFLAC = (len >= 5 && pOutputFilename.substr(len - 5) == ".flac");
-
-	shared_ptr<AudioFile> outputFile;
-	if (useFLAC)
-		outputFile = make_shared<FLACFile>(pOutputFilename);
-	else
-		outputFile = make_shared<WAVFile>(pOutputFilename);
-
-	try
-	{
-		AudioFileResultType mixResult = mixAudioFiles(pInputFilenames, *(outputFile.get()));
-		if (!mixResult)
-			errorMsg = mixResult.getError();
-	}
-	catch (const std::logic_error& e)
-	{
-		errorMsg = e.what();
-	}
-
-	outputFile->close();
-
-	return errorMsg;
 }

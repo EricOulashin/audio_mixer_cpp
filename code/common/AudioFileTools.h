@@ -31,6 +31,15 @@ namespace EOUtils
 	 */
 	 std::shared_ptr<AudioFile> createAudioFileObjForNewFile(const char* pFilename);
 
+	 /**
+	  * @brief Returns a filename's extension in uppercase, or an empty string if there is no extension.  The extension is the part of the filename after the last dot.
+	  *
+	  * @param[in] pFilename The name of the audio file
+	  *
+	  * @return The extension of the filename in uppercase, or an empty string if there is no extension.
+	  */
+	std::string getFileExtensionUpper(const char* pFilename);
+
 	/**
 	 * @brief Gets information about an audio file
 	 *
@@ -45,11 +54,11 @@ namespace EOUtils
 	 * @brief Mixes (merges) multiple audio files into a single file
 	 *
 	 * @param[in] pFilenames A collection of filenames of audio files to mix
-	 * @param[in,out] pOutFile An AudioFile object representing the file to output to
+	 * @param[out] pOutputFilename The filename for the resulting mixed audio file
 	 *
 	 * @return True on success, or false with error messages on failure
 	 */
-	AudioFileResultType mixAudioFiles(const std::vector<std::string>& pFilenames, AudioFile& pOutFile);
+	AudioFileResultType mixAudioFiles(const std::vector<std::string>& pFilenames, const std::string& pOutputFilename);
 
 	/**
 	 * @brief Gets the highest audio sample from a set of audio files, cast to a 64-bit integer

@@ -3,7 +3,7 @@
 # Requires libflac-dev (or equivalent) to be installed.
 
 CXX := g++
-CXXFLAGS := -std=c++17 -O2 -Wall -Wextra
+CXXFLAGS := -std=c++17 -O2 -Wall -Wextra -fno-aggressive-loop-optimizations
 LDFLAGS := -lFLAC
 AUDIO_MIXER_CMDLINE_APP := audioMixer
 
