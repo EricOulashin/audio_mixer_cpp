@@ -15,272 +15,273 @@ using std::shared_ptr;
 using std::make_shared;
 using std::string;
 using std::vector;
+using EOUtils::AudioFile;
+using EOUtils::AudioFileResultType;
 
-namespace EOUtils
+
+shared_ptr<AudioFile> EOUtils::createAudioFileObjForExistingFile(const char* pFilename)
 {
-	shared_ptr<AudioFile> createAudioFileObj(const char* pFilename)
+	shared_ptr<AudioFile> audioFile;
+	if (WAVFileInfo::isWAVFile(pFilename))
+		audioFile = make_shared<WAVFile>(pFilename);
+	else if (FLACFileInfo::isFLACFile(pFilename))
+		audioFile = make_shared<FLACFile>(pFilename);
+	return audioFile;
+}
+
+AudioFileResultType EOUtils::getAudioFileInfo(const char* pFilename, AudioFileInfo& pAudioFileInfo)
+{
+	AudioFileResultType result;
+
+	if (WAVFileInfo::isWAVFile(pFilename))
 	{
-		shared_ptr<AudioFile> audioFile;
-		if (WAVFileInfo::isWAVFile(pFilename))
-			audioFile = make_shared<WAVFile>(pFilename);
-		else if (FLACFileInfo::isFLACFile(pFilename))
-			audioFile = make_shared<FLACFile>(pFilename);
-		return audioFile;
-	}
-
-	AudioFileResultType getAudioFileInfo(const char* pFilename, AudioFileInfo& pAudioFileInfo)
-	{
-		AudioFileResultType result;
-
-		if (WAVFileInfo::isWAVFile(pFilename))
+		fstream inFile;
+		inFile.open(pFilename, std::ios_base::binary | std::ios_base::in);
+		if (inFile.is_open())
 		{
-			fstream inFile;
-			inFile.open(pFilename, std::ios_base::binary | std::ios_base::in);
-			if (inFile.is_open())
-			{
-				WAVFileInfo wavInfo;
-				result = wavInfo.read(inFile);
-				if (result)
-					pAudioFileInfo = wavInfo;
+			WAVFileInfo wavInfo;
+			result = wavInfo.read(inFile);
+			if (result)
+				pAudioFileInfo = wavInfo;
 
-				inFile.close();
-			}
-			else
-				result.addError("Failed to open " + string(pFilename) + " for reading");
-		}
-		else if (FLACFileInfo::isFLACFile(pFilename))
-		{
-			fstream inFile;
-			inFile.open(pFilename, std::ios_base::binary | std::ios_base::in);
-			if (inFile.is_open())
-			{
-				FLACFileInfo flacInfo;
-				result = flacInfo.read(inFile);
-				if (result)
-					pAudioFileInfo = flacInfo;
-
-				inFile.close();
-			}
-			else
-				result.addError("Failed to open " + string(pFilename) + " for reading");
+			inFile.close();
 		}
 		else
-			result.addError("Unrecognized audio file format for " + string(pFilename));
+			result.addError("Failed to open " + string(pFilename) + " for reading");
+	}
+	else if (FLACFileInfo::isFLACFile(pFilename))
+	{
+		fstream inFile;
+		inFile.open(pFilename, std::ios_base::binary | std::ios_base::in);
+		if (inFile.is_open())
+		{
+			FLACFileInfo flacInfo;
+			result = flacInfo.read(inFile);
+			if (result)
+				pAudioFileInfo = flacInfo;
 
+			inFile.close();
+		}
+		else
+			result.addError("Failed to open " + string(pFilename) + " for reading");
+	}
+	else
+		result.addError("Unrecognized audio file format for " + string(pFilename));
+
+	return result;
+}
+
+AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, AudioFile& pOutFile)
+{
+	AudioFileResultType result;
+
+	if (pFilenames.size() == 0)
+	{
+		result.addError("An empty filename list was provided");
 		return result;
 	}
 
-	AudioFileResultType mixAudioFiles(const vector<string>& pFilenames, AudioFile& pOutFile)
+	// Ensure all the audio files have the same sample rate and number of channels.  Also, get the highest number
+	// of bits per sample for the audio files.
+	AudioFileInfo fileInfo;
+	int16_t highestNumBitsPerSample = 0;
+	result = getAudioFileInfo(pFilenames[0].c_str(), fileInfo);
+	if (result)
 	{
-		AudioFileResultType result;
-
-		if (pFilenames.size() == 0)
+		int16_t lastNumchannels = 0;
+		int32_t lastSampleRateHz = 0;
+		highestNumBitsPerSample = fileInfo.BitsPerSample();
+		for (size_t i = 1; (i < pFilenames.size()) && result; ++i)
 		{
-			result.addError("An empty filename list was provided");
-			return result;
-		}
-
-		// Ensure all the audio files have the same sample rate and number of channels.  Also, get the highest number
-		// of bits per sample for the audio files.
-		AudioFileInfo fileInfo;
-		int16_t highestNumBitsPerSample = 0;
-		result = getAudioFileInfo(pFilenames[0].c_str(), fileInfo);
-		if (result)
-		{
-			int16_t lastNumchannels = 0;
-			int32_t lastSampleRateHz = 0;
-			highestNumBitsPerSample = fileInfo.BitsPerSample();
-			for (size_t i = 1; (i < pFilenames.size()) && result; ++i)
+			lastNumchannels = fileInfo.NumChannels();
+			lastSampleRateHz = fileInfo.SampleRateHz();
+			result = getAudioFileInfo(pFilenames[i].c_str(), fileInfo);
+			if (result)
 			{
-				lastNumchannels = fileInfo.NumChannels();
-				lastSampleRateHz = fileInfo.SampleRateHz();
-				result = getAudioFileInfo(pFilenames[i].c_str(), fileInfo);
-				if (result)
-				{
-					if (fileInfo.NumChannels() != lastNumchannels)
-						result.addError("Not all audio files given have the same number of channels");
-					if (fileInfo.SampleRateHz() != lastSampleRateHz)
-						result.addError("Not all audio files given have the same sample rate");
-					if (!result)
-						break;
-					if (fileInfo.BitsPerSample() > highestNumBitsPerSample)
-						highestNumBitsPerSample = fileInfo.BitsPerSample();
-				}
-			}
-		}
-		if (!result)
-			return result;
-
-
-		// Calculate the multiplier to use to scale down the sound files
-		double multiplier = 0.0;
-		int64_t highestSampleValueInSourceFiles = 0;
-		result = getHighestSampleValue_64bit(pFilenames, highestSampleValueInSourceFiles);
-		if (result)
-		{
-			int64_t difference = 0;
-			// This will be different depending on whether there are 8 bits/sample or
-			// 16 bits/sample for the sound files.
-			if (highestNumBitsPerSample == 8)
-				difference = (int64_t)(highestSampleValueInSourceFiles - ((int64_t)maxValue<uint8_t>() / (int64_t)pFilenames.size()));
-			else if (highestNumBitsPerSample == 16)
-				difference = (int64_t)(highestSampleValueInSourceFiles - ((int64_t)maxValue<int16_t>() / (int64_t)pFilenames.size()));
-			else if (highestNumBitsPerSample == 32)
-				difference = (int64_t)(highestSampleValueInSourceFiles - ((int64_t)maxValue<int32_t>() / (int64_t)pFilenames.size()));
-			multiplier = 1.0 - ((double)difference / (double)highestSampleValueInSourceFiles);
-		}
-		if (!result)
-			return result;
-
-		if (multiplier < 0.0)
-			multiplier = -multiplier;
-
-		// Create a collection of AudioFile objects for the audio files, and get the highest number of samples of all the files.
-		// This section of code also opens the source files.
-		const std::string sampleCountMetadataName = "sampleCount";
-		size_t highestNumSamples = 0;
-		vector<shared_ptr<AudioFile>> srcFiles;
-		for (const string& filename : pFilenames)
-		{
-			shared_ptr<AudioFile> audioFile = createAudioFileObj(filename.c_str());
-			if (audioFile == nullptr)
-				result.addError("Unable to determine file type for " + filename);
-			else
-			{
-				result = audioFile->open(AUDIO_FILE_READ);
-				if (result)
-				{
-					srcFiles.push_back(audioFile);
-					size_t numSamples = audioFile->numSamples();
-					audioFile->setMetadataFromVal(sampleCountMetadataName, numSamples);
-					if (numSamples > highestNumSamples)
-						highestNumSamples = audioFile->numSamples();
-				}
-				else
+				if (fileInfo.NumChannels() != lastNumchannels)
+					result.addError("Not all audio files given have the same number of channels");
+				if (fileInfo.SampleRateHz() != lastSampleRateHz)
+					result.addError("Not all audio files given have the same sample rate");
+				if (!result)
 					break;
+				if (fileInfo.BitsPerSample() > highestNumBitsPerSample)
+					highestNumBitsPerSample = fileInfo.BitsPerSample();
 			}
 		}
-		if (!result)
-			return result;
+	}
+	if (!result)
+		return result;
 
-		// Open the source files
-		for (shared_ptr<AudioFile>& srcFile : srcFiles)
-			result = srcFile->open(AUDIO_FILE_READ);
-		if (!result)
-			return result;
 
-		// Do the merging
-		// The basic algorithm for doing the merging is as follows:
-		// while there is at least 1 sample remaining in any of the source files
-		//    sample = 0
-		//    for each source file
-		//       if the source file has any samples remaining
-		//          sample = sample + (next available sample from the source file * multiplier)
-		//    sample = sample / # of source files
-		//    write the sample to the output file
-		if (!pOutFile.isOpen())
+	// Calculate the multiplier to use to scale down the sound files
+	double multiplier = 0.0;
+	int64_t highestSampleValueInSourceFiles = 0;
+	result = getHighestSampleValue_64bit(pFilenames, highestSampleValueInSourceFiles);
+	if (result)
+	{
+		int64_t difference = 0;
+		// This will be different depending on whether there are 8 bits/sample or
+		// 16 bits/sample for the sound files.
+		if (highestNumBitsPerSample == 8)
+			difference = (int64_t)(highestSampleValueInSourceFiles - ((int64_t)maxValue<uint8_t>() / (int64_t)pFilenames.size()));
+		else if (highestNumBitsPerSample == 16)
+			difference = (int64_t)(highestSampleValueInSourceFiles - ((int64_t)maxValue<int16_t>() / (int64_t)pFilenames.size()));
+		else if (highestNumBitsPerSample == 32)
+			difference = (int64_t)(highestSampleValueInSourceFiles - ((int64_t)maxValue<int32_t>() / (int64_t)pFilenames.size()));
+		multiplier = 1.0 - ((double)difference / (double)highestSampleValueInSourceFiles);
+	}
+	if (!result)
+		return result;
+
+	if (multiplier < 0.0)
+		multiplier = -multiplier;
+
+	// Create a collection of AudioFile objects for the audio files, and get the highest number of samples of all the files.
+	// This section of code also opens the source files.
+	const std::string sampleCountMetadataName = "sampleCount";
+	size_t highestNumSamples = 0;
+	vector<shared_ptr<AudioFile>> srcFiles;
+	for (const string& filename : pFilenames)
+	{
+		shared_ptr<AudioFile> audioFile = createAudioFileObjForExistingFile(filename.c_str());
+		if (audioFile == nullptr)
+			result.addError("Unable to determine file type for " + filename);
+		else
 		{
-			pOutFile.setAudioFileInfo(srcFiles[0]->getAudioFileInfo());
-			result = pOutFile.open(AUDIO_FILE_WRITE);
-			if (!result)
-				return result;
-		}
-		// Merge the audio files into the destination file.  And keep track of the highest sample value
-		// to use when increasing the destination volume later.
-		int64_t sample = 0;
-		int64_t srcSample = 0;
-		int64_t finalMixFileHighestSample = 0;
-		for (size_t sampleIdx = 0; (sampleIdx < highestNumSamples) && result; ++sampleIdx)
-		{
-			sample = 0;
-			for (size_t fileIdx = 0; (fileIdx < srcFiles.size()) && result; ++fileIdx)
-			{
-				if (sampleIdx < srcFiles[fileIdx]->getMetadataAs<size_t>(sampleCountMetadataName))
-				{
-					result = srcFiles[fileIdx]->getNextSample_int64(srcSample);
-					if (result)
-						sample += (int32_t)(srcSample * multiplier);
-				}
-			}
+			result = audioFile->open(AUDIO_FILE_READ);
 			if (result)
 			{
-				sample /= (int32_t)(srcFiles.size());
-				pOutFile.writeSample_int64(sample);
-				if (sample > finalMixFileHighestSample)
-					finalMixFileHighestSample = sample;
+				srcFiles.push_back(audioFile);
+				size_t numSamples = audioFile->numSamples();
+				audioFile->setMetadataFromVal(sampleCountMetadataName, numSamples);
+				if (numSamples > highestNumSamples)
+					highestNumSamples = audioFile->numSamples();
+			}
+			else
+				break;
+		}
+	}
+	if (!result)
+		return result;
+
+	// Open the source files
+	for (shared_ptr<AudioFile>& srcFile : srcFiles)
+		result = srcFile->open(AUDIO_FILE_READ);
+	if (!result)
+		return result;
+
+	// Do the merging
+	// The basic algorithm for doing the merging is as follows:
+	// while there is at least 1 sample remaining in any of the source files
+	//    sample = 0
+	//    for each source file
+	//       if the source file has any samples remaining
+	//          sample = sample + (next available sample from the source file * multiplier)
+	//    sample = sample / # of source files
+	//    write the sample to the output file
+	if (!pOutFile.isOpen())
+	{
+		pOutFile.setAudioFileInfo(srcFiles[0]->getAudioFileInfo());
+		result = pOutFile.open(AUDIO_FILE_WRITE);
+		if (!result)
+			return result;
+	}
+	// Merge the audio files into the destination file.  And keep track of the highest sample value
+	// to use when increasing the destination volume later.
+	int64_t sample = 0;
+	int64_t srcSample = 0;
+	int64_t finalMixFileHighestSample = 0;
+	for (size_t sampleIdx = 0; (sampleIdx < highestNumSamples) && result; ++sampleIdx)
+	{
+		sample = 0;
+		for (size_t fileIdx = 0; (fileIdx < srcFiles.size()) && result; ++fileIdx)
+		{
+			if (sampleIdx < srcFiles[fileIdx]->getMetadataAs<size_t>(sampleCountMetadataName))
+			{
+				result = srcFiles[fileIdx]->getNextSample_int64(srcSample);
+				if (result)
+					sample += (int32_t)(srcSample * multiplier);
 			}
 		}
-
-		for (shared_ptr<AudioFile>& srcFile : srcFiles)
-			srcFile->close();
-
-		pOutFile.close();
-
-		// Increase the destination file volume
-		multiplier = (double)pOutFile.maxValueForSampleSize() / (double)finalMixFileHighestSample;
-		if (multiplier < 0.0)
-			multiplier = -multiplier;
-		result = pOutFile.open(AUDIO_FILE_READ);
 		if (result)
 		{
-			const string& outFilename = pOutFile.Filename();
-			const bool outputIsFLAC = (outFilename.length() >= 5 && outFilename.substr(outFilename.length() - 5) == ".flac");
-			const string tempFilename = outputIsFLAC ? (outFilename + "-temp.flac") : (outFilename + "-temp.wav");
-
-			shared_ptr<AudioFile> out2;
-			if (outputIsFLAC)
-				out2 = make_shared<FLACFile>(tempFilename);
-			else
-				out2 = make_shared<WAVFile>(tempFilename);
-
-			out2->setAudioFileInfo(pOutFile.getAudioFileInfo());
-			result = out2->open(AUDIO_FILE_WRITE);
-			if (result)
-			{
-				const size_t numSamples = pOutFile.numSamples();
-				for (size_t i = 0; (i < numSamples) && result; ++i)
-				{
-					result = pOutFile.getNextSample_int64(sample);
-					if (result)
-						result = out2->writeSample_int64((int64_t)(sample * multiplier));
-				}
-				out2->close();
-			}
-			pOutFile.close();
-			if (remove(pOutFile.Filename().c_str()) == 0)
-			{
-				if (rename(tempFilename.c_str(), pOutFile.Filename().c_str()) != 0)
-					result.addError("Unable to rename " + tempFilename + " to " + pOutFile.Filename());
-			}
-			else
-				result.addError("File access error with " + pOutFile.Filename());
+			sample /= (int32_t)(srcFiles.size());
+			pOutFile.writeSample_int64(sample);
+			if (sample > finalMixFileHighestSample)
+				finalMixFileHighestSample = sample;
 		}
-
-		return result;
 	}
 
-	AudioFileResultType getHighestSampleValue_64bit(const std::vector<std::string>& pFilenames, int64_t& pHighestAudioSample)
+	for (shared_ptr<AudioFile>& srcFile : srcFiles)
+		srcFile->close();
+
+	pOutFile.close();
+	return result;
+
+	// Increase the destination file volume
+	multiplier = (double)pOutFile.maxValueForSampleSize() / (double)finalMixFileHighestSample;
+	if (multiplier < 0.0)
+		multiplier = -multiplier;
+	result = pOutFile.open(AUDIO_FILE_READ);
+	if (result)
 	{
-		pHighestAudioSample = 0;
-		int64_t highestAudioSample = 0;
-		AudioFileResultType result;
-		for (size_t i = 0; (i < pFilenames.size()) && result; ++i)
+		const string& outFilename = pOutFile.Filename();
+		const bool outputIsFLAC = (outFilename.length() >= 5 && outFilename.substr(outFilename.length() - 5) == ".flac");
+		const string tempFilename = outputIsFLAC ? (outFilename + "-temp.flac") : (outFilename + "-temp.wav");
+
+		shared_ptr<AudioFile> out2;
+		if (outputIsFLAC)
+			out2 = make_shared<FLACFile>(tempFilename);
+		else
+			out2 = make_shared<WAVFile>(tempFilename);
+
+		out2->setAudioFileInfo(pOutFile.getAudioFileInfo());
+		result = out2->open(AUDIO_FILE_WRITE);
+		if (result)
 		{
-			shared_ptr<AudioFile> audioFile = createAudioFileObj(pFilenames[i].c_str());
-			if (audioFile != nullptr)
+			const size_t numSamples = pOutFile.numSamples();
+			for (size_t i = 0; (i < numSamples) && result; ++i)
 			{
-				result = audioFile->open(AUDIO_FILE_READ);
-				if (result && audioFile->isOpen())
-				{
-					result = audioFile->getHighestSampleValue_int64(highestAudioSample);
-					if (result && (highestAudioSample > pHighestAudioSample))
-						pHighestAudioSample = highestAudioSample;
-					audioFile->close();
-				}
+				result = pOutFile.getNextSample_int64(sample);
+				if (result)
+					result = out2->writeSample_int64((int64_t)(sample * multiplier));
 			}
-			else
-				result.addError("Could not open " + pFilenames[i] + " for reading");
+			out2->close();
 		}
-		return result;
+		pOutFile.close();
+		if (remove(pOutFile.Filename().c_str()) == 0)
+		{
+			if (rename(tempFilename.c_str(), pOutFile.Filename().c_str()) != 0)
+				result.addError("Unable to rename " + tempFilename + " to " + pOutFile.Filename());
+		}
+		else
+			result.addError("File access error with " + pOutFile.Filename());
 	}
+
+	return result;
+}
+
+AudioFileResultType EOUtils::getHighestSampleValue_64bit(const std::vector<std::string>& pFilenames, int64_t& pHighestAudioSample)
+{
+	pHighestAudioSample = 0;
+	int64_t highestAudioSample = 0;
+	AudioFileResultType result;
+	for (size_t i = 0; (i < pFilenames.size()) && result; ++i)
+	{
+		shared_ptr<AudioFile> audioFile = createAudioFileObjForExistingFile(pFilenames[i].c_str());
+		if (audioFile != nullptr)
+		{
+			result = audioFile->open(AUDIO_FILE_READ);
+			if (result && audioFile->isOpen())
+			{
+				result = audioFile->getHighestSampleValue_int64(highestAudioSample);
+				if (result && (highestAudioSample > pHighestAudioSample))
+					pHighestAudioSample = highestAudioSample;
+				audioFile->close();
+			}
+		}
+		else
+			result.addError("Could not open " + pFilenames[i] + " for reading");
+	}
+	return result;
 }

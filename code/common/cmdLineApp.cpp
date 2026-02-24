@@ -7,6 +7,7 @@
 #include <fstream>
 #include <vector>
 #include <filesystem>
+#include <memory>
 #include "WAVFile.h"
 #include "FLACFile.h"
 #include "AudioFileTools.h"
@@ -17,6 +18,9 @@ using std::endl;
 using std::string;
 using std::ifstream;
 using std::vector;
+using std::shared_ptr;
+using std::make_shared;
+using EOUtils::AudioFile;
 using EOUtils::WAVFile;
 using EOUtils::FLACFile;
 using EOUtils::mixAudioFiles;
@@ -207,29 +211,24 @@ string mixAudioFiles(const vector<string>& pInputFilenames, const string& pOutpu
 	const size_t len = pOutputFilename.length();
 	const bool useFLAC = (len >= 5 && pOutputFilename.substr(len - 5) == ".flac");
 
+	shared_ptr<AudioFile> outputFile;
+	if (useFLAC)
+		outputFile = make_shared<FLACFile>(pOutputFilename);
+	else
+		outputFile = make_shared<WAVFile>(pOutputFilename);
+
 	try
 	{
-		if (useFLAC)
-		{
-			FLACFile outputFile(pOutputFilename);
-			AudioFileResultType mixResult = mixAudioFiles(pInputFilenames, outputFile);
-			if (!mixResult)
-				errorMsg = mixResult.getError();
-			outputFile.close();
-		}
-		else
-		{
-			WAVFile outputFile(pOutputFilename);
-			AudioFileResultType mixResult = mixAudioFiles(pInputFilenames, outputFile);
-			if (!mixResult)
-				errorMsg = mixResult.getError();
-			outputFile.close();
-		}
+		AudioFileResultType mixResult = mixAudioFiles(pInputFilenames, *(outputFile.get()));
+		if (!mixResult)
+			errorMsg = mixResult.getError();
 	}
 	catch (const std::logic_error& e)
 	{
 		errorMsg = e.what();
 	}
+
+	outputFile->close();
 
 	return errorMsg;
 }

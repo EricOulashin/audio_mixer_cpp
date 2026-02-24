@@ -19,7 +19,17 @@ namespace EOUtils
 	 *
 	 * @return A shared pointer to an AudioFile object, which will be an instance of the appropriate subclass for the file, or a null pointer if it is not a recognized format.
 	 */
-	std::shared_ptr<AudioFile> createAudioFileObj(const char* pFilename);
+	std::shared_ptr<AudioFile> createAudioFileObjForExistingFile(const char* pFilename);
+
+	/**
+	 * @brief Creates a shared pointer to an audioFile object for a new (non-existing) audio file - Creates the appropriate subclass object,
+	 *   depending on the filename extension. If the format isn't recognized, returns a null pointer.
+	 *
+	 * @param[in] pFilename The name of the audio file
+	 *
+	 * @return A shared pointer to an AudioFile object, which will be an instance of the appropriate subclass for the file, or a null pointer if it is not a recognized format.
+	 */
+	 std::shared_ptr<AudioFile> createAudioFileObjForNewFile(const char* pFilename);
 
 	/**
 	 * @brief Gets information about an audio file
