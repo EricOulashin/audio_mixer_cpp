@@ -25,6 +25,7 @@ using std::shared_ptr;
 using std::make_shared;
 using EOUtils::AudioFile;
 using EOUtils::AudioFileResultType;
+using EOUtils::AudioFileInfo;
 
 
 shared_ptr<AudioFile> EOUtils::createAudioFileObjForExistingFile(const char* pFilename)
@@ -288,8 +289,10 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 	multiplier = (double)mixedTmpFile->maxValueForSampleSize() / (double)finalMixFileHighestSample;
 	if (multiplier < 0.0)
 		multiplier = -multiplier;
+	AudioFileInfo audioFileInfo = mixedTmpFile->getAudioFileInfo();
 	mixedTmpFile->close();
-	finalOutputFile->setAudioFileInfo(srcFiles[0]->getAudioFileInfo());
+	//audioFileInfo.FileSize(0);
+	finalOutputFile->setAudioFileInfo(audioFileInfo);
 	finalOutputFile->open(AUDIO_FILE_WRITE);
 	if (!finalOutputFile->isOpen())
 	{
@@ -300,6 +303,7 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 	mixedTmpFile->open(AUDIO_FILE_READ);
 	if (!mixedTmpFile->isOpen())
 	{
+		finalOutputFile->close();
 		result.addError("Unable to open " + mixedFilename + " for reading");
 		return result;
 	}
@@ -314,8 +318,10 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 	finalOutputFile->close();
 	/*
 	if (remove(mixedFilename.c_str()) == 0)
+	{
 		if (rename(mixedFilename.c_str(), pOutputFilename.c_str()) != 0)
 			result.addError("Unable to rename " + mixedFilename + " to " + pOutputFilename);
+	}
 	else
 		result.addError("File access error with " + mixedFilename);
 	*/
