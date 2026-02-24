@@ -313,6 +313,8 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 		result = mixedTmpFile->getNextSample_int64(sample);
 		if (result)
 			result = finalOutputFile->writeSample_int64((int64_t)(sample * multiplier));
+		else
+			break;
 	}
 	mixedTmpFile->close();
 	finalOutputFile->close();
