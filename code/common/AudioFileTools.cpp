@@ -289,7 +289,6 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 	if (multiplier < 0.0)
 		multiplier = -multiplier;
 	mixedTmpFile->close();
-	return result; // Temporary
 	finalOutputFile->setAudioFileInfo(srcFiles[0]->getAudioFileInfo());
 	finalOutputFile->open(AUDIO_FILE_WRITE);
 	if (!finalOutputFile->isOpen())
