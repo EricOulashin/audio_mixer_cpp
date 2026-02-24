@@ -1,19 +1,29 @@
 # Audio Mixer (C++)
 One of my interests and hobbies is music.  This project is able to mix multiple WAV audio files
 into a single audio file, so that the audio from each source WAV file will be heard simultaneously.
-This project includes a C++ class that can be used to open, read, and write WAV audio files.  It is
-derived from an AudioFile class, and the mixing function uses the AudioFile interface.  That way,
-other audio formats (such as FLAC and AIF) could be added in the future and the mixing function
-would still work.  For mixing audio files, the source audio files will need to have the same sample
-rate and bit rate and same number of channels (mono or stereo).  No external libraries are required.
 
-In addition to the WAVFile class and supporting code, I've included a couple of applications for
-mixing WAV audio files (a GUI application for Windows and a command-line application
-for Linux). The compiled GUI application for Windows and the full source code are included in the link at the top of the article.
+The code uses modern C++ features, such as std::thread, a lambda function, std::shared_ptr, and a
+modern way of iterating through a collection.
 
-This project builds in Visual Studio 2017 (I used the free Community edition).  Note that to build
-the project, you will need to have the C++ toolset installed in Visual Studio, along with MFC.  The
-code uses modern C++ features, such as std::thread, a lambda function, std::shared_ptr, and a modern way of iterating through a collection.
+This project includes C++ classes that can be used to open, read, and write WAV and FLAC audio files.
+I wrote the WAVFile class from scratch, and I used AI (Cursor) to create the FLACFile class. Currently,
+the FLACFile class defaults to maximum FLAC compression.
+
+The WAVFile and FLACFile classes are derived from an AudioFile class, and the mixing function uses the
+AudioFile interface.  That way, other audio formats (such as FLAC and AIF) could be added in the
+future and the mixing function would still work.  For mixing audio files, the source audio files will
+need to have the same sample rate and bit rate and same number of channels (mono or stereo).
+
+The C++ FLAC coding library is needed in order to build this (on Linux, the library is called libflac++-dev).
+
+In addition to the WAVFile and FLACFile classes and supporting code, I've included a couple of
+applications for mixing WAV audio files (a GUI application for Windows and a command-line application
+for Linux). The compiled GUI application for Windows and the full source code are included in the link at
+the top of the article.
+
+The Windows GUI app builds in Visual Studio 2017 (I used the free Community edition).  For Visual Studio, note that
+you will need to have the C++ toolset installed, along with MFC.  As for the command-line application, I've verified
+it builds with g++ in Linux (I've tested it on Kubuntu 25.10).
 
 Visual Studio can be downloaded
 <a href='https://visualstudio.microsoft.com/vs/older-downloads/' target='_blank'>here</a>.

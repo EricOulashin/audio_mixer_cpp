@@ -7,7 +7,9 @@
 #include <fstream>
 #include <vector>
 #include <filesystem>
+#include <memory>
 #include "WAVFile.h"
+#include "FLACFile.h"
 #include "AudioFileTools.h"
 #include "AudioFileResultType.h"
 using std::cout;
@@ -16,7 +18,11 @@ using std::endl;
 using std::string;
 using std::ifstream;
 using std::vector;
+using std::shared_ptr;
+using std::make_shared;
+using EOUtils::AudioFile;
 using EOUtils::WAVFile;
+using EOUtils::FLACFile;
 using EOUtils::mixAudioFiles;
 using EOUtils::AudioFileResultType;
 
@@ -43,9 +49,6 @@ ProgOptions parseCommandLine(int argc, char* argv[]);
 
 // Reads the audio file list with the given filename.
 AudioFileMixOptions readAudioFileList(const string& pFilename, vector<string>& pErrorMsgs, vector<string>& pNonexistentFiles);
-
-// Mixes a set of audio files into an output file. Returns an empty string on success or an error message on failure.
-string mixAudioFiles(const vector<string>& pInputFilenames, const string& pOutputFilename);
 
 // Main program function
 int main(int argc, char* argv[])
@@ -92,7 +95,18 @@ int main(int argc, char* argv[])
 		for (const string& filename : mixOpts.inputFilenames)
 			cout << filename << "\n";
 	}
-	string resultMsg = mixAudioFiles(mixOpts.inputFilenames, mixOpts.outputFilename);
+	cout << "Mixing to " << mixOpts.outputFilename << "...\n";
+	string resultMsg;
+	try
+	{
+		AudioFileResultType mixResult = mixAudioFiles(mixOpts.inputFilenames, mixOpts.outputFilename);
+		if (!mixResult)
+			resultMsg = mixResult.getError();
+	}
+	catch (const std::logic_error& e)
+	{
+		resultMsg = e.what();
+	}
 	if (resultMsg.empty())
 		cout << "Mixing completed successfully.  Output file: " << mixOpts.outputFilename << endl;
 	else
@@ -194,24 +208,4 @@ AudioFileMixOptions readAudioFileList(const string& pFilename, vector<string>& p
 	}
 
 	return mixOptions;
-}
-
-string mixAudioFiles(const vector<string>& pInputFilenames, const string& pOutputFilename)
-{
-	string errorMsg;
-	cout << "Mixing to " << pOutputFilename << "...\n";
-	WAVFile outputFile(pOutputFilename);
-	try
-	{
-		AudioFileResultType mixResult = mixAudioFiles(pInputFilenames, outputFile);
-		if (!mixResult)
-			errorMsg = mixResult.getError();
-	}
-	catch (const std::logic_error& e)
-	{
-		errorMsg = e.what();
-	}
-	outputFile.close();
-
-	return errorMsg;
 }
