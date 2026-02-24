@@ -190,8 +190,10 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 			difference = (int64_t)(highestSampleValueInSourceFiles - ((int64_t)maxValue<int32_t>() / (int64_t)pFilenames.size()));
 		multiplier = 1.0 - ((double)difference / (double)highestSampleValueInSourceFiles);
 	}
-	if (!result)
-		return result;
+	// Proceed even if getHighestSampleValue failed (FLAC can return 'end of stream'); use multiplier 1.0
+	result = AudioFileResultType();  // Reset so mixing loop runs
+	if (multiplier == 0.0)
+		multiplier = 1.0;  // No scaling when we couldn't determine peak
 
 	if (multiplier < 0.0)
 		multiplier = -multiplier;
@@ -239,10 +241,11 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 	//          sample = sample + (next available sample from the source file * multiplier)
 	//    sample = sample / # of source files
 	//    write the sample to the output file
-	const string mixedFilename = pOutputFilename + "-mixed_tmp.flac";
-	unique_ptr<AudioFile> mixedTmpFile = make_unique<FLACFile>(mixedFilename);
-	mixedTmpFile->setAudioFileInfo(srcFiles[0]->getAudioFileInfo());
-	result = mixedTmpFile->open(AUDIO_FILE_WRITE);
+		const string mixedFilename = pOutputFilename + "-mixed_tmp.flac";
+		unique_ptr<AudioFile> mixedTmpFile = make_unique<FLACFile>(mixedFilename);
+		mixedTmpFile->setAudioFileInfo(srcFiles[0]->getAudioFileInfo());
+		mixedTmpFile->setMetadataFromVal("totalSamples", highestNumSamples);
+		result = mixedTmpFile->open(AUDIO_FILE_WRITE);
 	if (!result)
 	{
 		for (shared_ptr<AudioFile>& srcFile : srcFiles)
@@ -270,7 +273,9 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 		if (result)
 		{
 			sample /= (int32_t)(srcFiles.size());
-			mixedTmpFile->writeSample_int64(sample);
+			AudioFileResultType writeRes = mixedTmpFile->writeSample_int64(sample);
+			if (!writeRes)
+				result = writeRes;
 			if (sample > finalMixFileHighestSample)
 				finalMixFileHighestSample = sample;
 		}
@@ -300,25 +305,27 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 		return result;
 	}
 	mixedTmpFile = make_unique<FLACFile>(mixedFilename);
-	mixedTmpFile->open(AUDIO_FILE_READ);
-	if (!mixedTmpFile->isOpen())
+	result = mixedTmpFile->open(AUDIO_FILE_READ);
+	if (!result || !mixedTmpFile->isOpen())
 	{
 		finalOutputFile->close();
-		result.addError("Unable to open " + mixedFilename + " for reading");
+		if (!result)
+			result.addError("Unable to open " + mixedFilename + " for reading");
 		return result;
 	}
-	const size_t numSamples = mixedTmpFile->numSamples();
-	for (size_t i = 0; (i < numSamples) && result; ++i)
+	// Copy samples from mixed tmp to final output with volume scaling.
+	// Use highestNumSamples (we know exactly how many we wrote) rather than file's numSamples(),
+	// which can be 0 if FLAC lacks total_samples in metadata.
+	for (size_t i = 0; (i < highestNumSamples) && result; ++i)
 	{
 		result = mixedTmpFile->getNextSample_int64(sample);
 		if (result)
 			result = finalOutputFile->writeSample_int64((int64_t)(sample * multiplier));
-		else
-			break;
 	}
 	mixedTmpFile->close();
 	finalOutputFile->close();
-	/*
+
+	// Remove the initial mixed file and keep the one with the increased volume
 	if (remove(mixedFilename.c_str()) == 0)
 	{
 		if (rename(mixedFilename.c_str(), pOutputFilename.c_str()) != 0)
@@ -326,7 +333,7 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 	}
 	else
 		result.addError("File access error with " + mixedFilename);
-	*/
+
 	return result;
 }
 

@@ -128,15 +128,9 @@ namespace EOUtils
 			}
 		}
 
-		FLAC__StreamEncoderWriteStatus encoderWriteCb(const FLAC__StreamEncoder* /*encoder*/, const FLAC__byte buffer[], size_t bytes, uint32_t /*samples*/, uint32_t /*current_frame*/, void* client_data)
+		void encoderProgressCb(const FLAC__StreamEncoder* /*encoder*/, FLAC__uint64 /*bytes_written*/, FLAC__uint64 /*samples_written*/, uint32_t /*frames_written*/, uint32_t /*total_frames_estimate*/, void* /*client_data*/)
 		{
-			std::fstream* stream = static_cast<std::fstream*>(client_data);
-			if (stream && stream->is_open())
-			{
-				stream->write(reinterpret_cast<const char*>(buffer), static_cast<std::streamsize>(bytes));
-				return stream->good() ? FLAC__STREAM_ENCODER_WRITE_STATUS_OK : FLAC__STREAM_ENCODER_WRITE_STATUS_FATAL_ERROR;
-			}
-			return FLAC__STREAM_ENCODER_WRITE_STATUS_FATAL_ERROR;
+			// Progress callback; can be used for optional logging
 		}
 	}
 
@@ -286,10 +280,12 @@ namespace EOUtils
 				return result;
 			}
 
+			// Use init_file so FLAC manages the file (seek/tell for STREAMINFO update); close our stream first
+			mFileStream.close();
+
 			FLAC__StreamEncoder* encoder = FLAC__stream_encoder_new();
 			if (!encoder)
 			{
-				mFileStream.close();
 				result.addError("FLACFile::open(): Failed to create FLAC encoder");
 				return result;
 			}
@@ -300,21 +296,27 @@ namespace EOUtils
 			ok = ok && FLAC__stream_encoder_set_sample_rate(encoder, static_cast<uint32_t>(mFLACFileInfo.SampleRateHz()));
 			ok = ok && FLAC__stream_encoder_set_compression_level(encoder, 5);
 
+			// Set total samples estimate if available (required for correct numSamples when file is reopened)
+			if (hasMetadata("totalSamples"))
+			{
+				const size_t totalInterleaved = getMetadataAs<size_t>("totalSamples");
+				const uint32_t channels = static_cast<uint32_t>(mFLACFileInfo.NumChannels());
+				const FLAC__uint64 samplesPerChannel = (channels > 0) ? (totalInterleaved / channels) : 0;
+				ok = ok && FLAC__stream_encoder_set_total_samples_estimate(encoder, samplesPerChannel);
+			}
+
 			if (!ok)
 			{
 				FLAC__stream_encoder_delete(encoder);
-				mFileStream.close();
 				result.addError("FLACFile::open(): Failed to set encoder parameters");
 				return result;
 			}
 
-			FLAC__StreamEncoderInitStatus initStatus = FLAC__stream_encoder_init_stream(
+			FLAC__StreamEncoderInitStatus initStatus = FLAC__stream_encoder_init_file(
 				encoder,
-				encoderWriteCb,
-				nullptr,
-				nullptr,
-				nullptr,
-				&mFileStream
+				mFilename.c_str(),
+				encoderProgressCb,
+				nullptr   // client_data
 			);
 
 			if (initStatus != FLAC__STREAM_ENCODER_INIT_STATUS_OK)
@@ -322,7 +324,6 @@ namespace EOUtils
 				result.addError(std::string("FLACFile::open(): Encoder init failed: ") +
 					(FLAC__StreamEncoderInitStatusString[initStatus] ? FLAC__StreamEncoderInitStatusString[initStatus] : "unknown"));
 				FLAC__stream_encoder_delete(encoder);
-				mFileStream.close();
 				return result;
 			}
 
@@ -330,6 +331,12 @@ namespace EOUtils
 		}
 
 		return result;
+	}
+
+	bool FLACFile::isOpen() const
+	{
+		// When using init_file for write, mFileStream is not used; encoder manages the file
+		return mFileStream.is_open() || (mEncoder != nullptr) || (mDecoder != nullptr);
 	}
 
 	void FLACFile::close()
@@ -480,7 +487,8 @@ namespace EOUtils
 		if (mWriteBuffer.size() >= samplesPerBlock * numChannels)
 		{
 			FLAC__StreamEncoder* encoder = static_cast<FLAC__StreamEncoder*>(mEncoder);
-			if (!FLAC__stream_encoder_process_interleaved(encoder, mWriteBuffer.data(), static_cast<uint32_t>(samplesPerBlock)))
+			const uint32_t samplesToProcess = static_cast<uint32_t>(samplesPerBlock);
+			if (!FLAC__stream_encoder_process_interleaved(encoder, mWriteBuffer.data(), samplesToProcess))
 			{
 				FLAC__StreamEncoderState state = FLAC__stream_encoder_get_state(encoder);
 				result.addError(std::string("FLACFile::writeSample_int64(): Encode error: ") +

@@ -33,6 +33,8 @@ namespace EOUtils
 
 			void close() override;
 
+			bool isOpen() const override;
+
 			/**
 			 * @brief Returns a FLACFileInfo object with information about the FLAC file
 			 */
