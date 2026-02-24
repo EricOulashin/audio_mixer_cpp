@@ -8,6 +8,7 @@
 #include <vector>
 #include <filesystem>
 #include "WAVFile.h"
+#include "FLACFile.h"
 #include "AudioFileTools.h"
 #include "AudioFileResultType.h"
 using std::cout;
@@ -17,6 +18,7 @@ using std::string;
 using std::ifstream;
 using std::vector;
 using EOUtils::WAVFile;
+using EOUtils::FLACFile;
 using EOUtils::mixAudioFiles;
 using EOUtils::AudioFileResultType;
 
@@ -200,18 +202,34 @@ string mixAudioFiles(const vector<string>& pInputFilenames, const string& pOutpu
 {
 	string errorMsg;
 	cout << "Mixing to " << pOutputFilename << "...\n";
-	WAVFile outputFile(pOutputFilename);
+
+	// Choose output format based on filename extension
+	const size_t len = pOutputFilename.length();
+	const bool useFLAC = (len >= 5 && pOutputFilename.substr(len - 5) == ".flac");
+
 	try
 	{
-		AudioFileResultType mixResult = mixAudioFiles(pInputFilenames, outputFile);
-		if (!mixResult)
-			errorMsg = mixResult.getError();
+		if (useFLAC)
+		{
+			FLACFile outputFile(pOutputFilename);
+			AudioFileResultType mixResult = mixAudioFiles(pInputFilenames, outputFile);
+			if (!mixResult)
+				errorMsg = mixResult.getError();
+			outputFile.close();
+		}
+		else
+		{
+			WAVFile outputFile(pOutputFilename);
+			AudioFileResultType mixResult = mixAudioFiles(pInputFilenames, outputFile);
+			if (!mixResult)
+				errorMsg = mixResult.getError();
+			outputFile.close();
+		}
 	}
 	catch (const std::logic_error& e)
 	{
 		errorMsg = e.what();
 	}
-	outputFile.close();
 
 	return errorMsg;
 }

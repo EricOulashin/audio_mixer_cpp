@@ -3,6 +3,8 @@
 #include "utilFunctions.h"
 #include "WAVFileInfo.h"
 #include "WAVFile.h"
+#include "FLACFileInfo.h"
+#include "FLACFile.h"
 
 #include <fstream>
 #include <cstdio>
@@ -21,6 +23,8 @@ namespace EOUtils
 		shared_ptr<AudioFile> audioFile;
 		if (WAVFileInfo::isWAVFile(pFilename))
 			audioFile = make_shared<WAVFile>(pFilename);
+		else if (FLACFileInfo::isFLACFile(pFilename))
+			audioFile = make_shared<FLACFile>(pFilename);
 		return audioFile;
 	}
 
@@ -28,7 +32,6 @@ namespace EOUtils
 	{
 		AudioFileResultType result;
 
-		shared_ptr<AudioFile> audioFile;
 		if (WAVFileInfo::isWAVFile(pFilename))
 		{
 			fstream inFile;
@@ -45,6 +48,24 @@ namespace EOUtils
 			else
 				result.addError("Failed to open " + string(pFilename) + " for reading");
 		}
+		else if (FLACFileInfo::isFLACFile(pFilename))
+		{
+			fstream inFile;
+			inFile.open(pFilename, std::ios_base::binary | std::ios_base::in);
+			if (inFile.is_open())
+			{
+				FLACFileInfo flacInfo;
+				result = flacInfo.read(inFile);
+				if (result)
+					pAudioFileInfo = flacInfo;
+
+				inFile.close();
+			}
+			else
+				result.addError("Failed to open " + string(pFilename) + " for reading");
+		}
+		else
+			result.addError("Unrecognized audio file format for " + string(pFilename));
 
 		return result;
 	}
@@ -202,9 +223,18 @@ namespace EOUtils
 		result = pOutFile.open(AUDIO_FILE_READ);
 		if (result)
 		{
-			WAVFile out2(pOutFile.Filename() + "-temp.wav");
-			out2.setAudioFileInfo(pOutFile.getAudioFileInfo());
-			result = out2.open(AUDIO_FILE_WRITE);
+			const string& outFilename = pOutFile.Filename();
+			const bool outputIsFLAC = (outFilename.length() >= 5 && outFilename.substr(outFilename.length() - 5) == ".flac");
+			const string tempFilename = outputIsFLAC ? (outFilename + "-temp.flac") : (outFilename + "-temp.wav");
+
+			shared_ptr<AudioFile> out2;
+			if (outputIsFLAC)
+				out2 = make_shared<FLACFile>(tempFilename);
+			else
+				out2 = make_shared<WAVFile>(tempFilename);
+
+			out2->setAudioFileInfo(pOutFile.getAudioFileInfo());
+			result = out2->open(AUDIO_FILE_WRITE);
 			if (result)
 			{
 				const size_t numSamples = pOutFile.numSamples();
@@ -212,15 +242,15 @@ namespace EOUtils
 				{
 					result = pOutFile.getNextSample_int64(sample);
 					if (result)
-						result = out2.writeSample_int64((int64_t)(sample * multiplier));
+						result = out2->writeSample_int64((int64_t)(sample * multiplier));
 				}
-				out2.close();
+				out2->close();
 			}
 			pOutFile.close();
 			if (remove(pOutFile.Filename().c_str()) == 0)
 			{
-				if (rename(out2.Filename().c_str(), pOutFile.Filename().c_str()) != 0)
-					result.addError("Unable to rename " + out2.Filename() + " to " + pOutFile.Filename());
+				if (rename(tempFilename.c_str(), pOutFile.Filename().c_str()) != 0)
+					result.addError("Unable to rename " + tempFilename + " to " + pOutFile.Filename());
 			}
 			else
 				result.addError("File access error with " + pOutFile.Filename());
