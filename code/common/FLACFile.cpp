@@ -294,7 +294,7 @@ namespace EOUtils
 			ok = ok && FLAC__stream_encoder_set_channels(encoder, static_cast<uint32_t>(mFLACFileInfo.NumChannels()));
 			ok = ok && FLAC__stream_encoder_set_bits_per_sample(encoder, static_cast<uint32_t>(mFLACFileInfo.BitsPerSample()));
 			ok = ok && FLAC__stream_encoder_set_sample_rate(encoder, static_cast<uint32_t>(mFLACFileInfo.SampleRateHz()));
-			ok = ok && FLAC__stream_encoder_set_compression_level(encoder, 5);
+			ok = ok && FLAC__stream_encoder_set_compression_level(encoder, 8);  // Maximum compression
 
 			// Set total samples estimate if available (required for correct numSamples when file is reopened)
 			if (hasMetadata("totalSamples"))
