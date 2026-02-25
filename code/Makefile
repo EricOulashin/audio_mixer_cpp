@@ -29,7 +29,7 @@ all: $(AUDIO_MIXER_CMDLINE_APP)
 $(AUDIO_MIXER_CMDLINE_APP): $(OBJECTS) $(SRC_DIR)/cmdLineApp.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $(OBJECTS) $(SRC_DIR)/cmdLineApp.cpp $(LDFLAGS)
 
-%.o: %.cpp
+%.o: %.cpp %.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:

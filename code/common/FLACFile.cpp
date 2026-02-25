@@ -137,8 +137,6 @@ namespace EOUtils
 
 	FLACFile::FLACFile(const string& pFilename)
 		: AudioFile(pFilename),
-		  mDecoder(nullptr),
-		  mEncoder(nullptr),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
 		  mDecodePosition(0)
@@ -148,8 +146,6 @@ namespace EOUtils
 	FLACFile::FLACFile(const string& pFilename, const FLACFileInfo& pFLACFileInfo)
 		: AudioFile(pFilename),
 		  mFLACFileInfo(pFLACFileInfo),
-		  mDecoder(nullptr),
-		  mEncoder(nullptr),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
 		  mDecodePosition(0)
@@ -158,8 +154,6 @@ namespace EOUtils
 
 	FLACFile::FLACFile(const string& pFilename, AudioFileModes pFileMode)
 		: AudioFile(pFilename, pFileMode),
-		  mDecoder(nullptr),
-		  mEncoder(nullptr),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
 		  mDecodePosition(0)
@@ -169,8 +163,6 @@ namespace EOUtils
 	FLACFile::FLACFile(const FLACFile& pFLACFile)
 		: AudioFile(pFLACFile),
 		  mFLACFileInfo(pFLACFile.mFLACFileInfo),
-		  mDecoder(nullptr),
-		  mEncoder(nullptr),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
 		  mDecodePosition(pFLACFile.mDecodePosition)
@@ -180,8 +172,6 @@ namespace EOUtils
 	FLACFile::FLACFile(FLACFile&& pFLACFile) noexcept
 		: AudioFile(pFLACFile),
 		  mFLACFileInfo(std::move(pFLACFile.mFLACFileInfo)),
-		  mDecoder(nullptr),
-		  mEncoder(nullptr),
 		  mReadBuffer(std::move(pFLACFile.mReadBuffer)),
 		  mReadBufferChannel(pFLACFile.mReadBufferChannel),
 		  mReadBufferSample(pFLACFile.mReadBufferSample),

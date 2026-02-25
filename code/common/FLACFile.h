@@ -163,8 +163,8 @@ namespace EOUtils
 			FLACFileInfo mFLACFileInfo;
 
 			// FLAC decoder/encoder state (opaque pointers, avoid including FLAC headers in .h)
-			void* mDecoder;
-			void* mEncoder;
+			void* mDecoder = nullptr;
+			void* mEncoder = nullptr;
 
 			// Sample buffer for reading (decoder outputs frames, we output samples one-by-one)
 			// FLAC uses 32-bit signed samples; we store channels separately
