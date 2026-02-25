@@ -61,6 +61,19 @@ namespace EOUtils
 	AudioFileResultType mixAudioFiles(const std::vector<std::string>& pFilenames, const std::string& pOutputFilename);
 
 	/**
+	 * @brief Mixes (merges) multiple audio files into a single file
+	 *
+	 * @param[in] pFilenames A collection of filenames of audio files to mix
+	 * @param[in,out] pOutputAudioFile An AudioFile object for the resulting mixed audio file.  This should be an instance
+	 * of the desired subclass for the output file format, and does not need to be open (in fact, it's better if it's
+	 * not open yet)
+	 *
+	 * @return True on success, or false with error messages on failure
+	 */
+	AudioFileResultType mixAudioFiles(const std::vector<std::string>& pFilenames, std::shared_ptr<AudioFile>& pOutputAudioFile);
+	AudioFileResultType mixAudioFiles(const std::vector<std::string>& pFilenames, EOUtils::AudioFile& pOutputAudioFile);
+
+	/**
 	 * @brief Gets the highest audio sample from a set of audio files, cast to a 64-bit integer
 	 *
 	 * @param[in] pFilenames A collection of audio file names

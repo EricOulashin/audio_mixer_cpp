@@ -2,6 +2,7 @@
 #include "utilFunctions.h"
 
 #include <algorithm>
+#include <utility>
 #include <cstring>
 #include <sstream>
 #include <stdexcept>
@@ -136,8 +137,6 @@ namespace EOUtils
 
 	FLACFile::FLACFile(const string& pFilename)
 		: AudioFile(pFilename),
-		  mDecoder(nullptr),
-		  mEncoder(nullptr),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
 		  mDecodePosition(0)
@@ -147,8 +146,6 @@ namespace EOUtils
 	FLACFile::FLACFile(const string& pFilename, const FLACFileInfo& pFLACFileInfo)
 		: AudioFile(pFilename),
 		  mFLACFileInfo(pFLACFileInfo),
-		  mDecoder(nullptr),
-		  mEncoder(nullptr),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
 		  mDecodePosition(0)
@@ -157,8 +154,6 @@ namespace EOUtils
 
 	FLACFile::FLACFile(const string& pFilename, AudioFileModes pFileMode)
 		: AudioFile(pFilename, pFileMode),
-		  mDecoder(nullptr),
-		  mEncoder(nullptr),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
 		  mDecodePosition(0)
@@ -168,12 +163,25 @@ namespace EOUtils
 	FLACFile::FLACFile(const FLACFile& pFLACFile)
 		: AudioFile(pFLACFile),
 		  mFLACFileInfo(pFLACFile.mFLACFileInfo),
-		  mDecoder(nullptr),
-		  mEncoder(nullptr),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
 		  mDecodePosition(pFLACFile.mDecodePosition)
 	{
+	}
+
+	FLACFile::FLACFile(FLACFile&& pFLACFile) noexcept
+		: AudioFile(pFLACFile),
+		  mFLACFileInfo(std::move(pFLACFile.mFLACFileInfo)),
+		  mReadBuffer(std::move(pFLACFile.mReadBuffer)),
+		  mReadBufferChannel(pFLACFile.mReadBufferChannel),
+		  mReadBufferSample(pFLACFile.mReadBufferSample),
+		  mWriteBuffer(std::move(pFLACFile.mWriteBuffer)),
+		  mDecodePosition(pFLACFile.mDecodePosition)
+	{
+		pFLACFile.close();
+		pFLACFile.mReadBufferChannel = 0;
+		pFLACFile.mReadBufferSample = 0;
+		pFLACFile.mDecodePosition = 0;
 	}
 
 	FLACFile::~FLACFile()
@@ -184,6 +192,16 @@ namespace EOUtils
 	void FLACFile::setAudioFileInfo(const AudioFileInfo& pAudioFileInfo)
 	{
 		mFLACFileInfo.copyAudioFileInfo(pAudioFileInfo);
+	}
+
+	uint32_t FLACFile::CompressionLevel() const
+	{
+		return mFLACFileInfo.CompressionLevel();
+	}
+
+	void FLACFile::CompressionLevel(uint32_t pCompressionLevel)
+	{
+		mFLACFileInfo.CompressionLevel(pCompressionLevel);
 	}
 
 	AudioFileResultType FLACFile::open(AudioFileModes pOpenMode)
@@ -294,7 +312,7 @@ namespace EOUtils
 			ok = ok && FLAC__stream_encoder_set_channels(encoder, static_cast<uint32_t>(mFLACFileInfo.NumChannels()));
 			ok = ok && FLAC__stream_encoder_set_bits_per_sample(encoder, static_cast<uint32_t>(mFLACFileInfo.BitsPerSample()));
 			ok = ok && FLAC__stream_encoder_set_sample_rate(encoder, static_cast<uint32_t>(mFLACFileInfo.SampleRateHz()));
-			ok = ok && FLAC__stream_encoder_set_compression_level(encoder, 8);  // Maximum compression
+			ok = ok && FLAC__stream_encoder_set_compression_level(encoder, mFLACFileInfo.CompressionLevel());
 
 			// Set total samples estimate if available (required for correct numSamples when file is reopened)
 			if (hasMetadata("totalSamples"))
@@ -337,6 +355,17 @@ namespace EOUtils
 	{
 		// When using init_file for write, mFileStream is not used; encoder manages the file
 		return mFileStream.is_open() || (mEncoder != nullptr) || (mDecoder != nullptr);
+		/*
+		bool isOpen = false;
+		if (AudioFile::isOpen())
+		{
+			if (hasReadMode())
+				isOpen = isOpen && (mDecoder != nullptr);
+			if (hasWriteMode())
+				isOpen = isOpen && (mEncoder != nullptr);
+		}
+		return isOpen;
+		*/
 	}
 
 	void FLACFile::close()

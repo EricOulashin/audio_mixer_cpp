@@ -8,10 +8,10 @@
 
 #include <fstream>
 #include <cstdio>
-//#include <future>
 #include <algorithm>
 #include <cctype>
 #include <memory>
+#include <filesystem>
 #include <cstring>
 
 using std::fstream;
@@ -30,6 +30,11 @@ using EOUtils::AudioFileInfo;
 
 shared_ptr<AudioFile> EOUtils::createAudioFileObjForExistingFile(const char* pFilename)
 {
+	if (!std::filesystem::exists(pFilename))
+		return nullptr;
+
+	// Find the filename extension from pFilename and decide the file format
+	// based on that
 	shared_ptr<AudioFile> audioFile;
 	if (WAVFileInfo::isWAVFile(pFilename))
 		audioFile = make_shared<WAVFile>(pFilename);
@@ -124,20 +129,36 @@ AudioFileResultType EOUtils::getAudioFileInfo(const char* pFilename, AudioFileIn
 
 AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, const string& pOutputFilename)
 {
+	if (pOutputFilename.empty())
+	{
+		AudioFileResultType result;
+		result.addError("No output filename provided");
+		return result;
+	}
+	// Try to create an AudioFile object for the output file, detecting what format it should be
+	shared_ptr<AudioFile> finalOutputFile = createAudioFileObjForNewFile(pOutputFilename.c_str());
+	if (finalOutputFile == nullptr)
+	{
+		AudioFileResultType result;
+		result.addError("Unable to determine file type for " + pOutputFilename);
+		return result;
+	}
+
+	return mixAudioFiles(pFilenames, *finalOutputFile);
+}
+
+AudioFileResultType EOUtils::mixAudioFiles(const std::vector<std::string>& pFilenames, std::shared_ptr<AudioFile>& pOutputAudioFile)
+{
+	return mixAudioFiles(pFilenames, *pOutputAudioFile);
+}
+
+AudioFileResultType EOUtils::mixAudioFiles(const std::vector<std::string>& pFilenames, EOUtils::AudioFile& pOutputAudioFile)
+{
 	AudioFileResultType result;
 
 	if (pFilenames.size() == 0)
 	{
 		result.addError("An empty filename list was provided");
-		return result;
-	}
-
-	// Try to create an AudioFile object for the output file, detecting what format it should be
-	//std::shared_ptr<AudioFile> createAudioFileObjForNewFile(const char* pFilename);
-	shared_ptr<AudioFile> finalOutputFile = createAudioFileObjForNewFile(pOutputFilename.c_str());
-	if (finalOutputFile == nullptr)
-	{
-		result.addError("Unable to determine file type for " + pOutputFilename);
 		return result;
 	}
 
@@ -241,11 +262,12 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 	//          sample = sample + (next available sample from the source file * multiplier)
 	//    sample = sample / # of source files
 	//    write the sample to the output file
-		const string mixedFilename = pOutputFilename + "-mixed_tmp.flac";
-		unique_ptr<AudioFile> mixedTmpFile = make_unique<FLACFile>(mixedFilename);
-		mixedTmpFile->setAudioFileInfo(srcFiles[0]->getAudioFileInfo());
-		mixedTmpFile->setMetadataFromVal("totalSamples", highestNumSamples);
-		result = mixedTmpFile->open(AUDIO_FILE_WRITE);
+	const string finalOutputFilename = pOutputAudioFile.Filename();
+	const string mixedFilename = finalOutputFilename + "-mixed_tmp.flac";
+	unique_ptr<AudioFile> mixedTmpFile = make_unique<FLACFile>(mixedFilename);
+	mixedTmpFile->setAudioFileInfo(srcFiles[0]->getAudioFileInfo());
+	mixedTmpFile->setMetadataFromVal("totalSamples", highestNumSamples);
+	result = mixedTmpFile->open(AUDIO_FILE_WRITE);
 	if (!result)
 	{
 		for (shared_ptr<AudioFile>& srcFile : srcFiles)
@@ -297,18 +319,28 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 	AudioFileInfo audioFileInfo = mixedTmpFile->getAudioFileInfo();
 	mixedTmpFile->close();
 	//audioFileInfo.FileSize(0);
-	finalOutputFile->setAudioFileInfo(audioFileInfo);
-	finalOutputFile->open(AUDIO_FILE_WRITE);
-	if (!finalOutputFile->isOpen())
+	bool openedOutputFileHere = false;
+	if (!pOutputAudioFile.isOpen())
 	{
-		result.addError("Unable to open " + pOutputFilename + " for writing");
-		return result;
+		pOutputAudioFile.setAudioFileInfo(audioFileInfo);
+		AudioFileResultType openResult = pOutputAudioFile.open(AUDIO_FILE_WRITE);
+		if (openResult && pOutputAudioFile.isOpen())
+			openedOutputFileHere = true;
+		else
+		{
+			result.addError("Unable to open " + finalOutputFilename + " for writing:");
+			const auto& errorMsgs = openResult.getErrors();
+			for (const string& errMsg : errorMsgs)
+				result.addError(errMsg);
+			return result;
+		}
 	}
 	mixedTmpFile = make_unique<FLACFile>(mixedFilename);
 	result = mixedTmpFile->open(AUDIO_FILE_READ);
 	if (!result || !mixedTmpFile->isOpen())
 	{
-		finalOutputFile->close();
+		if (openedOutputFileHere)
+			pOutputAudioFile.close();
 		if (!result)
 			result.addError("Unable to open " + mixedFilename + " for reading");
 		return result;
@@ -320,16 +352,21 @@ AudioFileResultType EOUtils::mixAudioFiles(const vector<string>& pFilenames, con
 	{
 		result = mixedTmpFile->getNextSample_int64(sample);
 		if (result)
-			result = finalOutputFile->writeSample_int64((int64_t)(sample * multiplier));
+			result = pOutputAudioFile.writeSample_int64((int64_t)(sample * multiplier));
 	}
 	mixedTmpFile->close();
-	finalOutputFile->close();
+	if (openedOutputFileHere)
+		pOutputAudioFile.close();
 
 	// Remove the initial mixed file and keep the one with the increased volume
 	if (remove(mixedFilename.c_str()) == 0)
 	{
-		if (rename(mixedFilename.c_str(), pOutputFilename.c_str()) != 0)
-			result.addError("Unable to rename " + mixedFilename + " to " + pOutputFilename);
+		if (rename(mixedFilename.c_str(), finalOutputFilename.c_str()) != 0)
+		{
+			// Not sure why this is failing sometimes, but as a kludge, check whether the file exists too
+			if (!std::filesystem::exists(finalOutputFilename))
+				result.addError("Unable to rename " + mixedFilename + " to " + finalOutputFilename);
+		}
 	}
 	else
 		result.addError("File access error with " + mixedFilename);
