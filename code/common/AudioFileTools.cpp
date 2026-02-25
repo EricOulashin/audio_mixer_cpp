@@ -8,10 +8,10 @@
 
 #include <fstream>
 #include <cstdio>
-//#include <future>
 #include <algorithm>
 #include <cctype>
 #include <memory>
+#include <filesystem>
 #include <cstring>
 
 using std::fstream;
@@ -30,6 +30,11 @@ using EOUtils::AudioFileInfo;
 
 shared_ptr<AudioFile> EOUtils::createAudioFileObjForExistingFile(const char* pFilename)
 {
+	if (!std::filesystem::exists(pFilename))
+		return nullptr;
+
+	// Find the filename extension from pFilename and decide the file format
+	// based on that
 	shared_ptr<AudioFile> audioFile;
 	if (WAVFileInfo::isWAVFile(pFilename))
 		audioFile = make_shared<WAVFile>(pFilename);
@@ -357,7 +362,11 @@ AudioFileResultType EOUtils::mixAudioFiles(const std::vector<std::string>& pFile
 	if (remove(mixedFilename.c_str()) == 0)
 	{
 		if (rename(mixedFilename.c_str(), finalOutputFilename.c_str()) != 0)
-			result.addError("Unable to rename " + mixedFilename + " to " + finalOutputFilename);
+		{
+			// Not sure why this is failing sometimes, but as a kludge, check whether the file exists too
+			if (!std::filesystem::exists(finalOutputFilename))
+				result.addError("Unable to rename " + mixedFilename + " to " + finalOutputFilename);
+		}
 	}
 	else
 		result.addError("File access error with " + mixedFilename);

@@ -347,6 +347,17 @@ namespace EOUtils
 	{
 		// When using init_file for write, mFileStream is not used; encoder manages the file
 		return mFileStream.is_open() || (mEncoder != nullptr) || (mDecoder != nullptr);
+		/*
+		bool isOpen = false;
+		if (AudioFile::isOpen())
+		{
+			if (hasReadMode())
+				isOpen = isOpen && (mDecoder != nullptr);
+			if (hasWriteMode())
+				isOpen = isOpen && (mEncoder != nullptr);
+		}
+		return isOpen;
+		*/
 	}
 
 	void FLACFile::close()
