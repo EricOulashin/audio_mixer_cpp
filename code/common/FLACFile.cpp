@@ -623,9 +623,4 @@ namespace EOUtils
 	{
 		return mFLACFileInfo;
 	}
-
-	FLACFileInfo FLACFile::getFLACFileInfo() const
-	{
-		return mFLACFileInfo;
-	}
 }

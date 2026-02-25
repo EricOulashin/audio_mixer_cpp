@@ -17,16 +17,38 @@ namespace EOUtils
 	class FLACFile : public AudioFile
 	{
 		public:
+			/**
+			 * @brief Constructor for opening an existing FLAC file for reading
+			 *
+			 * @param[in] pFilename The name of the FLAC file
+			 */
 			FLACFile(const std::string& pFilename);
 
+			/**
+			 * @brief Constructor for opening an existing FLAC file for reading
+			 *
+			 * @param[in] pFilename The name of the FLAC file
+			 * @param[in] pFLACFileInfo An object containing information about the new FLAC file
+			 */
 			FLACFile(const std::string& pFilename, const FLACFileInfo& pFLACFileInfo);
 
+			/**
+			 * @brief Constructor for opening a FLAC file for reading or writing
+			 * @param[in] pFilename The name of the FLAC file
+			 * @param[in] pFileMode The mode to open the file in (read, write, or read/write)
+			 */
 			FLACFile(const std::string& pFilename, AudioFileModes pFileMode);
 
+			/**
+			 * @brief Copy constructor
+			 */
 			FLACFile(const FLACFile& pFLACFile);
 
 			~FLACFile();
 
+			/**
+			 * @brief Sets the audio file info for the FLAC file
+			 */
 			void setAudioFileInfo(const AudioFileInfo& pAudioFileInfo) override;
 
 			/**
@@ -41,10 +63,22 @@ namespace EOUtils
 			 */
 			void CompressionLevel(uint32_t pCompressionLevel);
 
+			/**
+			 * @brief Opens the audio file in the given mode (read, write, or read/write)
+			 *
+			 * @return An AudioFileResultType object containing error messages on failure, or no errors on success.
+			 * This can also be cast to a bool.
+			 */
 			AudioFileResultType open(AudioFileModes pOpenMode) override;
 
+			/**
+			 * @brief Closes the FLAC file
+			 */
 			void close() override;
 
+			/**
+			 * @brief Returns whether the FLAC file is open (and also has its encoder and/or decoder initialized)
+			 */
 			bool isOpen() const override;
 
 			/**
@@ -52,25 +86,65 @@ namespace EOUtils
 			 */
 			const FLACFileInfo& getFileInfo() const;
 
+			/**
+			 * @brief Gets the next sample from the file, cast to a 64-bit integer
+			 *
+			 * @param[out] pAudioSample The next audio sample from the file, cast to a 64-bit integer
+			 *
+			 * @return An AudioFileResultType object containing error messages on failure, or no errors on success.
+			 * This can also be cast to a bool.
+			 */
 			AudioFileResultType getNextSample_int64(int64_t& pAudioSample) override;
 
+			/**
+			 * @brief Writes an audio sample to the file.  The parameter is a 64-bit integer but will be cast to the
+			 *  bitness of the audio samples in the file.
+			 *
+			 * @param[in] pAudioSample The audio sample to write to the file
+			 *
+			 * @return An AudioFileResultType object containing error messages on failure, or no errors on success.
+			 * This can also be cast to a bool.
+			 */
 			AudioFileResultType writeSample_int64(int64_t pAudioSample) override;
 
+			/**
+			 * @brief Gets the highest audio sample value from the file, cast to a 64-bit integer
+			 *
+			 * @param[out] pHighestAudioSample The highest audio sample from the file, cast to a 64-bit integer
+			 *
+			 * @return An AudioFileResultType object containing error messages on failure, or no errors on success.
+			 * This can also be cast to a bool.
+			 */
 			AudioFileResultType getHighestSampleValue_int64(int64_t& pHighestAudioSample) override;
 
+			/**
+			 * @brief Goes to the audio data position in the audio file
+			 */
 			AudioFileResultType goToAudioDataPos() override;
 
+			/**
+			 * @brief Returns the number of audio samples in the audio file
+			 */
 			size_t numSamples() const override;
 
+			/**
+			 * @brief Returns the maximum possible positive value of the audio file's sample size
+			 */
 			int64_t maxValueForSampleSize() const override;
 
+			/**
+			 * @brief Returns the maximum possible positive value of the audio file's sample size
+			 */
 			void seekOutputToSampleNum(size_t pSampleNum) override;
 
+			/**
+			 * @brief Returns an AudioFile object with information about the audio file
+			 */
 			AudioFileInfo getAudioFileInfo() const override;
 
-			virtual FLACFileInfo getFLACFileInfo() const;
-
-			// Used by FLAC decoder callbacks (same layout as FLAC client data)
+			/**
+			 * @brief Used by FLAC decoder callbacks (same layout as FLAC client data)
+			 */
 			struct DecoderClientData {
 				std::fstream* stream = nullptr;
 				FLACFileInfo* fileInfo = nullptr;
