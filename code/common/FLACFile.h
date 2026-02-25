@@ -44,6 +44,11 @@ namespace EOUtils
 			 */
 			FLACFile(const FLACFile& pFLACFile);
 
+			/**
+			 * @brief Move constructor
+			 */
+			FLACFile(FLACFile&& pFLACFile) noexcept;
+
 			~FLACFile();
 
 			/**

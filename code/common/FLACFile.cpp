@@ -2,6 +2,7 @@
 #include "utilFunctions.h"
 
 #include <algorithm>
+#include <utility>
 #include <cstring>
 #include <sstream>
 #include <stdexcept>
@@ -174,6 +175,23 @@ namespace EOUtils
 		  mReadBufferSample(0),
 		  mDecodePosition(pFLACFile.mDecodePosition)
 	{
+	}
+
+	FLACFile::FLACFile(FLACFile&& pFLACFile) noexcept
+		: AudioFile(pFLACFile),
+		  mFLACFileInfo(std::move(pFLACFile.mFLACFileInfo)),
+		  mDecoder(nullptr),
+		  mEncoder(nullptr),
+		  mReadBuffer(std::move(pFLACFile.mReadBuffer)),
+		  mReadBufferChannel(pFLACFile.mReadBufferChannel),
+		  mReadBufferSample(pFLACFile.mReadBufferSample),
+		  mWriteBuffer(std::move(pFLACFile.mWriteBuffer)),
+		  mDecodePosition(pFLACFile.mDecodePosition)
+	{
+		pFLACFile.close();
+		pFLACFile.mReadBufferChannel = 0;
+		pFLACFile.mReadBufferSample = 0;
+		pFLACFile.mDecodePosition = 0;
 	}
 
 	FLACFile::~FLACFile()
