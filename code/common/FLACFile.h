@@ -18,11 +18,21 @@ namespace EOUtils
 	{
 		public:
 			/**
-			 * @brief Constructor for opening an existing FLAC file for reading
+			 * @brief Constructor for opening an existing FLAC file for reading,
+			 * which just takes the filename
 			 *
 			 * @param[in] pFilename The name of the FLAC file
 			 */
 			FLACFile(const std::string& pFilename);
+
+			/**
+			 * @brief Constructor for opening an existing FLAC file for reading,
+			 * which takes the filename and a compression level
+			 *
+			 * @param[in] pFilename The name of the FLAC file
+			 * @param[in] pCompressionLevel The compression level to use when writing FLAC files (0-8, where 0 is fastest and 8 is maximum compression)
+			 */
+			FLACFile(const std::string& pFilenam, uint32_t pCompressionLevel);
 
 			/**
 			 * @brief Constructor for opening an existing FLAC file for reading

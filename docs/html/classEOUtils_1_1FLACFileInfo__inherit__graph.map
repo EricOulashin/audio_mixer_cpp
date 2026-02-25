@@ -1,0 +1,5 @@
+<map id="EOUtils::FLACFileInfo" name="EOUtils::FLACFileInfo">
+<area shape="rect" id="Node000001" title="Holds metadata for FLAC audio files." alt="" coords="5,419,151,644"/>
+<area shape="rect" id="Node000002" href="$classEOUtils_1_1AudioFileInfo.html" title=" " alt="" coords="6,5,150,371"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,385,81,419,75,419,75,385"/>
+</map>

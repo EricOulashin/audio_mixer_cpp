@@ -1,0 +1,7 @@
+<map id="EOUtils::AudioFile" name="EOUtils::AudioFile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="72,5,263,391"/>
+<area shape="rect" id="Node000002" href="$classEOUtils_1_1FLACFile.html" title=" " alt="" coords="5,449,148,714"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,405,111,449,105,448,116,403"/>
+<area shape="rect" id="Node000003" href="$classEOUtils_1_1WAVFile.html" title=" " alt="" coords="173,439,346,724"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,403,228,438,223,439,214,405"/>
+</map>

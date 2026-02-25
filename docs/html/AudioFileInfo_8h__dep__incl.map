@@ -1,0 +1,43 @@
+<map id="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" name="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="702,5,869,60"/>
+<area shape="rect" id="Node000002" href="$AudioFile_8h.html" title=" " alt="" coords="433,108,589,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="702,67,583,110,581,105,700,62"/>
+<area shape="rect" id="Node000004" href="$AudioFileTools_8h.html" title=" " alt="" coords="49,211,225,265"/>
+<area shape="poly" id="edge17_Node000001_Node000004" title=" " alt="" coords="689,50,560,74,421,111,356,134,293,161,187,213,184,208,290,156,354,129,419,105,559,69,688,45"/>
+<area shape="rect" id="Node000012" href="$AudioFileInfo_8cpp.html" title=" " alt="" coords="1080,108,1261,163"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="883,57,1080,108,1079,113,881,62"/>
+<area shape="rect" id="Node000013" href="$FLACFileInfo_8h.html" title=" " alt="" coords="701,108,869,163"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="788,74,788,108,783,108,783,74"/>
+<area shape="rect" id="Node000015" href="$WAVFileInfo_8h.html" title=" " alt="" coords="893,108,1056,163"/>
+<area shape="poly" id="edge22_Node000001_Node000015" title=" " alt="" coords="848,64,926,105,924,110,845,69"/>
+<area shape="rect" id="Node000003" href="$AudioFile_8cpp.html" title=" " alt="" coords="250,211,409,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="453,172,378,213,376,208,450,167"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="420,164,226,216,225,210,419,159"/>
+<area shape="rect" id="Node000008" href="$FLACFile_8h.html" title=" " alt="" coords="613,211,769,265"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="571,167,645,208,642,213,568,172"/>
+<area shape="rect" id="Node000010" href="$WAVFile_8h.html" title=" " alt="" coords="433,211,589,265"/>
+<area shape="poly" id="edge11_Node000002_Node000010" title=" " alt="" coords="513,176,513,211,508,211,508,176"/>
+<area shape="rect" id="Node000005" href="$AudioMixerCPPDlg_8cpp.html" title=" " alt="" coords="5,313,235,383"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="134,280,128,314,123,313,128,279"/>
+<area shape="rect" id="Node000006" href="$AudioFileTools_8cpp.html" title=" " alt="" coords="826,321,1017,375"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="239,263,327,275,401,281,529,284,655,289,728,297,814,311,845,318,843,323,813,316,728,302,655,294,528,290,401,286,326,280,239,268"/>
+<area shape="rect" id="Node000007" href="$cmdLineApp_8cpp.html" title=" " alt="" coords="439,321,617,375"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="239,263,335,286,427,311,451,318,450,323,426,316,334,291,238,268"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="760,269,866,318,864,323,758,274"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="641,276,569,323,566,318,638,271"/>
+<area shape="rect" id="Node000009" href="$FLACFile_8cpp.html" title=" " alt="" coords="641,321,801,375"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="705,278,716,320,711,321,699,280"/>
+<area shape="poly" id="edge12_Node000010_Node000005" title=" " alt="" coords="420,268,235,319,234,313,419,263"/>
+<area shape="poly" id="edge13_Node000010_Node000006" title=" " alt="" coords="603,263,710,287,814,311,840,318,838,323,813,316,709,292,602,268"/>
+<area shape="poly" id="edge15_Node000010_Node000007" title=" " alt="" coords="520,279,526,320,521,321,514,280"/>
+<area shape="rect" id="Node000011" href="$WAVFile_8cpp.html" title=" " alt="" coords="259,321,415,375"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="458,275,381,323,378,318,455,270"/>
+<area shape="poly" id="edge19_Node000013_Node000006" title=" " alt="" coords="883,164,952,188,977,200,990,209,997,224,999,239,991,269,974,298,953,322,949,319,969,295,987,267,994,239,992,225,986,212,974,204,950,193,882,169"/>
+<area shape="poly" id="edge20_Node000013_Node000008" title=" " alt="" coords="753,174,717,212,713,209,749,171"/>
+<area shape="rect" id="Node000014" href="$FLACFileInfo_8cpp.html" title=" " alt="" coords="793,211,975,265"/>
+<area shape="poly" id="edge21_Node000013_Node000014" title=" " alt="" coords="823,171,860,209,856,212,819,175"/>
+<area shape="poly" id="edge23_Node000015_Node000006" title=" " alt="" coords="1013,172,1025,190,1035,210,1042,239,1034,267,1010,299,978,322,975,318,1006,295,1030,264,1036,238,1029,212,1021,192,1008,175"/>
+<area shape="poly" id="edge24_Node000015_Node000010" title=" " alt="" coords="880,165,801,181,738,189,677,198,601,213,590,216,588,211,599,208,676,193,738,184,800,175,879,160"/>
+<area shape="rect" id="Node000016" href="$WAVFileInfo_8cpp.html" title=" " alt="" coords="1101,211,1277,265"/>
+<area shape="poly" id="edge25_Node000015_Node000016" title=" " alt="" coords="1044,166,1135,208,1132,213,1042,171"/>
+</map>

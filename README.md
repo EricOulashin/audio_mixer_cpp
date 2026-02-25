@@ -16,6 +16,12 @@ need to have the same sample rate and bit rate and same number of channels (mono
 
 The C++ FLAC coding library is needed in order to build this (on Linux, the library is called libflac++-dev).
 
+There are <a href='https://www.doxygen.nl' target='_blank'>Doxygen</a> comments in the source in order to provide
+documentation; there is also a Doxyfile available for building Doxygen-based documentation.
+<a href='docs/html/index.html' target='_blank'>HTML documentation</a> for the C++ code has been added in the
+<a href='docs/html' target='_blank'>docs/html directory</a>.  If you want to generate documentation, you can
+simply run 'doxygen' from the cxWidgets directory, and it will output documentation into the docs directory.
+
 In addition to the WAVFile and FLACFile classes and supporting code, I've included a couple of
 applications for mixing WAV audio files (a GUI application for Windows and a command-line application
 for Linux). The compiled GUI application for Windows and the full source code are included in the link at

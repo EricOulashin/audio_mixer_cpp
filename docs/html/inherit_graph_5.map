@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classEOUtils_1_1AudioFileInfo.html" title=" " alt="" coords="5,31,157,56"/>
+<area shape="rect" id="Node000001" href="$classEOUtils_1_1FLACFileInfo.html" title="Holds metadata for FLAC audio files." alt="" coords="205,5,359,31"/>
+<area shape="poly" id="edge7_Node000000_Node000001" title=" " alt="" coords="170,29,205,25,205,30,171,35"/>
+<area shape="rect" id="Node000002" href="$classEOUtils_1_1WAVFileInfo.html" title=" " alt="" coords="209,55,355,80"/>
+<area shape="poly" id="edge8_Node000000_Node000002" title=" " alt="" coords="171,51,209,56,208,61,171,57"/>
+</map>

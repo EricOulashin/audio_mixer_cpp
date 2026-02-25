@@ -1,0 +1,11 @@
+<map id="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" name="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="35,5,246,60"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,108,60,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,62,60,101,57,97,106,58"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="84,108,123,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,61,116,96,111,94,127,59"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="147,108,209,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="155,59,170,94,165,96,150,61"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="234,108,303,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="181,58,242,98,239,103,178,62"/>
+</map>

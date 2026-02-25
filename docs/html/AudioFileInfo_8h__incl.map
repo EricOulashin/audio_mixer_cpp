@@ -1,0 +1,16 @@
+<map id="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" name="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,172,60"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="21,181,76,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,61,56,84,46,109,43,139,45,167,40,168,37,139,41,107,51,81,66,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="55,108,122,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,60,91,94,86,94,86,60"/>
+<area shape="rect" id="Node000004" href="$AudioFileResultType_8h.html" title=" " alt="" coords="147,108,300,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="131,58,195,98,192,103,128,62"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="196,136,90,179,88,174,194,131"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="129,181,168,207"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="213,135,173,174,169,170,210,131"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="192,181,255,207"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="226,134,226,168,221,168,221,134"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="279,181,349,207"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="240,131,290,170,287,175,236,135"/>
+</map>

@@ -143,6 +143,15 @@ namespace EOUtils
 	{
 	}
 
+	FLACFile::FLACFile(const string& pFilenam, uint32_t pCompressionLevel)
+		: AudioFile(pFilenam),
+		  mReadBufferChannel(0),
+		  mReadBufferSample(0),
+		  mDecodePosition(0)
+	{
+		mFLACFileInfo.CompressionLevel(pCompressionLevel);
+	}
+
 	FLACFile::FLACFile(const string& pFilename, const FLACFileInfo& pFLACFileInfo)
 		: AudioFile(pFilename),
 		  mFLACFileInfo(pFLACFileInfo),

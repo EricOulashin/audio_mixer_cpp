@@ -89,40 +89,31 @@ AudioFileResultType EOUtils::getAudioFileInfo(const char* pFilename, AudioFileIn
 {
 	AudioFileResultType result;
 
+	unique_ptr<AudioFileInfo> fileInfo;
 	if (WAVFileInfo::isWAVFile(pFilename))
-	{
-		fstream inFile;
-		inFile.open(pFilename, std::ios_base::binary | std::ios_base::in);
-		if (inFile.is_open())
-		{
-			WAVFileInfo wavInfo;
-			result = wavInfo.read(inFile);
-			if (result)
-				pAudioFileInfo = wavInfo;
-
-			inFile.close();
-		}
-		else
-			result.addError("Failed to open " + string(pFilename) + " for reading");
-	}
+		fileInfo = make_unique<WAVFileInfo>();
 	else if (FLACFileInfo::isFLACFile(pFilename))
+		fileInfo = make_unique<FLACFileInfo>();
+	else
+	{
+		result.addError("Unrecognized audio file format for " + string(pFilename));
+		return result;
+	}
+
+	if (fileInfo != nullptr)
 	{
 		fstream inFile;
 		inFile.open(pFilename, std::ios_base::binary | std::ios_base::in);
 		if (inFile.is_open())
 		{
-			FLACFileInfo flacInfo;
-			result = flacInfo.read(inFile);
-			if (result)
-				pAudioFileInfo = flacInfo;
-
+			result = fileInfo->read(inFile);
 			inFile.close();
+			if (result && result.numErrors() == 0)
+				pAudioFileInfo.copyAudioFileInfo(*fileInfo);
 		}
 		else
 			result.addError("Failed to open " + string(pFilename) + " for reading");
 	}
-	else
-		result.addError("Unrecognized audio file format for " + string(pFilename));
 
 	return result;
 }
@@ -253,7 +244,25 @@ AudioFileResultType EOUtils::mixAudioFiles(const std::vector<std::string>& pFile
 	if (!result)
 		return result;
 
-	// Do the mixing
+	// Do the mixing. First mix to a lossless format, then increase the
+	// volume back to where it should be in the desired output format.
+	// Open a temporary file for the initial mixing.
+	const string finalOutputFilename = pOutputAudioFile.Filename();
+	const string mixedFilename = finalOutputFilename + "-mixed_tmp.flac";
+	unique_ptr<AudioFile> mixedTmpFile = make_unique<FLACFile>(mixedFilename, 8); // 8: Maximum FLAC compression
+	mixedTmpFile->setAudioFileInfo(srcFiles[0]->getAudioFileInfo());
+	mixedTmpFile->setMetadataFromVal("totalSamples", highestNumSamples);
+	result = mixedTmpFile->open(AUDIO_FILE_WRITE);
+	if (!result)
+	{
+		// Close all the source files before returning
+		for (shared_ptr<AudioFile>& srcFile : srcFiles)
+			srcFile->close();
+		return result;
+	}
+
+	// Mix the audio files into the destination file.  And keep track of the highest sample value
+	// to use when increasing the destination volume later.
 	// The basic algorithm for doing the mixing is as follows:
 	// while there is at least 1 sample remaining in any of the source files
 	//    sample = 0
@@ -262,21 +271,6 @@ AudioFileResultType EOUtils::mixAudioFiles(const std::vector<std::string>& pFile
 	//          sample = sample + (next available sample from the source file * multiplier)
 	//    sample = sample / # of source files
 	//    write the sample to the output file
-	const string finalOutputFilename = pOutputAudioFile.Filename();
-	const string mixedFilename = finalOutputFilename + "-mixed_tmp.flac";
-	unique_ptr<AudioFile> mixedTmpFile = make_unique<FLACFile>(mixedFilename);
-	mixedTmpFile->setAudioFileInfo(srcFiles[0]->getAudioFileInfo());
-	mixedTmpFile->setMetadataFromVal("totalSamples", highestNumSamples);
-	result = mixedTmpFile->open(AUDIO_FILE_WRITE);
-	if (!result)
-	{
-		for (shared_ptr<AudioFile>& srcFile : srcFiles)
-			srcFile->close();
-		return result;
-	}
-
-	// Merge the audio files into the destination file.  And keep track of the highest sample value
-	// to use when increasing the destination volume later.
 	int64_t sample = 0;
 	int64_t srcSample = 0;
 	int64_t finalMixFileHighestSample = 0;
@@ -303,19 +297,24 @@ AudioFileResultType EOUtils::mixAudioFiles(const std::vector<std::string>& pFile
 		}
 		else
 		{
+			// Close all the source files before returning
 			for (shared_ptr<AudioFile>& srcFile : srcFiles)
 				srcFile->close();
 			return result;
 		}
 	}
 
+	// Close all the source files
 	for (shared_ptr<AudioFile>& srcFile : srcFiles)
 		srcFile->close();
 
-	// Increase the destination file volume
+	// Increase the destination file volume.
+	// First, calculate the volume multiplier
 	multiplier = (double)mixedTmpFile->maxValueForSampleSize() / (double)finalMixFileHighestSample;
 	if (multiplier < 0.0)
 		multiplier = -multiplier;
+	// Get the audio file information from the temporary mixed file, then close it.
+	// We'll re-open it so that we can start at the beginning and increase the volume.
 	AudioFileInfo audioFileInfo = mixedTmpFile->getAudioFileInfo();
 	mixedTmpFile->close();
 	//audioFileInfo.FileSize(0);
