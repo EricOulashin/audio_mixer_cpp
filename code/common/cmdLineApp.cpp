@@ -99,7 +99,13 @@ int main(int argc, char* argv[])
 	string resultMsg;
 	try
 	{
-		AudioFileResultType mixResult = mixAudioFiles(mixOpts.inputFilenames, mixOpts.outputFilename);
+		shared_ptr<AudioFile> outputFile = make_shared<FLACFile>(mixOpts.outputFilename);
+		/*
+		FLACFile *flacFile = dynamic_cast<FLACFile*>(outputFile.get());
+		if (flacFile != nullptr)
+			flacFile->CompressionLevel(8);
+		*/
+		AudioFileResultType mixResult = mixAudioFiles(mixOpts.inputFilenames, outputFile);
 		if (!mixResult)
 			resultMsg = mixResult.getError();
 	}
