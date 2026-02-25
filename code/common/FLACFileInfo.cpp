@@ -126,6 +126,12 @@ namespace EOUtils
 	{
 	}
 
+	FLACFileInfo::FLACFileInfo(const FLACFileInfo& pAudioFileInfo)
+		: AudioFileInfo(pAudioFileInfo),
+		  mCompressionLevel(pAudioFileInfo.mCompressionLevel)
+	{
+	}
+
 	AudioFileResultType FLACFileInfo::read(std::fstream& pInFStream)
 	{
 		AudioFileResultType result;
@@ -230,5 +236,18 @@ namespace EOUtils
 			return false;
 
 		return (signature[0] == 'f' && signature[1] == 'L' && signature[2] == 'a' && signature[3] == 'C');
+	}
+
+	uint32_t FLACFileInfo::CompressionLevel() const
+	{
+		return mCompressionLevel;
+	}
+
+	void FLACFileInfo::CompressionLevel(uint32_t pCompressionLevel)
+	{
+		// The compression level must be between 0 and 8 (inclusive), where 0 is fastest and 8 is maximum compression.
+		// pCompressionLevel is unsigned, so only need to check the upper bound.
+		if (pCompressionLevel <= 8)
+			mCompressionLevel = pCompressionLevel;
 	}
 }

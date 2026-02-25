@@ -3,6 +3,7 @@
 
 #include <string>
 #include <fstream>
+#include <cstdint>
 
 #include "AudioFileResultType.h"
 #include "AudioFileInfo.h"
@@ -26,6 +27,11 @@ namespace EOUtils
 			FLACFileInfo(const AudioFileInfo& pAudioFileInfo);
 
 			/**
+			 * @brief Constructor for copying a FLACFileInfo object
+			 */
+			FLACFileInfo(const FLACFileInfo& pAudioFileInfo);
+
+			/**
 			 * @brief Reads the FLAC stream info from a file
 			 */
 			AudioFileResultType read(std::fstream& pInFStream) override;
@@ -44,6 +50,19 @@ namespace EOUtils
 			 * @brief Check if the given file is a FLAC file (has "fLaC" signature)
 			 */
 			static bool isFLACFile(const char* pFilename);
+
+			/**
+			 * @brief Returns the current compression level
+			 */
+			uint32_t CompressionLevel() const;
+
+			/**
+			 * @brief Sets the compression level to use when writing FLAC files (0-8, where 0 is fastest and 8 is maximum compression)
+			 */
+			void CompressionLevel(uint32_t pCompressionLevel);
+
+		private:
+			uint32_t mCompressionLevel = 8; // Maximum compression
 	};
 }
 

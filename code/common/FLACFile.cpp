@@ -186,6 +186,16 @@ namespace EOUtils
 		mFLACFileInfo.copyAudioFileInfo(pAudioFileInfo);
 	}
 
+	uint32_t FLACFile::CompressionLevel() const
+	{
+		return mFLACFileInfo.CompressionLevel();
+	}
+
+	void FLACFile::CompressionLevel(uint32_t pCompressionLevel)
+	{
+		mFLACFileInfo.CompressionLevel(pCompressionLevel);
+	}
+
 	AudioFileResultType FLACFile::open(AudioFileModes pOpenMode)
 	{
 		if (mDecoder)
@@ -294,7 +304,7 @@ namespace EOUtils
 			ok = ok && FLAC__stream_encoder_set_channels(encoder, static_cast<uint32_t>(mFLACFileInfo.NumChannels()));
 			ok = ok && FLAC__stream_encoder_set_bits_per_sample(encoder, static_cast<uint32_t>(mFLACFileInfo.BitsPerSample()));
 			ok = ok && FLAC__stream_encoder_set_sample_rate(encoder, static_cast<uint32_t>(mFLACFileInfo.SampleRateHz()));
-			ok = ok && FLAC__stream_encoder_set_compression_level(encoder, 8);  // Maximum compression
+			ok = ok && FLAC__stream_encoder_set_compression_level(encoder, mFLACFileInfo.CompressionLevel());
 
 			// Set total samples estimate if available (required for correct numSamples when file is reopened)
 			if (hasMetadata("totalSamples"))
@@ -610,6 +620,11 @@ namespace EOUtils
 	}
 
 	AudioFileInfo FLACFile::getAudioFileInfo() const
+	{
+		return mFLACFileInfo;
+	}
+
+	FLACFileInfo FLACFile::getFLACFileInfo() const
 	{
 		return mFLACFileInfo;
 	}

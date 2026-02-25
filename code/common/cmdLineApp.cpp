@@ -100,11 +100,9 @@ int main(int argc, char* argv[])
 	try
 	{
 		shared_ptr<AudioFile> outputFile = make_shared<FLACFile>(mixOpts.outputFilename);
-		/*
 		FLACFile *flacFile = dynamic_cast<FLACFile*>(outputFile.get());
 		if (flacFile != nullptr)
-			flacFile->CompressionLevel(8);
-		*/
+			flacFile->CompressionLevel(8); // Maximum compression
 		AudioFileResultType mixResult = mixAudioFiles(mixOpts.inputFilenames, outputFile);
 		if (!mixResult)
 			resultMsg = mixResult.getError();

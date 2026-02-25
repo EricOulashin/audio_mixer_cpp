@@ -29,6 +29,18 @@ namespace EOUtils
 
 			void setAudioFileInfo(const AudioFileInfo& pAudioFileInfo) override;
 
+			/**
+			 * @brief Returns the compression level currently set for the FLAC file
+			 */
+			uint32_t CompressionLevel() const;
+
+			/**
+			 * @brief Sets the compression level to use when writing FLAC files
+			 *
+			 * @param[in] pCompressionLevel The compression level to use when writing FLAC files (0-8, where 0 is fastest and 8 is maximum compression)
+			 */
+			void CompressionLevel(uint32_t pCompressionLevel);
+
 			AudioFileResultType open(AudioFileModes pOpenMode) override;
 
 			void close() override;
@@ -55,6 +67,8 @@ namespace EOUtils
 			void seekOutputToSampleNum(size_t pSampleNum) override;
 
 			AudioFileInfo getAudioFileInfo() const override;
+
+			virtual FLACFileInfo getFLACFileInfo() const;
 
 			// Used by FLAC decoder callbacks (same layout as FLAC client data)
 			struct DecoderClientData {
