@@ -23,6 +23,7 @@ using std::make_shared;
 using EOUtils::AudioFile;
 using EOUtils::WAVFile;
 using EOUtils::FLACFile;
+using EOUtils::createAudioFileObjForNewFile;
 using EOUtils::mixAudioFiles;
 using EOUtils::AudioFileResultType;
 
@@ -99,11 +100,15 @@ int main(int argc, char* argv[])
 	string resultMsg;
 	try
 	{
-		// Mix to a FLAC with compression level 8 (maximum compression)
-		shared_ptr<AudioFile> outputFile = make_shared<FLACFile>(mixOpts.outputFilename, 8);
-		AudioFileResultType mixResult = mixAudioFiles(mixOpts.inputFilenames, outputFile);
-		if (!mixResult)
-			resultMsg = mixResult.getError();
+		shared_ptr<AudioFile> outputFile = createAudioFileObjForNewFile(mixOpts.outputFilename.c_str());
+		if (outputFile != nullptr)
+		{
+			AudioFileResultType mixResult = mixAudioFiles(mixOpts.inputFilenames, outputFile);
+			if (!mixResult)
+				resultMsg = mixResult.getError();
+		}
+		else
+			cerr << "Unable to determine the file format of the specified output file: " << mixOpts.outputFilename << "\n";
 	}
 	catch (const std::logic_error& e)
 	{
