@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Eric Oulashin&#39;s C++ Audio Mixer: Main Page</title>
+<title>Eric Oulashin&#39;s C++ Audio Mixer: Audio Mixer (C++)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,10 +38,122 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div class="header">
-  <div class="headertitle"><div class="title">Eric Oulashin's C++ Audio Mixer Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Audio Mixer (C++) </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__2home_2erico_2projects_2audio__mixer__cpp_2README"></a>One of my interests and hobbies is music. This project is able to mix multiple WAV audio files into a single audio file, so that the audio from each source WAV file will be heard simultaneously.</p>
+<p>The code uses modern C++ features, such as std::thread, a lambda function, std::shared_ptr, and a modern way of iterating through a collection.</p>
+<p>This project includes C++ classes that can be used to open, read, and write WAV and FLAC audio files. I wrote the WAVFile class from scratch, and I used AI (Cursor) to create the FLACFile class. Currently, the FLACFile class defaults to maximum FLAC compression.</p>
+<p>The WAVFile and FLACFile classes are derived from an AudioFile class, and the mixing function uses the AudioFile interface. That way, other audio formats (such as FLAC and AIF) could be added in the future and the mixing function would still work. For mixing audio files, the source audio files will need to have the same sample rate and bit rate and same number of channels (mono or stereo).</p>
+<p>The C++ FLAC coding library is needed in order to build this: </p><ul>
+<li>
+On Linux, the library is called libflac-dev and should be installable through your package manager. There is also a libflac++-dev for C++, though this doesn't use that. </li>
+<li>
+For Windows, you can download the FLAC project <a href="https://github.com/xiph/flac" target="_blank">from GitHub</a>; the header files are included, though the library files require building. You can build them with Visual Studio and CMake. I was able to ge them to build with help from Cursor (AI tool). </li>
+</ul>
+<p>If you want to build the application for Windows, you will need to set the environment variable FLAC_LIB_DIR to contain the directory where the FLAC project (as downloaded from GitHub) is located on your computer.</p>
+<p>There are <a href="https://www.doxygen.nl" target="_blank">Doxygen</a> comments in the source in order to provide documentation; there is also a Doxyfile available for building Doxygen-based documentation. <a href="https://ericoulashin.github.io/audio_mixer_cpp/html/index.html" target="_blank">HTML documentation</a> for the C++ code has been added in the <a href="docs/html" target="_blank">docs/html directory</a>. If you want to generate documentation, you can simply run 'doxygen' from the cxWidgets directory, and it will output documentation into the docs directory.</p>
+<p>In addition to the WAVFile and FLACFile classes and supporting code, I've included a couple of applications for mixing WAV audio files (a GUI application for Windows and a command-line application for Linux). The compiled GUI application for Windows and the full source code are included in the link at the top of the article.</p>
+<p>The Windows GUI app builds in Visual Studio 2017 (I used the free Community edition). For Visual Studio, note that you will need to have the C++ toolset installed, along with MFC. As for the command-line application, I've verified it builds with g++ in Linux (I've tested it on Kubuntu 25.10).</p>
+<p>Visual Studio can be downloaded <a href="https://visualstudio.microsoft.com/vs/older-downloads/" target="_blank">here</a>. As of this writing (January 2, 2026), that page has versions of Visual Studio from 2015 to 2022.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Code notes</h1>
+<p>In the 'code' directory, there are the following items: </p><ul>
+<li>
+<b>AudioMixerCPP_Win_VisualStudio:</b> Windows-specific source &amp; project files (for use with Visual Studio) </li>
+<li>
+<b>common:</b> Common source files (contains the core audio &amp; mixer code) </li>
+<li>
+<b>AudioMixerCPP.sln:</b> The solution file for use with Visual Studio </li>
+<li>
+<b>Makefile:</b> A makefile for building a command-line executable for Linux </li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Included Applications</h1>
+<p>The source code includes 2 applications: </p><ul>
+<li>
+A GUI application (written in MFC, for Windows) for choosing and mixing WAV audio files </li>
+<li>
+A command-line application (the source being <a class="el" href="cmdLineApp_8cpp.html">cmdLineApp.cpp</a>) for mixing WAV audio files </li>
+</ul>
+<h2><a class="anchor" id="autotoc_md3"></a>
+GUI application (Windows)</h2>
+<p>The following is a screenshot of the application:</p>
+<p><img src="screenshots/AudioMixerCPP.png" alt="Audio Mixer application" width="800" class="inline"/> </p>
+<p>To add WAV files to the list, you can drag &amp; drop files onto the GUI, or for each line in the list, there will be a "..." button that lets you browse and choose a WAV file to add.</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Command-line application</h2>
+<p>The command-line application source is <a class="el" href="cmdLineApp_8cpp.html">cmdLineApp.cpp</a>, and there is a makefile to help build everything in Linux (g++ is used as the compiler). The command-line application takes a command-line option which specifies a filename containing a list of WAV audio files to mix (and the last line is the output filename to use). The command-line also accepts another parameter, -v, to enable verbose output.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Background</h1>
+<p>A WAV audio file consists of a header at the beginning of the file, which contains strings to identify the file type ("RIFF" and "WAVE"), as well as information about the audio contained in the file (number of channels, sample rate, number of bits per channel, size of the data, etc.). Following the header is all of the audio data. Digital audio data is numeric: each sample is an integer that represents the level of the audio signal at that point in time.</p>
+<p>The general idea behind digital audio mixing is fairly simple: Until there are no more audio samples, the next audio sample from each audio file is read, then they're added together and saved to the output file. A bit more needs to be done, though, to deal with digital audio clipping. Digital audio clipping is caused by numeric range limitations of the values due to the sample size (i.e., 8 or 16 bits): When audio sample values are added together (or if the volume is increased), it's possible for the resulting values to go beyond the numeric range of the values. When that happens, the result is (often loud) pops and clicks in the audio, which is undesirable. So, in order to mix WAV files together, mixAudioFiles() (in <a class="el" href="AudioFileTools_8h.html">AudioFileTools.h</a> and .cpp) will first analyze each audio file to determine the highest audio sample, then reduce the volume of all the samples while mixing them to avoid digital audio clipping.</p>
+<p>Wikipedia has <a href="https://en.wikipedia.org/wiki/Clipping_(audio)" target="_blank">an article on audio clipping</a> that describes it in more detail.</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Using the code</h2>
+<p>The AudioFile class is a parent class for working with audio files, with some pure virtual methods to be implemented in derived classes, such as the included WAVFile class. The WAVFile class can open, read, and write WAV audio. Most of the class methods return an AudioFileResultType, which can be used as if it was a bool (in an 'if' statement, for instance), and if it's false, it contains error messages in the form of std::string.</p>
+<p>The following are some of the more important methods in the WAVFile class:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">WAVFile(const std::string&amp; pFilename)   </td><td class="markdownTableBodyNone">Constructor that takes a filename    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">WAVFile(const std::string&amp; pFilename, const WAVFileInfo&amp; pWAVFileInfo)   </td><td class="markdownTableBodyNone">Constructor that takes a filename and a WAVFileInfo objecct specifying the desired properties of the WAV file (sample rate, bit rate, number of channels, etc.)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">WAVFile(const std::string&amp; pFilename, AudioFileModes pFileMode)   </td><td class="markdownTableBodyNone">Constructor that takes a filename and a file mode (read, write, read/write)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">template &lt;class SampleType&gt; AudioFileResultType getNextSample(SampleType&amp; pAudioSample)   </td><td class="markdownTableBodyNone">A templatized method that reads the next sample from the audio file (if it's open in read or read/write mode). For the template, the proper data type must be used (for instance, for 16-bit audio, you can use uint16_t.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">template &lt;class SampleType&gt; AudioFileResultType writeSample(SampleType pAudioSample)   </td><td class="markdownTableBodyNone">A templated method that writes an audio sample to the WAV file (if it's open in write or read/write mode). For the template, the proper data type must be used (for instance, for 16-bit audio, you can use uint16_t.   </td></tr>
+</table>
+<p>These are some important methods in the AudioFile class, which are pure virtual:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">virtual AudioFileResultType getNextSample_int64(int64_t&amp; pAudioSample)   </td><td class="markdownTableBodyNone">Reads the next audio sample from the audio file (if in read or read/write mode). The audio sample is cast to an int64 so that it can be used in generic algorithms - Whether the audio data is 8-bit, 16-bit, or another bitness, the audio sample is cast to 64-bit.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">virtual AudioFileResultType writeSample_int64(int64_t pAudioSample)   </td><td class="markdownTableBodyNone">Writes an audio sample to the audio file (if in write or read/write mode). The sample parameter is an int64_t but will be cast down to the appropriate type when writing the sampel to the audio file. This is to make generic audio algorithms simpler - Whether the audio data is 8-bit, 16-bit, or another bitness, the audio sample is cast down to the appropriate type.   </td></tr>
+</table>
+<p><a class="el" href="AudioFileTools_8h.html">AudioFileTools.h</a> and <a class="el" href="AudioFileTools_8cpp.html">AudioFileTools.cpp</a> defines the following function (among others):</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">AudioFileResultType mixAudioFiles(const std::vector&lt;std::string&gt;&amp; pFilenames, AudioFile&amp; pOutFile)   </td><td class="markdownTableBodyNone">Mixes multiple audio files into a single audio file. The pFilenames parameter is a vector of strings containing the source filenames, and pOutFile is an AudioFile object representing the audio file where the mixed audio file will be saved. pOutFile is an AudioFile so that the calling code can decide what format the mixed file should be, and mixAudioFiles() will be able to work with it. Currently, only WAV is implemented, but in the future, other audio file formats (such as FLAC, AIF, etc.) could be implemented. Mixing audio files can take some time (due to the file I/O), so if you're using this in a GUI application, it's recommended to do the mixing in a separate thread so that the GUI doesn't freeze.   </td></tr>
+</table>
+<p>The WAVFileInfo and AudioFileInfo classes contain information about the audio files, such as bitness, number of channels, sample rate, etc.</p>
+<p>An example of opening a WAV file and looping through to get each audio sample (assuming the audio file contains 16-bit audio): </p><div class="fragment"><div class="line"> ++</div>
+<div class="line">WAVFile audioFile(<span class="stringliteral">&quot;someAudioFile.wav&quot;</span>);</div>
+<div class="line">AudioFileResultType <a class="code hl_variable" href="FLACFileInfo_8cpp.html#a713232f4d992fcdfc804cab77a8bf0f3">result</a> = audioFile.open(AUDIO_FILE_READ);</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code hl_variable" href="FLACFileInfo_8cpp.html#a713232f4d992fcdfc804cab77a8bf0f3">result</a>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">size_t</span> numSamples = audioFile.numSamples();</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; (i &lt; numSamples) &amp;&amp; <a class="code hl_variable" href="FLACFileInfo_8cpp.html#a713232f4d992fcdfc804cab77a8bf0f3">result</a>; ++i)</div>
+<div class="line">    {</div>
+<div class="line">        int16_t audioSample = 0;</div>
+<div class="line">        <a class="code hl_variable" href="FLACFileInfo_8cpp.html#a713232f4d992fcdfc804cab77a8bf0f3">result</a> = audioFile.getNextSample(audioSample);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">    cerr &lt;&lt; <span class="stringliteral">&quot;Error(s) getting audio samples:&quot;</span> &lt;&lt; endl;</div>
+<div class="line">    <a class="code hl_variable" href="FLACFileInfo_8cpp.html#a713232f4d992fcdfc804cab77a8bf0f3">result</a>.outputErrors(cerr);</div>
+<div class="line">}</div>
+<div class="line">audioFile.close();</div>
+<div class="ttc" id="aFLACFileInfo_8cpp_html_a713232f4d992fcdfc804cab77a8bf0f3"><div class="ttname"><a href="FLACFileInfo_8cpp.html#a713232f4d992fcdfc804cab77a8bf0f3">result</a></div><div class="ttdeci">AudioFileResultType * result</div><div class="ttdef"><b>Definition</b> FLACFileInfo.cpp:24</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
+Points of Interest</h2>
+<p>One interesting thing to note is that data in a WAV audio file is always little-endian, per the specification. On big-endian systems, the byte order must be reversed before manipulating the audio data, and the byte order for a sample must be reversed before saving it to a WAV file. My WAVFile class handles this automatically; for example, if the system is big-endian, then when retrieving audio samples from a WAV file or adding a 16-bit sample to a WAV file, the bye order will be automatically reversed so that the data is in the proper order.</p>
+<p>In creating the WAVFile class, it was necessary to look up the WAV file format specification. I found many web pages describing the WAV file format. There were 4 URLs I had referenced when I originally wrote this, but only one still exists today: </p><ul>
+<li>
+<a href="http://www.ringthis.com/dev/wave_format.htm" target="_blank">http://www.ringthis.com/dev/wave_format.htm</a> </li>
+</ul>
+<p>I also have <a href="https://github.com/EricOulashin/audio_mixer_c_sharp" target="_blank">a C# version of this</a> which I originally wrote in April 2009.</p>
+<p>I originally posted this project <a href="https://codeproject.com/articles/Cplusplus-audio-mixing-and-WAV-file-AudioFile-clas" target="_blank">on CodeProject</a>. </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

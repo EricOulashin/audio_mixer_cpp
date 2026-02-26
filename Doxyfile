@@ -78,7 +78,9 @@ WARN_LOGFILE           =
 # configuration options related to the input files
 #---------------------------------------------------------------------------
 INPUT                  = . \
+                         README.md \
                          code
+USE_MDFILE_AS_MAINPAGE = README.md
 FILE_PATTERNS          = *.c \
                          *.cc \
                          *.cxx \
