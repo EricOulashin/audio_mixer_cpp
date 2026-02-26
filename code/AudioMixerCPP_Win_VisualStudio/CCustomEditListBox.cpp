@@ -5,7 +5,7 @@
 void CCustomEditListBox::OnBrowse()
 {
 	int nSel = GetSelItem(); // This needs to be done first in order to be correct
-	const CString filenameFilter = _T("Wave|*.wav||");
+	const CString filenameFilter = _T("Wave|*.wav|FLAC|*.flac||");
 	CString selectedFilename;
 	if (letUserBrowseForOneFile(filenameFilter, selectedFilename, this) == IDOK)
 	{

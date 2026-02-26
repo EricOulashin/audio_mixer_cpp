@@ -14,7 +14,14 @@ AudioFile interface.  That way, other audio formats (such as FLAC and AIF) could
 future and the mixing function would still work.  For mixing audio files, the source audio files will
 need to have the same sample rate and bit rate and same number of channels (mono or stereo).
 
-The C++ FLAC coding library is needed in order to build this (on Linux, the library is called libflac++-dev).
+The C++ FLAC coding library is needed in order to build this:
+<ul>
+<li>On Linux, the library is called libflac-dev and should be installable through your package manager.  There is also a libflac++-dev for C++, though this doesn't use that.
+<li>For Windows, you can download the FLAC project <a href='https://github.com/xiph/flac' target='_blank'>from GitHub</a>; the header files are included, though the library files require building. You can build them with Visual Studio and CMake. I was able to ge them to build with help from Cursor (AI tool).
+</ul>
+
+If you want to build the application for Windows, you will need to set the environment variable FLAC_LIB_DIR to
+contain the directory where the FLAC project (as downloaded from GitHub) is located on your computer.
 
 There are <a href='https://www.doxygen.nl' target='_blank'>Doxygen</a> comments in the source in order to provide
 documentation; there is also a Doxyfile available for building Doxygen-based documentation.
