@@ -42,7 +42,7 @@ namespace EOUtils
 	}
 
 	// This would be pure virtual, but sometimes it has handy to instantiate objects of this class.
-	AudioFileResultType AudioFileInfo::read(std::fstream& pInFStream)
+	AudioFileResultType AudioFileInfo::read(std::fstream& /*pInFStream*/)
 	{
 		AudioFileResultType result;
 		result.addError("read(std::fstream&) called on instance of AudioFileInfo");
@@ -50,7 +50,7 @@ namespace EOUtils
 	}
 
 	// This would be pure virtual, but sometimes it has handy to instantiate objects of this class.
-	AudioFileResultType AudioFileInfo::write(std::fstream& pOutFStream)
+	AudioFileResultType AudioFileInfo::write(std::fstream& /*pOutFStream*/)
 	{
 		AudioFileResultType result;
 		result.addError("write(std::fstream&) called on instance of AudioFileInfo");
