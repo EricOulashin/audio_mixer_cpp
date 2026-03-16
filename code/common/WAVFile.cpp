@@ -63,19 +63,19 @@ namespace EOUtils
 			return result;
 		}
 
-		const bool readMode = hasReadMode();
+		const bool readMode  = hasReadMode();
 		const bool writeMode = hasWriteMode();
 		if (readMode)
 		{
-			// Read-only mode or read & write mode - Read the file header if
-			// the file is big enough.
-			// If the file size is less than the standard WAV header size, then
-			// return an error.
+			// Read-only or read+write mode — read the file header.
+			// Reject files that are obviously too small to contain a WAV header.
 			if (initialFileSize < WAVFileInfo::WAVFileHdrSize())
 			{
 				mFileStream.close();
 				std::ostringstream oss;
-				oss << "The file size (" << initialFileSize << ") is less than a standard WAV header size (" << WAVFileInfo::WAVFileHdrSize() << ")";
+				oss << "The file size (" << initialFileSize
+				    << ") is less than a standard WAV header size ("
+				    << WAVFileInfo::WAVFileHdrSize() << ")";
 				result.addError(oss.str());
 				return result;
 			}
@@ -84,23 +84,34 @@ namespace EOUtils
 			{
 				result = mWAVFileInfo.read(mFileStream);
 				if (result)
-					mDataSizeBytes = initialFileSize - WAVFileInfo::WAVFileHdrSize();
+				{
+					// Use the data size from the parsed header rather than
+					// estimating it from file size, so extra trailing metadata
+					// (or a truncated file) doesn't confuse numSamples().
+					mDataSizeBytes = static_cast<size_t>(mWAVFileInfo.DataSizeBytes());
+				}
 			}
 		}
 		else if (!readMode && writeMode)
 		{
 			if (mWAVFileInfo.BitsPerSample() > 0)
+			{
 				result = mWAVFileInfo.write(mFileStream);
+			}
 			else
 			{
 				mFileStream.close();
 				std::ostringstream oss;
-				oss << "The specified sample size (" << mWAVFileInfo.BitsPerSample() << " bits) is <= 0";
+				oss << "The specified sample size (" << mWAVFileInfo.BitsPerSample()
+				    << " bits) is <= 0";
 				result.addError(oss.str());
 			}
 		}
 		else if (!readMode && !writeMode)
-			result.addError("WAVFile::open() for " + mFilename + ": Open mode has neither read nor write mode");
+		{
+			result.addError("WAVFile::open() for " + mFilename
+			                + ": Open mode has neither read nor write mode");
+		}
 
 		return result;
 	}
@@ -109,18 +120,15 @@ namespace EOUtils
 	{
 		if (mFileStream.is_open())
 		{
-			// If in write mode, set the file size in the header to file size according to stream - 8, then
-			// update the file size in the WAV file before closing the stream
+			// If in write mode, update the file-size and data-size fields in the
+			// WAV header before closing the stream.
 			if (hasWriteMode())
 			{
-				// Write the file size to the WAV file
 				const int32_t fileSize = (int32_t)fileSizeAccordingToStream();
-				// Note: Per the WAV file spec, we need to write file size - 8 bytes.
-				// The header is 44 bytes, and 44 - 8 = 36
+				// Per the WAV spec, the RIFF file-size field holds (total bytes - 8).
 				mWAVFileInfo.updateFileSizeSizeInFile(mFileStream, fileSize - 8);
-
-				// Write the data size to the WAV file
-				mWAVFileInfo.updateDataSizeSizeInFile(mFileStream, fileSize - (int32_t)WAVFileInfo::WAVFileHdrSize());
+				mWAVFileInfo.updateDataSizeSizeInFile(mFileStream,
+				    fileSize - (int32_t)WAVFileInfo::WAVFileHdrSize());
 			}
 			mFileStream.close();
 		}
@@ -149,6 +157,28 @@ namespace EOUtils
 			if (result)
 				pAudioSample = (int64_t)audioSample;
 		}
+		else if (mWAVFileInfo.BitsPerSample() == 24)
+		{
+			if (!mFileStream.is_open())
+			{
+				result.addError("WAVFile::getNextSample_int64(): The file is not open");
+				return result;
+			}
+			if (mFileStream.eof())
+			{
+				result.addError("At end of file");
+				return result;
+			}
+			// 24-bit PCM is stored as 3 little-endian bytes; sign-extend to 64 bits.
+			uint8_t bytes[3] = {0, 0, 0};
+			mFileStream.read(reinterpret_cast<char*>(bytes), 3);
+			int32_t val = static_cast<int32_t>(bytes[0])
+			            | (static_cast<int32_t>(bytes[1]) << 8)
+			            | (static_cast<int32_t>(bytes[2]) << 16);
+			if (val & 0x800000)
+				val |= static_cast<int32_t>(0xFF000000);  // sign-extend
+			pAudioSample = static_cast<int64_t>(val);
+		}
 		else if (mWAVFileInfo.BitsPerSample() == 32)
 		{
 			int32_t audioSample = 0;
@@ -159,7 +189,8 @@ namespace EOUtils
 		else
 		{
 			std::ostringstream oss;
-			oss << "WAVFile::getNextSample_int64(): Unsupported number of bits per sample: " << mWAVFileInfo.BitsPerSample();
+			oss << "WAVFile::getNextSample_int64(): Unsupported number of bits per sample: "
+			    << mWAVFileInfo.BitsPerSample();
 			result.addError(oss.str());
 		}
 		return result;
@@ -169,15 +200,40 @@ namespace EOUtils
 	{
 		AudioFileResultType result;
 		if (mWAVFileInfo.BitsPerSample() == 8)
+		{
 			result = writeSample((uint8_t)pAudioSample);
+		}
 		else if (mWAVFileInfo.BitsPerSample() == 16)
+		{
 			result = writeSample((int16_t)pAudioSample);
+		}
+		else if (mWAVFileInfo.BitsPerSample() == 24)
+		{
+			if (!mFileStream.is_open())
+			{
+				result.addError("WAVFile::writeSample_int64(): The file is not open");
+				return result;
+			}
+			// Clamp to signed 24-bit range [-8388608, 8388607]
+			int32_t val = static_cast<int32_t>(
+			    std::max(static_cast<int64_t>(-8388608),
+			             std::min(static_cast<int64_t>(8388607), pAudioSample)));
+			uint8_t bytes[3];
+			bytes[0] = static_cast<uint8_t>(val & 0xFF);
+			bytes[1] = static_cast<uint8_t>((val >> 8) & 0xFF);
+			bytes[2] = static_cast<uint8_t>((val >> 16) & 0xFF);
+			mFileStream.write(reinterpret_cast<const char*>(bytes), 3);
+			mDataSizeBytes += 3;
+		}
 		else if (mWAVFileInfo.BitsPerSample() == 32)
+		{
 			result = writeSample((int32_t)pAudioSample);
+		}
 		else
 		{
 			std::ostringstream oss;
-			oss << "WAVFile::writeSample_int64(): Unsupported number of bits per sample: " << mWAVFileInfo.BitsPerSample();
+			oss << "WAVFile::writeSample_int64(): Unsupported number of bits per sample: "
+			    << mWAVFileInfo.BitsPerSample();
 			result.addError(oss.str());
 		}
 		return result;
@@ -201,6 +257,22 @@ namespace EOUtils
 			if (result)
 				pHighestAudioSample = (int64_t)highestAudioSample;
 		}
+		else if (mWAVFileInfo.BitsPerSample() == 24)
+		{
+			goToAudioDataPos();
+			const size_t numSmp = numSamples();
+			int64_t highest = 0;
+			for (size_t i = 0; i < numSmp && result; ++i)
+			{
+				int64_t sample = 0;
+				result = getNextSample_int64(sample);
+				if (result && sample > highest)
+					highest = sample;
+			}
+			if (result)
+				pHighestAudioSample = highest;
+			goToAudioDataPos();
+		}
 		else if (mWAVFileInfo.BitsPerSample() == 32)
 		{
 			int32_t highestAudioSample = 0;
@@ -211,7 +283,8 @@ namespace EOUtils
 		else
 		{
 			std::ostringstream oss;
-			oss << "WAVFile::getHighestSampleValue_int64(): Unsupported number of bits per sample: " << mWAVFileInfo.BitsPerSample();
+			oss << "WAVFile::getHighestSampleValue_int64(): Unsupported number of bits per sample: "
+			    << mWAVFileInfo.BitsPerSample();
 			result.addError(oss.str());
 		}
 		return result;
@@ -221,19 +294,26 @@ namespace EOUtils
 	{
 		AudioFileResultType result;
 		if (mFileStream.is_open())
-			mFileStream.seekg(WAVFileInfo::WAVFileHdrSize());
+		{
+			// Use the actual data offset recorded when the header was parsed
+			// (may be > 44 for WAV files with extra chunks before "data").
+			mFileStream.seekg(static_cast<std::streamoff>(mWAVFileInfo.AudioDataOffset()));
+		}
 		else
+		{
 			result.addError("WAVFile::goToAudioDataPos(): The file is not open");
+		}
 		return result;
 	}
 
 	size_t WAVFile::numSamples() const
 	{
 		if (mWAVFileInfo.BytesPerSample() > 0)
-			return(mDataSizeBytes / mWAVFileInfo.BytesPerSample());
+			return (mDataSizeBytes / mWAVFileInfo.BytesPerSample());
 		else
 		{
-			string msg = "WAVFile::numSamples() division by 0: Bytes per sample is 0 for " + mFilename;
+			string msg = "WAVFile::numSamples() division by 0: Bytes per sample is 0 for "
+			           + mFilename;
 			throw std::logic_error(msg.c_str());
 		}
 	}
@@ -249,6 +329,9 @@ namespace EOUtils
 			case 16:
 				maxVal = EOUtils::maxValue<int16_t>();
 				break;
+			case 24:
+				maxVal = 8388607;  // 2^23 - 1
+				break;
 			case 32:
 				maxVal = EOUtils::maxValue<int32_t>();
 				break;
@@ -259,7 +342,7 @@ namespace EOUtils
 	void WAVFile::seekOutputToSampleNum(size_t pSampleNum)
 	{
 		const int64_t numBytesOfMovement = pSampleNum * (int64_t)mWAVFileInfo.BytesPerSample();
-		mFileStream.seekp(WAVFileInfo::WAVFileHdrSize() + numBytesOfMovement);
+		mFileStream.seekp(mWAVFileInfo.AudioDataOffset() + numBytesOfMovement);
 	}
 
 	AudioFileInfo WAVFile::getAudioFileInfo() const

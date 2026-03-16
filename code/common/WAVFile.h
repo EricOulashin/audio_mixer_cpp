@@ -143,7 +143,7 @@ namespace EOUtils
 						reverseBytes((void*)&pAudioSample, sizeof(pAudioSample));
 					const size_t sampleSize = (mWAVFileInfo.BytesPerSample() < sizeof(pAudioSample) ? mWAVFileInfo.BytesPerSample() : sizeof(pAudioSample));
 					mFileStream.write((const char*)&pAudioSample, sampleSize);
-					mDataSizeBytes += sizeof(pAudioSample);
+					mDataSizeBytes += sampleSize;
 				}
 				else
 					result.addError("WAVFile::writeSample(): The file is not open");

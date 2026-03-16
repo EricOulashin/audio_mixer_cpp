@@ -78,12 +78,15 @@ namespace EOUtils
 
 			static bool isWAVFile(const char* pFilename);
 
+		int32_t AudioDataOffset() const;
+
 		private:
 			char mWAVHeader[4];     // The WAV header (4 bytes, "RIFF")
 			char mRIFFType[4];      // The RIFF type (4 bytes, "WAVE")
 			char mSubchunk2ID[4];
 			int32_t mSubchunk2Size;
 			int32_t mDataSizeBytes;
+			int32_t mAudioDataOffset;  // byte offset where audio sample data begins
 	};
 }
 
