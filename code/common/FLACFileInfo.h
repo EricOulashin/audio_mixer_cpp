@@ -44,7 +44,7 @@ namespace EOUtils
 			/**
 			 * @brief Reads FLAC stream info from a file by filename
 			 */
-			AudioFileResultType read(const char* pFilename);
+			AudioFileResultType read(const char* pFilename) override;
 
 			/**
 			 * @brief Check if the given file is a FLAC file (has "fLaC" signature)

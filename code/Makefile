@@ -6,17 +6,21 @@
 OS := $(shell uname)
 
 CXX := g++
-LDFLAGS := -lFLAC
 
 # Platform-specific settings
 # macOS (Darwin): g++ is actually clang, so avoid GCC-specific flags.
+# Homebrew installs libraries to a prefix that the compiler does not search
+# by default (/opt/homebrew on Apple Silicon, /usr/local on Intel).
 # Dynamic library is .dylib on macOS, .so on Linux/BSD/etc.
 ifeq ($(OS),Darwin)
-	CXXFLAGS := -std=c++17 -O2 -Wall -Wextra -fPIC
+	BREW_PREFIX := $(shell brew --prefix)
+	CXXFLAGS := -std=c++17 -O2 -Wall -Wextra -fPIC -I$(BREW_PREFIX)/include
+	LDFLAGS := -L$(BREW_PREFIX)/lib -lFLAC
 	DYNAMIC_LIB := libaudiomixer.dylib
 	DYNAMIC_LDFLAGS := -dynamiclib -install_name $(DYNAMIC_LIB)
 else
 	CXXFLAGS := -std=c++17 -O2 -Wall -Wextra -fPIC -fno-aggressive-loop-optimizations
+	LDFLAGS := -lFLAC
 	DYNAMIC_LIB := libaudiomixer.so
 	DYNAMIC_LDFLAGS := -shared -Wl,-soname,$(DYNAMIC_LIB)
 endif

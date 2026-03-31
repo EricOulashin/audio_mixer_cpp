@@ -64,9 +64,9 @@ namespace EOUtils
 
 			int32_t DataSizeBytes() const;
 
-			int16_t BitsPerSample() const;
+			int16_t BitsPerSample() const override;
 
-			void BitsPerSample(int16_t pBitsPerSample);
+			void BitsPerSample(int16_t pBitsPerSample) override;
 
 			void SetWAVHeaderAndRIFFType();
 

@@ -424,3 +424,9 @@ FodyWeavers.xsd
 EO_CPP_audio_mixer.tag
 
 code/audioMixer
+
+# *nix-style library files
+code/libaudiomixer.a
+code/libaudiomixer.so
+code/libaudiomixer.dylib
+
