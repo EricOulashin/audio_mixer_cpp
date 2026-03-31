@@ -3,7 +3,7 @@
 
 #include <cstdint>
 
-#include "AudioFile.h"
+#include "MetadataAudioFile.h"
 #include "FLACFileInfo.h"
 #include "AudioFileResultType.h"
 #include "EOUtils.h"
@@ -14,7 +14,7 @@
 
 namespace EOUtils
 {
-	class FLACFile : public AudioFile
+	class FLACFile : public MetadataAudioFile
 	{
 		public:
 			/**
@@ -157,6 +157,23 @@ namespace EOUtils
 			 */
 			AudioFileInfo getAudioFileInfo() const override;
 
+			// MetadataAudioFile overrides for FLAC Vorbis Comment metadata
+			AudioFileResultType setTitle(const std::string& pTitle) override;
+			AudioFileResultType setArtist(const std::string& pArtist) override;
+			AudioFileResultType setAlbum(const std::string& pAlbum) override;
+			AudioFileResultType setGenre(const std::string& pGenre) override;
+			AudioFileResultType setTrackNumber(uint32_t pTrackNumber, uint32_t pTotalTracks = 0) override;
+			AudioFileResultType setYear(const std::string& pYear) override;
+			AudioFileResultType setComment(const std::string& pComment) override;
+
+			AudioFileResultType getTitle(std::string& pTitle) const override;
+			AudioFileResultType getArtist(std::string& pArtist) const override;
+			AudioFileResultType getAlbum(std::string& pAlbum) const override;
+			AudioFileResultType getGenre(std::string& pGenre) const override;
+			AudioFileResultType getTrackNumber(uint32_t& pTrackNumber, uint32_t& pTotalTracks) const override;
+			AudioFileResultType getYear(std::string& pYear) const override;
+			AudioFileResultType getComment(std::string& pComment) const override;
+
 			/**
 			 * @brief Used by FLAC decoder callbacks (same layout as FLAC client data)
 			 */
@@ -190,6 +207,10 @@ namespace EOUtils
 
 			// Persistent client data for FLAC decoder callbacks (must outlive open())
 			DecoderClientData mDecoderClientData;
+
+			// Helpers for reading/writing FLAC Vorbis Comment metadata
+			AudioFileResultType setVorbisComment(const std::string& pTagName, const std::string& pValue);
+			AudioFileResultType getVorbisComment(const std::string& pTagName, std::string& pValue) const;
 		};
 }
 

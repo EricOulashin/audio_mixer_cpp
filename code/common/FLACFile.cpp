@@ -10,6 +10,7 @@
 extern "C" {
 #include <FLAC/stream_decoder.h>
 #include <FLAC/stream_encoder.h>
+#include <FLAC/metadata.h>
 }
 
 using std::logic_error;
@@ -136,7 +137,7 @@ namespace EOUtils
 	}
 
 	FLACFile::FLACFile(const string& pFilename)
-		: AudioFile(pFilename),
+		: MetadataAudioFile(pFilename),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
 		  mDecodePosition(0)
@@ -144,7 +145,7 @@ namespace EOUtils
 	}
 
 	FLACFile::FLACFile(const string& pFilenam, uint32_t pCompressionLevel)
-		: AudioFile(pFilenam),
+		: MetadataAudioFile(pFilenam),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
 		  mDecodePosition(0)
@@ -153,7 +154,7 @@ namespace EOUtils
 	}
 
 	FLACFile::FLACFile(const string& pFilename, const FLACFileInfo& pFLACFileInfo)
-		: AudioFile(pFilename),
+		: MetadataAudioFile(pFilename),
 		  mFLACFileInfo(pFLACFileInfo),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
@@ -162,7 +163,7 @@ namespace EOUtils
 	}
 
 	FLACFile::FLACFile(const string& pFilename, AudioFileModes pFileMode)
-		: AudioFile(pFilename, pFileMode),
+		: MetadataAudioFile(pFilename, pFileMode),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
 		  mDecodePosition(0)
@@ -170,7 +171,7 @@ namespace EOUtils
 	}
 
 	FLACFile::FLACFile(const FLACFile& pFLACFile)
-		: AudioFile(pFLACFile),
+		: MetadataAudioFile(pFLACFile),
 		  mFLACFileInfo(pFLACFile.mFLACFileInfo),
 		  mReadBufferChannel(0),
 		  mReadBufferSample(0),
@@ -179,7 +180,7 @@ namespace EOUtils
 	}
 
 	FLACFile::FLACFile(FLACFile&& pFLACFile) noexcept
-		: AudioFile(pFLACFile),
+		: MetadataAudioFile(pFLACFile),
 		  mFLACFileInfo(std::move(pFLACFile.mFLACFileInfo)),
 		  mReadBuffer(std::move(pFLACFile.mReadBuffer)),
 		  mReadBufferChannel(pFLACFile.mReadBufferChannel),
@@ -650,5 +651,265 @@ namespace EOUtils
 	AudioFileInfo FLACFile::getAudioFileInfo() const
 	{
 		return mFLACFileInfo;
+	}
+
+	// Private helpers for FLAC Vorbis Comment metadata
+
+	AudioFileResultType FLACFile::setVorbisComment(const string& pTagName, const string& pValue)
+	{
+		AudioFileResultType result;
+
+		FLAC__Metadata_Chain* chain = FLAC__metadata_chain_new();
+		if (!chain)
+		{
+			result.addError("FLACFile::setVorbisComment(): Failed to create metadata chain");
+			return result;
+		}
+
+		if (!FLAC__metadata_chain_read(chain, mFilename.c_str()))
+		{
+			result.addError("FLACFile::setVorbisComment(): Failed to read metadata chain from " + mFilename);
+			FLAC__metadata_chain_delete(chain);
+			return result;
+		}
+
+		FLAC__Metadata_Iterator* iter = FLAC__metadata_iterator_new();
+		if (!iter)
+		{
+			result.addError("FLACFile::setVorbisComment(): Failed to create metadata iterator");
+			FLAC__metadata_chain_delete(chain);
+			return result;
+		}
+
+		FLAC__metadata_iterator_init(iter, chain);
+
+		// Find existing VORBIS_COMMENT block
+		FLAC__StreamMetadata* block = nullptr;
+		do
+		{
+			block = FLAC__metadata_iterator_get_block(iter);
+			if (block->type == FLAC__METADATA_TYPE_VORBIS_COMMENT)
+				break;
+			block = nullptr;
+		} while (FLAC__metadata_iterator_next(iter));
+
+		if (!block)
+		{
+			// Create a new VORBIS_COMMENT block
+			block = FLAC__metadata_object_new(FLAC__METADATA_TYPE_VORBIS_COMMENT);
+			if (!block || !FLAC__metadata_iterator_insert_block_after(iter, block))
+			{
+				result.addError("FLACFile::setVorbisComment(): Failed to create Vorbis Comment block");
+				if (block)
+					FLAC__metadata_object_delete(block);
+				FLAC__metadata_iterator_delete(iter);
+				FLAC__metadata_chain_delete(chain);
+				return result;
+			}
+		}
+
+		// Build the entry string: "TAGNAME=value"
+		string entryStr = pTagName + "=" + pValue;
+		FLAC__StreamMetadata_VorbisComment_Entry entry;
+		entry.length = static_cast<FLAC__uint32>(entryStr.size());
+		entry.entry = reinterpret_cast<FLAC__byte*>(const_cast<char*>(entryStr.c_str()));
+
+		// Update existing entry or append a new one
+		int entryIdx = FLAC__metadata_object_vorbiscomment_find_entry_from(block, 0, pTagName.c_str());
+		if (entryIdx >= 0)
+		{
+			if (!FLAC__metadata_object_vorbiscomment_set_comment(block, static_cast<uint32_t>(entryIdx), entry, /*copy=*/true))
+			{
+				result.addError("FLACFile::setVorbisComment(): Failed to update Vorbis Comment entry for " + pTagName);
+				FLAC__metadata_iterator_delete(iter);
+				FLAC__metadata_chain_delete(chain);
+				return result;
+			}
+		}
+		else
+		{
+			if (!FLAC__metadata_object_vorbiscomment_append_comment(block, entry, /*copy=*/true))
+			{
+				result.addError("FLACFile::setVorbisComment(): Failed to append Vorbis Comment entry for " + pTagName);
+				FLAC__metadata_iterator_delete(iter);
+				FLAC__metadata_chain_delete(chain);
+				return result;
+			}
+		}
+
+		// Write the updated metadata back to the file
+		if (!FLAC__metadata_chain_write(chain, /*use_padding=*/true, /*preserve_file_stats=*/false))
+		{
+			result.addError("FLACFile::setVorbisComment(): Failed to write metadata to " + mFilename);
+		}
+
+		FLAC__metadata_iterator_delete(iter);
+		FLAC__metadata_chain_delete(chain);
+		return result;
+	}
+
+	AudioFileResultType FLACFile::getVorbisComment(const string& pTagName, string& pValue) const
+	{
+		AudioFileResultType result;
+		pValue.clear();
+
+		FLAC__Metadata_Chain* chain = FLAC__metadata_chain_new();
+		if (!chain)
+		{
+			result.addError("FLACFile::getVorbisComment(): Failed to create metadata chain");
+			return result;
+		}
+
+		if (!FLAC__metadata_chain_read(chain, mFilename.c_str()))
+		{
+			result.addError("FLACFile::getVorbisComment(): Failed to read metadata chain from " + mFilename);
+			FLAC__metadata_chain_delete(chain);
+			return result;
+		}
+
+		FLAC__Metadata_Iterator* iter = FLAC__metadata_iterator_new();
+		if (!iter)
+		{
+			result.addError("FLACFile::getVorbisComment(): Failed to create metadata iterator");
+			FLAC__metadata_chain_delete(chain);
+			return result;
+		}
+
+		FLAC__metadata_iterator_init(iter, chain);
+
+		// Find the VORBIS_COMMENT block
+		FLAC__StreamMetadata* block = nullptr;
+		do
+		{
+			block = FLAC__metadata_iterator_get_block(iter);
+			if (block->type == FLAC__METADATA_TYPE_VORBIS_COMMENT)
+				break;
+			block = nullptr;
+		} while (FLAC__metadata_iterator_next(iter));
+
+		if (block)
+		{
+			int idx = FLAC__metadata_object_vorbiscomment_find_entry_from(block, 0, pTagName.c_str());
+			if (idx >= 0)
+			{
+				const char* entryChars = reinterpret_cast<const char*>(block->data.vorbis_comment.comments[idx].entry);
+				const char* eq = strchr(entryChars, '=');
+				if (eq)
+					pValue = string(eq + 1);
+			}
+			else
+			{
+				result.addError("FLACFile::getVorbisComment(): Tag '" + pTagName + "' not found in " + mFilename);
+			}
+		}
+		else
+		{
+			result.addError("FLACFile::getVorbisComment(): No Vorbis Comment block found in " + mFilename);
+		}
+
+		FLAC__metadata_iterator_delete(iter);
+		FLAC__metadata_chain_delete(chain);
+		return result;
+	}
+
+	// MetadataAudioFile overrides - setters
+
+	AudioFileResultType FLACFile::setTitle(const string& pTitle)
+	{
+		return setVorbisComment("TITLE", pTitle);
+	}
+
+	AudioFileResultType FLACFile::setArtist(const string& pArtist)
+	{
+		return setVorbisComment("ARTIST", pArtist);
+	}
+
+	AudioFileResultType FLACFile::setAlbum(const string& pAlbum)
+	{
+		return setVorbisComment("ALBUM", pAlbum);
+	}
+
+	AudioFileResultType FLACFile::setGenre(const string& pGenre)
+	{
+		return setVorbisComment("GENRE", pGenre);
+	}
+
+	AudioFileResultType FLACFile::setTrackNumber(uint32_t pTrackNumber, uint32_t pTotalTracks)
+	{
+		string trackStr = std::to_string(pTrackNumber);
+		if (pTotalTracks > 0)
+			trackStr += "/" + std::to_string(pTotalTracks);
+		return setVorbisComment("TRACKNUMBER", trackStr);
+	}
+
+	AudioFileResultType FLACFile::setYear(const string& pYear)
+	{
+		return setVorbisComment("DATE", pYear);
+	}
+
+	AudioFileResultType FLACFile::setComment(const string& pComment)
+	{
+		return setVorbisComment("COMMENT", pComment);
+	}
+
+	// MetadataAudioFile overrides - getters
+
+	AudioFileResultType FLACFile::getTitle(string& pTitle) const
+	{
+		return getVorbisComment("TITLE", pTitle);
+	}
+
+	AudioFileResultType FLACFile::getArtist(string& pArtist) const
+	{
+		return getVorbisComment("ARTIST", pArtist);
+	}
+
+	AudioFileResultType FLACFile::getAlbum(string& pAlbum) const
+	{
+		return getVorbisComment("ALBUM", pAlbum);
+	}
+
+	AudioFileResultType FLACFile::getGenre(string& pGenre) const
+	{
+		return getVorbisComment("GENRE", pGenre);
+	}
+
+	AudioFileResultType FLACFile::getTrackNumber(uint32_t& pTrackNumber, uint32_t& pTotalTracks) const
+	{
+		pTrackNumber = 0;
+		pTotalTracks = 0;
+		string value;
+		AudioFileResultType result = getVorbisComment("TRACKNUMBER", value);
+		if (result && !value.empty())
+		{
+			try
+			{
+				size_t slashPos = value.find('/');
+				if (slashPos != string::npos)
+				{
+					pTrackNumber = static_cast<uint32_t>(std::stoul(value.substr(0, slashPos)));
+					pTotalTracks = static_cast<uint32_t>(std::stoul(value.substr(slashPos + 1)));
+				}
+				else
+				{
+					pTrackNumber = static_cast<uint32_t>(std::stoul(value));
+				}
+			}
+			catch (...)
+			{
+				result.addError("FLACFile::getTrackNumber(): Invalid track number value: " + value);
+			}
+		}
+		return result;
+	}
+
+	AudioFileResultType FLACFile::getYear(string& pYear) const
+	{
+		return getVorbisComment("DATE", pYear);
+	}
+
+	AudioFileResultType FLACFile::getComment(string& pComment) const
+	{
+		return getVorbisComment("COMMENT", pComment);
 	}
 }
