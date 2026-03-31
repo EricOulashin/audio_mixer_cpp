@@ -180,7 +180,7 @@ namespace EOUtils
 			template<typename T>
 			T getMetadataAs(const std::string& pName) const
 			{
-				T value;
+				T value{};
 				std::map<std::string, std::string>::const_iterator iterator = mMetadata.find(pName);
 				if (iterator != mMetadata.end())
 				{

@@ -24,6 +24,8 @@ namespace EOUtils
 			 */
 			AudioFileInfo(int16_t pNumChannels = 0, int32_t pSampleRateHz = 0, int32_t pBytesPerSecond = 0, int16_t pByteRate = 0, int16_t pBitsPerSample = 0);
 
+			virtual ~AudioFileInfo() = default;
+
 			/**
 			 * @brief Copies the values from another AudioFileInfo object
 			 *
