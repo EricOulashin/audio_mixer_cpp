@@ -7,9 +7,8 @@ successful decode support in your toolchain.
 The code uses modern C++ features, such as std::thread, a lambda function, std::shared_ptr, and a
 modern way of iterating through a collection.
 
-This project includes C++ classes that can be used to open, read, and write **WAV** and **FLAC** audio files.
-I wrote the WAVFile class from scratch, and I used AI (Cursor) to create the FLACFile class. Currently,
-the FLACFile class defaults to maximum FLAC compression.
+I wrote the WAVFile class from scratch, and I used AI (Cursor) to create the classes for FLAC, MP3, Ogg,
+and aiff files.
 
 **MP3 (MPEG layer III), Ogg Vorbis (in Ogg container),** and **AIFF** PCM are implemented in `code/common`
 via **libsndfile**: `MP3File`, `OggFile`, and `AiffFile` derive from `MetadataAudioFile`, through a shared
