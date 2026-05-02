@@ -65,6 +65,14 @@ jobs:
       - name: Add MSBuild to PATH
         uses: microsoft/setup-msbuild@v2
 
+      # Headers + sndfile.lib for SndFileBackedMetadataAudioFile (matches vcxproj LibSndFileInstalledRoot defaults).
+      - name: Install libsndfile (vcpkg x64-windows)
+        shell: pwsh
+        run: |
+          $root = $env:VCPKG_INSTALLATION_ROOT
+          if (-not $root) { $root = 'C:\vcpkg' }
+          & "$root\vcpkg.exe" install libsndfile:x64-windows --recurse
+
       - name: Build AudioMixerCPP.sln
         working-directory: code
         env:
