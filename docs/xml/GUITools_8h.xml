@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="GUITools_8h" kind="file" language="C++">
+    <compoundname>GUITools.h</compoundname>
+    <includes local="no">atlstr.h</includes>
+    <includedby refid="AudioMixerCPPDlg_8cpp" local="yes">/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp</includedby>
+    <includedby refid="CCustomEditListBox_8cpp" local="yes">/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/CCustomEditListBox.cpp</includedby>
+    <includedby refid="GUITools_8cpp" local="yes">/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.h</label>
+        <link refid="GUITools_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>atlstr.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp</label>
+        <link refid="AudioMixerCPPDlg_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/CCustomEditListBox.cpp</label>
+        <link refid="CCustomEditListBox_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.cpp</label>
+        <link refid="GUITools_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.h</label>
+        <link refid="GUITools_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="GUITools_8h_1a61047631edbd6b20a4983eefa61f14aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>INT_PTR</type>
+        <definition>INT_PTR letUserBrowseForOneFile</definition>
+        <argsstring>(const CString &amp;pFileFilter, CString &amp;pSelectedFile, CWnd *pParentWnd=nullptr)</argsstring>
+        <name>letUserBrowseForOneFile</name>
+        <param>
+          <type>const CString &amp;</type>
+          <declname>pFileFilter</declname>
+        </param>
+        <param>
+          <type>CString &amp;</type>
+          <declname>pSelectedFile</declname>
+        </param>
+        <param>
+          <type>CWnd *</type>
+          <declname>pParentWnd</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Lets the user select a single file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pFileFilter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename filter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pSelectedFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This will be populated with the selected filename, if the user selected one </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pParentWnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the parent window. Defaults to nullptr. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The status code from the file dialog </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.h" line="13" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.cpp" bodystart="5" bodyend="19" declfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.h" declline="13" declcolumn="9"/>
+        <referencedby refid="classCAudioMixerCPPDlg_1a6372aa0e41bfc9ce3eefaf5754c36830" compoundref="AudioMixerCPPDlg_8cpp" startline="243" endline="248">CAudioMixerCPPDlg::OnClickedButtonSelectOutputFile</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__GUI_TOOLS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__GUI_TOOLS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atlstr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">INT_PTR<sp/><ref refid="GUITools_8h_1a61047631edbd6b20a4983eefa61f14aa" kindref="member">letUserBrowseForOneFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CString&amp;<sp/>pFileFilter,<sp/>CString&amp;<sp/>pSelectedFile,<sp/>CWnd*<sp/>pParentWnd<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.h"/>
+  </compounddef>
+</doxygen>

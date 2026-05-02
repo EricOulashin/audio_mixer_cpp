@@ -38,6 +38,11 @@ namespace EOUtils
 			virtual AudioFileResultType open(AudioFileModes pOpenMode);
 
 			/**
+			 * @brief Returns whether or not the audio file bitrate is adjustable
+			 */
+			virtual bool BitrateIsAdjustable() const = 0;
+
+			/**
 			 * @brief Returns whether or not the audio file is open
 			 */
 			virtual bool isOpen() const;

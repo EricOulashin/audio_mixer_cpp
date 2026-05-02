@@ -1,0 +1,45 @@
+\doxysection{/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\+Snd\+File\+Helpers.h File Reference}
+\label{SndFileHelpers_8h}\index{/home/erico/projects/audio\_mixer\_cpp/code/common/SndFileHelpers.h@{/home/erico/projects/audio\_mixer\_cpp/code/common/SndFileHelpers.h}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$sndfile.\+h$>$}\newline
+{\ttfamily \#include "{}Audio\+File\+Info.\+h"{}}\newline
+{\ttfamily \#include "{}Audio\+File\+Result\+Type.\+h"{}}\newline
+Include dependency graph for Snd\+File\+Helpers.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SndFileHelpers_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SndFileHelpers_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \textbf{ EOUtils}
+\item 
+namespace \textbf{ EOUtils\+::sndfile\+\_\+detail}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ EOUtils\+::sndfile\+\_\+detail\+::sf\+Info\+To\+Audio\+File\+Info} (const SF\+\_\+\+INFO \&p\+Sf, std\+::uintmax\+\_\+t p\+File\+Size\+Bytes, \textbf{ Audio\+File\+Info} \&p\+Out)
+\begin{DoxyCompactList}\small\item\em Fills \doxyref{Audio\+File\+Info}{p.}{classEOUtils_1_1AudioFileInfo} from libsndfile SF\+\_\+\+INFO and optional file size. \end{DoxyCompactList}\item 
+int16\+\_\+t \textbf{ EOUtils\+::sndfile\+\_\+detail\+::effective\+Bits\+Per\+Sample} (int p\+Sf\+Format\+Full)
+\begin{DoxyCompactList}\small\item\em Nominal bits per sample for decoded/interleaved int I/O via libsndfile. \end{DoxyCompactList}\item 
+int64\+\_\+t \textbf{ EOUtils\+::sndfile\+\_\+detail\+::max\+Sample\+Value\+For\+Format} (int16\+\_\+t p\+Bits\+Per\+Sample)
+\begin{DoxyCompactList}\small\item\em Maximum PCM magnitude for clamping ints passed to sf\+\_\+writef\+\_\+$\ast$. \end{DoxyCompactList}\item 
+std\+::string \textbf{ EOUtils\+::sndfile\+\_\+detail\+::format\+Error\+Suffix} (SNDFILE $\ast$p\+Snd\+Or\+Null)
+\item 
+bool \textbf{ EOUtils\+::sndfile\+\_\+detail\+::format\+Has\+Major\+Minor} (int p\+Full\+Format, int p\+Major\+Mask, int p\+Minor\+Mask)
+\item 
+std\+::uintmax\+\_\+t \textbf{ EOUtils\+::sndfile\+\_\+detail\+::safe\+File\+Size} (const std\+::string \&p\+Path)
+\item 
+std\+::vector$<$ char $>$ \textbf{ EOUtils\+::sndfile\+\_\+detail\+::peek\+File\+Prefix} (const std\+::string \&p\+Path, std\+::size\+\_\+t p\+Max\+Len)
+\end{DoxyCompactItemize}

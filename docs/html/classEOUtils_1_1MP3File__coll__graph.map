@@ -1,0 +1,25 @@
+<map id="EOUtils::MP3File" name="EOUtils::MP3File">
+<area shape="rect" id="Node000001" title=" " alt="" coords="233,1609,458,2111"/>
+<area shape="rect" id="Node000002" href="$classEOUtils_1_1SndFileBackedMetadataAudioFile.html" title="Shared libsndfile&#45;backed implementation used by MP3, Ogg Vorbis, and AIFF codecs." alt="" coords="242,957,449,1560"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="346,1572,348,1610,343,1609,345,1578"/>
+<area shape="rect" id="Node000003" href="$classEOUtils_1_1MetadataAudioFile.html" title="Abstract class that extends AudioFile with pure virtual methods for adding/updating common audio meta..." alt="" coords="170,603,342,885"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="283,897,296,958,290,958,283,903"/>
+<area shape="rect" id="Node000004" href="$classEOUtils_1_1AudioFile.html" title=" " alt="" coords="162,163,350,488"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="256,500,259,603,253,603,256,505"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,13,48,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="39,80,55,110,71,137,109,185,152,230,147,232,105,188,67,140,50,112,40,85"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="109,13,163,83"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="144,80,164,138,168,147,163,148,159,140,144,85"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="221,13,291,83"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="256,80,259,146,253,145,256,85"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="374,13,420,83"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="388,85,370,140,361,160,356,158,366,138,389,80"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="477,5,608,91"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="530,93,519,118,499,141,483,150,468,155,440,155,413,154,398,157,383,165,366,177,361,174,380,160,397,152,412,149,440,150,467,149,481,145,496,137,515,115,532,88"/>
+<area shape="rect" id="Node000010" href="$classEOUtils_1_1AudioFileInfo.html" title=" " alt="" coords="367,603,508,885"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="413,883,405,942,400,940,412,888"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="394,291,444,360"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="418,357,420,458,423,579,423,586,418,585,417,579,414,458,417,362"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="548,291,598,360"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="575,357,572,460,563,520,546,580,519,637,514,635,542,578,558,519,567,459,574,363"/>
+</map>

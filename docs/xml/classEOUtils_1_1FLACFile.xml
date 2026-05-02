@@ -1,0 +1,1364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classEOUtils_1_1FLACFile" kind="class" language="C++" prot="public">
+    <compoundname>EOUtils::FLACFile</compoundname>
+    <basecompoundref refid="classEOUtils_1_1MetadataAudioFile" prot="public" virt="non-virtual">EOUtils::MetadataAudioFile</basecompoundref>
+    <includes refid="FLACFile_8h" local="no">FLACFile.h</includes>
+    <innerclass refid="structEOUtils_1_1FLACFile_1_1DecoderClientData" prot="public">EOUtils::FLACFile::DecoderClientData</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEOUtils_1_1FLACFile_1a8a9ddfb801a7732a9ef6202768618a5e" prot="private" static="no" mutable="no">
+        <type><ref refid="classEOUtils_1_1FLACFileInfo" kindref="compound">FLACFileInfo</ref></type>
+        <definition>FLACFileInfo EOUtils::FLACFile::mFLACFileInfo</definition>
+        <argsstring></argsstring>
+        <name>mFLACFileInfo</name>
+        <qualifiedname>EOUtils::FLACFile::mFLACFileInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="190" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1FLACFile_1ad9732e41ec3be7eba34ed240131c24c9" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* EOUtils::FLACFile::mDecoder</definition>
+        <argsstring></argsstring>
+        <name>mDecoder</name>
+        <qualifiedname>EOUtils::FLACFile::mDecoder</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="193" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1FLACFile_1a378c8ce997acd6b8edc8d46db1cb01cd" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* EOUtils::FLACFile::mEncoder</definition>
+        <argsstring></argsstring>
+        <name>mEncoder</name>
+        <qualifiedname>EOUtils::FLACFile::mEncoder</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="194" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1FLACFile_1ae01d2569dd15a320d5d418497d72c733" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; int32_t &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;int32_t&gt; &gt; EOUtils::FLACFile::mReadBuffer</definition>
+        <argsstring></argsstring>
+        <name>mReadBuffer</name>
+        <qualifiedname>EOUtils::FLACFile::mReadBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="198" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1FLACFile_1ad13e750c6b8596b15dd96453780f6ded" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t EOUtils::FLACFile::mReadBufferChannel</definition>
+        <argsstring></argsstring>
+        <name>mReadBufferChannel</name>
+        <qualifiedname>EOUtils::FLACFile::mReadBufferChannel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="199" column="8" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1FLACFile_1aba1d648ac37e00333348f3788a037b18" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t EOUtils::FLACFile::mReadBufferSample</definition>
+        <argsstring></argsstring>
+        <name>mReadBufferSample</name>
+        <qualifiedname>EOUtils::FLACFile::mReadBufferSample</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="200" column="8" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1FLACFile_1abaf90574b628fff036f0f51fa4360274" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int32_t &gt;</type>
+        <definition>std::vector&lt;int32_t&gt; EOUtils::FLACFile::mWriteBuffer</definition>
+        <argsstring></argsstring>
+        <name>mWriteBuffer</name>
+        <qualifiedname>EOUtils::FLACFile::mWriteBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="203" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1FLACFile_1a0b40cea48921b0a94e4ab80d77ac8c71" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t EOUtils::FLACFile::mDecodePosition</definition>
+        <argsstring></argsstring>
+        <name>mDecodePosition</name>
+        <qualifiedname>EOUtils::FLACFile::mDecodePosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="206" column="10" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1FLACFile_1a13f134df6f19c435afa6f89654d209ce" prot="private" static="no" mutable="no">
+        <type><ref refid="structEOUtils_1_1FLACFile_1_1DecoderClientData" kindref="compound">DecoderClientData</ref></type>
+        <definition>DecoderClientData EOUtils::FLACFile::mDecoderClientData</definition>
+        <argsstring></argsstring>
+        <name>mDecoderClientData</name>
+        <qualifiedname>EOUtils::FLACFile::mDecoderClientData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="209" column="19" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a103ca48a11951261ed8583f6aa0f9453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::FLACFile::FLACFile</definition>
+        <argsstring>(const std::string &amp;pFilename)</argsstring>
+        <name>FLACFile</name>
+        <qualifiedname>EOUtils::FLACFile::FLACFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for opening an existing FLAC file for reading, which just takes the filename. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the FLAC file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="26" column="1"/>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a1ab449b1e691db5d7481884b75b71ea3" compoundref="FLACFile_8cpp" startline="173" endline="180">FLACFile</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1ae06baf4bb1f6b91457687e424ae8745a">FLACFile</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1ad4b9b7175d3def12da99c48f2e883b3e" compoundref="FLACFile_8cpp" startline="182" endline="195">FLACFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a3eb257712343b021d5210a0511371d3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::FLACFile::FLACFile</definition>
+        <argsstring>(const std::string &amp;pFilenam, uint32_t pCompressionLevel)</argsstring>
+        <name>FLACFile</name>
+        <qualifiedname>EOUtils::FLACFile::FLACFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilenam</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>pCompressionLevel</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for opening an existing FLAC file for reading, which takes the filename and a compression level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the FLAC file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pCompressionLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compression level to use when writing FLAC files (0-8, where 0 is fastest and 8 is maximum compression) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1aa3f19ba9d5383cb8f6ad640a85ff0245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::FLACFile::FLACFile</definition>
+        <argsstring>(const std::string &amp;pFilename, const FLACFileInfo &amp;pFLACFileInfo)</argsstring>
+        <name>FLACFile</name>
+        <qualifiedname>EOUtils::FLACFile::FLACFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classEOUtils_1_1FLACFileInfo" kindref="compound">FLACFileInfo</ref> &amp;</type>
+          <declname>pFLACFileInfo</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for opening an existing FLAC file for reading. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the FLAC file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pFLACFileInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object containing information about the new FLAC file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1ae06baf4bb1f6b91457687e424ae8745a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::FLACFile::FLACFile</definition>
+        <argsstring>(const std::string &amp;pFilename, AudioFileModes pFileMode)</argsstring>
+        <name>FLACFile</name>
+        <qualifiedname>EOUtils::FLACFile::FLACFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758c" kindref="member">AudioFileModes</ref></type>
+          <declname>pFileMode</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for opening a FLAC file for reading or writing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the FLAC file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pFileMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode to open the file in (read, write, or read/write) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="50" column="1"/>
+        <references refid="classEOUtils_1_1FLACFile_1a103ca48a11951261ed8583f6aa0f9453">FLACFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a1ab449b1e691db5d7481884b75b71ea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::FLACFile::FLACFile</definition>
+        <argsstring>(const FLACFile &amp;pFLACFile)</argsstring>
+        <name>FLACFile</name>
+        <qualifiedname>EOUtils::FLACFile::FLACFile</qualifiedname>
+        <param>
+          <type>const <ref refid="classFLACFile" kindref="compound">FLACFile</ref> &amp;</type>
+          <declname>pFLACFile</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="55" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="173" bodyend="180"/>
+        <references refid="classEOUtils_1_1FLACFile_1a103ca48a11951261ed8583f6aa0f9453">FLACFile</references>
+        <references refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f">EOUtils::MetadataAudioFile::MetadataAudioFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1ad4b9b7175d3def12da99c48f2e883b3e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::FLACFile::FLACFile</definition>
+        <argsstring>(FLACFile &amp;&amp;pFLACFile) noexcept</argsstring>
+        <name>FLACFile</name>
+        <qualifiedname>EOUtils::FLACFile::FLACFile</qualifiedname>
+        <param>
+          <type><ref refid="classFLACFile" kindref="compound">FLACFile</ref> &amp;&amp;</type>
+          <declname>pFLACFile</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="60" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="182" bodyend="195"/>
+        <references refid="classEOUtils_1_1FLACFile_1a103ca48a11951261ed8583f6aa0f9453">FLACFile</references>
+        <references refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f">EOUtils::MetadataAudioFile::MetadataAudioFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1abdb4e6b197a2fcf29ced24ef07d79d1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::FLACFile::~FLACFile</definition>
+        <argsstring>()</argsstring>
+        <name>~FLACFile</name>
+        <qualifiedname>EOUtils::FLACFile::~FLACFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="62" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="197" bodyend="200"/>
+        <references refid="classEOUtils_1_1FLACFile_1a186c57b08fade9564784e5200c1ee055" compoundref="FLACFile_8cpp" startline="381" endline="408">close</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a837fc7246b256128abbe2980ad1588d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::FLACFile::setAudioFileInfo</definition>
+        <argsstring>(const AudioFileInfo &amp;pAudioFileInfo) override</argsstring>
+        <name>setAudioFileInfo</name>
+        <qualifiedname>EOUtils::FLACFile::setAudioFileInfo</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a2801f28e7658576fb6ae96f91ced6f92">setAudioFileInfo</reimplements>
+        <param>
+          <type>const <ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref> &amp;</type>
+          <declname>pAudioFileInfo</declname>
+        </param>
+        <briefdescription>
+<para>Sets the audio file info for the FLAC file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="67" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a1521b31dabbc176622c880a18f822659" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t EOUtils::FLACFile::CompressionLevel</definition>
+        <argsstring>() const</argsstring>
+        <name>CompressionLevel</name>
+        <qualifiedname>EOUtils::FLACFile::CompressionLevel</qualifiedname>
+        <briefdescription>
+<para>Returns the compression level currently set for the FLAC file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="72" column="10" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="207" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1ac5b3d74e85d3b99d16c32e49b133fc47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::FLACFile::CompressionLevel</definition>
+        <argsstring>(uint32_t pCompressionLevel)</argsstring>
+        <name>CompressionLevel</name>
+        <qualifiedname>EOUtils::FLACFile::CompressionLevel</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>pCompressionLevel</declname>
+        </param>
+        <briefdescription>
+<para>Sets the compression level to use when writing FLAC files. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pCompressionLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compression level to use when writing FLAC files (0-8, where 0 is fastest and 8 is maximum compression) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="79" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="212" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::open</definition>
+        <argsstring>(AudioFileModes pOpenMode) override</argsstring>
+        <name>open</name>
+        <qualifiedname>EOUtils::FLACFile::open</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6">open</reimplements>
+        <param>
+          <type><ref refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758c" kindref="member">AudioFileModes</ref></type>
+          <declname>pOpenMode</declname>
+        </param>
+        <briefdescription>
+<para>Opens the audio file in the given mode (read, write, or read/write). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> object containing error messages on failure, or no errors on success. This can also be cast to a bool. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="87" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="217" bodyend="362"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="classEOUtils_1_1AudioFile_1a80b9e185e791079450429706ca9ef91e" compoundref="AudioFile_8h" startline="162" endline="174">EOUtils::AudioFile::getMetadataAs</references>
+        <references refid="classEOUtils_1_1AudioFile_1aedf6b1305b5cfd321bedd7790ef7c8e4" compoundref="AudioFile_8cpp" startline="111" endline="114">EOUtils::AudioFile::hasMetadata</references>
+        <references refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" compoundref="AudioFile_8cpp" startline="59" endline="62">EOUtils::AudioFile::hasReadMode</references>
+        <references refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" compoundref="AudioFile_8cpp" startline="64" endline="67">EOUtils::AudioFile::hasWriteMode</references>
+        <references refid="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" compoundref="AudioFile_8h" startline="238">EOUtils::AudioFile::mDataSizeBytes</references>
+        <references refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" compoundref="AudioFile_8h" startline="235">EOUtils::AudioFile::mFilename</references>
+        <references refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" compoundref="AudioFile_8h" startline="236">EOUtils::AudioFile::mFileStream</references>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a30725c5f74f0492d20f9bfa685dcab02" compoundref="AudioFileResultType_8cpp" startline="39" endline="42">EOUtils::AudioFileResultType::numErrors</references>
+        <references refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" compoundref="AudioFile_8cpp" startline="38" endline="52">EOUtils::AudioFile::open</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a186c57b08fade9564784e5200c1ee055" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::FLACFile::close</definition>
+        <argsstring>() override</argsstring>
+        <name>close</name>
+        <qualifiedname>EOUtils::FLACFile::close</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a4be2573c17b87c092a3f367989d82722">close</reimplements>
+        <briefdescription>
+<para>Closes the FLAC file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="92" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="381" bodyend="408"/>
+        <references refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" compoundref="AudioFile_8h" startline="236">EOUtils::AudioFile::mFileStream</references>
+        <referencedby refid="classEOUtils_1_1FLACFile_1abdb4e6b197a2fcf29ced24ef07d79d1f" compoundref="FLACFile_8cpp" startline="197" endline="200">~FLACFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1ae1fd986a87d029318dac135da4cf2fe8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool EOUtils::FLACFile::isOpen</definition>
+        <argsstring>() const override</argsstring>
+        <name>isOpen</name>
+        <qualifiedname>EOUtils::FLACFile::isOpen</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1aadb1e2576c96134c0e146735c8aea1f1">isOpen</reimplements>
+        <briefdescription>
+<para>Returns whether the FLAC file is open (and also has its encoder and/or decoder initialized). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="97" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="364" bodyend="379"/>
+        <references refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" compoundref="AudioFile_8h" startline="236">EOUtils::AudioFile::mFileStream</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a482bf351365ec1b561a43f27342ef6dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classEOUtils_1_1FLACFileInfo" kindref="compound">FLACFileInfo</ref> &amp;</type>
+        <definition>const FLACFileInfo &amp; EOUtils::FLACFile::getFileInfo</definition>
+        <argsstring>() const</argsstring>
+        <name>getFileInfo</name>
+        <qualifiedname>EOUtils::FLACFile::getFileInfo</qualifiedname>
+        <briefdescription>
+<para>Returns a <ref refid="classEOUtils_1_1FLACFileInfo" kindref="compound">FLACFileInfo</ref> object with information about the FLAC file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="102" column="20" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="410" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1aecd756065217efeff7bcd1ebefaba8b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::getNextSample_int64</definition>
+        <argsstring>(int64_t &amp;pAudioSample) override</argsstring>
+        <name>getNextSample_int64</name>
+        <qualifiedname>EOUtils::FLACFile::getNextSample_int64</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a99c362d4f3f1417e88a29e20e1a569b5">getNextSample_int64</reimplements>
+        <param>
+          <type>int64_t &amp;</type>
+          <declname>pAudioSample</declname>
+        </param>
+        <briefdescription>
+<para>Gets the next sample from the file, cast to a 64-bit integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pAudioSample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The next audio sample from the file, cast to a 64-bit integer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> object containing error messages on failure, or no errors on success. This can also be cast to a bool. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="112" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="415" bodyend="488"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" compoundref="AudioFile_8cpp" startline="59" endline="62">EOUtils::AudioFile::hasReadMode</references>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a30725c5f74f0492d20f9bfa685dcab02" compoundref="AudioFileResultType_8cpp" startline="39" endline="42">EOUtils::AudioFileResultType::numErrors</references>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a742be01f59c8bdd485c1bd33dda5bf33" compoundref="FLACFile_8cpp" startline="543" endline="577">getHighestSampleValue_int64</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1aea40fce50b9c489955238f06d2207f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::writeSample_int64</definition>
+        <argsstring>(int64_t pAudioSample) override</argsstring>
+        <name>writeSample_int64</name>
+        <qualifiedname>EOUtils::FLACFile::writeSample_int64</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a901b6f6818ae604841592537a278507d">writeSample_int64</reimplements>
+        <param>
+          <type>int64_t</type>
+          <declname>pAudioSample</declname>
+        </param>
+        <briefdescription>
+<para>Writes an audio sample to the file. The parameter is a 64-bit integer but will be cast to the bitness of the audio samples in the file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pAudioSample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The audio sample to write to the file</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> object containing error messages on failure, or no errors on success. This can also be cast to a bool. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="123" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="490" bodyend="541"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" compoundref="AudioFile_8cpp" startline="64" endline="67">EOUtils::AudioFile::hasWriteMode</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a742be01f59c8bdd485c1bd33dda5bf33" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::getHighestSampleValue_int64</definition>
+        <argsstring>(int64_t &amp;pHighestAudioSample) override</argsstring>
+        <name>getHighestSampleValue_int64</name>
+        <qualifiedname>EOUtils::FLACFile::getHighestSampleValue_int64</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a1780a021a151729a1a7eaa0d02a2fa01">getHighestSampleValue_int64</reimplements>
+        <param>
+          <type>int64_t &amp;</type>
+          <declname>pHighestAudioSample</declname>
+        </param>
+        <briefdescription>
+<para>Gets the highest audio sample value from the file, cast to a 64-bit integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pHighestAudioSample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The highest audio sample from the file, cast to a 64-bit integer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> object containing error messages on failure, or no errors on success. This can also be cast to a bool. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="133" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="543" bodyend="577"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="classEOUtils_1_1FLACFile_1aecd756065217efeff7bcd1ebefaba8b7" compoundref="FLACFile_8cpp" startline="415" endline="488">getNextSample_int64</references>
+        <references refid="classEOUtils_1_1FLACFile_1ada175c6e4ee3721cabac43f7c2967a97" compoundref="FLACFile_8cpp" startline="579" endline="601">goToAudioDataPos</references>
+        <references refid="classEOUtils_1_1FLACFile_1af00f73c62416d28429f91a2b520d5e75" compoundref="FLACFile_8cpp" startline="603" endline="617">numSamples</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1ada175c6e4ee3721cabac43f7c2967a97" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::goToAudioDataPos</definition>
+        <argsstring>() override</argsstring>
+        <name>goToAudioDataPos</name>
+        <qualifiedname>EOUtils::FLACFile::goToAudioDataPos</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1ae747456aaffc54186bf27d40d2b6619c">goToAudioDataPos</reimplements>
+        <briefdescription>
+<para>Goes to the audio data position in the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="138" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="579" bodyend="601"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a742be01f59c8bdd485c1bd33dda5bf33" compoundref="FLACFile_8cpp" startline="543" endline="577">getHighestSampleValue_int64</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1af00f73c62416d28429f91a2b520d5e75" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t EOUtils::FLACFile::numSamples</definition>
+        <argsstring>() const override</argsstring>
+        <name>numSamples</name>
+        <qualifiedname>EOUtils::FLACFile::numSamples</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a9323d827fd3a5cd95c02c90b07c33552">numSamples</reimplements>
+        <briefdescription>
+<para>Returns the number of audio samples in the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="143" column="8" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="603" bodyend="617"/>
+        <references refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" compoundref="AudioFile_8h" startline="235">EOUtils::AudioFile::mFilename</references>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a742be01f59c8bdd485c1bd33dda5bf33" compoundref="FLACFile_8cpp" startline="543" endline="577">getHighestSampleValue_int64</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a279fa0d38950175dc309eb3d76766f1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int64_t</type>
+        <definition>int64_t EOUtils::FLACFile::maxValueForSampleSize</definition>
+        <argsstring>() const override</argsstring>
+        <name>maxValueForSampleSize</name>
+        <qualifiedname>EOUtils::FLACFile::maxValueForSampleSize</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a04453bb2912c38bb59448756a7773835">maxValueForSampleSize</reimplements>
+        <briefdescription>
+<para>Returns the maximum possible positive value of the audio file&apos;s sample size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="148" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="619" bodyend="634"/>
+        <references refid="namespaceEOUtils_1ab75513be550984f7118723a1973d9cb4" compoundref="utilFunctions_8h" startline="9" endline="12">EOUtils::maxValue</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a6f21036c7d2d0bc03fe24cb4eb7d0d9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::FLACFile::seekOutputToSampleNum</definition>
+        <argsstring>(size_t pSampleNum) override</argsstring>
+        <name>seekOutputToSampleNum</name>
+        <qualifiedname>EOUtils::FLACFile::seekOutputToSampleNum</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1af30b9f5c0bd6f6eb670976c5872aacdd">seekOutputToSampleNum</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>pSampleNum</declname>
+        </param>
+        <briefdescription>
+<para>Returns the maximum possible positive value of the audio file&apos;s sample size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="153" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="636" bodyend="649"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a001c2ef8f62f5e2779527e67af4fdfa6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref></type>
+        <definition>AudioFileInfo EOUtils::FLACFile::getAudioFileInfo</definition>
+        <argsstring>() const override</argsstring>
+        <name>getAudioFileInfo</name>
+        <qualifiedname>EOUtils::FLACFile::getAudioFileInfo</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1afa9106be5e7602616779070043bc2252">getAudioFileInfo</reimplements>
+        <briefdescription>
+<para>Returns an <ref refid="classEOUtils_1_1AudioFile" kindref="compound">AudioFile</ref> object with information about the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="158" column="15" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="651" bodyend="654"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a788c88ceef07cdb70319fece43ea39d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::setTitle</definition>
+        <argsstring>(const std::string &amp;pTitle) override</argsstring>
+        <name>setTitle</name>
+        <qualifiedname>EOUtils::FLACFile::setTitle</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1a33c4eecf35d0febcec189e27b8caf98a">setTitle</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pTitle</declname>
+        </param>
+        <briefdescription>
+<para>Sets the title metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pTitle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="161" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="817" bodyend="820"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a8f306ba3900116c94f2f3caa5a51dd67" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::setArtist</definition>
+        <argsstring>(const std::string &amp;pArtist) override</argsstring>
+        <name>setArtist</name>
+        <qualifiedname>EOUtils::FLACFile::setArtist</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1adae18656bf60b5e8e81f484f672db1bf">setArtist</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pArtist</declname>
+        </param>
+        <briefdescription>
+<para>Sets the artist metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pArtist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The artist string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="162" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="822" bodyend="825"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1af91ffac30914ad8b25aad1113fc368ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::setAlbum</definition>
+        <argsstring>(const std::string &amp;pAlbum) override</argsstring>
+        <name>setAlbum</name>
+        <qualifiedname>EOUtils::FLACFile::setAlbum</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1ae5b899c9d5b6f8942cfe181e29272afe">setAlbum</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pAlbum</declname>
+        </param>
+        <briefdescription>
+<para>Sets the album metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pAlbum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The album string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="163" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="827" bodyend="830"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a8af69d28dea1df607e1c22bb415599ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::setGenre</definition>
+        <argsstring>(const std::string &amp;pGenre) override</argsstring>
+        <name>setGenre</name>
+        <qualifiedname>EOUtils::FLACFile::setGenre</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1acc7942dfb3e61cd54127aabdd2862093">setGenre</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pGenre</declname>
+        </param>
+        <briefdescription>
+<para>Sets the genre metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pGenre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The genre string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="164" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="832" bodyend="835"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a85a2c6d8c254e0cb7edce0ae24e7988b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::setTrackNumber</definition>
+        <argsstring>(uint32_t pTrackNumber, uint32_t pTotalTracks=0) override</argsstring>
+        <name>setTrackNumber</name>
+        <qualifiedname>EOUtils::FLACFile::setTrackNumber</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1aab2746c19dca62fe5a27bd12d936fa46">setTrackNumber</reimplements>
+        <param>
+          <type>uint32_t</type>
+          <declname>pTrackNumber</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>pTotalTracks</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Sets the track number metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pTrackNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The track number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pTotalTracks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total number of tracks (0 means not specified, stores only the track number)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="165" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="837" bodyend="843"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1ad7051aad9a2b2ccf8643ed552e1477f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::setYear</definition>
+        <argsstring>(const std::string &amp;pYear) override</argsstring>
+        <name>setYear</name>
+        <qualifiedname>EOUtils::FLACFile::setYear</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1a596dd3b2b993afc0a2c3a2ff68d47a13">setYear</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pYear</declname>
+        </param>
+        <briefdescription>
+<para>Sets the year/date metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pYear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The year string (e.g., &quot;2024&quot;)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="166" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="845" bodyend="848"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a4ec2ca4e85f29bd5b54e4755b2f55eb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::setComment</definition>
+        <argsstring>(const std::string &amp;pComment) override</argsstring>
+        <name>setComment</name>
+        <qualifiedname>EOUtils::FLACFile::setComment</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1aa367019cbde49d7f23c60c646c6954f0">setComment</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pComment</declname>
+        </param>
+        <briefdescription>
+<para>Sets the comment metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pComment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The comment string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="167" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="850" bodyend="853"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a682e2d4e9d802902c829cc78d07a28bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::getTitle</definition>
+        <argsstring>(std::string &amp;pTitle) const override</argsstring>
+        <name>getTitle</name>
+        <qualifiedname>EOUtils::FLACFile::getTitle</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1abd1812a1b5957f74618d4018a3acc40f">getTitle</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pTitle</declname>
+        </param>
+        <briefdescription>
+<para>Gets the title metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pTitle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the title string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="169" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="857" bodyend="860"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a2e9ab8eced8b37ccf292b13c85333d4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::getArtist</definition>
+        <argsstring>(std::string &amp;pArtist) const override</argsstring>
+        <name>getArtist</name>
+        <qualifiedname>EOUtils::FLACFile::getArtist</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1a1700387c5e5663c5acafbaf37173a88b">getArtist</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pArtist</declname>
+        </param>
+        <briefdescription>
+<para>Gets the artist metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pArtist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the artist string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="170" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="862" bodyend="865"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a1a1d150b221252fb88b9933de631a817" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::getAlbum</definition>
+        <argsstring>(std::string &amp;pAlbum) const override</argsstring>
+        <name>getAlbum</name>
+        <qualifiedname>EOUtils::FLACFile::getAlbum</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1a077014bfc235676d6a6a602876e568c0">getAlbum</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pAlbum</declname>
+        </param>
+        <briefdescription>
+<para>Gets the album metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pAlbum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the album string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="171" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="867" bodyend="870"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a948ea6ac939a76fdc85f90ee81e55d0e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::getGenre</definition>
+        <argsstring>(std::string &amp;pGenre) const override</argsstring>
+        <name>getGenre</name>
+        <qualifiedname>EOUtils::FLACFile::getGenre</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1a761cb9b8167c290c09c5c12c2bcb1eb6">getGenre</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pGenre</declname>
+        </param>
+        <briefdescription>
+<para>Gets the genre metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pGenre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the genre string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="172" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="872" bodyend="875"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1ac390e92ea5bcf4942f573f29a4a7aaa2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::getTrackNumber</definition>
+        <argsstring>(uint32_t &amp;pTrackNumber, uint32_t &amp;pTotalTracks) const override</argsstring>
+        <name>getTrackNumber</name>
+        <qualifiedname>EOUtils::FLACFile::getTrackNumber</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1ae43dcd8ce45042c99e66d7a858c9d074">getTrackNumber</reimplements>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>pTrackNumber</declname>
+        </param>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>pTotalTracks</declname>
+        </param>
+        <briefdescription>
+<para>Gets the track number metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pTrackNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the track number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pTotalTracks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the total number of tracks (0 if not specified in the metadata)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="173" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="877" bodyend="904"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1af11cbc03945c3a95deabfaf8d94edcad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::getYear</definition>
+        <argsstring>(std::string &amp;pYear) const override</argsstring>
+        <name>getYear</name>
+        <qualifiedname>EOUtils::FLACFile::getYear</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1ad23e6e0b25b00e498929b598b43285a1">getYear</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pYear</declname>
+        </param>
+        <briefdescription>
+<para>Gets the year/date metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pYear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the year string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="174" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="906" bodyend="909"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a210be766390b234b3d392a8c23710757" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::getComment</definition>
+        <argsstring>(std::string &amp;pComment) const override</argsstring>
+        <name>getComment</name>
+        <qualifiedname>EOUtils::FLACFile::getComment</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1ae4934841335acc0e23f1e2df73e58964">getComment</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pComment</declname>
+        </param>
+        <briefdescription>
+<para>Gets the comment metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pComment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the comment string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="175" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="911" bodyend="914"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1a48c4304b8f70e56d0d2bff3c7a308333" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::setVorbisComment</definition>
+        <argsstring>(const std::string &amp;pTagName, const std::string &amp;pValue)</argsstring>
+        <name>setVorbisComment</name>
+        <qualifiedname>EOUtils::FLACFile::setVorbisComment</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pTagName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="212" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="658" bodyend="749"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1FLACFile_1ab9ba70d5f7769db604abff297c4eb82d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::FLACFile::getVorbisComment</definition>
+        <argsstring>(const std::string &amp;pTagName, std::string &amp;pValue) const</argsstring>
+        <name>getVorbisComment</name>
+        <qualifiedname>EOUtils::FLACFile::getVorbisComment</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pTagName</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="213" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp" bodystart="751" bodyend="813"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>EOUtils::AudioFile</label>
+        <link refid="classEOUtils_1_1AudioFile"/>
+      </node>
+      <node id="1">
+        <label>EOUtils::FLACFile</label>
+        <link refid="classEOUtils_1_1FLACFile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EOUtils::MetadataAudioFile</label>
+        <link refid="classEOUtils_1_1MetadataAudioFile"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>EOUtils::AudioFile</label>
+        <link refid="classEOUtils_1_1AudioFile"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#mFilename</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#mFileStream</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#mFileOpenMode</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#mDataSizeBytes</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>#mMetadata</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EOUtils::FLACFile</label>
+        <link refid="classEOUtils_1_1FLACFile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EOUtils::MetadataAudioFile</label>
+        <link refid="classEOUtils_1_1MetadataAudioFile"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>size_t</label>
+      </node>
+      <node id="5">
+        <label>fstream</label>
+      </node>
+      <node id="6">
+        <label>openmode</label>
+      </node>
+      <node id="8">
+        <label>map&lt; std::string, std::string &gt;</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" line="17" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h" bodystart="18" bodyend="214"/>
+    <listofallmembers>
+      <member refid="classEOUtils_1_1AudioFile_1a8ad604ab1ec13becdf8b2659e61c9c3d" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a7dd053155e5498f9603b2a232158d1dc" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a929e0fbe28b29242d228331212e89336" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a683fdacc6a09b3a22d5c438c8559a054" prot="public" virt="pure-virtual"><scope>EOUtils::FLACFile</scope><name>BitrateIsAdjustable</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a186c57b08fade9564784e5200c1ee055" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>close</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a1521b31dabbc176622c880a18f822659" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>CompressionLevel</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1ac5b3d74e85d3b99d16c32e49b133fc47" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>CompressionLevel</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ad6281b62a2270d05ba8ab3d643837caa" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>Filename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aab5a60cd510028e984f06f3cad3ba196" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>Filename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1abff45a0857ea7ac45920ce200c9c2f42" prot="protected" virt="virtual"><scope>EOUtils::FLACFile</scope><name>fileSizeAccordingToStream</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a103ca48a11951261ed8583f6aa0f9453" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>FLACFile</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a3eb257712343b021d5210a0511371d3e" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>FLACFile</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1aa3f19ba9d5383cb8f6ad640a85ff0245" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>FLACFile</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1ae06baf4bb1f6b91457687e424ae8745a" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>FLACFile</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a1ab449b1e691db5d7481884b75b71ea3" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>FLACFile</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1ad4b9b7175d3def12da99c48f2e883b3e" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>FLACFile</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a1a1d150b221252fb88b9933de631a817" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>getAlbum</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a2e9ab8eced8b37ccf292b13c85333d4e" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>getArtist</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a001c2ef8f62f5e2779527e67af4fdfa6" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>getAudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a210be766390b234b3d392a8c23710757" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>getComment</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a482bf351365ec1b561a43f27342ef6dd" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>getFileInfo</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a948ea6ac939a76fdc85f90ee81e55d0e" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>getGenre</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a742be01f59c8bdd485c1bd33dda5bf33" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>getHighestSampleValue_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a3e4f535ca55f141bf8145665b5881bd9" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>getMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1414f518e301c5ca00132f3b4d726d67" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>getMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a80b9e185e791079450429706ca9ef91e" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a5c3e338b5d9b22e3e16ddb5b2d87a533" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ab867a5930c81e792f4116f62df0f8298" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1aecd756065217efeff7bcd1ebefaba8b7" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>getNextSample_int64</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a682e2d4e9d802902c829cc78d07a28bd" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>getTitle</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1ac390e92ea5bcf4942f573f29a4a7aaa2" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>getTrackNumber</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1ab9ba70d5f7769db604abff297c4eb82d" prot="private" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>getVorbisComment</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1af11cbc03945c3a95deabfaf8d94edcad" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>getYear</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1ada175c6e4ee3721cabac43f7c2967a97" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>goToAudioDataPos</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aedf6b1305b5cfd321bedd7790ef7c8e4" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>hasMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>hasReadMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>hasWriteMode</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1ae1fd986a87d029318dac135da4cf2fe8" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>isOpen</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a279fa0d38950175dc309eb3d76766f1f" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>maxValueForSampleSize</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" prot="protected" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mDataSizeBytes</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a0b40cea48921b0a94e4ab80d77ac8c71" prot="private" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mDecodePosition</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1ad9732e41ec3be7eba34ed240131c24c9" prot="private" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mDecoder</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a13f134df6f19c435afa6f89654d209ce" prot="private" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mDecoderClientData</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a378c8ce997acd6b8edc8d46db1cb01cd" prot="private" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mEncoder</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a4b979898316007867c1721e9823738cf" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a097c2697ff13926740a76063de122cb6" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" prot="protected" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mFilename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" prot="protected" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mFileOpenMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" prot="protected" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mFileStream</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a8a9ddfb801a7732a9ef6202768618a5e" prot="private" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mFLACFileInfo</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" prot="protected" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mMetadata</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1ae01d2569dd15a320d5d418497d72c733" prot="private" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mReadBuffer</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1ad13e750c6b8596b15dd96453780f6ded" prot="private" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mReadBufferChannel</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1aba1d648ac37e00333348f3788a037b18" prot="private" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mReadBufferSample</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1abaf90574b628fff036f0f51fa4360274" prot="private" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>mWriteBuffer</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1af00f73c62416d28429f91a2b520d5e75" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>numSamples</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>open</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a6f21036c7d2d0bc03fe24cb4eb7d0d9d" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>seekOutputToSampleNum</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1af91ffac30914ad8b25aad1113fc368ae" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>setAlbum</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a8f306ba3900116c94f2f3caa5a51dd67" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>setArtist</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a837fc7246b256128abbe2980ad1588d0" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>setAudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a4ec2ca4e85f29bd5b54e4755b2f55eb6" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>setComment</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a376cef8c69f91ed84ea84026075a4df2" prot="protected" virt="virtual"><scope>EOUtils::FLACFile</scope><name>setFileMode</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a8af69d28dea1df607e1c22bb415599ea" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>setGenre</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a7c9c44e7d515e2281736219609d785ed" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>setMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a877560d2344ca9a2c38700e2f11f1224" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>setMetadataFromVal</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a788c88ceef07cdb70319fece43ea39d2" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>setTitle</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a85a2c6d8c254e0cb7edce0ae24e7988b" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>setTrackNumber</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1a48c4304b8f70e56d0d2bff3c7a308333" prot="private" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>setVorbisComment</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1ad7051aad9a2b2ccf8643ed552e1477f6" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>setYear</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1aea40fce50b9c489955238f06d2207f8c" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>writeSample_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1af6b8d50765277b330bc63e57dcc4f0c3" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>~AudioFile</name></member>
+      <member refid="classEOUtils_1_1FLACFile_1abdb4e6b197a2fcf29ced24ef07d79d1f" prot="public" virt="non-virtual"><scope>EOUtils::FLACFile</scope><name>~FLACFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1ab78858553941cba26740fc69f926b569" prot="public" virt="virtual"><scope>EOUtils::FLACFile</scope><name>~MetadataAudioFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,127 @@
+\doxysection{Audio\+File\+Result\+Type Class Reference}
+\label{classAudioFileResultType}\index{AudioFileResultType@{AudioFileResultType}}
+
+
+{\ttfamily \#include $<$Audio\+File\+Result\+Type.\+h$>$}
+
+
+
+Collaboration diagram for Audio\+File\+Result\+Type\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classAudioFileResultType__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \textbf{ error\+Collection\+Type} = std\+::list$<$std\+::string$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File\+Result\+Type} (const std\+::string \&p\+Error="{}"{})
+\item 
+\textbf{ $\sim$\+Audio\+File\+Result\+Type} ()
+\item 
+void \textbf{ add\+Error} (const std\+::string \&p\+Error)
+\item 
+const \textbf{ error\+Collection\+Type} \& \textbf{ get\+Errors} () const
+\item 
+error\+Collection\+Type\+::const\+\_\+iterator \textbf{ get\+Errors\+Begin} () const
+\item 
+error\+Collection\+Type\+::const\+\_\+iterator \textbf{ get\+Errors\+End} () const
+\item 
+size\+\_\+t \textbf{ num\+Errors} () const
+\item 
+std\+::string \textbf{ get\+Error} () const
+\item 
+\textbf{ operator bool} () const
+\item 
+void \textbf{ output\+Errors} (std\+::ostream \&p\+Out\+Stream) const
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\doxysubsection{Member Typedef Documentation}
+\index{AudioFileResultType@{AudioFileResultType}!errorCollectionType@{errorCollectionType}}
+\index{errorCollectionType@{errorCollectionType}!AudioFileResultType@{AudioFileResultType}}
+\doxysubsubsection{errorCollectionType}
+{\footnotesize\ttfamily \label{classAudioFileResultType_a7f065eef66f8578c52a7a989b6689e81} 
+using \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::error\+Collection\+Type} = std\+::list$<$std\+::string$>$}
+
+
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{AudioFileResultType@{AudioFileResultType}!AudioFileResultType@{AudioFileResultType}}
+\index{AudioFileResultType@{AudioFileResultType}!AudioFileResultType@{AudioFileResultType}}
+\doxysubsubsection{AudioFileResultType()}
+{\footnotesize\ttfamily \label{classAudioFileResultType_a228d6aeba7d0186edbe6f15e01ec65e9} 
+\textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::\+Audio\+File\+Result\+Type} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Error}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+\index{AudioFileResultType@{AudioFileResultType}!````~AudioFileResultType@{$\sim$AudioFileResultType}}
+\index{````~AudioFileResultType@{$\sim$AudioFileResultType}!AudioFileResultType@{AudioFileResultType}}
+\doxysubsubsection{$\sim$AudioFileResultType()}
+{\footnotesize\ttfamily \label{classAudioFileResultType_aaeaa4d2f44e3ae973c85e3f5558b694e} 
+\textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::$\sim$\+Audio\+File\+Result\+Type} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{AudioFileResultType@{AudioFileResultType}!addError@{addError}}
+\index{addError@{addError}!AudioFileResultType@{AudioFileResultType}}
+\doxysubsubsection{addError()}
+{\footnotesize\ttfamily \label{classAudioFileResultType_a684c6447da4c85612789a4289b4985a8} 
+void \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Error}{}\end{DoxyParamCaption})}
+
+\index{AudioFileResultType@{AudioFileResultType}!getError@{getError}}
+\index{getError@{getError}!AudioFileResultType@{AudioFileResultType}}
+\doxysubsubsection{getError()}
+{\footnotesize\ttfamily \label{classAudioFileResultType_a7cb671fe20ea46e8d4ee3cf4785a7269} 
+string \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::get\+Error} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{AudioFileResultType@{AudioFileResultType}!getErrors@{getErrors}}
+\index{getErrors@{getErrors}!AudioFileResultType@{AudioFileResultType}}
+\doxysubsubsection{getErrors()}
+{\footnotesize\ttfamily \label{classAudioFileResultType_a614346c7534f05ce9e8de3a42217dfea} 
+const \textbf{ Audio\+File\+Result\+Type\+::error\+Collection\+Type} \& \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::get\+Errors} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{AudioFileResultType@{AudioFileResultType}!getErrorsBegin@{getErrorsBegin}}
+\index{getErrorsBegin@{getErrorsBegin}!AudioFileResultType@{AudioFileResultType}}
+\doxysubsubsection{getErrorsBegin()}
+{\footnotesize\ttfamily \label{classAudioFileResultType_a4c1c0e01ecfafe5a10b7359929dcf691} 
+Audio\+File\+Result\+Type\+::error\+Collection\+Type\+::const\+\_\+iterator \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::get\+Errors\+Begin} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{AudioFileResultType@{AudioFileResultType}!getErrorsEnd@{getErrorsEnd}}
+\index{getErrorsEnd@{getErrorsEnd}!AudioFileResultType@{AudioFileResultType}}
+\doxysubsubsection{getErrorsEnd()}
+{\footnotesize\ttfamily \label{classAudioFileResultType_aa67421495c95cff1666f758bd75d7100} 
+Audio\+File\+Result\+Type\+::error\+Collection\+Type\+::const\+\_\+iterator \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::get\+Errors\+End} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{AudioFileResultType@{AudioFileResultType}!numErrors@{numErrors}}
+\index{numErrors@{numErrors}!AudioFileResultType@{AudioFileResultType}}
+\doxysubsubsection{numErrors()}
+{\footnotesize\ttfamily \label{classAudioFileResultType_a30725c5f74f0492d20f9bfa685dcab02} 
+size\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::num\+Errors} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{AudioFileResultType@{AudioFileResultType}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!AudioFileResultType@{AudioFileResultType}}
+\doxysubsubsection{operator bool()}
+{\footnotesize\ttfamily \label{classAudioFileResultType_ad672a9d8bc0a1cabf55fe4f7d2da864e} 
+EOUtils\+::\+Audio\+File\+Result\+Type\+::operator bool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{AudioFileResultType@{AudioFileResultType}!outputErrors@{outputErrors}}
+\index{outputErrors@{outputErrors}!AudioFileResultType@{AudioFileResultType}}
+\doxysubsubsection{outputErrors()}
+{\footnotesize\ttfamily \label{classAudioFileResultType_aae2b9b567834b1dc1fb8f3f1aaa26cb2} 
+void \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::output\+Errors} (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{p\+Out\+Stream}{}\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Audio\+File\+Result\+Type.\+h}\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Audio\+File\+Result\+Type.\+cpp}\end{DoxyCompactItemize}

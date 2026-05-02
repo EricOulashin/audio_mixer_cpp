@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classCAboutDlg" kind="class" language="C++" prot="public">
+    <compoundname>CAboutDlg</compoundname>
+    <basecompoundref refid="classCDialogEx" prot="public" virt="non-virtual">CDialogEx</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCAboutDlg_1a6d1e6a33fef23bee6e75254189d865ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CAboutDlg::CAboutDlg</definition>
+        <argsstring>()</argsstring>
+        <name>CAboutDlg</name>
+        <qualifiedname>CAboutDlg::CAboutDlg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" line="37" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="52" bodyend="54"/>
+        <references refid="resource_8h_1a77a06326b569136edbb6c766bc98c33c" compoundref="resource_8h" startline="6">IDD_ABOUTBOX</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classCAboutDlg_1ab83db7484fec957282d7d5a21aed4df4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CAboutDlg::DoDataExchange</definition>
+        <argsstring>(CDataExchange *pDX)</argsstring>
+        <name>DoDataExchange</name>
+        <qualifiedname>CAboutDlg::DoDataExchange</qualifiedname>
+        <param>
+          <type>CDataExchange *</type>
+          <declname>pDX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" line="45" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CAboutDlg</label>
+        <link refid="classCAboutDlg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CDialogEx</label>
+        <link refid="classCDialogEx"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CAboutDlg</label>
+        <link refid="classCAboutDlg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CDialogEx</label>
+        <link refid="classCDialogEx"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" line="34" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="35" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classCAboutDlg_1a6d1e6a33fef23bee6e75254189d865ce" prot="public" virt="non-virtual"><scope>CAboutDlg</scope><name>CAboutDlg</name></member>
+      <member refid="classCAboutDlg_1ab83db7484fec957282d7d5a21aed4df4" prot="protected" virt="virtual"><scope>CAboutDlg</scope><name>DoDataExchange</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="stdafx_8cpp" kind="file" language="C++">
+    <compoundname>stdafx.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/stdafx.cpp</label>
+        <link refid="stdafx_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">﻿</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>stdafx.cpp<sp/>:<sp/>source<sp/>file<sp/>that<sp/>includes<sp/>just<sp/>the<sp/>standard<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>AudioMixerCPP.pch<sp/>will<sp/>be<sp/>the<sp/>pre-compiled<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>stdafx.obj<sp/>will<sp/>contain<sp/>the<sp/>pre-compiled<sp/>type<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/stdafx.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,143 @@
+\doxysection{EOUtils\+::Audio\+File\+Result\+Type Class Reference}
+\label{classEOUtils_1_1AudioFileResultType}\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+
+
+{\ttfamily \#include $<$Audio\+File\+Result\+Type.\+h$>$}
+
+
+
+Collaboration diagram for EOUtils\+::Audio\+File\+Result\+Type\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{classEOUtils_1_1AudioFileResultType__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \textbf{ error\+Collection\+Type} = std\+::list$<$std\+::string$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File\+Result\+Type} (const std\+::string \&p\+Error="{}"{})
+\item 
+\textbf{ $\sim$\+Audio\+File\+Result\+Type} ()
+\item 
+void \textbf{ add\+Error} (const std\+::string \&p\+Error)
+\item 
+const \textbf{ error\+Collection\+Type} \& \textbf{ get\+Errors} () const
+\item 
+error\+Collection\+Type\+::const\+\_\+iterator \textbf{ get\+Errors\+Begin} () const
+\item 
+error\+Collection\+Type\+::const\+\_\+iterator \textbf{ get\+Errors\+End} () const
+\item 
+size\+\_\+t \textbf{ num\+Errors} () const
+\item 
+std\+::string \textbf{ get\+Error} () const
+\item 
+\textbf{ operator bool} () const
+\item 
+void \textbf{ output\+Errors} (std\+::ostream \&p\+Out\+Stream) const
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\doxysubsection{Member Typedef Documentation}
+\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}!errorCollectionType@{errorCollectionType}}
+\index{errorCollectionType@{errorCollectionType}!EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+\doxysubsubsection{errorCollectionType}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFileResultType_a7f065eef66f8578c52a7a989b6689e81} 
+using \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::error\+Collection\+Type} = std\+::list$<$std\+::string$>$}
+
+
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}!AudioFileResultType@{AudioFileResultType}}
+\index{AudioFileResultType@{AudioFileResultType}!EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+\doxysubsubsection{AudioFileResultType()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFileResultType_a228d6aeba7d0186edbe6f15e01ec65e9} 
+EOUtils\+::\+Audio\+File\+Result\+Type\+::\+Audio\+File\+Result\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Error}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}!````~AudioFileResultType@{$\sim$AudioFileResultType}}
+\index{````~AudioFileResultType@{$\sim$AudioFileResultType}!EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+\doxysubsubsection{$\sim$AudioFileResultType()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFileResultType_aaeaa4d2f44e3ae973c85e3f5558b694e} 
+EOUtils\+::\+Audio\+File\+Result\+Type\+::$\sim$\+Audio\+File\+Result\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}!addError@{addError}}
+\index{addError@{addError}!EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+\doxysubsubsection{addError()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFileResultType_a684c6447da4c85612789a4289b4985a8} 
+void EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Error}{}\end{DoxyParamCaption})}
+
+
+
+Referenced by \textbf{ EOUtils\+::get\+Audio\+File\+Info()}, \textbf{ EOUtils\+::\+WAVFile\+::get\+Highest\+Sample\+Value()}, \textbf{ EOUtils\+::get\+Highest\+Sample\+Value\+\_\+64bit()}, \textbf{ EOUtils\+::\+FLACFile\+::get\+Highest\+Sample\+Value\+\_\+int64()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Highest\+Sample\+Value\+\_\+int64()}, \textbf{ EOUtils\+::\+WAVFile\+::get\+Highest\+Sample\+Value\+\_\+int64()}, \textbf{ EOUtils\+::\+Audio\+File\+::get\+Metadata\+As()}, \textbf{ EOUtils\+::\+WAVFile\+::get\+Next\+Sample()}, \textbf{ EOUtils\+::\+FLACFile\+::get\+Next\+Sample\+\_\+int64()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Next\+Sample\+\_\+int64()}, \textbf{ EOUtils\+::\+WAVFile\+::get\+Next\+Sample\+\_\+int64()}, \textbf{ EOUtils\+::\+FLACFile\+::get\+Track\+Number()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Track\+Number()}, \textbf{ EOUtils\+::\+FLACFile\+::go\+To\+Audio\+Data\+Pos()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::go\+To\+Audio\+Data\+Pos()}, \textbf{ EOUtils\+::\+WAVFile\+::go\+To\+Audio\+Data\+Pos()}, \textbf{ EOUtils\+::mix\+Audio\+Files()}, \textbf{ EOUtils\+::\+Audio\+File\+::open()}, \textbf{ EOUtils\+::\+FLACFile\+::open()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::open()}, \textbf{ EOUtils\+::\+WAVFile\+::open()}, \textbf{ EOUtils\+::\+Aiff\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+Aiff\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+FLACFile\+Info\+::read()}, \textbf{ EOUtils\+::\+FLACFile\+Info\+::read()}, \textbf{ EOUtils\+::\+MP3\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+MP3\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+Ogg\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+Ogg\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+WAVFile\+Info\+::read()}, \textbf{ EOUtils\+::sf\+Get\+Via\+Temp\+Read()}, \textbf{ EOUtils\+::sf\+Set\+Via\+Rw()}, \textbf{ EOUtils\+::\+WAVFile\+Info\+::update\+Data\+Size\+Size\+In\+File()}, \textbf{ EOUtils\+::\+WAVFile\+Info\+::update\+File\+Size\+Size\+In\+File()}, \textbf{ EOUtils\+::\+Aiff\+File\+Info\+::write()}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::write()}, \textbf{ EOUtils\+::\+FLACFile\+Info\+::write()}, \textbf{ EOUtils\+::\+MP3\+File\+Info\+::write()}, \textbf{ EOUtils\+::\+Ogg\+File\+Info\+::write()}, \textbf{ EOUtils\+::\+WAVFile\+Info\+::write()}, \textbf{ EOUtils\+::\+WAVFile\+::write\+Sample()}, \textbf{ EOUtils\+::\+FLACFile\+::write\+Sample\+\_\+int64()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::write\+Sample\+\_\+int64()}, and \textbf{ EOUtils\+::\+WAVFile\+::write\+Sample\+\_\+int64()}.
+
+\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}!getError@{getError}}
+\index{getError@{getError}!EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+\doxysubsubsection{getError()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFileResultType_a7cb671fe20ea46e8d4ee3cf4785a7269} 
+string EOUtils\+::\+Audio\+File\+Result\+Type\+::get\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Referenced by \textbf{ main()}, and \textbf{ CAudio\+Mixer\+CPPDlg\+::\+On\+Bn\+Clicked\+Button\+Mix\+Audio\+Files()}.
+
+\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}!getErrors@{getErrors}}
+\index{getErrors@{getErrors}!EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+\doxysubsubsection{getErrors()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFileResultType_a614346c7534f05ce9e8de3a42217dfea} 
+const \textbf{ Audio\+File\+Result\+Type\+::error\+Collection\+Type} \& EOUtils\+::\+Audio\+File\+Result\+Type\+::get\+Errors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Referenced by \textbf{ EOUtils\+::mix\+Audio\+Files()}.
+
+\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}!getErrorsBegin@{getErrorsBegin}}
+\index{getErrorsBegin@{getErrorsBegin}!EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+\doxysubsubsection{getErrorsBegin()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFileResultType_a4c1c0e01ecfafe5a10b7359929dcf691} 
+Audio\+File\+Result\+Type\+::error\+Collection\+Type\+::const\+\_\+iterator EOUtils\+::\+Audio\+File\+Result\+Type\+::get\+Errors\+Begin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}!getErrorsEnd@{getErrorsEnd}}
+\index{getErrorsEnd@{getErrorsEnd}!EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+\doxysubsubsection{getErrorsEnd()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFileResultType_aa67421495c95cff1666f758bd75d7100} 
+Audio\+File\+Result\+Type\+::error\+Collection\+Type\+::const\+\_\+iterator EOUtils\+::\+Audio\+File\+Result\+Type\+::get\+Errors\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}!numErrors@{numErrors}}
+\index{numErrors@{numErrors}!EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+\doxysubsubsection{numErrors()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFileResultType_a30725c5f74f0492d20f9bfa685dcab02} 
+size\+\_\+t EOUtils\+::\+Audio\+File\+Result\+Type\+::num\+Errors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Referenced by \textbf{ EOUtils\+::get\+Audio\+File\+Info()}, \textbf{ EOUtils\+::\+FLACFile\+::get\+Next\+Sample\+\_\+int64()}, \textbf{ EOUtils\+::\+FLACFile\+::open()}, and \textbf{ EOUtils\+::\+FLACFile\+Info\+::read()}.
+
+\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+\doxysubsubsection{operator bool()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFileResultType_ad672a9d8bc0a1cabf55fe4f7d2da864e} 
+EOUtils\+::\+Audio\+File\+Result\+Type\+::operator bool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}!outputErrors@{outputErrors}}
+\index{outputErrors@{outputErrors}!EOUtils::AudioFileResultType@{EOUtils::AudioFileResultType}}
+\doxysubsubsection{outputErrors()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFileResultType_aae2b9b567834b1dc1fb8f3f1aaa26cb2} 
+void EOUtils\+::\+Audio\+File\+Result\+Type\+::output\+Errors (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{p\+Out\+Stream}{}\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Audio\+File\+Result\+Type.\+h}\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Audio\+File\+Result\+Type.\+cpp}\end{DoxyCompactItemize}

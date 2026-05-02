@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Audio Mixer (C++)</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md__2home_2erico_2projects_2audio__mixer__cpp_2README"/></para>
+<para>One of my interests and hobbies is music. This project is able to mix multiple audio files into a single output file, so that the audio from each source will be heard simultaneously. Source files may be WAV, FLAC, AIFF (<computeroutput>.aiff</computeroutput>, <computeroutput>.aif</computeroutput>, <computeroutput>.aifc</computeroutput>), Ogg Vorbis (<computeroutput>.ogg</computeroutput>, <computeroutput>.oga</computeroutput>), or MP3—subject to successful decode support in your toolchain.</para>
+<para>The code uses modern C++ features, such as std::thread, a lambda function, std::shared_ptr, and a modern way of iterating through a collection.</para>
+<para>This project includes C++ classes that can be used to open, read, and write <bold>WAV</bold> and <bold>FLAC</bold> audio files. I wrote the <ref refid="classWAVFile" kindref="compound">WAVFile</ref> class from scratch, and I used AI (Cursor) to create the <ref refid="classFLACFile" kindref="compound">FLACFile</ref> class. Currently, the <ref refid="classFLACFile" kindref="compound">FLACFile</ref> class defaults to maximum FLAC compression.</para>
+<para><bold>MP3 (MPEG layer III), Ogg Vorbis (in Ogg container),</bold> and <bold>AIFF</bold> PCM are implemented in <computeroutput>code/common</computeroutput> via <bold>libsndfile</bold>: <computeroutput>MP3File</computeroutput>, <computeroutput>OggFile</computeroutput>, and <computeroutput>AiffFile</computeroutput> derive from <computeroutput>MetadataAudioFile</computeroutput>, through a shared <computeroutput>sndfile</computeroutput>-backed base class (<computeroutput>SndFileBackedMetadataAudioFile</computeroutput>). Encoding quality for MP3 and Ogg writes can be configured on those types (constant / average bitrate and VBR for MP3; Vorbis-quality or approximate nominal bitrate for Ogg). AIFF reads and writes uncompressed PCM comparable to WAV.</para>
+<para>Derived types (<computeroutput><ref refid="classWAVFile" kindref="compound">WAVFile</ref></computeroutput>, <computeroutput><ref refid="classFLACFile" kindref="compound">FLACFile</ref></computeroutput>, <computeroutput>MP3File</computeroutput>, …) conform to <computeroutput><ref refid="classAudioFile" kindref="compound">AudioFile</ref></computeroutput> / <computeroutput>MetadataAudioFile</computeroutput> so the mixer logic can treat different formats uniformly. For mixing audio files, the source audio files will need to match on sample rate and channel count; the mixer also expects compatible nominal PCM layout across sources (where reported), so keep inputs consistent similar to stacking raw WAV clips.</para>
+<para>The following libraries are required to build this project:</para>
+<para><bold>FLAC</bold></para>
+<para><itemizedlist>
+<listitem>
+<para>On Linux, the library is typically <computeroutput>libflac-dev</computeroutput> via your package manager. There is also <computeroutput>libflac++-dev</computeroutput> for C++; this codebase does not use the C++ wrapper. </para>
+</listitem>
+<listitem>
+<para>For Windows, you can download the FLAC project <ulink url="https://github.com/xiph/flac">from GitHub</ulink>; the header files are included, though the library files require building. You can build them with Visual Studio and CMake. </para>
+</listitem>
+</itemizedlist>
+</para>
+<para>If you want to build the Windows GUI application, set the environment variable <computeroutput>FLAC_LIB_DIR</computeroutput> to the directory where the FLAC project (as cloned from GitHub) lives on your machine.</para>
+<para><bold>libsndfile</bold> (for MP3 / Ogg / AIFF support in <computeroutput>code/common</computeroutput>)</para>
+<para><itemizedlist>
+<listitem>
+<para>On Debian-style Linux distributions, installing <computeroutput>libsndfile1-dev</computeroutput> (name may vary) provides headers and linkage for <computeroutput>-lsndfile</computeroutput>. The project&apos;s <computeroutput>code/Makefile</computeroutput> already links FLAC and sndfile together. </para>
+</listitem>
+<listitem>
+<para>MP3 <emphasis>writing</emphasis> normally requires libsndfile to have been built with <bold>LAME</bold> support; distribution packages often include this—if encoder open fails at runtime for <computeroutput>.mp3</computeroutput> output, rebuild or reinstall a full-featured libsndfile. </para>
+</listitem>
+<listitem>
+<para>The checked-in Visual Studio solution under <computeroutput>AudioMixerCPP_Win_VisualStudio</computeroutput> currently wires <bold>FLAC</bold> only; extending it to compile the sndfile-backed sources would mean adding libsndfile (and LAME-as-used-by-sndfile) to the linker settings similarly to FLAC. </para>
+</listitem>
+</itemizedlist>
+</para>
+<sect1 id="index_1autotoc_md1_1s1"><sect2 id="index_1autotoc_md1">
+<title>MP3, Ogg Vorbis, and AIFF (overview)</title><para><itemizedlist>
+<listitem>
+<para><bold>MP3</bold> — <computeroutput>MP3File</computeroutput> / <computeroutput>MP3FileInfo</computeroutput>; typical extension <computeroutput>.mp3</computeroutput>. Reading and writing go through libsndfile (LAME-backed encoding when enabled in your sndfile build). Write-time bitrate control uses <computeroutput>Mp3BitrateMode</computeroutput> <bold>Constant</bold> (CBR), <bold>Average</bold> (ABR), or <bold>Variable</bold> (VBR). Use the <computeroutput>MP3File(path, Mp3BitrateMode, nominalKbps)</computeroutput> constructor for CBR/ABR, or <computeroutput>MP3File(path, double)</computeroutput> for VBR (libsndfile scale: 0 = best quality, 1 = lowest). Equivalent setters clear or override encoder defaults unless you call <computeroutput>clearMp3WriteEncodingOverrides()</computeroutput>. </para>
+</listitem>
+<listitem>
+<para><bold>Ogg Vorbis</bold> — <computeroutput>OggFile</computeroutput> / <computeroutput>OggFileInfo</computeroutput>; extensions <computeroutput>.ogg</computeroutput>, <computeroutput>.oga</computeroutput>. libsndfile only exposes quality-style Vorbis encoding via <computeroutput>SFC_SET_COMPRESSION_LEVEL</computeroutput>. This project wraps that as <computeroutput>OggWriteQuality</computeroutput> (1 = best perceived quality down to 0) or as <computeroutput>OggWriteApproxBitrateKbps</computeroutput> (&quot;nominally about
+&lt;code&gt;N&lt;/code&gt; kb/s&quot;) using a heuristic; treat the latter as approximate, not guaranteed CBR. Setters mirror these options; <computeroutput>clearOggWriteEncodingOverrides()</computeroutput> restores libsndfile&apos;s internal defaults on the next encode open. </para>
+</listitem>
+<listitem>
+<para><bold>AIFF</bold> — <computeroutput>AiffFile</computeroutput> / <computeroutput>AiffFileInfo</computeroutput>; PCM in classic AIFF variants with extensions such as <computeroutput>.aiff</computeroutput>, <computeroutput>.aif</computeroutput>, and <computeroutput>.aifc</computeroutput>. No extra bitrate knobs compared to WAV—this is uncompressed PCM surfaced through libsndfile. </para>
+</listitem>
+</itemizedlist>
+</para>
+<para>There are <ulink url="https://www.doxygen.nl">Doxygen</ulink> comments in the source in order to provide documentation; there is also a Doxyfile available for building Doxygen-based documentation. <ulink url="https://ericoulashin.github.io/audio_mixer_cpp/html/index.html">HTML documentation</ulink> for the C++ code has been added in the <ulink url="docs/html">docs/html directory</ulink>. If you want to generate documentation, you can run <computeroutput>doxygen</computeroutput> from the directory that contains the Doxyfile (project root), and it will output documentation into the docs directory.</para>
+<para>In addition to the audio file classes in <computeroutput>code/common</computeroutput>, there are applications for mixing (a GUI for Windows and a command-line tool for Linux). The Linux command-line mixer uses extensions and optional sniffing to recognise WAV/FLAC/AIFF/Ogg/MP3 and can write <computeroutput>.wav</computeroutput>, <computeroutput>.flac</computeroutput>, <computeroutput>.mp3</computeroutput>, <computeroutput>.ogg</computeroutput>/<computeroutput>.oga</computeroutput>, or <computeroutput>.aiff</computeroutput>/ <computeroutput>.aif</computeroutput>/<computeroutput>.aifc</computeroutput> outputs based on the output filename extension.</para>
+<para>The Windows GUI app builds in Visual Studio 2017 (I used the free Community edition). For Visual Studio, note that you will need to have the C++ toolset installed, along with MFC. As for the command-line application, I&apos;ve verified it builds with g++ in Linux (I&apos;ve tested it on Kubuntu 25.10).</para>
+<para>Visual Studio can be downloaded <ulink url="https://visualstudio.microsoft.com/vs/older-downloads/">here</ulink>. As of this writing (January 2, 2026), that page has versions of Visual Studio from 2015 to 2022.</para>
+</sect2></sect1>
+<sect1 id="index_1autotoc_md2">
+<title>Code notes</title><para>In the &apos;code&apos; directory, there are the following items: <itemizedlist>
+<listitem>
+<para><bold>AudioMixerCPP_Win_VisualStudio:</bold> Windows-specific source &amp; project files (for use with Visual Studio) </para>
+</listitem>
+<listitem>
+<para><bold>common:</bold> Common source files (contains the core audio &amp; mixer code) </para>
+</listitem>
+<listitem>
+<para><bold>AudioMixerCPP.sln:</bold> The solution file for use with Visual Studio </para>
+</listitem>
+<listitem>
+<para><bold>Makefile:</bold> A makefile for building a command-line executable for Linux </para>
+</listitem>
+</itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md3">
+<title>Included Applications</title><para>The source code includes 2 applications: <itemizedlist>
+<listitem>
+<para>A GUI application (written in MFC, for Windows) centred on WAV file selection (see filters in the VS project). </para>
+</listitem>
+<listitem>
+<para>A command-line application (<computeroutput><ref refid="cmdLineApp_8cpp" kindref="compound">cmdLineApp.cpp</ref></computeroutput>) aimed at Linux: it mixes the formats recognised in <computeroutput>AudioFileTools</computeroutput>, not only WAV. </para>
+</listitem>
+</itemizedlist>
+</para>
+<sect2 id="index_1autotoc_md4">
+<title>GUI application (Windows)</title><para>The following is a screenshot of the application:</para>
+<para><image type="html" name="screenshots/AudioMixerCPP.png" alt="Audio Mixer application" inline="yes"></image>
+ </para>
+<para>To add WAV files to the list, you can drag &amp; drop files onto the GUI, or for each line in the list, there will be a &quot;...&quot; button that lets you browse and choose a WAV file to add.</para>
+</sect2>
+<sect2 id="index_1autotoc_md5">
+<title>Command-line application</title><para>The command-line application source is <ref refid="cmdLineApp_8cpp" kindref="compound">cmdLineApp.cpp</ref>, and there is a makefile to help build everything in Linux (g++ is used as the compiler). The command-line application takes a command-line option which specifies a filename containing a list of audio filenames to mix (and the last line is the output filename to use). The command-line also accepts another parameter, -v, to enable verbose output.</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md6">
+<title>Background</title><para>A WAV audio file consists of a header at the beginning of the file, which contains strings to identify the file type (&quot;RIFF&quot; and &quot;WAVE&quot;), as well as information about the audio contained in the file (number of channels, sample rate, number of bits per channel, size of the data, etc.). Following the header is all of the audio data. Digital audio data is numeric: each sample is an integer that represents the level of the audio signal at that point in time.</para>
+<para>The general idea behind digital audio mixing is fairly simple: Until there are no more audio samples, the next audio sample from each audio file is read, then they&apos;re added together and saved to the output file. A bit more needs to be done, though, to deal with digital audio clipping. Digital audio clipping is caused by numeric range limitations of the values due to the sample size (i.e., 8 or 16 bits): When audio sample values are added together (or if the volume is increased), it&apos;s possible for the resulting values to go beyond the numeric range of the values. When that happens, the result is (often loud) pops and clicks in the audio, which is undesirable. So, in order to mix WAV files together, <ref refid="AudioMixerCPPDlg_8cpp_1a36829f33264df3b55d08a964555c9c7f" kindref="member">mixAudioFiles()</ref> (in <ref refid="AudioFileTools_8h" kindref="compound">AudioFileTools.h</ref> and .cpp) will first analyze each audio file to determine the highest audio sample, then reduce the volume of all the samples while mixing them to avoid digital audio clipping.</para>
+<para>Wikipedia has <ulink url="https://en.wikipedia.org/wiki/Clipping_(audio)">an article on audio clipping</ulink> that describes it in more detail.</para>
+<sect2 id="index_1autotoc_md7">
+<title>Using the code</title><para>The <ref refid="classAudioFile" kindref="compound">AudioFile</ref> class is a parent class for working with audio files, with some pure virtual methods to be implemented in derived classes, such as the included <ref refid="classWAVFile" kindref="compound">WAVFile</ref> class. The <ref refid="classWAVFile" kindref="compound">WAVFile</ref> class can open, read, and write WAV audio. Most of the class methods return an <ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref>, which can be used as if it was a bool (in an &apos;if&apos; statement, for instance), and if it&apos;s false, it contains error messages in the form of std::string.</para>
+<para>The following are some of the more important methods in the <ref refid="classWAVFile" kindref="compound">WAVFile</ref> class:</para>
+<para><table rows="6" cols="2"><row>
+<entry thead="yes"><para>Method  </para>
+</entry><entry thead="yes"><para>Description  </para>
+</entry></row>
+<row>
+<entry thead="no"><para><ref refid="classWAVFile" kindref="compound">WAVFile(const std::string&amp; pFilename)</ref>  </para>
+</entry><entry thead="no"><para>Constructor that takes a filename  </para>
+</entry></row>
+<row>
+<entry thead="no"><para><ref refid="classWAVFile" kindref="compound">WAVFile(const std::string&amp; pFilename, const WAVFileInfo&amp; pWAVFileInfo)</ref>  </para>
+</entry><entry thead="no"><para>Constructor that takes a filename and a WAVFileInfo objecct specifying the desired properties of the WAV file (sample rate, bit rate, number of channels, etc.)  </para>
+</entry></row>
+<row>
+<entry thead="no"><para><ref refid="classWAVFile" kindref="compound">WAVFile(const std::string&amp; pFilename, AudioFileModes pFileMode)</ref>  </para>
+</entry><entry thead="no"><para>Constructor that takes a filename and a file mode (read, write, read/write)  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>template &lt;class SampleType&gt; <ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref> getNextSample(SampleType&amp; pAudioSample)  </para>
+</entry><entry thead="no"><para>A templatized method that reads the next sample from the audio file (if it&apos;s open in read or read/write mode). For the template, the proper data type must be used (for instance, for 16-bit audio, you can use uint16_t.  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>template &lt;class SampleType&gt; <ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref> writeSample(SampleType pAudioSample)  </para>
+</entry><entry thead="no"><para>A templated method that writes an audio sample to the WAV file (if it&apos;s open in write or read/write mode). For the template, the proper data type must be used (for instance, for 16-bit audio, you can use uint16_t.  </para>
+</entry></row>
+</table>
+</para>
+<para>These are some important methods in the <ref refid="classAudioFile" kindref="compound">AudioFile</ref> class, which are pure virtual:</para>
+<para><table rows="3" cols="2"><row>
+<entry thead="yes"><para>Method  </para>
+</entry><entry thead="yes"><para>Description  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>virtual <ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref> getNextSample_int64(int64_t&amp; pAudioSample)  </para>
+</entry><entry thead="no"><para>Reads the next audio sample from the audio file (if in read or read/write mode). The audio sample is cast to an int64 so that it can be used in generic algorithms - Whether the audio data is 8-bit, 16-bit, or another bitness, the audio sample is cast to 64-bit.  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>virtual <ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref> writeSample_int64(int64_t pAudioSample)  </para>
+</entry><entry thead="no"><para>Writes an audio sample to the audio file (if in write or read/write mode). The sample parameter is an int64_t but will be cast down to the appropriate type when writing the sampel to the audio file. This is to make generic audio algorithms simpler - Whether the audio data is 8-bit, 16-bit, or another bitness, the audio sample is cast down to the appropriate type.  </para>
+</entry></row>
+</table>
+</para>
+<para><ref refid="AudioFileTools_8h" kindref="compound">AudioFileTools.h</ref> and <ref refid="AudioFileTools_8cpp" kindref="compound">AudioFileTools.cpp</ref> defines the following function (among others):</para>
+<para><table rows="2" cols="2"><row>
+<entry thead="yes"><para>Method  </para>
+</entry><entry thead="yes"><para>Description  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Various <computeroutput><ref refid="AudioMixerCPPDlg_8cpp_1a36829f33264df3b55d08a964555c9c7f" kindref="member">mixAudioFiles</ref></computeroutput> overloads  </para>
+</entry><entry thead="no"><para>Combine many inputs into one <computeroutput><ref refid="classAudioFile" kindref="compound">AudioFile</ref></computeroutput>-backed output. Decoding uses WAV/FLAC/sndfile classes as appropriate; helpers such as <computeroutput><ref refid="AudioMixerCPPDlg_8cpp_1a669d98e89f0bbc2652a05cb73a6aca76" kindref="member">createAudioFileObjForNewFile</ref></computeroutput> pick the writer from the output extension (<computeroutput>.wav</computeroutput>, <computeroutput>.flac</computeroutput>, <computeroutput>.mp3</computeroutput>, <computeroutput>.ogg</computeroutput>/<computeroutput>.oga</computeroutput>, <computeroutput>.aiff</computeroutput>/<computeroutput>.aif</computeroutput>/<computeroutput>.aifc</computeroutput>). Inputs must agree on channel count and sample rate. Mixing can take noticeable time—keep heavy work off the GUI thread.  </para>
+</entry></row>
+</table>
+</para>
+<para>The WAVFileInfo and <ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref> classes contain information about the audio files, such as bitness, number of channels, sample rate, etc.</para>
+<para>An example of opening a WAV file and looping through to get each audio sample (assuming the audio file contains 16-bit audio): <programlisting filename=".C++"><codeline><highlight class="normal"><ref refid="classWAVFile" kindref="compound">WAVFile</ref><sp/>audioFile(</highlight><highlight class="stringliteral">&quot;someAudioFile.wav&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref><sp/>result<sp/>=<sp/>audioFile.open(AUDIO_FILE_READ);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>numSamples<sp/>=<sp/>audioFile.numSamples();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>(i<sp/>&lt;<sp/>numSamples)<sp/>&amp;&amp;<sp/>result;<sp/>++i)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/>audioSample<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>audioFile.getNextSample(audioSample);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error(s)<sp/>getting<sp/>audio<sp/>samples:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>result.<ref refid="classAudioFileResultType_1aae2b9b567834b1dc1fb8f3f1aaa26cb2" kindref="member">outputErrors</ref>(cerr);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">audioFile.close();</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="index_1autotoc_md8">
+<title>Points of Interest</title><para>One interesting thing to note is that data in a WAV audio file is always little-endian, per the specification. On big-endian systems, the byte order must be reversed before manipulating the audio data, and the byte order for a sample must be reversed before saving it to a WAV file. My <ref refid="classWAVFile" kindref="compound">WAVFile</ref> class handles this automatically; for example, if the system is big-endian, then when retrieving audio samples from a WAV file or adding a 16-bit sample to a WAV file, the byte order will be automatically reversed so that the data is in the proper order.</para>
+<para>In creating the <ref refid="classWAVFile" kindref="compound">WAVFile</ref> class, it was necessary to look up the WAV file format specification. I found many web pages describing the WAV file format. There were 4 URLs I had referenced when I originally wrote this, but only one still exists today: <itemizedlist>
+<listitem>
+<para><ulink url="http://www.ringthis.com/dev/wave_format.htm">http://www.ringthis.com/dev/wave_format.htm</ulink> </para>
+</listitem>
+</itemizedlist>
+</para>
+<para>I also have <ulink url="https://github.com/EricOulashin/audio_mixer_c_sharp">a C# version of this</ulink> which I originally wrote in April 2009.</para>
+<para>I originally posted this project <ulink url="https://codeproject.com/articles/Cplusplus-audio-mixing-and-WAV-file-AudioFile-clas">on CodeProject</ulink>. </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="/home/erico/projects/audio_mixer_cpp/README.md"/>
+  </compounddef>
+</doxygen>

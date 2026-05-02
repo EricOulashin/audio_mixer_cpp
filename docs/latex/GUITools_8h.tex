@@ -1,0 +1,52 @@
+\doxysection{/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/\+Audio\+Mixer\+CPP\+\_\+\+Win\+\_\+\+Visual\+Studio/\+GUITools.h File Reference}
+\label{GUITools_8h}\index{/home/erico/projects/audio\_mixer\_cpp/code/AudioMixerCPP\_Win\_VisualStudio/GUITools.h@{/home/erico/projects/audio\_mixer\_cpp/code/AudioMixerCPP\_Win\_VisualStudio/GUITools.h}}
+{\ttfamily \#include $<$atlstr.\+h$>$}\newline
+Include dependency graph for GUITools.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{GUITools_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GUITools_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+INT\+\_\+\+PTR \textbf{ let\+User\+Browse\+For\+One\+File} (const CString \&p\+File\+Filter, CString \&p\+Selected\+File, CWnd $\ast$p\+Parent\+Wnd=nullptr)
+\begin{DoxyCompactList}\small\item\em Lets the user select a single file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\doxysubsection{Function Documentation}
+\index{GUITools.h@{GUITools.h}!letUserBrowseForOneFile@{letUserBrowseForOneFile}}
+\index{letUserBrowseForOneFile@{letUserBrowseForOneFile}!GUITools.h@{GUITools.h}}
+\doxysubsubsection{letUserBrowseForOneFile()}
+{\footnotesize\ttfamily \label{GUITools_8h_a61047631edbd6b20a4983eefa61f14aa} 
+INT\+\_\+\+PTR let\+User\+Browse\+For\+One\+File (\begin{DoxyParamCaption}\item[{const CString \&}]{p\+File\+Filter}{, }\item[{CString \&}]{p\+Selected\+File}{, }\item[{CWnd $\ast$}]{p\+Parent\+Wnd}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Lets the user select a single file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+File\+Filter} & The filename filter \\
+\hline
+\mbox{\texttt{out}}  & {\em p\+Selected\+File} & This will be populated with the selected filename, if the user selected one \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Parent\+Wnd} & A pointer to the parent window. Defaults to nullptr. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The status code from the file dialog 
+\end{DoxyReturn}
+
+
+Referenced by \textbf{ CAudio\+Mixer\+CPPDlg\+::\+On\+Clicked\+Button\+Select\+Output\+File()}.
+

@@ -199,6 +199,11 @@ namespace EOUtils
 		close();
 	}
 
+	bool FLACFile::BitrateIsAdjustable() const
+	{
+		return false;
+	}
+
 	void FLACFile::setAudioFileInfo(const AudioFileInfo& pAudioFileInfo)
 	{
 		mFLACFileInfo.copyAudioFileInfo(pAudioFileInfo);

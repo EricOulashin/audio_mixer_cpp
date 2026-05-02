@@ -1,0 +1,614 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classAudioFileInfo" kind="class" language="C++" prot="public">
+    <compoundname>AudioFileInfo</compoundname>
+    <derivedcompoundref refid="classEOUtils_1_1AiffFileInfo" prot="public" virt="non-virtual">EOUtils::AiffFileInfo</derivedcompoundref>
+    <derivedcompoundref refid="classEOUtils_1_1FLACFileInfo" prot="public" virt="non-virtual">EOUtils::FLACFileInfo</derivedcompoundref>
+    <derivedcompoundref refid="classEOUtils_1_1MP3FileInfo" prot="public" virt="non-virtual">EOUtils::MP3FileInfo</derivedcompoundref>
+    <derivedcompoundref refid="classEOUtils_1_1OggFileInfo" prot="public" virt="non-virtual">EOUtils::OggFileInfo</derivedcompoundref>
+    <derivedcompoundref refid="classEOUtils_1_1WAVFileInfo" prot="public" virt="non-virtual">EOUtils::WAVFileInfo</derivedcompoundref>
+    <includes refid="AudioFileInfo_8h" local="no">AudioFileInfo.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classAudioFileInfo_1a5d780adb5a915770b5707aee210c15e5" prot="protected" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t EOUtils::AudioFileInfo::mFileSize</definition>
+        <argsstring></argsstring>
+        <name>mFileSize</name>
+        <qualifiedname>AudioFileInfo::mFileSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="92" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioFileInfo_1acad9abe5b454c2d77d06eb6e73192e56" prot="protected" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t EOUtils::AudioFileInfo::mNumChannels</definition>
+        <argsstring></argsstring>
+        <name>mNumChannels</name>
+        <qualifiedname>AudioFileInfo::mNumChannels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="93" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioFileInfo_1adef5201babdec70e8c48f79f622915e2" prot="protected" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t EOUtils::AudioFileInfo::mSampleRateHz</definition>
+        <argsstring></argsstring>
+        <name>mSampleRateHz</name>
+        <qualifiedname>AudioFileInfo::mSampleRateHz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="94" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioFileInfo_1a57e6bae0181e9d47e37924e99238ba20" prot="protected" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t EOUtils::AudioFileInfo::mBytesPerSecond</definition>
+        <argsstring></argsstring>
+        <name>mBytesPerSecond</name>
+        <qualifiedname>AudioFileInfo::mBytesPerSecond</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="95" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioFileInfo_1a9307f85fa10c2104f2b11dac26c0d7a9" prot="protected" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t EOUtils::AudioFileInfo::mByteRate</definition>
+        <argsstring></argsstring>
+        <name>mByteRate</name>
+        <qualifiedname>AudioFileInfo::mByteRate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="96" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioFileInfo_1a0b3c35133b9afb40a8678061e1e558af" prot="protected" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t EOUtils::AudioFileInfo::mBitsPerSample</definition>
+        <argsstring></argsstring>
+        <name>mBitsPerSample</name>
+        <qualifiedname>AudioFileInfo::mBitsPerSample</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="97" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAudioFileInfo_1a658d1cdbdc856d3171e9eda93bcc4b14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AudioFileInfo::AudioFileInfo</definition>
+        <argsstring>(int16_t pNumChannels=0, int32_t pSampleRateHz=0, int32_t pBytesPerSecond=0, int16_t pByteRate=0, int16_t pBitsPerSample=0)</argsstring>
+        <name>AudioFileInfo</name>
+        <qualifiedname>AudioFileInfo::AudioFileInfo</qualifiedname>
+        <param>
+          <type>int16_t</type>
+          <declname>pNumChannels</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>pSampleRateHz</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>pBytesPerSecond</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>pByteRate</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>pBitsPerSample</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pNumChannels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of channels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pSampleRateHz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sample rate (in Hz) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pBytesPerSecond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes per second </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pByteRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte rate (number of bytes per sample * number of channels) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pBitsPerSample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bits per sample </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="25" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="10" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1a68ba83c0b64f8622807d044e43bace65" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual EOUtils::AudioFileInfo::~AudioFileInfo</definition>
+        <argsstring>()=default</argsstring>
+        <name>~AudioFileInfo</name>
+        <qualifiedname>AudioFileInfo::~AudioFileInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="27" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1abc993cfabd7bf5db763072caafed438f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFileInfo::copyAudioFileInfo</definition>
+        <argsstring>(const AudioFileInfo &amp;pAudioFileInfo)</argsstring>
+        <name>copyAudioFileInfo</name>
+        <qualifiedname>AudioFileInfo::copyAudioFileInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref> &amp;</type>
+          <declname>pAudioFileInfo</declname>
+        </param>
+        <briefdescription>
+<para>Copies the values from another <ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pAudioFileInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref> object to copy the values from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="34" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="20" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1ab94a417a9ec7ebf2ac1e9b1578f59825" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::AudioFileInfo::read</definition>
+        <argsstring>(const char *pFilename)</argsstring>
+        <name>read</name>
+        <qualifiedname>AudioFileInfo::read</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>pFilename</declname>
+        </param>
+        <briefdescription>
+<para>Reads the info from a WAV file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of a WAV file to read from</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref> object containing error messages on failure, or no errors on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="43" column="29" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="30" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1ae46975f1e0d83c16008c256d283d5c23" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::AudioFileInfo::read</definition>
+        <argsstring>(std::fstream &amp;pInFStream)</argsstring>
+        <name>read</name>
+        <qualifiedname>AudioFileInfo::read</qualifiedname>
+        <param>
+          <type>std::fstream &amp;</type>
+          <declname>pInFStream</declname>
+        </param>
+        <briefdescription>
+<para>Reads the info from a file stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pInFStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file stream object to read the information from. This must be already opened in read and binary mode.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref> object containing error messages on failure, or no errors on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="53" column="29" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="45" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1a35bee862e09314491cc60205fa953b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::AudioFileInfo::write</definition>
+        <argsstring>(std::fstream &amp;pOutFStream)</argsstring>
+        <name>write</name>
+        <qualifiedname>AudioFileInfo::write</qualifiedname>
+        <param>
+          <type>std::fstream &amp;</type>
+          <declname>pOutFStream</declname>
+        </param>
+        <briefdescription>
+<para>Writes the info to a file stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pOutFStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file stream object to write the information to. This must be already opened in write and binary mode.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref> object containing error messages on failure, or no errors on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="63" column="29" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="53" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1ae4ad85c7dec9cea2e1c972fa5363317b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int32_t</type>
+        <definition>int32_t EOUtils::AudioFileInfo::FileSize</definition>
+        <argsstring>() const</argsstring>
+        <name>FileSize</name>
+        <qualifiedname>AudioFileInfo::FileSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="65" column="17" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1a909d37035c78c019104b5eed55a4d4c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFileInfo::FileSize</definition>
+        <argsstring>(int32_t pFileSize)</argsstring>
+        <name>FileSize</name>
+        <qualifiedname>AudioFileInfo::FileSize</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>pFileSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="67" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1a06eec6c97330b24756c63267fef967d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int16_t</type>
+        <definition>int16_t EOUtils::AudioFileInfo::NumChannels</definition>
+        <argsstring>() const</argsstring>
+        <name>NumChannels</name>
+        <qualifiedname>AudioFileInfo::NumChannels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="69" column="17" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1a45f4b006353e74fe3855406019f36800" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFileInfo::NumChannels</definition>
+        <argsstring>(int16_t pNumChannels)</argsstring>
+        <name>NumChannels</name>
+        <qualifiedname>AudioFileInfo::NumChannels</qualifiedname>
+        <param>
+          <type>int16_t</type>
+          <declname>pNumChannels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="71" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1a3ebf18af705038e03f640ece3dfd96b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int32_t</type>
+        <definition>int32_t EOUtils::AudioFileInfo::SampleRateHz</definition>
+        <argsstring>() const</argsstring>
+        <name>SampleRateHz</name>
+        <qualifiedname>AudioFileInfo::SampleRateHz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="73" column="17" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1a5a27ec24f55e1f6db76f2690910fd145" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFileInfo::SampleRateHz</definition>
+        <argsstring>(int32_t pSampleRateHz)</argsstring>
+        <name>SampleRateHz</name>
+        <qualifiedname>AudioFileInfo::SampleRateHz</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>pSampleRateHz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="75" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1aec253c7d40de4a512c2b2cfd13866ad4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int32_t</type>
+        <definition>int32_t EOUtils::AudioFileInfo::BytesPerSecond</definition>
+        <argsstring>() const</argsstring>
+        <name>BytesPerSecond</name>
+        <qualifiedname>AudioFileInfo::BytesPerSecond</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="77" column="17" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1af72fc31e0f2e56cf2fcc83121518b4c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFileInfo::BytesPerSecond</definition>
+        <argsstring>(int32_t pBytesPerSecond)</argsstring>
+        <name>BytesPerSecond</name>
+        <qualifiedname>AudioFileInfo::BytesPerSecond</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>pBytesPerSecond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="79" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1a6eae27e84b5551365f18c0e534dffb9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int16_t</type>
+        <definition>int16_t EOUtils::AudioFileInfo::ByteRate</definition>
+        <argsstring>() const</argsstring>
+        <name>ByteRate</name>
+        <qualifiedname>AudioFileInfo::ByteRate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="81" column="17" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1a561210c51ba98733104752dbce0b1dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFileInfo::ByteRate</definition>
+        <argsstring>(int16_t pByteRate)</argsstring>
+        <name>ByteRate</name>
+        <qualifiedname>AudioFileInfo::ByteRate</qualifiedname>
+        <param>
+          <type>int16_t</type>
+          <declname>pByteRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="83" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1a251e008ebbbe7b96fa393162ff6dffa8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int16_t</type>
+        <definition>int16_t EOUtils::AudioFileInfo::BitsPerSample</definition>
+        <argsstring>() const</argsstring>
+        <name>BitsPerSample</name>
+        <qualifiedname>AudioFileInfo::BitsPerSample</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="85" column="17" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1abe9beee9f81daab6f8b88a10b97d38f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFileInfo::BitsPerSample</definition>
+        <argsstring>(int16_t pBitsPerSample)</argsstring>
+        <name>BitsPerSample</name>
+        <qualifiedname>AudioFileInfo::BitsPerSample</qualifiedname>
+        <param>
+          <type>int16_t</type>
+          <declname>pBitsPerSample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="87" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileInfo_1a62cab32f6620633f2ae70e89bd8697bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t EOUtils::AudioFileInfo::BytesPerSample</definition>
+        <argsstring>() const</argsstring>
+        <name>BytesPerSample</name>
+        <qualifiedname>AudioFileInfo::BytesPerSample</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="89" column="16" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AudioFileInfo</label>
+        <link refid="classAudioFileInfo"/>
+      </node>
+      <node id="2">
+        <label>EOUtils::AiffFileInfo</label>
+        <link refid="classEOUtils_1_1AiffFileInfo"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EOUtils::FLACFileInfo</label>
+        <link refid="classEOUtils_1_1FLACFileInfo"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>EOUtils::MP3FileInfo</label>
+        <link refid="classEOUtils_1_1MP3FileInfo"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>EOUtils::OggFileInfo</label>
+        <link refid="classEOUtils_1_1OggFileInfo"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>EOUtils::WAVFileInfo</label>
+        <link refid="classEOUtils_1_1WAVFileInfo"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AudioFileInfo</label>
+        <link refid="classAudioFileInfo"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#mBytesPerSecond</edgelabel>
+          <edgelabel>#mFileSize</edgelabel>
+          <edgelabel>#mSampleRateHz</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#mBitsPerSample</edgelabel>
+          <edgelabel>#mByteRate</edgelabel>
+          <edgelabel>#mNumChannels</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>int16_t</label>
+      </node>
+      <node id="2">
+        <label>int32_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" line="13" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h" bodystart="14" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classAudioFileInfo_1a658d1cdbdc856d3171e9eda93bcc4b14" prot="public" virt="non-virtual"><scope>AudioFileInfo</scope><name>AudioFileInfo</name></member>
+      <member refid="classAudioFileInfo_1a251e008ebbbe7b96fa393162ff6dffa8" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>BitsPerSample</name></member>
+      <member refid="classAudioFileInfo_1abe9beee9f81daab6f8b88a10b97d38f8" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>BitsPerSample</name></member>
+      <member refid="classAudioFileInfo_1a6eae27e84b5551365f18c0e534dffb9a" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>ByteRate</name></member>
+      <member refid="classAudioFileInfo_1a561210c51ba98733104752dbce0b1dff" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>ByteRate</name></member>
+      <member refid="classAudioFileInfo_1a62cab32f6620633f2ae70e89bd8697bd" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>BytesPerSample</name></member>
+      <member refid="classAudioFileInfo_1aec253c7d40de4a512c2b2cfd13866ad4" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>BytesPerSecond</name></member>
+      <member refid="classAudioFileInfo_1af72fc31e0f2e56cf2fcc83121518b4c9" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>BytesPerSecond</name></member>
+      <member refid="classAudioFileInfo_1abc993cfabd7bf5db763072caafed438f" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>copyAudioFileInfo</name></member>
+      <member refid="classAudioFileInfo_1ae4ad85c7dec9cea2e1c972fa5363317b" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>FileSize</name></member>
+      <member refid="classAudioFileInfo_1a909d37035c78c019104b5eed55a4d4c5" prot="public" virt="non-virtual"><scope>AudioFileInfo</scope><name>FileSize</name></member>
+      <member refid="classAudioFileInfo_1a0b3c35133b9afb40a8678061e1e558af" prot="protected" virt="non-virtual"><scope>AudioFileInfo</scope><name>mBitsPerSample</name></member>
+      <member refid="classAudioFileInfo_1a9307f85fa10c2104f2b11dac26c0d7a9" prot="protected" virt="non-virtual"><scope>AudioFileInfo</scope><name>mByteRate</name></member>
+      <member refid="classAudioFileInfo_1a57e6bae0181e9d47e37924e99238ba20" prot="protected" virt="non-virtual"><scope>AudioFileInfo</scope><name>mBytesPerSecond</name></member>
+      <member refid="classAudioFileInfo_1a5d780adb5a915770b5707aee210c15e5" prot="protected" virt="non-virtual"><scope>AudioFileInfo</scope><name>mFileSize</name></member>
+      <member refid="classAudioFileInfo_1acad9abe5b454c2d77d06eb6e73192e56" prot="protected" virt="non-virtual"><scope>AudioFileInfo</scope><name>mNumChannels</name></member>
+      <member refid="classAudioFileInfo_1adef5201babdec70e8c48f79f622915e2" prot="protected" virt="non-virtual"><scope>AudioFileInfo</scope><name>mSampleRateHz</name></member>
+      <member refid="classAudioFileInfo_1a06eec6c97330b24756c63267fef967d1" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>NumChannels</name></member>
+      <member refid="classAudioFileInfo_1a45f4b006353e74fe3855406019f36800" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>NumChannels</name></member>
+      <member refid="classAudioFileInfo_1ab94a417a9ec7ebf2ac1e9b1578f59825" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>read</name></member>
+      <member refid="classAudioFileInfo_1ae46975f1e0d83c16008c256d283d5c23" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>read</name></member>
+      <member refid="classAudioFileInfo_1a3ebf18af705038e03f640ece3dfd96b3" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>SampleRateHz</name></member>
+      <member refid="classAudioFileInfo_1a5a27ec24f55e1f6db76f2690910fd145" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>SampleRateHz</name></member>
+      <member refid="classAudioFileInfo_1a35bee862e09314491cc60205fa953b02" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>write</name></member>
+      <member refid="classAudioFileInfo_1a68ba83c0b64f8622807d044e43bace65" prot="public" virt="virtual"><scope>AudioFileInfo</scope><name>~AudioFileInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

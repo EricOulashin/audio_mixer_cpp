@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="structEOUtils_1_1OggWriteQuality" kind="struct" language="C++" prot="public">
+    <compoundname>EOUtils::OggWriteQuality</compoundname>
+    <includes refid="OggFile_8h" local="no">OggFile.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structEOUtils_1_1OggWriteQuality_1aede25451ee9bc5e4d8bbff1f817a2a6e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EOUtils::OggWriteQuality::QualityBestOneWorstZero</definition>
+        <argsstring></argsstring>
+        <name>QualityBestOneWorstZero</name>
+        <qualifiedname>EOUtils::OggWriteQuality::QualityBestOneWorstZero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" line="19" column="8" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="structEOUtils_1_1OggWriteQuality_1a88e3828e881b811f420efa3111f201e2" compoundref="OggFile_8h" startline="33" endline="36">OggWriteQuality</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structEOUtils_1_1OggWriteQuality_1a88e3828e881b811f420efa3111f201e2" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::OggWriteQuality::OggWriteQuality</definition>
+        <argsstring>(double pQualityBestOneWorstZero)</argsstring>
+        <name>OggWriteQuality</name>
+        <qualifiedname>EOUtils::OggWriteQuality::OggWriteQuality</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>pQualityBestOneWorstZero</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" line="17" column="10" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" bodystart="33" bodyend="36"/>
+        <references refid="structEOUtils_1_1OggWriteQuality_1aede25451ee9bc5e4d8bbff1f817a2a6e" compoundref="OggFile_8h" startline="19">QualityBestOneWorstZero</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Vorbis write quality scale 1 best → 0 worst (mapped to libsndfile SFC_SET_COMPRESSION_LEVEL). </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>EOUtils::OggWriteQuality</label>
+        <link refid="structEOUtils_1_1OggWriteQuality"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+QualityBestOneWorstZero</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>double</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" line="15" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" bodystart="16" bodyend="20"/>
+    <listofallmembers>
+      <member refid="structEOUtils_1_1OggWriteQuality_1a88e3828e881b811f420efa3111f201e2" prot="public" virt="non-virtual"><scope>EOUtils::OggWriteQuality</scope><name>OggWriteQuality</name></member>
+      <member refid="structEOUtils_1_1OggWriteQuality_1aede25451ee9bc5e4d8bbff1f817a2a6e" prot="public" virt="non-virtual"><scope>EOUtils::OggWriteQuality</scope><name>QualityBestOneWorstZero</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

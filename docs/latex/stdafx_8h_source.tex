@@ -1,0 +1,62 @@
+\doxysection{stdafx.\+h}
+\label{stdafx_8h_source}\index{/home/erico/projects/audio\_mixer\_cpp/code/AudioMixerCPP\_Win\_VisualStudio/stdafx.h@{/home/erico/projects/audio\_mixer\_cpp/code/AudioMixerCPP\_Win\_VisualStudio/stdafx.h}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ stdafx.h\ :\ include\ file\ for\ standard\ system\ include\ files,}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ or\ project\ specific\ include\ files\ that\ are\ used\ frequently,}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ but\ are\ changed\ infrequently}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifdef\ \_WINDOWS}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ VC\_EXTRALEAN}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ VC\_EXTRALEAN\ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Exclude\ rarely-\/used\ stuff\ from\ Windows\ headers}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}targetver.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ \_ATL\_CSTRING\_EXPLICIT\_CONSTRUCTORS\ \ \ \ \ \ }\textcolor{comment}{//\ some\ CString\ constructors\ will\ be\ explicit}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ turns\ off\ MFC's\ hiding\ of\ some\ common\ and\ often\ safely\ ignored\ warning\ messages}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ \_AFX\_ALL\_WARNINGS}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <afxwin.h>}\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MFC\ core\ and\ standard\ components}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <afxext.h>}\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MFC\ extensions}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <afxdisp.h>}\ \ \ \ \ \ \ \ \textcolor{comment}{//\ MFC\ Automation\ classes}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#ifndef\ \_AFX\_NO\_OLE\_SUPPORT}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <afxdtctl.h>}\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MFC\ support\ for\ Internet\ Explorer\ 4\ Common\ Controls}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#ifndef\ \_AFX\_NO\_AFXCMN\_SUPPORT}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <afxcmn.h>}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MFC\ support\ for\ Windows\ Common\ Controls}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_AFX\_NO\_AFXCMN\_SUPPORT}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <afxcontrolbars.h>}\ \ \ \ \ \textcolor{comment}{//\ MFC\ support\ for\ ribbons\ and\ control\ bars}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#ifdef\ \_UNICODE}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#if\ defined\ \_M\_IX86}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#pragma\ comment(linker,"{}/manifestdependency:\(\backslash\)"{}type='win32'\ name='Microsoft.Windows.Common-\/Controls'\ version='6.0.0.0'\ processorArchitecture='x86'\ publicKeyToken='6595b64144ccf1df'\ language='*'\(\backslash\)"{}"{})}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#elif\ defined\ \_M\_X64}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#pragma\ comment(linker,"{}/manifestdependency:\(\backslash\)"{}type='win32'\ name='Microsoft.Windows.Common-\/Controls'\ version='6.0.0.0'\ processorArchitecture='amd64'\ publicKeyToken='6595b64144ccf1df'\ language='*'\(\backslash\)"{}"{})}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#pragma\ comment(linker,"{}/manifestdependency:\(\backslash\)"{}type='win32'\ name='Microsoft.Windows.Common-\/Controls'\ version='6.0.0.0'\ processorArchitecture='*'\ publicKeyToken='6595b64144ccf1df'\ language='*'\(\backslash\)"{}"{})}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,873 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 14.1.2 (0)
+%%Title: EOUtils::AiffFile
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 199 1352
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 163 1316 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% Node1
+gsave
+0 0 0.6 nodecolor
+newpath 138.625 228 moveto
+16.375 228 lineto
+16.375 0 lineto
+138.625 0 lineto
+closepath fill
+0 0 0 nodecolor
+10 /Helvetica set_font
+41.875 214.5 moveto 71.25 (EOUtils::AiffFile) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+76 198.5 moveto 3 ( ) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.375 182.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 182.5 moveto 36.75 (AiffFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.375 166.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 166.5 moveto 36.75 (AiffFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.375 150.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 150.5 moveto 36.75 (AiffFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.375 134.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 134.5 moveto 36.75 (AiffFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.375 118.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 118.5 moveto 36.75 (AiffFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.375 102.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 102.5 moveto 42.75 (~AiffFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.375 86.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 86.5 moveto 27 (open\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.375 70.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 70.5 moveto 76.5 (setAudioFileInfo\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.375 54.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 54.5 moveto 51.75 (getFileInfo\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.75 38.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 38.5 moveto 93 (readFormatMatches\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.75 22.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 22.5 moveto 104.25 (newFileSfFormatMask\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.75 6.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.375 6.5 moveto 57 (formatLabel\(\)) alignedtext
+0 0 0.4 nodecolor
+newpath 16.375 210 moveto
+16.375 210 lineto
+138.625 210 lineto
+138.625 210 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 16.375 210 moveto
+16.375 210 lineto
+138.625 210 lineto
+138.625 210 lineto
+closepath stroke
+0 0 0.4 nodecolor
+newpath 16.375 194 moveto
+16.375 194 lineto
+138.625 194 lineto
+138.625 194 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 16.375 194 moveto
+16.375 194 lineto
+138.625 194 lineto
+138.625 194 lineto
+closepath stroke
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 16.375 0 moveto
+16.375 228 lineto
+138.625 228 lineto
+138.625 0 lineto
+closepath stroke
+grestore
+% Node2
+gsave
+[ /Rect [ 0 264 155 716 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classEOUtils_1_1SndFileBackedMetadataAudioFile.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 155 716 moveto
+0 716 lineto
+0 264 lineto
+155 264 lineto
+closepath fill
+0 0 0 nodecolor
+10 /Helvetica set_font
+4 702.5 moveto 147 (EOUtils::SndFileBackedMetadata) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+57.25 690.5 moveto 40.5 (AudioFile) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.812 674.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 674.5 moveto 53.25 (mFileLayout) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.438 658.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 658.5 moveto 76.5 (setAudioFileInfo\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.438 642.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 642.5 moveto 27 (open\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.438 626.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 626.5 moveto 29.25 (close\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.438 610.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 610.5 moveto 36.75 (isOpen\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.438 594.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 594.5 moveto 99.75 (getNextSample_int64\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.438 578.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 578.5 moveto 86.25 (writeSample_int64\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.438 562.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 562.5 moveto 104.25 (getHighestSampleValue) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 550.5 moveto 32.25 (_int64\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.438 534.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 534.5 moveto 90 (goToAudioDataPos\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.438 518.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 518.5 moveto 63 (numSamples\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.438 502.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 502.5 moveto 115.5 (maxValueForSampleSize\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 486.5 moveto 63 (and 17 more...) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.812 470.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 470.5 moveto 131.25 (SndFileBackedMetadataAudio) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 458.5 moveto 21.75 (File\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.812 442.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 442.5 moveto 131.25 (SndFileBackedMetadataAudio) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 430.5 moveto 21.75 (File\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.812 414.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 414.5 moveto 131.25 (SndFileBackedMetadataAudio) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 402.5 moveto 21.75 (File\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.812 386.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 386.5 moveto 131.25 (SndFileBackedMetadataAudio) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 374.5 moveto 21.75 (File\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.812 358.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 358.5 moveto 131.25 (SndFileBackedMetadataAudio) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 346.5 moveto 21.75 (File\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.812 330.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 330.5 moveto 93 (readFormatMatches\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.812 314.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 314.5 moveto 104.25 (newFileSfFormatMask\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.812 298.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 298.5 moveto 57 (formatLabel\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+5.812 282.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 282.5 moveto 120 (configureSndfileEncoderFor) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.875 270.5 moveto 28.5 (Write\(\)) alignedtext
+0 0 0.4 nodecolor
+newpath 0 686 moveto
+0 686 lineto
+155 686 lineto
+155 686 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 0 686 moveto
+0 686 lineto
+155 686 lineto
+155 686 lineto
+closepath stroke
+0 0 0.4 nodecolor
+newpath 0 670 moveto
+0 670 lineto
+14.875 670 lineto
+14.875 670 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 0 670 moveto
+0 670 lineto
+14.875 670 lineto
+14.875 670 lineto
+closepath stroke
+0 0 0.4 nodecolor
+newpath 14.875 670 moveto
+14.875 670 lineto
+155 670 lineto
+155 670 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 14.875 670 moveto
+14.875 670 lineto
+155 670 lineto
+155 670 lineto
+closepath stroke
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 0 264 moveto
+0 716 lineto
+155 716 lineto
+155 264 lineto
+closepath stroke
+grestore
+% Node2->Node1
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 77.5 252.901 moveto
+77.5 244.396 77.5 236.037 77.5 227.902 curveto
+stroke
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 74 252.645 moveto
+77.5 262.645 lineto
+81 252.645 lineto
+closepath stroke
+grestore
+% Node3
+gsave
+[ /Rect [ 12.75 752 142.25 964 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classEOUtils_1_1MetadataAudioFile.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 142.25 964 moveto
+12.75 964 lineto
+12.75 752 lineto
+142.25 752 lineto
+closepath fill
+0 0 0 nodecolor
+10 /Helvetica set_font
+16.75 950.5 moveto 121.5 (EOUtils::MetadataAudioFile) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+76 934.5 moveto 3 ( ) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+21.375 918.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+36 918.5 moveto 87 (MetadataAudioFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+21.375 902.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+36 902.5 moveto 87 (MetadataAudioFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+21.375 886.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+36 886.5 moveto 87 (MetadataAudioFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+21.375 870.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+36 870.5 moveto 93 (~MetadataAudioFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+21.375 854.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+36 854.5 moveto 38.25 (setTitle\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+21.375 838.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+36 838.5 moveto 42.75 (setArtist\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+21.375 822.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+36 822.5 moveto 47.25 (setAlbum\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+21.375 806.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+36 806.5 moveto 45.75 (setGenre\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+21.375 790.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+36 790.5 moveto 78.75 (setTrackNumber\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+21.375 774.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+36 774.5 moveto 39 (setYear\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+36 758.5 moveto 57.75 (and 8 more...) alignedtext
+0 0 0.4 nodecolor
+newpath 12.75 946 moveto
+12.75 946 lineto
+142.25 946 lineto
+142.25 946 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 12.75 946 moveto
+12.75 946 lineto
+142.25 946 lineto
+142.25 946 lineto
+closepath stroke
+0 0 0.4 nodecolor
+newpath 12.75 930 moveto
+12.75 930 lineto
+142.25 930 lineto
+142.25 930 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 12.75 930 moveto
+12.75 930 lineto
+142.25 930 lineto
+142.25 930 lineto
+closepath stroke
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 12.75 752 moveto
+12.75 964 lineto
+142.25 964 lineto
+142.25 752 lineto
+closepath stroke
+grestore
+% Node3->Node2
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 77.5 740.804 moveto
+77.5 732.699 77.5 724.392 77.5 715.959 curveto
+stroke
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 74 740.606 moveto
+77.5 750.606 lineto
+81 740.606 lineto
+closepath stroke
+grestore
+% Node4
+gsave
+[ /Rect [ 6.625 1000 148.375 1308 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classEOUtils_1_1AudioFile.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 148.375 1308 moveto
+6.625 1308 lineto
+6.625 1000 lineto
+148.375 1000 lineto
+closepath fill
+0 0 0 nodecolor
+10 /Helvetica set_font
+37 1294.5 moveto 81 (EOUtils::AudioFile) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+11 1278.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1278.5 moveto 48 (mFilename) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+11 1262.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1262.5 moveto 55.5 (mFileStream) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+11 1246.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1246.5 moveto 71.25 (mFileOpenMode) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+11 1230.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1230.5 moveto 74.25 (mDataSizeBytes) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+11 1214.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1214.5 moveto 48.75 (mMetadata) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+10.625 1198.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1198.5 moveto 46.5 (AudioFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+10.625 1182.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1182.5 moveto 46.5 (AudioFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+10.625 1166.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1166.5 moveto 46.5 (AudioFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+10.625 1150.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1150.5 moveto 52.5 (~AudioFile\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+10.625 1134.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1134.5 moveto 76.5 (setAudioFileInfo\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+10.625 1118.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1118.5 moveto 27 (open\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+10.625 1102.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1102.5 moveto 88.5 (BitrateIsAdjustable\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+10.625 1086.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1086.5 moveto 36.75 (isOpen\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+10.625 1070.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1070.5 moveto 69 (hasReadMode\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+10.625 1054.5 moveto 6 (+) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1054.5 moveto 68.25 (hasWriteMode\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1038.5 moveto 63 (and 19 more...) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+11 1022.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1022.5 moveto 123.75 (fileSizeAccordingToStream\(\)) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+11 1006.5 moveto 5.25 (#) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.625 1006.5 moveto 59.25 (setFileMode\(\)) alignedtext
+0 0 0.4 nodecolor
+newpath 6.625 1290 moveto
+6.625 1290 lineto
+148.375 1290 lineto
+148.375 1290 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 6.625 1290 moveto
+6.625 1290 lineto
+148.375 1290 lineto
+148.375 1290 lineto
+closepath stroke
+0 0 0.4 nodecolor
+newpath 6.625 1210 moveto
+6.625 1210 lineto
+18.625 1210 lineto
+18.625 1210 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 6.625 1210 moveto
+6.625 1210 lineto
+18.625 1210 lineto
+18.625 1210 lineto
+closepath stroke
+0 0 0.4 nodecolor
+newpath 18.625 1210 moveto
+18.625 1210 lineto
+148.375 1210 lineto
+148.375 1210 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 18.625 1210 moveto
+18.625 1210 lineto
+148.375 1210 lineto
+148.375 1210 lineto
+closepath stroke
+1 setlinewidth
+solid
+0 0 0.4 nodecolor
+newpath 6.625 1000 moveto
+6.625 1308 lineto
+148.375 1308 lineto
+148.375 1000 lineto
+closepath stroke
+grestore
+% Node4->Node3
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 77.5 988.893 moveto
+77.5 980.48 77.5 972.142 77.5 963.993 curveto
+stroke
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 74 988.889 moveto
+77.5 998.889 lineto
+81 988.889 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 199 1352
+end
+restore
+%%EOF

@@ -5,6 +5,12 @@
 #include "WAVFile.h"
 #include "FLACFileInfo.h"
 #include "FLACFile.h"
+#include "MP3File.h"
+#include "MP3FileInfo.h"
+#include "OggFile.h"
+#include "OggFileInfo.h"
+#include "AiffFile.h"
+#include "AiffFileInfo.h"
 
 #include <fstream>
 #include <cstdio>
@@ -13,7 +19,6 @@
 #include <memory>
 #include <filesystem>
 #include <cstring>
-
 using std::fstream;
 using std::shared_ptr;
 using std::make_shared;
@@ -40,6 +45,12 @@ shared_ptr<AudioFile> EOUtils::createAudioFileObjForExistingFile(const char* pFi
 		audioFile = make_shared<WAVFile>(pFilename);
 	else if (FLACFileInfo::isFLACFile(pFilename))
 		audioFile = make_shared<FLACFile>(pFilename);
+	else if (AiffFileInfo::matchesExtension(pFilename) || AiffFileInfo::sniffFileHeader(pFilename))
+		audioFile = make_shared<AiffFile>(pFilename);
+	else if (OggFileInfo::matchesExtension(pFilename) || OggFileInfo::sniffFileHeader(pFilename))
+		audioFile = make_shared<OggFile>(pFilename);
+	else if (MP3FileInfo::matchesExtension(pFilename) || MP3FileInfo::sniffFileHeader(pFilename))
+		audioFile = make_shared<MP3File>(pFilename);
 	return audioFile;
 }
 
@@ -56,6 +67,12 @@ shared_ptr<AudioFile> EOUtils::createAudioFileObjForNewFile(const char* pFilenam
 		outputFile = make_shared<WAVFile>(pFilename);
 	else if (filenameExt == "FLAC")
 		outputFile = make_shared<FLACFile>(pFilename);
+	else if (filenameExt == "MP3")
+		outputFile = make_shared<MP3File>(pFilename);
+	else if (filenameExt == "OGG" || filenameExt == "OGA")
+		outputFile = make_shared<OggFile>(pFilename);
+	else if (filenameExt == "AIFF" || filenameExt == "AIF" || filenameExt == "AIFC")
+		outputFile = make_shared<AiffFile>(pFilename);
 
 	return outputFile;
 }
@@ -90,10 +107,28 @@ AudioFileResultType EOUtils::getAudioFileInfo(const char* pFilename, AudioFileIn
 	AudioFileResultType result;
 
 	unique_ptr<AudioFileInfo> fileInfo;
+	enum class ProbeKind { Fstream, FilenameOnly };
+	ProbeKind kind = ProbeKind::Fstream;
+
 	if (WAVFileInfo::isWAVFile(pFilename))
 		fileInfo = make_unique<WAVFileInfo>();
 	else if (FLACFileInfo::isFLACFile(pFilename))
 		fileInfo = make_unique<FLACFileInfo>();
+	else if (MP3FileInfo::matchesExtension(pFilename) || MP3FileInfo::sniffFileHeader(pFilename))
+	{
+		fileInfo = make_unique<MP3FileInfo>();
+		kind = ProbeKind::FilenameOnly;
+	}
+	else if (OggFileInfo::matchesExtension(pFilename) || OggFileInfo::sniffFileHeader(pFilename))
+	{
+		fileInfo = make_unique<OggFileInfo>();
+		kind = ProbeKind::FilenameOnly;
+	}
+	else if (AiffFileInfo::matchesExtension(pFilename) || AiffFileInfo::sniffFileHeader(pFilename))
+	{
+		fileInfo = make_unique<AiffFileInfo>();
+		kind = ProbeKind::FilenameOnly;
+	}
 	else
 	{
 		result.addError("Unrecognized audio file format for " + string(pFilename));
@@ -102,17 +137,22 @@ AudioFileResultType EOUtils::getAudioFileInfo(const char* pFilename, AudioFileIn
 
 	if (fileInfo != nullptr)
 	{
-		fstream inFile;
-		inFile.open(pFilename, std::ios_base::binary | std::ios_base::in);
-		if (inFile.is_open())
-		{
-			result = fileInfo->read(inFile);
-			inFile.close();
-			if (result && result.numErrors() == 0)
-				pAudioFileInfo.copyAudioFileInfo(*fileInfo);
-		}
+		if (kind == ProbeKind::FilenameOnly)
+			result = fileInfo->read(pFilename);
 		else
-			result.addError("Failed to open " + string(pFilename) + " for reading");
+		{
+			fstream inFile;
+			inFile.open(pFilename, std::ios_base::binary | std::ios_base::in);
+			if (inFile.is_open())
+			{
+				result = fileInfo->read(inFile);
+				inFile.close();
+			}
+			else
+				result.addError("Failed to open " + string(pFilename) + " for reading");
+		}
+		if (result && result.numErrors() == 0)
+			pAudioFileInfo.copyAudioFileInfo(*fileInfo);
 	}
 
 	return result;
@@ -191,16 +231,27 @@ AudioFileResultType EOUtils::mixAudioFiles(const std::vector<std::string>& pFile
 	result = getHighestSampleValue_64bit(pFilenames, highestSampleValueInSourceFiles);
 	if (result)
 	{
-		int64_t difference = 0;
-		// This will be different depending on whether there are 8 bits/sample or
-		// 16 bits/sample for the sound files.
-		if (highestNumBitsPerSample == 8)
-			difference = (int64_t)(highestSampleValueInSourceFiles - ((int64_t)maxValue<uint8_t>() / (int64_t)pFilenames.size()));
-		else if (highestNumBitsPerSample == 16)
-			difference = (int64_t)(highestSampleValueInSourceFiles - ((int64_t)maxValue<int16_t>() / (int64_t)pFilenames.size()));
-		else if (highestNumBitsPerSample == 32)
-			difference = (int64_t)(highestSampleValueInSourceFiles - ((int64_t)maxValue<int32_t>() / (int64_t)pFilenames.size()));
-		multiplier = 1.0 - ((double)difference / (double)highestSampleValueInSourceFiles);
+		if (highestSampleValueInSourceFiles <= 0)
+			multiplier = 1.0;
+		else
+		{
+			int64_t difference = 0;
+			// This will be different depending on whether there are 8 bits/sample or
+			// 16 bits/sample for the sound files.
+			if (highestNumBitsPerSample == 8)
+				difference = (int64_t)(highestSampleValueInSourceFiles
+				                       - ((int64_t)maxValue<uint8_t>() / (int64_t)pFilenames.size()));
+			else if (highestNumBitsPerSample == 16)
+				difference = (int64_t)(highestSampleValueInSourceFiles
+				                       - ((int64_t)maxValue<int16_t>() / (int64_t)pFilenames.size()));
+			else if (highestNumBitsPerSample == 24)
+				difference = (int64_t)(highestSampleValueInSourceFiles
+				                       - (((int64_t)8388607) / (int64_t)pFilenames.size()));
+			else if (highestNumBitsPerSample == 32)
+				difference = (int64_t)(highestSampleValueInSourceFiles
+				                       - ((int64_t)maxValue<int32_t>() / (int64_t)pFilenames.size()));
+			multiplier = 1.0 - ((double)difference / (double)highestSampleValueInSourceFiles);
+		}
 	}
 	// Proceed even if getHighestSampleValue failed (FLAC can return 'end of stream'); use multiplier 1.0
 	result = AudioFileResultType();  // Reset so mixing loop runs
@@ -273,7 +324,7 @@ AudioFileResultType EOUtils::mixAudioFiles(const std::vector<std::string>& pFile
 	//    write the sample to the output file
 	int64_t sample = 0;
 	int64_t srcSample = 0;
-	int64_t finalMixFileHighestSample = 0;
+	int64_t finalMixPeakAbs = 0;
 	for (size_t sampleIdx = 0; (sampleIdx < highestNumSamples) && result; ++sampleIdx)
 	{
 		sample = 0;
@@ -292,8 +343,9 @@ AudioFileResultType EOUtils::mixAudioFiles(const std::vector<std::string>& pFile
 			AudioFileResultType writeRes = mixedTmpFile->writeSample_int64(sample);
 			if (!writeRes)
 				result = writeRes;
-			if (sample > finalMixFileHighestSample)
-				finalMixFileHighestSample = sample;
+			const int64_t mag = sample >= 0 ? sample : -sample;
+			if (mag > finalMixPeakAbs)
+				finalMixPeakAbs = mag;
 		}
 		else
 		{
@@ -310,7 +362,10 @@ AudioFileResultType EOUtils::mixAudioFiles(const std::vector<std::string>& pFile
 
 	// Increase the destination file volume.
 	// First, calculate the volume multiplier
-	multiplier = (double)mixedTmpFile->maxValueForSampleSize() / (double)finalMixFileHighestSample;
+	{
+		const int64_t denom = std::max<int64_t>(1, finalMixPeakAbs);
+		multiplier = (double)mixedTmpFile->maxValueForSampleSize() / (double)denom;
+	}
 	if (multiplier < 0.0)
 		multiplier = -multiplier;
 	// Get the audio file information from the temporary mixed file, then close it.
@@ -357,18 +412,12 @@ AudioFileResultType EOUtils::mixAudioFiles(const std::vector<std::string>& pFile
 	if (openedOutputFileHere)
 		pOutputAudioFile.close();
 
-	// Remove the initial mixed file and keep the one with the increased volume
-	if (remove(mixedFilename.c_str()) == 0)
-	{
-		if (rename(mixedFilename.c_str(), finalOutputFilename.c_str()) != 0)
-		{
-			// Not sure why this is failing sometimes, but as a kludge, check whether the file exists too
-			if (!std::filesystem::exists(finalOutputFilename))
-				result.addError("Unable to rename " + mixedFilename + " to " + finalOutputFilename);
-		}
-	}
-	else
-		result.addError("File access error with " + mixedFilename);
+	// Discard the FLAC scratch file; the final codec file is already closed above.
+	std::error_code rmEc;
+	std::filesystem::remove(mixedFilename, rmEc);
+	if (rmEc && std::filesystem::exists(std::filesystem::path(mixedFilename)))
+		result.addError("Unable to delete temporary mixed file " + mixedFilename + ": "
+		                + rmEc.message());
 
 	return result;
 }

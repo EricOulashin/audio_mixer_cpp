@@ -1,0 +1,47 @@
+\doxysection{/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/\+Audio\+Mixer\+CPP\+\_\+\+Win\+\_\+\+Visual\+Studio/\+GUITools.cpp File Reference}
+\label{GUITools_8cpp}\index{/home/erico/projects/audio\_mixer\_cpp/code/AudioMixerCPP\_Win\_VisualStudio/GUITools.cpp@{/home/erico/projects/audio\_mixer\_cpp/code/AudioMixerCPP\_Win\_VisualStudio/GUITools.cpp}}
+{\ttfamily \#include "{}stdafx.\+h"{}}\newline
+{\ttfamily \#include "{}GUITools.\+h"{}}\newline
+{\ttfamily \#include "{}afxdlgs.\+h"{}}\newline
+Include dependency graph for GUITools.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{GUITools_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+INT\+\_\+\+PTR \textbf{ let\+User\+Browse\+For\+One\+File} (const CString \&p\+File\+Filter, CString \&p\+Selected\+File, CWnd $\ast$p\+Parent\+Wnd)
+\begin{DoxyCompactList}\small\item\em Lets the user select a single file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\doxysubsection{Function Documentation}
+\index{GUITools.cpp@{GUITools.cpp}!letUserBrowseForOneFile@{letUserBrowseForOneFile}}
+\index{letUserBrowseForOneFile@{letUserBrowseForOneFile}!GUITools.cpp@{GUITools.cpp}}
+\doxysubsubsection{letUserBrowseForOneFile()}
+{\footnotesize\ttfamily \label{GUITools_8cpp_a67560c4b88e8fe6ee37b2fadd4e5acda} 
+INT\+\_\+\+PTR let\+User\+Browse\+For\+One\+File (\begin{DoxyParamCaption}\item[{const CString \&}]{p\+File\+Filter}{, }\item[{CString \&}]{p\+Selected\+File}{, }\item[{CWnd $\ast$}]{p\+Parent\+Wnd}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Lets the user select a single file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+File\+Filter} & The filename filter \\
+\hline
+\mbox{\texttt{out}}  & {\em p\+Selected\+File} & This will be populated with the selected filename, if the user selected one \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Parent\+Wnd} & A pointer to the parent window. Defaults to nullptr. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The status code from the file dialog 
+\end{DoxyReturn}
+
+
+Referenced by \textbf{ CAudio\+Mixer\+CPPDlg\+::\+On\+Clicked\+Button\+Select\+Output\+File()}.
+

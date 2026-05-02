@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="structEOUtils_1_1OggWriteApproxBitrateKbps" kind="struct" language="C++" prot="public">
+    <compoundname>EOUtils::OggWriteApproxBitrateKbps</compoundname>
+    <includes refid="OggFile_8h" local="no">OggFile.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structEOUtils_1_1OggWriteApproxBitrateKbps_1a95b31987b5c161106c31768d2399ae53" prot="public" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t EOUtils::OggWriteApproxBitrateKbps::ApproxNominalBitrateKbps</definition>
+        <argsstring></argsstring>
+        <name>ApproxNominalBitrateKbps</name>
+        <qualifiedname>EOUtils::OggWriteApproxBitrateKbps::ApproxNominalBitrateKbps</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" line="30" column="15" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="structEOUtils_1_1OggWriteApproxBitrateKbps_1af8ab5334a341c8e07bf3eab972ca4bc4" compoundref="OggFile_8h" startline="38" endline="41">OggWriteApproxBitrateKbps</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structEOUtils_1_1OggWriteApproxBitrateKbps_1af8ab5334a341c8e07bf3eab972ca4bc4" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::OggWriteApproxBitrateKbps::OggWriteApproxBitrateKbps</definition>
+        <argsstring>(std::uint32_t pApproxNominalBitrateKbps)</argsstring>
+        <name>OggWriteApproxBitrateKbps</name>
+        <qualifiedname>EOUtils::OggWriteApproxBitrateKbps::OggWriteApproxBitrateKbps</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>pApproxNominalBitrateKbps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" line="28" column="10" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" bodystart="38" bodyend="41"/>
+        <references refid="structEOUtils_1_1OggWriteApproxBitrateKbps_1a95b31987b5c161106c31768d2399ae53" compoundref="OggFile_8h" startline="30">ApproxNominalBitrateKbps</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Request an approximate nominal stream bitrate when writing Vorbis — libsndfile only exposes quality-based VBR; this converts kbps using a heuristic (typical stereo layout). </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>EOUtils::OggWriteApproxBitrateKbps</label>
+        <link refid="structEOUtils_1_1OggWriteApproxBitrateKbps"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+ApproxNominalBitrateKbps</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uint32_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" line="26" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h" bodystart="27" bodyend="31"/>
+    <listofallmembers>
+      <member refid="structEOUtils_1_1OggWriteApproxBitrateKbps_1a95b31987b5c161106c31768d2399ae53" prot="public" virt="non-virtual"><scope>EOUtils::OggWriteApproxBitrateKbps</scope><name>ApproxNominalBitrateKbps</name></member>
+      <member refid="structEOUtils_1_1OggWriteApproxBitrateKbps_1af8ab5334a341c8e07bf3eab972ca4bc4" prot="public" virt="non-virtual"><scope>EOUtils::OggWriteApproxBitrateKbps</scope><name>OggWriteApproxBitrateKbps</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

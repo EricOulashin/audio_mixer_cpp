@@ -1,0 +1,38 @@
+\doxysection{Snd\+File\+Helpers.\+h}
+\label{SndFileHelpers_8h_source}\index{/home/erico/projects/audio\_mixer\_cpp/code/common/SndFileHelpers.h@{/home/erico/projects/audio\_mixer\_cpp/code/common/SndFileHelpers.h}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_EO\_UTILS\_SNDFILE\_HELPERS\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_EO\_UTILS\_SNDFILE\_HELPERS\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <sndfile.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}AudioFileInfo.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}AudioFileResultType.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }EOUtils}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }sndfile\_detail}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ sfInfoToAudioFileInfo(\textcolor{keyword}{const}\ SF\_INFO\&\ pSf,\ std::uintmax\_t\ pFileSizeBytes,\ AudioFileInfo\&\ pOut);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int16\_t\ effectiveBitsPerSample(\textcolor{keywordtype}{int}\ pSfFormatFull);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int64\_t\ maxSampleValueForFormat(int16\_t\ pBitsPerSample);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ formatErrorSuffix(SNDFILE*\ pSndOrNull);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ formatHasMajorMinor(\textcolor{keywordtype}{int}\ pFullFormat,\ \textcolor{keywordtype}{int}\ pMajorMask,\ \textcolor{keywordtype}{int}\ pMinorMask);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::uintmax\_t\ safeFileSize(\textcolor{keyword}{const}\ std::string\&\ pPath);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<char>\ peekFilePrefix(\textcolor{keyword}{const}\ std::string\&\ pPath,\ std::size\_t\ pMaxLen);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

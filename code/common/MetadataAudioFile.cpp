@@ -22,4 +22,9 @@ namespace EOUtils
 	MetadataAudioFile::~MetadataAudioFile()
 	{
 	}
+
+	bool MetadataAudioFile::BitrateIsAdjustable() const
+	{
+		return false;
+	}
 }

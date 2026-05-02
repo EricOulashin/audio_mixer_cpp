@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="AudioFileInfo_8cpp" kind="file" language="C++">
+    <compoundname>AudioFileInfo.cpp</compoundname>
+    <includes refid="AudioFileInfo_8h" local="yes">AudioFileInfo.h</includes>
+    <includes refid="EOUtils_8h" local="yes">EOUtils.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp</label>
+        <link refid="AudioFileInfo_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AudioFileInfo.h</label>
+        <link refid="AudioFileInfo_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AudioFileResultType.h</label>
+        <link refid="AudioFileResultType_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>EOUtils.h</label>
+        <link refid="EOUtils_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>fstream</label>
+      </node>
+      <node id="7">
+        <label>iterator</label>
+      </node>
+      <node id="6">
+        <label>list</label>
+      </node>
+      <node id="8">
+        <label>ostream</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceEOUtils">EOUtils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="AudioFileInfo_8h" kindref="compound">AudioFileInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="EOUtils_8h" kindref="compound">EOUtils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::string;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::fstream;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::ifstream;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceEOUtils" kindref="compound">EOUtils</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="classEOUtils_1_1AudioFileInfo_1a658d1cdbdc856d3171e9eda93bcc4b14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a658d1cdbdc856d3171e9eda93bcc4b14" kindref="member">AudioFileInfo::AudioFileInfo</ref>(int16_t<sp/>pNumChannels,<sp/>int32_t<sp/>pSampleRateHz,<sp/>int32_t<sp/>pBytesPerSecond,<sp/>int16_t<sp/>pByteRate,<sp/>int16_t<sp/>pBitsPerSample)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a5d780adb5a915770b5707aee210c15e5" kindref="member">mFileSize</ref>(0),</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1acad9abe5b454c2d77d06eb6e73192e56" kindref="member">mNumChannels</ref>(pNumChannels),</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1adef5201babdec70e8c48f79f622915e2" kindref="member">mSampleRateHz</ref>(pSampleRateHz),</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a57e6bae0181e9d47e37924e99238ba20" kindref="member">mBytesPerSecond</ref>(pBytesPerSecond),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a9307f85fa10c2104f2b11dac26c0d7a9" kindref="member">mByteRate</ref>(pByteRate),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a0b3c35133b9afb40a8678061e1e558af" kindref="member">mBitsPerSample</ref>(pBitsPerSample)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classEOUtils_1_1AudioFileInfo_1abc993cfabd7bf5db763072caafed438f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1abc993cfabd7bf5db763072caafed438f" kindref="member">AudioFileInfo::copyAudioFileInfo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a658d1cdbdc856d3171e9eda93bcc4b14" kindref="member">AudioFileInfo</ref>&amp;<sp/>pAudioFileInfo)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a5d780adb5a915770b5707aee210c15e5" kindref="member">mFileSize</ref><sp/>=<sp/>pAudioFileInfo.<ref refid="classEOUtils_1_1AudioFileInfo_1a5d780adb5a915770b5707aee210c15e5" kindref="member">mFileSize</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1acad9abe5b454c2d77d06eb6e73192e56" kindref="member">mNumChannels</ref><sp/>=<sp/>pAudioFileInfo.<ref refid="classEOUtils_1_1AudioFileInfo_1acad9abe5b454c2d77d06eb6e73192e56" kindref="member">mNumChannels</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1adef5201babdec70e8c48f79f622915e2" kindref="member">mSampleRateHz</ref><sp/>=<sp/>pAudioFileInfo.<ref refid="classEOUtils_1_1AudioFileInfo_1adef5201babdec70e8c48f79f622915e2" kindref="member">mSampleRateHz</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a57e6bae0181e9d47e37924e99238ba20" kindref="member">mBytesPerSecond</ref><sp/>=<sp/>pAudioFileInfo.<ref refid="classEOUtils_1_1AudioFileInfo_1a57e6bae0181e9d47e37924e99238ba20" kindref="member">mBytesPerSecond</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a9307f85fa10c2104f2b11dac26c0d7a9" kindref="member">mByteRate</ref><sp/>=<sp/>pAudioFileInfo.<ref refid="classEOUtils_1_1AudioFileInfo_1a9307f85fa10c2104f2b11dac26c0d7a9" kindref="member">mByteRate</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a0b3c35133b9afb40a8678061e1e558af" kindref="member">mBitsPerSample</ref><sp/>=<sp/>pAudioFileInfo.<ref refid="classEOUtils_1_1AudioFileInfo_1a0b3c35133b9afb40a8678061e1e558af" kindref="member">mBitsPerSample</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classEOUtils_1_1AudioFileInfo_1ab94a417a9ec7ebf2ac1e9b1578f59825" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1ab94a417a9ec7ebf2ac1e9b1578f59825" kindref="member">AudioFileInfo::read</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pFilename)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref><sp/>result;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fstream<sp/>inFile(pFilename,<sp/>std::ios::binary<sp/>|<sp/>std::ios::in);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(inFile.is_open())</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="classEOUtils_1_1AudioFileInfo_1ab94a417a9ec7ebf2ac1e9b1578f59825" kindref="member">read</ref>(inFile);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inFile.close();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.<ref refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" kindref="member">addError</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">(pFilename)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>for<sp/>reading&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>would<sp/>be<sp/>pure<sp/>virtual,<sp/>but<sp/>sometimes<sp/>it<sp/>has<sp/>handy<sp/>to<sp/>instantiate<sp/>objects<sp/>of<sp/>this<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classEOUtils_1_1AudioFileInfo_1ae46975f1e0d83c16008c256d283d5c23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1ab94a417a9ec7ebf2ac1e9b1578f59825" kindref="member">AudioFileInfo::read</ref>(std::fstream&amp;<sp/></highlight><highlight class="comment">/*pInFStream*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref><sp/>result;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.<ref refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" kindref="member">addError</ref>(</highlight><highlight class="stringliteral">&quot;read(std::fstream&amp;)<sp/>called<sp/>on<sp/>instance<sp/>of<sp/>AudioFileInfo&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>would<sp/>be<sp/>pure<sp/>virtual,<sp/>but<sp/>sometimes<sp/>it<sp/>has<sp/>handy<sp/>to<sp/>instantiate<sp/>objects<sp/>of<sp/>this<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classEOUtils_1_1AudioFileInfo_1a35bee862e09314491cc60205fa953b02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a35bee862e09314491cc60205fa953b02" kindref="member">AudioFileInfo::write</ref>(std::fstream&amp;<sp/></highlight><highlight class="comment">/*pOutFStream*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref><sp/>result;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.<ref refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" kindref="member">addError</ref>(</highlight><highlight class="stringliteral">&quot;write(std::fstream&amp;)<sp/>called<sp/>on<sp/>instance<sp/>of<sp/>AudioFileInfo&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classEOUtils_1_1AudioFileInfo_1ae4ad85c7dec9cea2e1c972fa5363317b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="classEOUtils_1_1AudioFileInfo_1ae4ad85c7dec9cea2e1c972fa5363317b" kindref="member">AudioFileInfo::FileSize</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="61"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a5d780adb5a915770b5707aee210c15e5" kindref="member">mFileSize</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classEOUtils_1_1AudioFileInfo_1a909d37035c78c019104b5eed55a4d4c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1ae4ad85c7dec9cea2e1c972fa5363317b" kindref="member">AudioFileInfo::FileSize</ref>(int32_t<sp/>pFileSize)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a5d780adb5a915770b5707aee210c15e5" kindref="member">mFileSize</ref><sp/>=<sp/>pFileSize;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classEOUtils_1_1AudioFileInfo_1a06eec6c97330b24756c63267fef967d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a06eec6c97330b24756c63267fef967d1" kindref="member">AudioFileInfo::NumChannels</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="71"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1acad9abe5b454c2d77d06eb6e73192e56" kindref="member">mNumChannels</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classEOUtils_1_1AudioFileInfo_1a45f4b006353e74fe3855406019f36800" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a06eec6c97330b24756c63267fef967d1" kindref="member">AudioFileInfo::NumChannels</ref>(int16_t<sp/>pNumChannels)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1acad9abe5b454c2d77d06eb6e73192e56" kindref="member">mNumChannels</ref><sp/>=<sp/>pNumChannels;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classEOUtils_1_1AudioFileInfo_1a3ebf18af705038e03f640ece3dfd96b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a3ebf18af705038e03f640ece3dfd96b3" kindref="member">AudioFileInfo::SampleRateHz</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="81"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1adef5201babdec70e8c48f79f622915e2" kindref="member">mSampleRateHz</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classEOUtils_1_1AudioFileInfo_1a5a27ec24f55e1f6db76f2690910fd145" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a3ebf18af705038e03f640ece3dfd96b3" kindref="member">AudioFileInfo::SampleRateHz</ref>(int32_t<sp/>pSampleRateHz)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1adef5201babdec70e8c48f79f622915e2" kindref="member">mSampleRateHz</ref><sp/>=<sp/>pSampleRateHz;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classEOUtils_1_1AudioFileInfo_1aec253c7d40de4a512c2b2cfd13866ad4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="classEOUtils_1_1AudioFileInfo_1aec253c7d40de4a512c2b2cfd13866ad4" kindref="member">AudioFileInfo::BytesPerSecond</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="91"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a57e6bae0181e9d47e37924e99238ba20" kindref="member">mBytesPerSecond</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classEOUtils_1_1AudioFileInfo_1af72fc31e0f2e56cf2fcc83121518b4c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1aec253c7d40de4a512c2b2cfd13866ad4" kindref="member">AudioFileInfo::BytesPerSecond</ref>(int32_t<sp/>pBytesPerSecond)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a57e6bae0181e9d47e37924e99238ba20" kindref="member">mBytesPerSecond</ref><sp/>=<sp/>pBytesPerSecond;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classEOUtils_1_1AudioFileInfo_1a6eae27e84b5551365f18c0e534dffb9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a6eae27e84b5551365f18c0e534dffb9a" kindref="member">AudioFileInfo::ByteRate</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="101"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a9307f85fa10c2104f2b11dac26c0d7a9" kindref="member">mByteRate</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classEOUtils_1_1AudioFileInfo_1a561210c51ba98733104752dbce0b1dff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a6eae27e84b5551365f18c0e534dffb9a" kindref="member">AudioFileInfo::ByteRate</ref>(int16_t<sp/>pByteRate)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a9307f85fa10c2104f2b11dac26c0d7a9" kindref="member">mByteRate</ref><sp/>=<sp/>pByteRate;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classEOUtils_1_1AudioFileInfo_1a251e008ebbbe7b96fa393162ff6dffa8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a251e008ebbbe7b96fa393162ff6dffa8" kindref="member">AudioFileInfo::BitsPerSample</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="111"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a0b3c35133b9afb40a8678061e1e558af" kindref="member">mBitsPerSample</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classEOUtils_1_1AudioFileInfo_1abe9beee9f81daab6f8b88a10b97d38f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a251e008ebbbe7b96fa393162ff6dffa8" kindref="member">AudioFileInfo::BitsPerSample</ref>(int16_t<sp/>pBitsPerSample)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a0b3c35133b9afb40a8678061e1e558af" kindref="member">mBitsPerSample</ref><sp/>=<sp/>pBitsPerSample;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classEOUtils_1_1AudioFileInfo_1a62cab32f6620633f2ae70e89bd8697bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileInfo_1a62cab32f6620633f2ae70e89bd8697bd" kindref="member">AudioFileInfo::BytesPerSample</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="121"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">((</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)<ref refid="classEOUtils_1_1AudioFileInfo_1a0b3c35133b9afb40a8678061e1e558af" kindref="member">mBitsPerSample</ref><sp/>/<sp/><ref refid="AudioFileInfo_8h_1a369ecd38b3ab077fc235f892354bb46f" kindref="member">BITS_PER_BYTE</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp"/>
+  </compounddef>
+</doxygen>

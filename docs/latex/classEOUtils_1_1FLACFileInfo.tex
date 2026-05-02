@@ -1,0 +1,259 @@
+\doxysection{EOUtils\+::FLACFile\+Info Class Reference}
+\label{classEOUtils_1_1FLACFileInfo}\index{EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}}
+
+
+Holds metadata for FLAC audio files.  
+
+
+
+
+{\ttfamily \#include $<$FLACFile\+Info.\+h$>$}
+
+
+
+Inheritance diagram for EOUtils\+::FLACFile\+Info\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEOUtils_1_1FLACFileInfo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for EOUtils\+::FLACFile\+Info\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEOUtils_1_1FLACFileInfo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ FLACFile\+Info} (int16\+\_\+t p\+Num\+Channels=0, int32\+\_\+t p\+Sample\+Rate\+Hz=0, int32\+\_\+t p\+Bytes\+Per\+Second=0, int16\+\_\+t p\+Byte\+Rate=0, int16\+\_\+t p\+Bits\+Per\+Sample=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\textbf{ FLACFile\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info)
+\begin{DoxyCompactList}\small\item\em Constructor for copying an \doxyref{Audio\+File\+Info}{p.}{classEOUtils_1_1AudioFileInfo} object. \end{DoxyCompactList}\item 
+\textbf{ FLACFile\+Info} (const FLACFile\+Info \&p\+Audio\+File\+Info)
+\begin{DoxyCompactList}\small\item\em Constructor for copying a \doxyref{FLACFile\+Info}{p.}{classEOUtils_1_1FLACFileInfo} object. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ read} (std\+::fstream \&p\+In\+FStream) override
+\begin{DoxyCompactList}\small\item\em Reads the FLAC stream info from a file. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ write} (std\+::fstream \&p\+Out\+FStream) override
+\begin{DoxyCompactList}\small\item\em Not used for FLAC -\/ metadata is written by the encoder. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ read} (const char $\ast$p\+Filename) override
+\begin{DoxyCompactList}\small\item\em Reads FLAC stream info from a file by filename. \end{DoxyCompactList}\item 
+uint32\+\_\+t \textbf{ Compression\+Level} () const
+\begin{DoxyCompactList}\small\item\em Returns the current compression level. \end{DoxyCompactList}\item 
+void \textbf{ Compression\+Level} (uint32\+\_\+t p\+Compression\+Level)
+\begin{DoxyCompactList}\small\item\em Sets the compression level to use when writing FLAC files (0-\/8, where 0 is fastest and 8 is maximum compression). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ EOUtils\+::\+Audio\+File\+Info}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File\+Info} (int16\+\_\+t p\+Num\+Channels=0, int32\+\_\+t p\+Sample\+Rate\+Hz=0, int32\+\_\+t p\+Bytes\+Per\+Second=0, int16\+\_\+t p\+Byte\+Rate=0, int16\+\_\+t p\+Bits\+Per\+Sample=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \textbf{ $\sim$\+Audio\+File\+Info} ()=default
+\item 
+virtual void \textbf{ copy\+Audio\+File\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info)
+\begin{DoxyCompactList}\small\item\em Copies the values from another \doxyref{Audio\+File\+Info}{p.}{classEOUtils_1_1AudioFileInfo} object. \end{DoxyCompactList}\item 
+virtual int32\+\_\+t \textbf{ File\+Size} () const
+\item 
+void \textbf{ File\+Size} (int32\+\_\+t p\+File\+Size)
+\item 
+virtual int16\+\_\+t \textbf{ Num\+Channels} () const
+\item 
+virtual void \textbf{ Num\+Channels} (int16\+\_\+t p\+Num\+Channels)
+\item 
+virtual int32\+\_\+t \textbf{ Sample\+Rate\+Hz} () const
+\item 
+virtual void \textbf{ Sample\+Rate\+Hz} (int32\+\_\+t p\+Sample\+Rate\+Hz)
+\item 
+virtual int32\+\_\+t \textbf{ Bytes\+Per\+Second} () const
+\item 
+virtual void \textbf{ Bytes\+Per\+Second} (int32\+\_\+t p\+Bytes\+Per\+Second)
+\item 
+virtual int16\+\_\+t \textbf{ Byte\+Rate} () const
+\item 
+virtual void \textbf{ Byte\+Rate} (int16\+\_\+t p\+Byte\+Rate)
+\item 
+virtual int16\+\_\+t \textbf{ Bits\+Per\+Sample} () const
+\item 
+virtual void \textbf{ Bits\+Per\+Sample} (int16\+\_\+t p\+Bits\+Per\+Sample)
+\item 
+virtual size\+\_\+t \textbf{ Bytes\+Per\+Sample} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \textbf{ is\+FLACFile} (const char $\ast$p\+Filename)
+\begin{DoxyCompactList}\small\item\em Check if the given file is a FLAC file (has "{}f\+La\+C"{} signature). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \textbf{ EOUtils\+::\+Audio\+File\+Info}}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \textbf{ m\+File\+Size}
+\item 
+int16\+\_\+t \textbf{ m\+Num\+Channels}
+\item 
+int32\+\_\+t \textbf{ m\+Sample\+Rate\+Hz}
+\item 
+int32\+\_\+t \textbf{ m\+Bytes\+Per\+Second}
+\item 
+int16\+\_\+t \textbf{ m\+Byte\+Rate}
+\item 
+int16\+\_\+t \textbf{ m\+Bits\+Per\+Sample}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holds metadata for FLAC audio files. 
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}!FLACFileInfo@{FLACFileInfo}}
+\index{FLACFileInfo@{FLACFileInfo}!EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}}
+\doxysubsubsection{FLACFileInfo()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1FLACFileInfo_abf79e4399f094f85ad7146734ad2736d} 
+EOUtils\+::\+FLACFile\+Info\+::\+FLACFile\+Info (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{p\+Num\+Channels}{ = {\ttfamily 0}, }\item[{int32\+\_\+t}]{p\+Sample\+Rate\+Hz}{ = {\ttfamily 0}, }\item[{int32\+\_\+t}]{p\+Bytes\+Per\+Second}{ = {\ttfamily 0}, }\item[{int16\+\_\+t}]{p\+Byte\+Rate}{ = {\ttfamily 0}, }\item[{int16\+\_\+t}]{p\+Bits\+Per\+Sample}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Audio\+File\+Info()}.
+
+
+
+Referenced by \textbf{ FLACFile\+Info()}.
+
+\index{EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}!FLACFileInfo@{FLACFileInfo}}
+\index{FLACFileInfo@{FLACFileInfo}!EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}}
+\doxysubsubsection{FLACFileInfo()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1FLACFileInfo_a30cd963ac223cc94ae42b7c79d1b128e} 
+EOUtils\+::\+FLACFile\+Info\+::\+FLACFile\+Info (\begin{DoxyParamCaption}\item[{const \textbf{ Audio\+File\+Info} \&}]{p\+Audio\+File\+Info}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for copying an \doxyref{Audio\+File\+Info}{p.}{classEOUtils_1_1AudioFileInfo} object. 
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Audio\+File\+Info()}.
+
+\index{EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}!FLACFileInfo@{FLACFileInfo}}
+\index{FLACFileInfo@{FLACFileInfo}!EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}}
+\doxysubsubsection{FLACFileInfo()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1FLACFileInfo_ac87b1738f79c83cd15ee165bc3a4beea} 
+EOUtils\+::\+FLACFile\+Info\+::\+FLACFile\+Info (\begin{DoxyParamCaption}\item[{const FLACFile\+Info \&}]{p\+Audio\+File\+Info}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for copying a \doxyref{FLACFile\+Info}{p.}{classEOUtils_1_1FLACFileInfo} object. 
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Audio\+File\+Info()}, and \textbf{ FLACFile\+Info()}.
+
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}!CompressionLevel@{CompressionLevel}}
+\index{CompressionLevel@{CompressionLevel}!EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}}
+\doxysubsubsection{CompressionLevel()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1FLACFileInfo_a9adb9da8978af776c6915cbb88bf7062} 
+uint32\+\_\+t EOUtils\+::\+FLACFile\+Info\+::\+Compression\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the current compression level. 
+
+\index{EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}!CompressionLevel@{CompressionLevel}}
+\index{CompressionLevel@{CompressionLevel}!EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}}
+\doxysubsubsection{CompressionLevel()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1FLACFileInfo_a4b8cdc4e36ba701a2cf4b466503ac7c3} 
+void EOUtils\+::\+FLACFile\+Info\+::\+Compression\+Level (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{p\+Compression\+Level}{}\end{DoxyParamCaption})}
+
+
+
+Sets the compression level to use when writing FLAC files (0-\/8, where 0 is fastest and 8 is maximum compression). 
+
+\index{EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}!isFLACFile@{isFLACFile}}
+\index{isFLACFile@{isFLACFile}!EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}}
+\doxysubsubsection{isFLACFile()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1FLACFileInfo_a6542e2a5ee03140200cccb48eaf4622c} 
+bool EOUtils\+::\+FLACFile\+Info\+::is\+FLACFile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if the given file is a FLAC file (has "{}f\+La\+C"{} signature). 
+
+
+
+Referenced by \textbf{ EOUtils\+::create\+Audio\+File\+Obj\+For\+Existing\+File()}, and \textbf{ EOUtils\+::get\+Audio\+File\+Info()}.
+
+\index{EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}!read@{read}}
+\index{read@{read}!EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}}
+\doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1FLACFileInfo_afa9ecafbcc6267355a603620a2dfd6f3} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+FLACFile\+Info\+::read (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads FLAC stream info from a file by filename. 
+
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File\+Info} \doxyref{}{p.}{classEOUtils_1_1AudioFileInfo_ab94a417a9ec7ebf2ac1e9b1578f59825}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, and \textbf{ read()}.
+
+\index{EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}!read@{read}}
+\index{read@{read}!EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}}
+\doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1FLACFileInfo_a2c888b427c1fb23aa2d8e7e1f11bb0c2} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+FLACFile\+Info\+::read (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{p\+In\+FStream}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads the FLAC stream info from a file. 
+
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File\+Info} \doxyref{}{p.}{classEOUtils_1_1AudioFileInfo_ae46975f1e0d83c16008c256d283d5c23}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ BITS\+\_\+\+PER\+\_\+\+BYTE}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Bits\+Per\+Sample}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Byte\+Rate}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Bytes\+Per\+Second}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+File\+Size}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Num\+Channels}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Sample\+Rate\+Hz}, and \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::num\+Errors()}.
+
+
+
+Referenced by \textbf{ read()}.
+
+\index{EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}!write@{write}}
+\index{write@{write}!EOUtils::FLACFileInfo@{EOUtils::FLACFileInfo}}
+\doxysubsubsection{write()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1FLACFileInfo_a7a4feab4d15f2635e225ce41e52f50dd} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+FLACFile\+Info\+::write (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{p\+Out\+FStream}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Not used for FLAC -\/ metadata is written by the encoder. 
+
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File\+Info} \doxyref{}{p.}{classEOUtils_1_1AudioFileInfo_a35bee862e09314491cc60205fa953b02}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ FLACFile\+Info.\+h}\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ FLACFile\+Info.\+cpp}\end{DoxyCompactItemize}

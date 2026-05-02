@@ -1,0 +1,143 @@
+\doxysection{/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/cmd\+Line\+App.cpp File Reference}
+\label{cmdLineApp_8cpp}\index{/home/erico/projects/audio\_mixer\_cpp/code/common/cmdLineApp.cpp@{/home/erico/projects/audio\_mixer\_cpp/code/common/cmdLineApp.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include "{}WAVFile.\+h"{}}\newline
+{\ttfamily \#include "{}FLACFile.\+h"{}}\newline
+{\ttfamily \#include "{}Audio\+File\+Tools.\+h"{}}\newline
+{\ttfamily \#include "{}Audio\+File\+Result\+Type.\+h"{}}\newline
+Include dependency graph for cmd\+Line\+App.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cmdLineApp_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Prog\+Options}
+\item 
+struct \textbf{ Audio\+File\+Mix\+Options}
+\item 
+class \textbf{ WAVFile}
+\item 
+class \textbf{ FLACFile}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ show\+Program\+Help} ()
+\item 
+\textbf{ Prog\+Options} \textbf{ parse\+Command\+Line} (int argc, char $\ast$argv[$\,$])
+\item 
+\textbf{ Audio\+File\+Mix\+Options} \textbf{ read\+Audio\+File\+List} (const string \&p\+Filename, vector$<$ string $>$ \&p\+Error\+Msgs, vector$<$ string $>$ \&p\+Nonexistent\+Files)
+\item 
+int \textbf{ main} (int argc, char $\ast$argv[$\,$])
+\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ Audio\+File} $>$ \textbf{ create\+Audio\+File\+Obj\+For\+New\+File} (const char $\ast$p\+Filename)
+\begin{DoxyCompactList}\small\item\em Creates a shared pointer to an audio\+File object for a new (non-\/existing) audio file -\/ Creates the appropriate subclass object, depending on the filename extension. If the format isn\textquotesingle{}t recognized, returns a null pointer. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ mix\+Audio\+Files} (const std\+::vector$<$ std\+::string $>$ \&p\+Filenames, const std\+::string \&p\+Output\+Filename)
+\begin{DoxyCompactList}\small\item\em Mixes (merges) multiple audio files into a single file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\doxysubsection{Function Documentation}
+\index{cmdLineApp.cpp@{cmdLineApp.cpp}!createAudioFileObjForNewFile@{createAudioFileObjForNewFile}}
+\index{createAudioFileObjForNewFile@{createAudioFileObjForNewFile}!cmdLineApp.cpp@{cmdLineApp.cpp}}
+\doxysubsubsection{createAudioFileObjForNewFile()}
+{\footnotesize\ttfamily \label{cmdLineApp_8cpp_a669d98e89f0bbc2652a05cb73a6aca76} 
+shared\+\_\+ptr$<$ \textbf{ Audio\+File} $>$ \textbf{ EOUtils\+::create\+Audio\+File\+Obj\+For\+New\+File} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename}{}\end{DoxyParamCaption})}
+
+
+
+Creates a shared pointer to an audio\+File object for a new (non-\/existing) audio file -\/ Creates the appropriate subclass object, depending on the filename extension. If the format isn\textquotesingle{}t recognized, returns a null pointer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Filename} & The name of the audio file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to an \doxyref{Audio\+File}{p.}{classAudioFile} object, which will be an instance of the appropriate subclass for the file, or a null pointer if it is not a recognized format. 
+\end{DoxyReturn}
+
+
+Referenced by \textbf{ main()}.
+
+\index{cmdLineApp.cpp@{cmdLineApp.cpp}!main@{main}}
+\index{main@{main}!cmdLineApp.cpp@{cmdLineApp.cpp}}
+\doxysubsubsection{main()}
+{\footnotesize\ttfamily \label{cmdLineApp_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char $\ast$}]{argv}{[$\,$]}\end{DoxyParamCaption})}
+
+
+
+References \textbf{ Prog\+Options\+::audio\+File\+List\+Filename}, \textbf{ create\+Audio\+File\+Obj\+For\+New\+File()}, \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::get\+Error()}, \textbf{ Audio\+File\+Mix\+Options\+::input\+Filenames}, \textbf{ mix\+Audio\+Files()}, \textbf{ Audio\+File\+Mix\+Options\+::output\+Filename}, \textbf{ parse\+Command\+Line()}, \textbf{ read\+Audio\+File\+List()}, \textbf{ show\+Program\+Help()}, and \textbf{ Prog\+Options\+::verbose}.
+
+\index{cmdLineApp.cpp@{cmdLineApp.cpp}!mixAudioFiles@{mixAudioFiles}}
+\index{mixAudioFiles@{mixAudioFiles}!cmdLineApp.cpp@{cmdLineApp.cpp}}
+\doxysubsubsection{mixAudioFiles()}
+{\footnotesize\ttfamily \label{cmdLineApp_8cpp_a36829f33264df3b55d08a964555c9c7f} 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::mix\+Audio\+Files} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{p\+Filenames}{, }\item[{const std\+::string \&}]{p\+Output\+Filename}{}\end{DoxyParamCaption})}
+
+
+
+Mixes (merges) multiple audio files into a single file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Filenames} & A collection of filenames of audio files to mix \\
+\hline
+\mbox{\texttt{out}}  & {\em p\+Output\+Filename} & The filename for the resulting mixed audio file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, or false with error messages on failure 
+\end{DoxyReturn}
+
+
+Referenced by \textbf{ main()}.
+
+\index{cmdLineApp.cpp@{cmdLineApp.cpp}!parseCommandLine@{parseCommandLine}}
+\index{parseCommandLine@{parseCommandLine}!cmdLineApp.cpp@{cmdLineApp.cpp}}
+\doxysubsubsection{parseCommandLine()}
+{\footnotesize\ttfamily \label{cmdLineApp_8cpp_a13003c27cb50f63325ea22ab1a6606fd} 
+\textbf{ Prog\+Options} parse\+Command\+Line (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char $\ast$}]{argv}{[$\,$]}\end{DoxyParamCaption})}
+
+
+
+References \textbf{ Prog\+Options\+::audio\+File\+List\+Filename}, \textbf{ show\+Program\+Help()}, and \textbf{ Prog\+Options\+::verbose}.
+
+
+
+Referenced by \textbf{ main()}.
+
+\index{cmdLineApp.cpp@{cmdLineApp.cpp}!readAudioFileList@{readAudioFileList}}
+\index{readAudioFileList@{readAudioFileList}!cmdLineApp.cpp@{cmdLineApp.cpp}}
+\doxysubsubsection{readAudioFileList()}
+{\footnotesize\ttfamily \label{cmdLineApp_8cpp_a0083949fd77675d48a8c5060d1dcc7b6} 
+\textbf{ Audio\+File\+Mix\+Options} read\+Audio\+File\+List (\begin{DoxyParamCaption}\item[{const string \&}]{p\+Filename}{, }\item[{vector$<$ string $>$ \&}]{p\+Error\+Msgs}{, }\item[{vector$<$ string $>$ \&}]{p\+Nonexistent\+Files}{}\end{DoxyParamCaption})}
+
+
+
+References \textbf{ Audio\+File\+Mix\+Options\+::input\+Filenames}, and \textbf{ Audio\+File\+Mix\+Options\+::output\+Filename}.
+
+
+
+Referenced by \textbf{ main()}.
+
+\index{cmdLineApp.cpp@{cmdLineApp.cpp}!showProgramHelp@{showProgramHelp}}
+\index{showProgramHelp@{showProgramHelp}!cmdLineApp.cpp@{cmdLineApp.cpp}}
+\doxysubsubsection{showProgramHelp()}
+{\footnotesize\ttfamily \label{cmdLineApp_8cpp_a27a8684e906ead61867f426da8010650} 
+void show\+Program\+Help (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Referenced by \textbf{ main()}, and \textbf{ parse\+Command\+Line()}.
+

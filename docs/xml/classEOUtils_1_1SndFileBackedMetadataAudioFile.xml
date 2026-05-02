@@ -1,0 +1,1355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classEOUtils_1_1SndFileBackedMetadataAudioFile" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>EOUtils::SndFileBackedMetadataAudioFile</compoundname>
+    <basecompoundref refid="classEOUtils_1_1MetadataAudioFile" prot="public" virt="non-virtual">EOUtils::MetadataAudioFile</basecompoundref>
+    <derivedcompoundref refid="classEOUtils_1_1AiffFile" prot="public" virt="non-virtual">EOUtils::AiffFile</derivedcompoundref>
+    <derivedcompoundref refid="classEOUtils_1_1MP3File" prot="public" virt="non-virtual">EOUtils::MP3File</derivedcompoundref>
+    <derivedcompoundref refid="classEOUtils_1_1OggFile" prot="public" virt="non-virtual">EOUtils::OggFile</derivedcompoundref>
+    <includes refid="SndFileBackedMetadataAudioFile_8h" local="no">SndFileBackedMetadataAudioFile.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" prot="protected" static="no" mutable="no">
+        <type><ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref></type>
+        <definition>AudioFileInfo EOUtils::SndFileBackedMetadataAudioFile::mFileLayout</definition>
+        <argsstring></argsstring>
+        <name>mFileLayout</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::mFileLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="86" column="15" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="classEOUtils_1_1AiffFile_1a210eb0320ee1f09793a50573b71514db" compoundref="AiffFile_8cpp" startline="25" endline="30">EOUtils::AiffFile::AiffFile</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFile_1afe46d0e8eaa56b29932663b7d92fc02d" compoundref="AiffFile_8cpp" startline="38" endline="43">EOUtils::AiffFile::AiffFile</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1a0b59260c0e9870d03a136917855f29cc" compoundref="MP3File_8cpp" startline="167" endline="185">EOUtils::MP3File::configureSndfileEncoderForWrite</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1add950d3dd5e3892f931130fd183a94fd" compoundref="OggFile_8cpp" startline="141" endline="161">EOUtils::OggFile::configureSndfileEncoderForWrite</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a2e91490fab82a495f6cc3244f68a3fe1" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="455" endline="458">getAudioFileInfo</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a50528a485aeda6e16ab5c3f1558aefd5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="367" endline="401">getHighestSampleValue_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1afc4e1a414dc53a1c3112f6a7b93600f0" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="294" endline="330">getNextSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a99ac823f1aa365c8876fa35939b61e82" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="429" endline="432">maxValueForSampleSize</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1a08c9a296bee88c12716a1bf021523bee" compoundref="MP3File_8cpp" startline="40" endline="45">EOUtils::MP3File::MP3File</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1ab4fb87b05ea1d0cc6f6e50f514db2daa" compoundref="MP3File_8cpp" startline="53" endline="58">EOUtils::MP3File::MP3File</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1af4285270a52f6b3da08ddcc9e786b7a9" compoundref="MP3File_8cpp" startline="74" endline="82">EOUtils::MP3File::MP3File</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1a1ab1c2de33f9ee84e0e4f3e90ed20863" compoundref="MP3File_8cpp" startline="60" endline="72">EOUtils::MP3File::MP3File</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFile_1a310abc99b7aa1799be5fb278d9cf9b9c" compoundref="AiffFile_8cpp" startline="87" endline="90">EOUtils::AiffFile::newFileSfFormatMask</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a520f77d8c349944e508a6707bc3617ac" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="417" endline="427">numSamples</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1a182630b07b35dd3c5e4afbce7ab8c73e" compoundref="OggFile_8cpp" startline="30" endline="35">EOUtils::OggFile::OggFile</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1a9b41de38ca10b8c4ffe4ae4d51635ff2" compoundref="OggFile_8cpp" startline="43" endline="48">EOUtils::OggFile::OggFile</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1a601373f019f9a39c29b952840d6c7abd" compoundref="OggFile_8cpp" startline="59" endline="66">EOUtils::OggFile::OggFile</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1ad9a82fb2a1c2c3dfa428c71fb4ac0d3e" compoundref="OggFile_8cpp" startline="50" endline="57">EOUtils::OggFile::OggFile</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFile_1adbf5b1a9feef88138c4ac879c362befe" compoundref="AiffFile_8cpp" startline="65" endline="71">EOUtils::AiffFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1a1285c6bbb18c976aeb13c39527787c59" compoundref="MP3File_8cpp" startline="139" endline="145">EOUtils::MP3File::open</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1a16436218fdd8af3038000ec7f6b9500a" compoundref="OggFile_8cpp" startline="113" endline="119">EOUtils::OggFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3c569d4cc544c985d81dc131e0da5a32" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="434" endline="453">seekOutputToSampleNum</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a5b4ddbc681df5496f355bef551bbddea" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="124" endline="128">setAudioFileInfo</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a1778198551e223d0d3bfa83b8dcbac77" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="99" endline="103">SndFileBackedMetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="73" endline="80">SndFileBackedMetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a12124ab04a2c7b42865611f800383a76" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="82" endline="89">SndFileBackedMetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1aff3cc98c3785aeae129472b484bfcb64" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="91" endline="97">SndFileBackedMetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af55a4cf92b361107109307c56281efd6" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="105" endline="117">SndFileBackedMetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acfdd6717c813c6af0a7d8510ab53cd1a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="332" endline="365">writeSample_int64</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acb0156e754d20dea7ef210bd1adcfbc5" prot="private" static="no" mutable="no">
+        <type>SNDFILE *</type>
+        <definition>SNDFILE* EOUtils::SndFileBackedMetadataAudioFile::mSnd</definition>
+        <argsstring></argsstring>
+        <name>mSnd</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::mSnd</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="89" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af91ed2005716d130ef65998c880bc279" prot="private" static="no" mutable="no">
+        <type>SF_INFO</type>
+        <definition>SF_INFO EOUtils::SndFileBackedMetadataAudioFile::mSf</definition>
+        <argsstring></argsstring>
+        <name>mSf</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::mSf</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="90" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab5ad29f94444e2e054ffc0bda82f1d69" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; EOUtils::SndFileBackedMetadataAudioFile::mFrameBuf</definition>
+        <argsstring></argsstring>
+        <name>mFrameBuf</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::mFrameBuf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="91" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a6715e23ce598df722ad507ce6141006f" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t EOUtils::SndFileBackedMetadataAudioFile::mChannelIndexInPump</definition>
+        <argsstring></argsstring>
+        <name>mChannelIndexInPump</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::mChannelIndexInPump</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="92" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad234d06578622968dcccd39b2cbbb95b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; EOUtils::SndFileBackedMetadataAudioFile::mWriteAccum</definition>
+        <argsstring></argsstring>
+        <name>mWriteAccum</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::mWriteAccum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="93" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a5b4ddbc681df5496f355bef551bbddea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::SndFileBackedMetadataAudioFile::setAudioFileInfo</definition>
+        <argsstring>(const AudioFileInfo &amp;pAudioFileInfo) override</argsstring>
+        <name>setAudioFileInfo</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::setAudioFileInfo</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a2801f28e7658576fb6ae96f91ced6f92">setAudioFileInfo</reimplements>
+        <param>
+          <type>const <ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref> &amp;</type>
+          <declname>pAudioFileInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="23" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="124" bodyend="128"/>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+        <referencedby refid="classEOUtils_1_1AiffFile_1a594d9c73bcb27941f606b32c009381c7" compoundref="AiffFile_8cpp" startline="59" endline="63">EOUtils::AiffFile::setAudioFileInfo</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1a5876a844978007965692a5b59f7dd8e2" compoundref="MP3File_8cpp" startline="133" endline="137">EOUtils::MP3File::setAudioFileInfo</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1a25ae99134bfbff58471418527d20dbd0" compoundref="OggFile_8cpp" startline="107" endline="111">EOUtils::OggFile::setAudioFileInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::open</definition>
+        <argsstring>(AudioFileModes pOpenMode) override</argsstring>
+        <name>open</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::open</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6">open</reimplements>
+        <param>
+          <type><ref refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758c" kindref="member">AudioFileModes</ref></type>
+          <declname>pOpenMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="25" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="130" bodyend="226"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af7608eef3ca48433142025a37bb99033" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="247" endline="260">close</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9d6a9bf52f6167e7245edba64fd53070" compoundref="SndFileBackedMetadataAudioFile_8h" startline="83" endline="84">configureSndfileEncoderForWrite</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a8c417c6986f90ded3964e483ec00753e">formatLabel</references>
+        <references refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" compoundref="AudioFile_8cpp" startline="59" endline="62">EOUtils::AudioFile::hasReadMode</references>
+        <references refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" compoundref="AudioFile_8cpp" startline="64" endline="67">EOUtils::AudioFile::hasWriteMode</references>
+        <references refid="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" compoundref="AudioFile_8h" startline="238">EOUtils::AudioFile::mDataSizeBytes</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+        <references refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" compoundref="AudioFile_8h" startline="235">EOUtils::AudioFile::mFilename</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9d4543b5c26b8881a281ddd3bf0de7b6">newFileSfFormatMask</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3f040f277c0e76c9411defa7b386cd38">readFormatMatches</references>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1a1f04e2e516d189d0d154be73024c59c0" compoundref="SndFileHelpers_8cpp" startline="102" endline="108">EOUtils::sndfile_detail::safeFileSize</references>
+        <references refid="classEOUtils_1_1AudioFile_1a376cef8c69f91ed84ea84026075a4df2" compoundref="AudioFile_8cpp" startline="127" endline="142">EOUtils::AudioFile::setFileMode</references>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1a107e7ae26bbe28f94fdfdfdde385dd15" compoundref="SndFileHelpers_8cpp" startline="30" endline="48">EOUtils::sndfile_detail::sfInfoToAudioFileInfo</references>
+        <referencedby refid="classEOUtils_1_1AiffFile_1adbf5b1a9feef88138c4ac879c362befe" compoundref="AiffFile_8cpp" startline="65" endline="71">EOUtils::AiffFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1a1285c6bbb18c976aeb13c39527787c59" compoundref="MP3File_8cpp" startline="139" endline="145">EOUtils::MP3File::open</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1a16436218fdd8af3038000ec7f6b9500a" compoundref="OggFile_8cpp" startline="113" endline="119">EOUtils::OggFile::open</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af7608eef3ca48433142025a37bb99033" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::SndFileBackedMetadataAudioFile::close</definition>
+        <argsstring>() override</argsstring>
+        <name>close</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::close</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a4be2573c17b87c092a3f367989d82722">close</reimplements>
+        <briefdescription>
+<para>Closes the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="27" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="247" bodyend="260"/>
+        <references refid="classEOUtils_1_1AudioFile_1a4be2573c17b87c092a3f367989d82722" compoundref="AudioFile_8cpp" startline="69" endline="73">EOUtils::AudioFile::close</references>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad98e4c6af29f9f31f35e333a75e515c3" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="119" endline="122">~SndFileBackedMetadataAudioFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a819cd193fb520477daecc99074244b27" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool EOUtils::SndFileBackedMetadataAudioFile::isOpen</definition>
+        <argsstring>() const override</argsstring>
+        <name>isOpen</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::isOpen</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1aadb1e2576c96134c0e146735c8aea1f1">isOpen</reimplements>
+        <briefdescription>
+<para>Returns whether or not the audio file is open. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="29" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1afc4e1a414dc53a1c3112f6a7b93600f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::getNextSample_int64</definition>
+        <argsstring>(std::int64_t &amp;pAudioSample) override</argsstring>
+        <name>getNextSample_int64</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::getNextSample_int64</qualifiedname>
+        <param>
+          <type>std::int64_t &amp;</type>
+          <declname>pAudioSample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="31" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="294" bodyend="330"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a8c417c6986f90ded3964e483ec00753e">formatLabel</references>
+        <references refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" compoundref="AudioFile_8cpp" startline="59" endline="62">EOUtils::AudioFile::hasReadMode</references>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1a5205d4d1f3a23eee2c2728b52256498d" compoundref="SndFileHelpers_8cpp" startline="73" endline="84">EOUtils::sndfile_detail::maxSampleValueForFormat</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+        <references refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" compoundref="AudioFile_8h" startline="235">EOUtils::AudioFile::mFilename</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acfdd6717c813c6af0a7d8510ab53cd1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::writeSample_int64</definition>
+        <argsstring>(std::int64_t pAudioSample) override</argsstring>
+        <name>writeSample_int64</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::writeSample_int64</qualifiedname>
+        <param>
+          <type>std::int64_t</type>
+          <declname>pAudioSample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="33" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="332" bodyend="365"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1af36bfc91c020a30e9627e0e03f29f220" compoundref="SndFileHelpers_8cpp" startline="86" endline="94">EOUtils::sndfile_detail::formatErrorSuffix</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a8c417c6986f90ded3964e483ec00753e">formatLabel</references>
+        <references refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" compoundref="AudioFile_8cpp" startline="64" endline="67">EOUtils::AudioFile::hasWriteMode</references>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1a5205d4d1f3a23eee2c2728b52256498d" compoundref="SndFileHelpers_8cpp" startline="73" endline="84">EOUtils::sndfile_detail::maxSampleValueForFormat</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+        <references refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" compoundref="AudioFile_8h" startline="235">EOUtils::AudioFile::mFilename</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a50528a485aeda6e16ab5c3f1558aefd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::getHighestSampleValue_int64</definition>
+        <argsstring>(std::int64_t &amp;pHighestAudioSample) override</argsstring>
+        <name>getHighestSampleValue_int64</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::getHighestSampleValue_int64</qualifiedname>
+        <param>
+          <type>std::int64_t &amp;</type>
+          <declname>pHighestAudioSample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="35" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="367" bodyend="401"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a8c417c6986f90ded3964e483ec00753e">formatLabel</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ae71e6cdf5e73980e8a71af7005411111" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="403" endline="415">goToAudioDataPos</references>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1a5205d4d1f3a23eee2c2728b52256498d" compoundref="SndFileHelpers_8cpp" startline="73" endline="84">EOUtils::sndfile_detail::maxSampleValueForFormat</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ae71e6cdf5e73980e8a71af7005411111" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::goToAudioDataPos</definition>
+        <argsstring>() override</argsstring>
+        <name>goToAudioDataPos</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::goToAudioDataPos</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1ae747456aaffc54186bf27d40d2b6619c">goToAudioDataPos</reimplements>
+        <briefdescription>
+<para>Goes to the audio data position in the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="37" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="403" bodyend="415"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a8c417c6986f90ded3964e483ec00753e">formatLabel</references>
+        <references refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" compoundref="AudioFile_8h" startline="235">EOUtils::AudioFile::mFilename</references>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a50528a485aeda6e16ab5c3f1558aefd5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="367" endline="401">getHighestSampleValue_int64</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a520f77d8c349944e508a6707bc3617ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t EOUtils::SndFileBackedMetadataAudioFile::numSamples</definition>
+        <argsstring>() const override</argsstring>
+        <name>numSamples</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::numSamples</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a9323d827fd3a5cd95c02c90b07c33552">numSamples</reimplements>
+        <briefdescription>
+<para>Returns the number of audio samples in the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="39" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="417" bodyend="427"/>
+        <references refid="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" compoundref="AudioFile_8h" startline="238">EOUtils::AudioFile::mDataSizeBytes</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+        <references refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" compoundref="AudioFile_8h" startline="235">EOUtils::AudioFile::mFilename</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a99ac823f1aa365c8876fa35939b61e82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::int64_t</type>
+        <definition>std::int64_t EOUtils::SndFileBackedMetadataAudioFile::maxValueForSampleSize</definition>
+        <argsstring>() const override</argsstring>
+        <name>maxValueForSampleSize</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::maxValueForSampleSize</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a04453bb2912c38bb59448756a7773835">maxValueForSampleSize</reimplements>
+        <briefdescription>
+<para>Returns the maximum possible positive value of the audio file&apos;s sample size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="41" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="429" bodyend="432"/>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1a5205d4d1f3a23eee2c2728b52256498d" compoundref="SndFileHelpers_8cpp" startline="73" endline="84">EOUtils::sndfile_detail::maxSampleValueForFormat</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3c569d4cc544c985d81dc131e0da5a32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::SndFileBackedMetadataAudioFile::seekOutputToSampleNum</definition>
+        <argsstring>(std::size_t pSampleNum) override</argsstring>
+        <name>seekOutputToSampleNum</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::seekOutputToSampleNum</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>pSampleNum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="43" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="434" bodyend="453"/>
+        <references refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" compoundref="AudioFile_8cpp" startline="64" endline="67">EOUtils::AudioFile::hasWriteMode</references>
+        <references refid="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" compoundref="AudioFile_8h" startline="238">EOUtils::AudioFile::mDataSizeBytes</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a2e91490fab82a495f6cc3244f68a3fe1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref></type>
+        <definition>AudioFileInfo EOUtils::SndFileBackedMetadataAudioFile::getAudioFileInfo</definition>
+        <argsstring>() const override</argsstring>
+        <name>getAudioFileInfo</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::getAudioFileInfo</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1afa9106be5e7602616779070043bc2252">getAudioFileInfo</reimplements>
+        <briefdescription>
+<para>Returns an <ref refid="classEOUtils_1_1AudioFile" kindref="compound">AudioFile</ref> object with information about the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="45" column="15" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="455" bodyend="458"/>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9e83638df759da359e7024e493cd1301" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::setTitle</definition>
+        <argsstring>(const std::string &amp;pTitle) override</argsstring>
+        <name>setTitle</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::setTitle</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1a33c4eecf35d0febcec189e27b8caf98a">setTitle</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pTitle</declname>
+        </param>
+        <briefdescription>
+<para>Sets the title metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pTitle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="47" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="550" bodyend="553"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a13a905679e51af831810eff6a15b9524" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::setArtist</definition>
+        <argsstring>(const std::string &amp;pArtist) override</argsstring>
+        <name>setArtist</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::setArtist</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1adae18656bf60b5e8e81f484f672db1bf">setArtist</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pArtist</declname>
+        </param>
+        <briefdescription>
+<para>Sets the artist metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pArtist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The artist string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="48" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="555" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1adb1c8cfe8ff0ecc8d0159871c9245a18" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::setAlbum</definition>
+        <argsstring>(const std::string &amp;pAlbum) override</argsstring>
+        <name>setAlbum</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::setAlbum</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1ae5b899c9d5b6f8942cfe181e29272afe">setAlbum</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pAlbum</declname>
+        </param>
+        <briefdescription>
+<para>Sets the album metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pAlbum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The album string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="49" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="560" bodyend="563"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab315502e2dc380bd6ff616dfa2521716" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::setGenre</definition>
+        <argsstring>(const std::string &amp;pGenre) override</argsstring>
+        <name>setGenre</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::setGenre</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1acc7942dfb3e61cd54127aabdd2862093">setGenre</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pGenre</declname>
+        </param>
+        <briefdescription>
+<para>Sets the genre metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pGenre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The genre string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="50" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="565" bodyend="568"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a04ebcd99162fd7421accd0b2f92f2d1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::setTrackNumber</definition>
+        <argsstring>(std::uint32_t pTrackNumber, std::uint32_t pTotalTracks=0) override</argsstring>
+        <name>setTrackNumber</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::setTrackNumber</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>pTrackNumber</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>pTotalTracks</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="51" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="580" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1aa32686ba35238da9794c7133589bf01e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::setYear</definition>
+        <argsstring>(const std::string &amp;pYear) override</argsstring>
+        <name>setYear</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::setYear</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1a596dd3b2b993afc0a2c3a2ff68d47a13">setYear</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pYear</declname>
+        </param>
+        <briefdescription>
+<para>Sets the year/date metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pYear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The year string (e.g., &quot;2024&quot;)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="52" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="570" bodyend="573"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a05761942c1d69d5afe4ae82a7f7b91fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::setComment</definition>
+        <argsstring>(const std::string &amp;pComment) override</argsstring>
+        <name>setComment</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::setComment</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1aa367019cbde49d7f23c60c646c6954f0">setComment</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pComment</declname>
+        </param>
+        <briefdescription>
+<para>Sets the comment metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pComment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The comment string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="53" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="575" bodyend="578"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a684645d427b4002fc62c8fc23cd0a141" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::getTitle</definition>
+        <argsstring>(std::string &amp;pTitle) const override</argsstring>
+        <name>getTitle</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::getTitle</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1abd1812a1b5957f74618d4018a3acc40f">getTitle</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pTitle</declname>
+        </param>
+        <briefdescription>
+<para>Gets the title metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pTitle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the title string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="55" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="590" bodyend="593"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a74491b1431583e61361ed3fc2b958722" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::getArtist</definition>
+        <argsstring>(std::string &amp;pArtist) const override</argsstring>
+        <name>getArtist</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::getArtist</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1a1700387c5e5663c5acafbaf37173a88b">getArtist</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pArtist</declname>
+        </param>
+        <briefdescription>
+<para>Gets the artist metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pArtist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the artist string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="56" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="595" bodyend="598"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a597832cb68f37962e65d9af4a4daca76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::getAlbum</definition>
+        <argsstring>(std::string &amp;pAlbum) const override</argsstring>
+        <name>getAlbum</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::getAlbum</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1a077014bfc235676d6a6a602876e568c0">getAlbum</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pAlbum</declname>
+        </param>
+        <briefdescription>
+<para>Gets the album metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pAlbum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the album string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="57" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="600" bodyend="603"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a623f3a0ddfb0ae89e87d5c0868d0dfcc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::getGenre</definition>
+        <argsstring>(std::string &amp;pGenre) const override</argsstring>
+        <name>getGenre</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::getGenre</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1a761cb9b8167c290c09c5c12c2bcb1eb6">getGenre</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pGenre</declname>
+        </param>
+        <briefdescription>
+<para>Gets the genre metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pGenre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the genre string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="58" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="605" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a79744b85e1f5a071d022d49ce0fb80a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::getTrackNumber</definition>
+        <argsstring>(std::uint32_t &amp;pTrackNumber, std::uint32_t &amp;pTotalTracks) const override</argsstring>
+        <name>getTrackNumber</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::getTrackNumber</qualifiedname>
+        <param>
+          <type>std::uint32_t &amp;</type>
+          <declname>pTrackNumber</declname>
+        </param>
+        <param>
+          <type>std::uint32_t &amp;</type>
+          <declname>pTotalTracks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="59" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="620" bodyend="648"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a6cc1dca0322a5945225c7cf82a504226" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::getYear</definition>
+        <argsstring>(std::string &amp;pYear) const override</argsstring>
+        <name>getYear</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::getYear</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1ad23e6e0b25b00e498929b598b43285a1">getYear</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pYear</declname>
+        </param>
+        <briefdescription>
+<para>Gets the year/date metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pYear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the year string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="60" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="610" bodyend="613"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a788bfd7f1e24f8d7ebd5e4c67660513f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::getComment</definition>
+        <argsstring>(std::string &amp;pComment) const override</argsstring>
+        <name>getComment</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::getComment</qualifiedname>
+        <reimplements refid="classEOUtils_1_1MetadataAudioFile_1ae4934841335acc0e23f1e2df73e58964">getComment</reimplements>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pComment</declname>
+        </param>
+        <briefdescription>
+<para>Gets the comment metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pComment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the comment string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="61" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="615" bodyend="618"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad98e4c6af29f9f31f35e333a75e515c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::SndFileBackedMetadataAudioFile::~SndFileBackedMetadataAudioFile</definition>
+        <argsstring>() override</argsstring>
+        <name>~SndFileBackedMetadataAudioFile</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::~SndFileBackedMetadataAudioFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="63" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="119" bodyend="122"/>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af7608eef3ca48433142025a37bb99033" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="247" endline="260">close</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</definition>
+        <argsstring>(const std::string &amp;pFilename)</argsstring>
+        <name>SndFileBackedMetadataAudioFile</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="66" column="10" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="73" bodyend="80"/>
+        <references refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f">EOUtils::MetadataAudioFile::MetadataAudioFile</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+        <referencedby refid="classEOUtils_1_1AiffFile_1a07a996e7f6879b17322df74c7ed24d80" compoundref="AiffFile_8cpp" startline="51" endline="55">EOUtils::AiffFile::AiffFile</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFile_1ae6b9ba11e02d50bf4fb7dd38710357da" compoundref="AiffFile_8cpp" startline="45" endline="49">EOUtils::AiffFile::AiffFile</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFile_1a210eb0320ee1f09793a50573b71514db" compoundref="AiffFile_8cpp" startline="25" endline="30">EOUtils::AiffFile::AiffFile</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFile_1afe46d0e8eaa56b29932663b7d92fc02d" compoundref="AiffFile_8cpp" startline="38" endline="43">EOUtils::AiffFile::AiffFile</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFile_1a65dadae4594487acb2cf939f696ef0b6" compoundref="AiffFile_8cpp" startline="32" endline="36">EOUtils::AiffFile::AiffFile</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1ad3221fabe03375bd2f6e0c173b3387ca" compoundref="MP3File_8cpp" startline="84" endline="92">EOUtils::MP3File::MP3File</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1a08c9a296bee88c12716a1bf021523bee" compoundref="MP3File_8cpp" startline="40" endline="45">EOUtils::MP3File::MP3File</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1ab4fb87b05ea1d0cc6f6e50f514db2daa" compoundref="MP3File_8cpp" startline="53" endline="58">EOUtils::MP3File::MP3File</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1afb608ef241e4c0f818586aedf67a5cfe" compoundref="MP3File_8cpp" startline="47" endline="51">EOUtils::MP3File::MP3File</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1af4285270a52f6b3da08ddcc9e786b7a9" compoundref="MP3File_8cpp" startline="74" endline="82">EOUtils::MP3File::MP3File</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1a1ab1c2de33f9ee84e0e4f3e90ed20863" compoundref="MP3File_8cpp" startline="60" endline="72">EOUtils::MP3File::MP3File</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1a429b1a6138c437d59dcb84e5bdbfa617" compoundref="MP3File_8cpp" startline="94" endline="102">EOUtils::MP3File::MP3File</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1ad7b75f336d3abe3fbd7454a9ccae0e21" compoundref="OggFile_8cpp" startline="68" endline="75">EOUtils::OggFile::OggFile</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1a182630b07b35dd3c5e4afbce7ab8c73e" compoundref="OggFile_8cpp" startline="30" endline="35">EOUtils::OggFile::OggFile</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1a9b41de38ca10b8c4ffe4ae4d51635ff2" compoundref="OggFile_8cpp" startline="43" endline="48">EOUtils::OggFile::OggFile</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1a11dfaf6249a63533f9d8ef50df53cdc3" compoundref="OggFile_8cpp" startline="37" endline="41">EOUtils::OggFile::OggFile</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1a601373f019f9a39c29b952840d6c7abd" compoundref="OggFile_8cpp" startline="59" endline="66">EOUtils::OggFile::OggFile</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1ad9a82fb2a1c2c3dfa428c71fb4ac0d3e" compoundref="OggFile_8cpp" startline="50" endline="57">EOUtils::OggFile::OggFile</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1ad9af5c781f6e3f2feec120a2b4b899de" compoundref="OggFile_8cpp" startline="77" endline="84">EOUtils::OggFile::OggFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a1778198551e223d0d3bfa83b8dcbac77" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="99" endline="103">SndFileBackedMetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af55a4cf92b361107109307c56281efd6" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="105" endline="117">SndFileBackedMetadataAudioFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a12124ab04a2c7b42865611f800383a76" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</definition>
+        <argsstring>(const std::string &amp;pFilename, AudioFileModes pFileMode)</argsstring>
+        <name>SndFileBackedMetadataAudioFile</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758c" kindref="member">AudioFileModes</ref></type>
+          <declname>pFileMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="68" column="10" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="82" bodyend="89"/>
+        <references refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f">EOUtils::MetadataAudioFile::MetadataAudioFile</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a1778198551e223d0d3bfa83b8dcbac77" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</definition>
+        <argsstring>(const SndFileBackedMetadataAudioFile &amp;pOther)</argsstring>
+        <name>SndFileBackedMetadataAudioFile</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</qualifiedname>
+        <param>
+          <type>const SndFileBackedMetadataAudioFile &amp;</type>
+          <declname>pOther</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="70" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="99" bodyend="103"/>
+        <references refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f">EOUtils::MetadataAudioFile::MetadataAudioFile</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="73" endline="80">SndFileBackedMetadataAudioFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af55a4cf92b361107109307c56281efd6" prot="protected" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</definition>
+        <argsstring>(SndFileBackedMetadataAudioFile &amp;&amp;pOther) noexcept</argsstring>
+        <name>SndFileBackedMetadataAudioFile</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</qualifiedname>
+        <param>
+          <type>SndFileBackedMetadataAudioFile &amp;&amp;</type>
+          <declname>pOther</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="72" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="105" bodyend="117"/>
+        <references refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f">EOUtils::MetadataAudioFile::MetadataAudioFile</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="73" endline="80">SndFileBackedMetadataAudioFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1aff3cc98c3785aeae129472b484bfcb64" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</definition>
+        <argsstring>(const std::string &amp;pFilename, const AudioFileInfo &amp;pLayoutHint)</argsstring>
+        <name>SndFileBackedMetadataAudioFile</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref> &amp;</type>
+          <declname>pLayoutHint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="74" column="10" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="91" bodyend="97"/>
+        <references refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f">EOUtils::MetadataAudioFile::MetadataAudioFile</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">mFileLayout</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3f040f277c0e76c9411defa7b386cd38" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool EOUtils::SndFileBackedMetadataAudioFile::readFormatMatches</definition>
+        <argsstring>(int pSfFullFormat) const =0</argsstring>
+        <name>readFormatMatches</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::readFormatMatches</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1AiffFile_1a3a52e2ce0418a6a496ffcf8463f69632">readFormatMatches</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1MP3File_1acded4b8297cfd6e349cd0a89e8a8e8ee">readFormatMatches</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1OggFile_1aa89063b86c0a015e5c62d8741c3fb14e">readFormatMatches</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>pSfFullFormat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="76" column="14"/>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">open</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9d4543b5c26b8881a281ddd3bf0de7b6" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int EOUtils::SndFileBackedMetadataAudioFile::newFileSfFormatMask</definition>
+        <argsstring>() const =0</argsstring>
+        <name>newFileSfFormatMask</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::newFileSfFormatMask</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1AiffFile_1a310abc99b7aa1799be5fb278d9cf9b9c">newFileSfFormatMask</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1MP3File_1a1990439c695c59199298dfbeeaa353d8">newFileSfFormatMask</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1OggFile_1a2876012be4ac06751bd55334ef4766fd">newFileSfFormatMask</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="78" column="13"/>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">open</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a8c417c6986f90ded3964e483ec00753e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const char *</type>
+        <definition>virtual const char * EOUtils::SndFileBackedMetadataAudioFile::formatLabel</definition>
+        <argsstring>() const =0</argsstring>
+        <name>formatLabel</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::formatLabel</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1AiffFile_1acc06d9651e0f4a91a17ba825728366f6">formatLabel</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1MP3File_1a554aaa588cb0e117ea2f1898728b2c03">formatLabel</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1OggFile_1ae93d873d3e7a19e4680b8ac3f36908ce">formatLabel</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="80" column="20"/>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a50528a485aeda6e16ab5c3f1558aefd5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="367" endline="401">getHighestSampleValue_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1afc4e1a414dc53a1c3112f6a7b93600f0" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="294" endline="330">getNextSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ae71e6cdf5e73980e8a71af7005411111" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="403" endline="415">goToAudioDataPos</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acfdd6717c813c6af0a7d8510ab53cd1a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="332" endline="365">writeSample_int64</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9d6a9bf52f6167e7245edba64fd53070" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void EOUtils::SndFileBackedMetadataAudioFile::configureSndfileEncoderForWrite</definition>
+        <argsstring>(SNDFILE *)</argsstring>
+        <name>configureSndfileEncoderForWrite</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::configureSndfileEncoderForWrite</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1MP3File_1a0b59260c0e9870d03a136917855f29cc">configureSndfileEncoderForWrite</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1OggFile_1add950d3dd5e3892f931130fd183a94fd">configureSndfileEncoderForWrite</reimplementedby>
+        <param>
+          <type>SNDFILE *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>After a successful SFM_WRITE open, codecs may tweak the encoder via sf_command. Default: no-op. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="83" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" bodystart="83" bodyend="84"/>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">open</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9bb15e4fbbf1caeda87028eed71072f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::SndFileBackedMetadataAudioFile::finalizePartialWriteFrames</definition>
+        <argsstring>()</argsstring>
+        <name>finalizePartialWriteFrames</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::finalizePartialWriteFrames</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="95" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="228" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a98ddca957866f617b40e26427e0b1b53" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::getSfStringField</definition>
+        <argsstring>(int pStrKind, std::string &amp;pOut) const</argsstring>
+        <name>getSfStringField</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::getSfStringField</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pStrKind</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pOut</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="97" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="514" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad045177f4dd9d78b1631aadc7074af6e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::SndFileBackedMetadataAudioFile::setSfStringField</definition>
+        <argsstring>(int pStrKind, const std::string &amp;pVal)</argsstring>
+        <name>setSfStringField</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::setSfStringField</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pStrKind</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pVal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="99" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="536" bodyend="548"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a15871650afca97c6bb93dbfc6b3a3034" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::SndFileBackedMetadataAudioFile::syncLayoutBytesFromSf</definition>
+        <argsstring>()</argsstring>
+        <name>syncLayoutBytesFromSf</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::syncLayoutBytesFromSf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="101" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="267" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a94eaba56c5d9acf842da425b62b78ec1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::SndFileBackedMetadataAudioFile::bumpDataSizeEstimate</definition>
+        <argsstring>()</argsstring>
+        <name>bumpDataSizeEstimate</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::bumpDataSizeEstimate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="103" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="287" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad792ce3b4a9f66e3985c10ace062d9b9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::SndFileBackedMetadataAudioFile::resetReadPump</definition>
+        <argsstring>()</argsstring>
+        <name>resetReadPump</name>
+        <qualifiedname>EOUtils::SndFileBackedMetadataAudioFile::resetReadPump</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="105" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp" bodystart="281" bodyend="285"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Shared libsndfile-backed implementation used by MP3, Ogg Vorbis, and AIFF codecs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>EOUtils::AiffFile</label>
+        <link refid="classEOUtils_1_1AiffFile"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EOUtils::AudioFile</label>
+        <link refid="classEOUtils_1_1AudioFile"/>
+      </node>
+      <node id="5">
+        <label>EOUtils::MP3File</label>
+        <link refid="classEOUtils_1_1MP3File"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EOUtils::MetadataAudioFile</label>
+        <link refid="classEOUtils_1_1MetadataAudioFile"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>EOUtils::OggFile</label>
+        <link refid="classEOUtils_1_1OggFile"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EOUtils::SndFileBackedMetadataAudioFile</label>
+        <link refid="classEOUtils_1_1SndFileBackedMetadataAudioFile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>EOUtils::AudioFile</label>
+        <link refid="classEOUtils_1_1AudioFile"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#mFilename</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#mFileStream</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#mFileOpenMode</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#mDataSizeBytes</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>#mMetadata</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>EOUtils::AudioFileInfo</label>
+        <link refid="classEOUtils_1_1AudioFileInfo"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>#mBytesPerSecond</edgelabel>
+          <edgelabel>#mFileSize</edgelabel>
+          <edgelabel>#mSampleRateHz</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>#mBitsPerSample</edgelabel>
+          <edgelabel>#mByteRate</edgelabel>
+          <edgelabel>#mNumChannels</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EOUtils::MetadataAudioFile</label>
+        <link refid="classEOUtils_1_1MetadataAudioFile"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EOUtils::SndFileBackedMetadataAudioFile</label>
+        <link refid="classEOUtils_1_1SndFileBackedMetadataAudioFile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#mFileLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>int16_t</label>
+      </node>
+      <node id="10">
+        <label>int32_t</label>
+      </node>
+      <node id="7">
+        <label>size_t</label>
+      </node>
+      <node id="5">
+        <label>fstream</label>
+      </node>
+      <node id="6">
+        <label>openmode</label>
+      </node>
+      <node id="8">
+        <label>map&lt; std::string, std::string &gt;</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" line="20" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h" bodystart="21" bodyend="106"/>
+    <listofallmembers>
+      <member refid="classEOUtils_1_1AudioFile_1a8ad604ab1ec13becdf8b2659e61c9c3d" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a7dd053155e5498f9603b2a232158d1dc" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a929e0fbe28b29242d228331212e89336" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a683fdacc6a09b3a22d5c438c8559a054" prot="public" virt="pure-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>BitrateIsAdjustable</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a94eaba56c5d9acf842da425b62b78ec1" prot="private" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>bumpDataSizeEstimate</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af7608eef3ca48433142025a37bb99033" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>close</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9d6a9bf52f6167e7245edba64fd53070" prot="protected" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>configureSndfileEncoderForWrite</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ad6281b62a2270d05ba8ab3d643837caa" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>Filename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aab5a60cd510028e984f06f3cad3ba196" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>Filename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1abff45a0857ea7ac45920ce200c9c2f42" prot="protected" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>fileSizeAccordingToStream</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9bb15e4fbbf1caeda87028eed71072f6" prot="private" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>finalizePartialWriteFrames</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a8c417c6986f90ded3964e483ec00753e" prot="protected" virt="pure-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>formatLabel</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a597832cb68f37962e65d9af4a4daca76" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getAlbum</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a74491b1431583e61361ed3fc2b958722" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getArtist</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a2e91490fab82a495f6cc3244f68a3fe1" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getAudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a788bfd7f1e24f8d7ebd5e4c67660513f" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getComment</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a623f3a0ddfb0ae89e87d5c0868d0dfcc" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getGenre</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a50528a485aeda6e16ab5c3f1558aefd5" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getHighestSampleValue_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1780a021a151729a1a7eaa0d02a2fa01" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getHighestSampleValue_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a3e4f535ca55f141bf8145665b5881bd9" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1414f518e301c5ca00132f3b4d726d67" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a80b9e185e791079450429706ca9ef91e" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a5c3e338b5d9b22e3e16ddb5b2d87a533" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ab867a5930c81e792f4116f62df0f8298" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1afc4e1a414dc53a1c3112f6a7b93600f0" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getNextSample_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a99c362d4f3f1417e88a29e20e1a569b5" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getNextSample_int64</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a98ddca957866f617b40e26427e0b1b53" prot="private" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getSfStringField</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a684645d427b4002fc62c8fc23cd0a141" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getTitle</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a79744b85e1f5a071d022d49ce0fb80a6" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getTrackNumber</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1ae43dcd8ce45042c99e66d7a858c9d074" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getTrackNumber</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a6cc1dca0322a5945225c7cf82a504226" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>getYear</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ae71e6cdf5e73980e8a71af7005411111" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>goToAudioDataPos</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aedf6b1305b5cfd321bedd7790ef7c8e4" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>hasMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>hasReadMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>hasWriteMode</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a819cd193fb520477daecc99074244b27" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>isOpen</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a99ac823f1aa365c8876fa35939b61e82" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>maxValueForSampleSize</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a6715e23ce598df722ad507ce6141006f" prot="private" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>mChannelIndexInPump</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" prot="protected" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>mDataSizeBytes</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a4b979898316007867c1721e9823738cf" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a097c2697ff13926740a76063de122cb6" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" prot="protected" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>mFileLayout</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" prot="protected" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>mFilename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" prot="protected" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>mFileOpenMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" prot="protected" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>mFileStream</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab5ad29f94444e2e054ffc0bda82f1d69" prot="private" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>mFrameBuf</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" prot="protected" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>mMetadata</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af91ed2005716d130ef65998c880bc279" prot="private" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>mSf</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acb0156e754d20dea7ef210bd1adcfbc5" prot="private" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>mSnd</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad234d06578622968dcccd39b2cbbb95b" prot="private" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>mWriteAccum</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9d4543b5c26b8881a281ddd3bf0de7b6" prot="protected" virt="pure-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>newFileSfFormatMask</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a520f77d8c349944e508a6707bc3617ac" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>numSamples</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>open</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3f040f277c0e76c9411defa7b386cd38" prot="protected" virt="pure-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>readFormatMatches</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad792ce3b4a9f66e3985c10ace062d9b9" prot="private" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>resetReadPump</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3c569d4cc544c985d81dc131e0da5a32" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>seekOutputToSampleNum</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1af30b9f5c0bd6f6eb670976c5872aacdd" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>seekOutputToSampleNum</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1adb1c8cfe8ff0ecc8d0159871c9245a18" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setAlbum</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a13a905679e51af831810eff6a15b9524" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setArtist</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a5b4ddbc681df5496f355bef551bbddea" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setAudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a05761942c1d69d5afe4ae82a7f7b91fc" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setComment</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a376cef8c69f91ed84ea84026075a4df2" prot="protected" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setFileMode</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab315502e2dc380bd6ff616dfa2521716" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setGenre</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a7c9c44e7d515e2281736219609d785ed" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a877560d2344ca9a2c38700e2f11f1224" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setMetadataFromVal</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad045177f4dd9d78b1631aadc7074af6e" prot="private" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setSfStringField</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9e83638df759da359e7024e493cd1301" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setTitle</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a04ebcd99162fd7421accd0b2f92f2d1b" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setTrackNumber</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1aab2746c19dca62fe5a27bd12d936fa46" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setTrackNumber</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1aa32686ba35238da9794c7133589bf01e" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>setYear</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" prot="protected" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>SndFileBackedMetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a12124ab04a2c7b42865611f800383a76" prot="protected" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>SndFileBackedMetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a1778198551e223d0d3bfa83b8dcbac77" prot="protected" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>SndFileBackedMetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af55a4cf92b361107109307c56281efd6" prot="protected" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>SndFileBackedMetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1aff3cc98c3785aeae129472b484bfcb64" prot="protected" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>SndFileBackedMetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a15871650afca97c6bb93dbfc6b3a3034" prot="private" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>syncLayoutBytesFromSf</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acfdd6717c813c6af0a7d8510ab53cd1a" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>writeSample_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a901b6f6818ae604841592537a278507d" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>writeSample_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1af6b8d50765277b330bc63e57dcc4f0c3" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>~AudioFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1ab78858553941cba26740fc69f926b569" prot="public" virt="virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>~MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad98e4c6af29f9f31f35e333a75e515c3" prot="public" virt="non-virtual"><scope>EOUtils::SndFileBackedMetadataAudioFile</scope><name>~SndFileBackedMetadataAudioFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="resource_8h" kind="file" language="C++">
+    <compoundname>resource.h</compoundname>
+    <includedby refid="AudioMixerCPP_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPP.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPP.cpp</label>
+        <link refid="AudioMixerCPP_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPP.h</label>
+        <link refid="AudioMixerCPP_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp</label>
+        <link refid="AudioMixerCPPDlg_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h</label>
+        <link refid="resource_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="resource_8h_1a74b41adc6435c09e5393739d1ebeace4" prot="public" static="no">
+        <name>IDM_ABOUTBOX</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="5" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="5" bodyend="-1"/>
+        <referencedby refid="classCAudioMixerCPPDlg_1a0754f2ee76b5180dd8077b9b8c263a44" compoundref="AudioMixerCPPDlg_8cpp" startline="100" endline="134">CAudioMixerCPPDlg::OnInitDialog</referencedby>
+        <referencedby refid="classCAudioMixerCPPDlg_1a6c0991ab95cb6ac8e21859de2eb930e4" compoundref="AudioMixerCPPDlg_8cpp" startline="136" endline="147">CAudioMixerCPPDlg::OnSysCommand</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a77a06326b569136edbb6c766bc98c33c" prot="public" static="no">
+        <name>IDD_ABOUTBOX</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="6" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="6" bodyend="-1"/>
+        <referencedby refid="classCAboutDlg_1a6d1e6a33fef23bee6e75254189d865ce" compoundref="AudioMixerCPPDlg_8cpp" startline="52" endline="54">CAboutDlg::CAboutDlg</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a912ee15244eed3e0f75c2fc1ef9719eb" prot="public" static="no">
+        <name>IDS_ABOUTBOX</name>
+        <initializer>101</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="7" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="classCAudioMixerCPPDlg_1a0754f2ee76b5180dd8077b9b8c263a44" compoundref="AudioMixerCPPDlg_8cpp" startline="100" endline="134">CAudioMixerCPPDlg::OnInitDialog</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a356556ed96435a3fe6a0aca91f1a47dd" prot="public" static="no">
+        <name>IDD_AUDIOMIXERCPP_DIALOG</name>
+        <initializer>102</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="8" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="classCAudioMixerCPPDlg_1a8cda873f3281910bf5593aafc5d5af26" compoundref="AudioMixerCPPDlg_8cpp" startline="67" endline="73">CAudioMixerCPPDlg::CAudioMixerCPPDlg</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a9772c84d39896ad00b9aeb34b15d324d" prot="public" static="no">
+        <name>IDR_MAINFRAME</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="9" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classCAudioMixerCPPDlg_1a8cda873f3281910bf5593aafc5d5af26" compoundref="AudioMixerCPPDlg_8cpp" startline="67" endline="73">CAudioMixerCPPDlg::CAudioMixerCPPDlg</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a212d2c4f456c21cdebf8141370db9e57" prot="public" static="no">
+        <name>IDC_MFCVSLISTBOX_SOUND_FILENAMES</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="10" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classCAudioMixerCPPDlg_1ae263d828b9c09b0d998ac0d0cf64f7f1" compoundref="AudioMixerCPPDlg_8cpp" startline="75" endline="82">CAudioMixerCPPDlg::DoDataExchange</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a2bb3e7fdd36ddcaf951a4b803b74199a" prot="public" static="no">
+        <name>IDC_BUTTON_MIX_AUDIO_FILES</name>
+        <initializer>1001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="11" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a49fb3015667f19f5523069907b5a32d5" prot="public" static="no">
+        <name>IDC_MFCVSLISTBOX2</name>
+        <initializer>1002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="12" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1aec1569be5e665c14c815a0e601f6aafb" prot="public" static="no">
+        <name>IDC_STATIC_STATUS</name>
+        <initializer>1003</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="13" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classCAudioMixerCPPDlg_1ae263d828b9c09b0d998ac0d0cf64f7f1" compoundref="AudioMixerCPPDlg_8cpp" startline="75" endline="82">CAudioMixerCPPDlg::DoDataExchange</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1a9e1edce4bcfa8441ad8569ac29726288" prot="public" static="no">
+        <name>IDC_BUTTON_SELECT_OUTPUT_FILE</name>
+        <initializer>1004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="14" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1ad123446cb35c803caf42a339fc842813" prot="public" static="no">
+        <name>IDC_EDIT1</name>
+        <initializer>1005</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="15" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1afa33d864844f8f52b4b14e17c82186ff" prot="public" static="no">
+        <name>IDC_EDIT_OUTPUT_FILENAME</name>
+        <initializer>1005</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="16" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classCAudioMixerCPPDlg_1ae263d828b9c09b0d998ac0d0cf64f7f1" compoundref="AudioMixerCPPDlg_8cpp" startline="75" endline="82">CAudioMixerCPPDlg::DoDataExchange</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="resource_8h_1af2558e6fac609b3bfbf2c990c69e9a67" prot="public" static="no">
+        <name>IDC_BUTTON_CLEAR_INPUT_LIST</name>
+        <initializer>1006</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" line="17" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">﻿</highlight><highlight class="comment">//{{NO_DEPENDENCIES}}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Microsoft<sp/>Visual<sp/>C++<sp/>generated<sp/>include<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Used<sp/>by<sp/>AudioMixerCPP.rc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="resource_8h_1a74b41adc6435c09e5393739d1ebeace4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDM_ABOUTBOX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0010</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="resource_8h_1a77a06326b569136edbb6c766bc98c33c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDD_ABOUTBOX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="resource_8h_1a912ee15244eed3e0f75c2fc1ef9719eb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDS_ABOUTBOX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>101</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="resource_8h_1a356556ed96435a3fe6a0aca91f1a47dd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDD_AUDIOMIXERCPP_DIALOG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>102</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="resource_8h_1a9772c84d39896ad00b9aeb34b15d324d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDR_MAINFRAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="resource_8h_1a212d2c4f456c21cdebf8141370db9e57" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDC_MFCVSLISTBOX_SOUND_FILENAMES<sp/>1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="resource_8h_1a2bb3e7fdd36ddcaf951a4b803b74199a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDC_BUTTON_MIX_AUDIO_FILES<sp/><sp/><sp/><sp/><sp/><sp/>1001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="resource_8h_1a49fb3015667f19f5523069907b5a32d5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDC_MFCVSLISTBOX2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1002</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="resource_8h_1aec1569be5e665c14c815a0e601f6aafb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDC_STATIC_STATUS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1003</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="resource_8h_1a9e1edce4bcfa8441ad8569ac29726288" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDC_BUTTON_SELECT_OUTPUT_FILE<sp/><sp/><sp/>1004</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="resource_8h_1ad123446cb35c803caf42a339fc842813" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDC_EDIT1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1005</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="resource_8h_1afa33d864844f8f52b4b14e17c82186ff" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDC_EDIT_OUTPUT_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1005</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="resource_8h_1af2558e6fac609b3bfbf2c990c69e9a67" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDC_BUTTON_CLEAR_INPUT_LIST<sp/><sp/><sp/><sp/><sp/>1006</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Next<sp/>default<sp/>values<sp/>for<sp/>new<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>APSTUDIO_INVOKED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>APSTUDIO_READONLY_SYMBOLS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_APS_NEXT_RESOURCE_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>131</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_APS_NEXT_COMMAND_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32771</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_APS_NEXT_CONTROL_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1007</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_APS_NEXT_SYMED_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>101</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/resource.h"/>
+  </compounddef>
+</doxygen>

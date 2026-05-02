@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="EOUtils_8h" kind="file" language="C++">
+    <compoundname>EOUtils.h</compoundname>
+    <includes local="no">cstddef</includes>
+    <includedby refid="AudioFileInfo_8cpp" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp</includedby>
+    <includedby refid="EOUtils_8cpp" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/EOUtils.cpp</includedby>
+    <includedby refid="FLACFile_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h</includedby>
+    <includedby refid="WAVFile_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/WAVFile.h</includedby>
+    <includedby refid="WAVFileInfo_8cpp" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/WAVFileInfo.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/EOUtils.h</label>
+        <link refid="EOUtils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstddef</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp</label>
+        <link refid="AudioMixerCPPDlg_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp</label>
+        <link refid="AudioFileInfo_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFileTools.cpp</label>
+        <link refid="AudioFileTools_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/EOUtils.cpp</label>
+        <link refid="EOUtils_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/EOUtils.h</label>
+        <link refid="EOUtils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp</label>
+        <link refid="FLACFile_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h</label>
+        <link refid="FLACFile_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/WAVFile.cpp</label>
+        <link refid="WAVFile_8cpp"/>
+      </node>
+      <node id="8">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/WAVFile.h</label>
+        <link refid="WAVFile_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/WAVFileInfo.cpp</label>
+        <link refid="WAVFileInfo_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp</label>
+        <link refid="cmdLineApp_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceEOUtils">EOUtils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__EO_UTILS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__EO_UTILS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceEOUtils" kindref="compound">EOUtils</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceEOUtils_1af2c3f00553c53ab2242e70efc948dbcf" kindref="member">isBigEndian</ref>();</highlight></codeline>
+<codeline lineno="9" refid="namespaceEOUtils_1afbf98608a59e80f37845f299beab3f22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceEOUtils_1afbf98608a59e80f37845f299beab3f22" kindref="member">machineIsBigEndian</ref><sp/>=<sp/><ref refid="namespaceEOUtils_1af2c3f00553c53ab2242e70efc948dbcf" kindref="member">isBigEndian</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceEOUtils_1a7aaa860cae2d39f10d1e630c9c3dec0e" kindref="member">reverseBytes</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespaceEOUtils_1a8739921e2c1cb5efa3a996719a8ebd85" kindref="member">getFileSize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pFilename);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/EOUtils.h"/>
+  </compounddef>
+</doxygen>

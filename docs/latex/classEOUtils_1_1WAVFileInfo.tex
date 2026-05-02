@@ -1,0 +1,367 @@
+\doxysection{EOUtils\+::WAVFile\+Info Class Reference}
+\label{classEOUtils_1_1WAVFileInfo}\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+
+
+{\ttfamily \#include $<$WAVFile\+Info.\+h$>$}
+
+
+
+Inheritance diagram for EOUtils\+::WAVFile\+Info\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEOUtils_1_1WAVFileInfo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for EOUtils\+::WAVFile\+Info\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEOUtils_1_1WAVFileInfo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ WAVFile\+Info} (int16\+\_\+t p\+Num\+Channels=0, int32\+\_\+t p\+Sample\+Rate\+Hz=0, int32\+\_\+t p\+Bytes\+Per\+Second=0, int16\+\_\+t p\+Byte\+Rate=0, int16\+\_\+t p\+Bits\+Per\+Sample=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\textbf{ WAVFile\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info)
+\begin{DoxyCompactList}\small\item\em Constructor for copying an \doxyref{Audio\+File\+Info}{p.}{classEOUtils_1_1AudioFileInfo} object. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ read} (std\+::fstream \&p\+In\+FStream) override
+\begin{DoxyCompactList}\small\item\em Reads the info from a file stream. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ write} (std\+::fstream \&p\+Out\+FStream) override
+\begin{DoxyCompactList}\small\item\em Writes the info to a file stream. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ update\+File\+Size\+Size\+In\+File} (std\+::fstream \&p\+Out\+FStream, int32\+\_\+t p\+File\+Size)
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ update\+Data\+Size\+Size\+In\+File} (std\+::fstream \&p\+Out\+FStream, int32\+\_\+t p\+Data\+Size)
+\item 
+std\+::string \textbf{ WAVHeader} () const
+\item 
+std\+::string \textbf{ RIFFType} () const
+\item 
+std\+::string \textbf{ Subchunk2\+ID} () const
+\item 
+int32\+\_\+t \textbf{ Subchunk2\+Size} () const
+\item 
+int32\+\_\+t \textbf{ Data\+Size\+Bytes} () const
+\item 
+int16\+\_\+t \textbf{ Bits\+Per\+Sample} () const override
+\item 
+void \textbf{ Bits\+Per\+Sample} (int16\+\_\+t p\+Bits\+Per\+Sample) override
+\item 
+void \textbf{ Set\+WAVHeader\+And\+RIFFType} ()
+\item 
+void \textbf{ Set\+Subchunk2\+IDAnd\+Size} ()
+\item 
+int32\+\_\+t \textbf{ Audio\+Data\+Offset} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ EOUtils\+::\+Audio\+File\+Info}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File\+Info} (int16\+\_\+t p\+Num\+Channels=0, int32\+\_\+t p\+Sample\+Rate\+Hz=0, int32\+\_\+t p\+Bytes\+Per\+Second=0, int16\+\_\+t p\+Byte\+Rate=0, int16\+\_\+t p\+Bits\+Per\+Sample=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \textbf{ $\sim$\+Audio\+File\+Info} ()=default
+\item 
+virtual void \textbf{ copy\+Audio\+File\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info)
+\begin{DoxyCompactList}\small\item\em Copies the values from another \doxyref{Audio\+File\+Info}{p.}{classEOUtils_1_1AudioFileInfo} object. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ read} (const char $\ast$p\+Filename)
+\begin{DoxyCompactList}\small\item\em Reads the info from a WAV file. \end{DoxyCompactList}\item 
+virtual int32\+\_\+t \textbf{ File\+Size} () const
+\item 
+void \textbf{ File\+Size} (int32\+\_\+t p\+File\+Size)
+\item 
+virtual int16\+\_\+t \textbf{ Num\+Channels} () const
+\item 
+virtual void \textbf{ Num\+Channels} (int16\+\_\+t p\+Num\+Channels)
+\item 
+virtual int32\+\_\+t \textbf{ Sample\+Rate\+Hz} () const
+\item 
+virtual void \textbf{ Sample\+Rate\+Hz} (int32\+\_\+t p\+Sample\+Rate\+Hz)
+\item 
+virtual int32\+\_\+t \textbf{ Bytes\+Per\+Second} () const
+\item 
+virtual void \textbf{ Bytes\+Per\+Second} (int32\+\_\+t p\+Bytes\+Per\+Second)
+\item 
+virtual int16\+\_\+t \textbf{ Byte\+Rate} () const
+\item 
+virtual void \textbf{ Byte\+Rate} (int16\+\_\+t p\+Byte\+Rate)
+\item 
+virtual size\+\_\+t \textbf{ Bytes\+Per\+Sample} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \textbf{ WAVFile\+Hdr\+Size} ()
+\item 
+static int16\+\_\+t \textbf{ Bits\+Per\+Sample} (const char $\ast$p\+Filename)
+\item 
+static bool \textbf{ is\+WAVFile} (const char $\ast$p\+Filename)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \textbf{ EOUtils\+::\+Audio\+File\+Info}}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \textbf{ m\+File\+Size}
+\item 
+int16\+\_\+t \textbf{ m\+Num\+Channels}
+\item 
+int32\+\_\+t \textbf{ m\+Sample\+Rate\+Hz}
+\item 
+int32\+\_\+t \textbf{ m\+Bytes\+Per\+Second}
+\item 
+int16\+\_\+t \textbf{ m\+Byte\+Rate}
+\item 
+int16\+\_\+t \textbf{ m\+Bits\+Per\+Sample}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!WAVFileInfo@{WAVFileInfo}}
+\index{WAVFileInfo@{WAVFileInfo}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{WAVFileInfo()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a533190a5b42a240e15622e5cbb5ba067} 
+EOUtils\+::\+WAVFile\+Info\+::\+WAVFile\+Info (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{p\+Num\+Channels}{ = {\ttfamily 0}, }\item[{int32\+\_\+t}]{p\+Sample\+Rate\+Hz}{ = {\ttfamily 0}, }\item[{int32\+\_\+t}]{p\+Bytes\+Per\+Second}{ = {\ttfamily 0}, }\item[{int16\+\_\+t}]{p\+Byte\+Rate}{ = {\ttfamily 0}, }\item[{int16\+\_\+t}]{p\+Bits\+Per\+Sample}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Num\+Channels} & The number of channels \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Sample\+Rate\+Hz} & The sample rate (in Hz) \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Bytes\+Per\+Second} & The number of bytes per second \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Byte\+Rate} & The byte rate (number of bytes per sample $\ast$ number of channels) \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Bits\+Per\+Sample} & The number of bits per sample \\
+\hline
+\end{DoxyParams}
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Audio\+File\+Info()}.
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!WAVFileInfo@{WAVFileInfo}}
+\index{WAVFileInfo@{WAVFileInfo}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{WAVFileInfo()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a4c54a90b33d923ce1ccd346fa22957d0} 
+EOUtils\+::\+WAVFile\+Info\+::\+WAVFile\+Info (\begin{DoxyParamCaption}\item[{const \textbf{ Audio\+File\+Info} \&}]{p\+Audio\+File\+Info}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for copying an \doxyref{Audio\+File\+Info}{p.}{classEOUtils_1_1AudioFileInfo} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Audio\+File\+Info} & An \doxyref{Audio\+File\+Info}{p.}{classEOUtils_1_1AudioFileInfo} object to copy the values from \\
+\hline
+\end{DoxyParams}
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Audio\+File\+Info()}.
+
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!AudioDataOffset@{AudioDataOffset}}
+\index{AudioDataOffset@{AudioDataOffset}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{AudioDataOffset()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_ae38a7177f6cd5a06367649f77af0ada8} 
+int32\+\_\+t EOUtils\+::\+WAVFile\+Info\+::\+Audio\+Data\+Offset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!BitsPerSample@{BitsPerSample}}
+\index{BitsPerSample@{BitsPerSample}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{BitsPerSample()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a928f6117e9491082cb7caa316caf8550} 
+int16\+\_\+t EOUtils\+::\+WAVFile\+Info\+::\+Bits\+Per\+Sample (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File\+Info} \doxyref{}{p.}{classEOUtils_1_1AudioFileInfo_a251e008ebbbe7b96fa393162ff6dffa8}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Bits\+Per\+Sample()}.
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!BitsPerSample@{BitsPerSample}}
+\index{BitsPerSample@{BitsPerSample}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{BitsPerSample()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a9eda15956af7951b425d55c911eaae76} 
+int16\+\_\+t EOUtils\+::\+WAVFile\+Info\+::\+Bits\+Per\+Sample (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+References \textbf{ EOUtils\+::get\+File\+Size()}, \textbf{ EOUtils\+::machine\+Is\+Big\+Endian}, \textbf{ EOUtils\+::reverse\+Bytes()}, and \textbf{ WAVFile\+Hdr\+Size()}.
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!BitsPerSample@{BitsPerSample}}
+\index{BitsPerSample@{BitsPerSample}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{BitsPerSample()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a68aafa7e2189ef546a76f39cfc3fa83d} 
+void EOUtils\+::\+WAVFile\+Info\+::\+Bits\+Per\+Sample (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{p\+Bits\+Per\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File\+Info} \doxyref{}{p.}{classEOUtils_1_1AudioFileInfo_abe9beee9f81daab6f8b88a10b97d38f8}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Bits\+Per\+Sample()}.
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!DataSizeBytes@{DataSizeBytes}}
+\index{DataSizeBytes@{DataSizeBytes}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{DataSizeBytes()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_aba75849541f154341f553c881b954a49} 
+int32\+\_\+t EOUtils\+::\+WAVFile\+Info\+::\+Data\+Size\+Bytes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!isWAVFile@{isWAVFile}}
+\index{isWAVFile@{isWAVFile}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{isWAVFile()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a4a8b3d88c25b22c3d9319fb9c29a7ebe} 
+bool EOUtils\+::\+WAVFile\+Info\+::is\+WAVFile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+References \textbf{ EOUtils\+::get\+File\+Size()}, \textbf{ RIFFType()}, \textbf{ WAVFile\+Hdr\+Size()}, and \textbf{ WAVHeader()}.
+
+
+
+Referenced by \textbf{ EOUtils\+::create\+Audio\+File\+Obj\+For\+Existing\+File()}, and \textbf{ EOUtils\+::get\+Audio\+File\+Info()}.
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!read@{read}}
+\index{read@{read}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{read()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a3ea420f4e58f22d9a61ebfc6444b769b} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+WAVFile\+Info\+::read (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{p\+In\+FStream}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads the info from a file stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+In\+FStream} & A file stream object to read the information from. This must be already opened in read and binary mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} object containing error messages on failure, or no errors on success 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File\+Info} \doxyref{}{p.}{classEOUtils_1_1AudioFileInfo_ae46975f1e0d83c16008c256d283d5c23}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ EOUtils\+::machine\+Is\+Big\+Endian}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Bits\+Per\+Sample}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Byte\+Rate}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Bytes\+Per\+Second}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+File\+Size}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Num\+Channels}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Sample\+Rate\+Hz}, and \textbf{ EOUtils\+::reverse\+Bytes()}.
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!RIFFType@{RIFFType}}
+\index{RIFFType@{RIFFType}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{RIFFType()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a607d418c5bfc2117a0715156e6c6b36b} 
+string EOUtils\+::\+WAVFile\+Info\+::\+RIFFType (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Referenced by \textbf{ is\+WAVFile()}.
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!SetSubchunk2IDAndSize@{SetSubchunk2IDAndSize}}
+\index{SetSubchunk2IDAndSize@{SetSubchunk2IDAndSize}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{SetSubchunk2IDAndSize()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_ad652a8c18316b2a5394fa63e9905bccd} 
+void EOUtils\+::\+WAVFile\+Info\+::\+Set\+Subchunk2\+IDAnd\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!SetWAVHeaderAndRIFFType@{SetWAVHeaderAndRIFFType}}
+\index{SetWAVHeaderAndRIFFType@{SetWAVHeaderAndRIFFType}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{SetWAVHeaderAndRIFFType()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a1c4c81ce56e7398d393fbf857f03d88c} 
+void EOUtils\+::\+WAVFile\+Info\+::\+Set\+WAVHeader\+And\+RIFFType (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!Subchunk2ID@{Subchunk2ID}}
+\index{Subchunk2ID@{Subchunk2ID}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{Subchunk2ID()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_ac6fdcdbb49e1ddaa4ecbb2d6a70d5cda} 
+string EOUtils\+::\+WAVFile\+Info\+::\+Subchunk2\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!Subchunk2Size@{Subchunk2Size}}
+\index{Subchunk2Size@{Subchunk2Size}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{Subchunk2Size()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_ad8239e8d342a111622543b33e0879411} 
+int32\+\_\+t EOUtils\+::\+WAVFile\+Info\+::\+Subchunk2\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!updateDataSizeSizeInFile@{updateDataSizeSizeInFile}}
+\index{updateDataSizeSizeInFile@{updateDataSizeSizeInFile}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{updateDataSizeSizeInFile()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a2e24c98872bf837b409680d27526ec49} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+WAVFile\+Info\+::update\+Data\+Size\+Size\+In\+File (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{p\+Out\+FStream}{, }\item[{int32\+\_\+t}]{p\+Data\+Size}{}\end{DoxyParamCaption})}
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ EOUtils\+::machine\+Is\+Big\+Endian}, and \textbf{ EOUtils\+::reverse\+Bytes()}.
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!updateFileSizeSizeInFile@{updateFileSizeSizeInFile}}
+\index{updateFileSizeSizeInFile@{updateFileSizeSizeInFile}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{updateFileSizeSizeInFile()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_ae618a681f3b16ec6b1f83f0894ae118e} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+WAVFile\+Info\+::update\+File\+Size\+Size\+In\+File (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{p\+Out\+FStream}{, }\item[{int32\+\_\+t}]{p\+File\+Size}{}\end{DoxyParamCaption})}
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+File\+Size()}, \textbf{ EOUtils\+::machine\+Is\+Big\+Endian}, and \textbf{ EOUtils\+::reverse\+Bytes()}.
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!WAVFileHdrSize@{WAVFileHdrSize}}
+\index{WAVFileHdrSize@{WAVFileHdrSize}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{WAVFileHdrSize()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a908934cdc311faa2bac6837bb8e73fdc} 
+size\+\_\+t EOUtils\+::\+WAVFile\+Info\+::\+WAVFile\+Hdr\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Referenced by \textbf{ Bits\+Per\+Sample()}, \textbf{ EOUtils\+::\+WAVFile\+::close()}, \textbf{ is\+WAVFile()}, and \textbf{ EOUtils\+::\+WAVFile\+::open()}.
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!WAVHeader@{WAVHeader}}
+\index{WAVHeader@{WAVHeader}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{WAVHeader()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a1e959e91b87c297a147eb3a2046825ea} 
+string EOUtils\+::\+WAVFile\+Info\+::\+WAVHeader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Referenced by \textbf{ is\+WAVFile()}.
+
+\index{EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}!write@{write}}
+\index{write@{write}!EOUtils::WAVFileInfo@{EOUtils::WAVFileInfo}}
+\doxysubsubsection{write()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1WAVFileInfo_a19e432d3926053a8c40a03d06e26a237} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+WAVFile\+Info\+::write (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{p\+Out\+FStream}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes the info to a file stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Out\+FStream} & A file stream object to write the information to. This must be already opened in write and binary mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} object containing error messages on failure, or no errors on success 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File\+Info} \doxyref{}{p.}{classEOUtils_1_1AudioFileInfo_a35bee862e09314491cc60205fa953b02}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ EOUtils\+::machine\+Is\+Big\+Endian}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Bits\+Per\+Sample}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Byte\+Rate}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Bytes\+Per\+Second}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+File\+Size}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Num\+Channels}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Sample\+Rate\+Hz}, and \textbf{ EOUtils\+::reverse\+Bytes()}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ WAVFile\+Info.\+h}\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ WAVFile\+Info.\+cpp}\end{DoxyCompactItemize}

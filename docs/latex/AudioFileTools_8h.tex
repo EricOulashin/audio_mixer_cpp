@@ -1,0 +1,46 @@
+\doxysection{/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\+Audio\+File\+Tools.h File Reference}
+\label{AudioFileTools_8h}\index{/home/erico/projects/audio\_mixer\_cpp/code/common/AudioFileTools.h@{/home/erico/projects/audio\_mixer\_cpp/code/common/AudioFileTools.h}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}Audio\+File.\+h"{}}\newline
+{\ttfamily \#include "{}Audio\+File\+Info.\+h"{}}\newline
+{\ttfamily \#include "{}Audio\+File\+Result\+Type.\+h"{}}\newline
+Include dependency graph for Audio\+File\+Tools.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AudioFileTools_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AudioFileTools_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \textbf{ EOUtils}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ Audio\+File} $>$ \textbf{ EOUtils\+::create\+Audio\+File\+Obj\+For\+Existing\+File} (const char $\ast$p\+Filename)
+\begin{DoxyCompactList}\small\item\em Creates a shared pointer to an audio\+File object for an existing audio file -\/ Creates the appropriate subclass object, depending on the file format. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ Audio\+File} $>$ \textbf{ EOUtils\+::create\+Audio\+File\+Obj\+For\+New\+File} (const char $\ast$p\+Filename)
+\begin{DoxyCompactList}\small\item\em Creates a shared pointer to an audio\+File object for a new (non-\/existing) audio file -\/ Creates the appropriate subclass object, depending on the filename extension. If the format isn\textquotesingle{}t recognized, returns a null pointer. \end{DoxyCompactList}\item 
+std\+::string \textbf{ EOUtils\+::get\+File\+Extension\+Upper} (const char $\ast$p\+Filename)
+\begin{DoxyCompactList}\small\item\em Returns a filename\textquotesingle{}s extension in uppercase, or an empty string if there is no extension. The extension is the part of the filename after the last dot. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::get\+Audio\+File\+Info} (const char $\ast$p\+Filename, \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info)
+\begin{DoxyCompactList}\small\item\em Gets information about an audio file. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::mix\+Audio\+Files} (const std\+::vector$<$ std\+::string $>$ \&p\+Filenames, const std\+::string \&p\+Output\+Filename)
+\begin{DoxyCompactList}\small\item\em Mixes (merges) multiple audio files into a single file. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::mix\+Audio\+Files} (const std\+::vector$<$ std\+::string $>$ \&p\+Filenames, std\+::shared\+\_\+ptr$<$ \textbf{ Audio\+File} $>$ \&p\+Output\+Audio\+File)
+\begin{DoxyCompactList}\small\item\em Mixes (merges) multiple audio files into a single file. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::mix\+Audio\+Files} (const std\+::vector$<$ std\+::string $>$ \&p\+Filenames, \textbf{ EOUtils\+::\+Audio\+File} \&p\+Output\+Audio\+File)
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::get\+Highest\+Sample\+Value\+\_\+64bit} (const std\+::vector$<$ std\+::string $>$ \&p\+Filenames, int64\+\_\+t \&p\+Highest\+Audio\+Sample)
+\begin{DoxyCompactList}\small\item\em Gets the highest audio sample from a set of audio files, cast to a 64-\/bit integer. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,418 @@
+\doxysection{EOUtils\+::Ogg\+File Class Reference}
+\label{classEOUtils_1_1OggFile}\index{EOUtils::OggFile@{EOUtils::OggFile}}
+
+
+{\ttfamily \#include $<$Ogg\+File.\+h$>$}
+
+
+
+Inheritance diagram for EOUtils\+::Ogg\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEOUtils_1_1OggFile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for EOUtils\+::Ogg\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEOUtils_1_1OggFile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Ogg\+File} (const std\+::string \&p\+Filename)
+\item 
+\textbf{ Ogg\+File} (const std\+::string \&p\+Filename, const \textbf{ Ogg\+File\+Info} \&p\+File\+Info)
+\item 
+\textbf{ Ogg\+File} (const std\+::string \&p\+Filename, \textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\item 
+\textbf{ Ogg\+File} (const std\+::string \&p\+Filename, \textbf{ Ogg\+Write\+Quality} p\+Quality)
+\item 
+\textbf{ Ogg\+File} (const std\+::string \&p\+Filename, \textbf{ Ogg\+Write\+Approx\+Bitrate\+Kbps} p\+Approx\+Bitrate)
+\item 
+\textbf{ Ogg\+File} (const Ogg\+File \&p\+Other)
+\item 
+\textbf{ Ogg\+File} (Ogg\+File \&\&p\+Other) noexcept
+\item 
+\textbf{ $\sim$\+Ogg\+File} () override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ open} (\textbf{ Audio\+File\+Modes} p\+Open\+Mode) override
+\item 
+void \textbf{ set\+Audio\+File\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info) override
+\item 
+const \textbf{ Ogg\+File\+Info} \& \textbf{ get\+File\+Info} () const
+\item 
+void \textbf{ set\+Ogg\+Write\+Quality\+Best\+One\+Worst\+Zero} (double p\+Quality)
+\item 
+void \textbf{ set\+Ogg\+Write\+Approx\+Nominal\+Bitrate\+Kbps} (std\+::uint32\+\_\+t p\+Kbps)
+\item 
+void \textbf{ clear\+Ogg\+Write\+Encoding\+Overrides} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ set\+Audio\+File\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info) override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ open} (\textbf{ Audio\+File\+Modes} p\+Open\+Mode) override
+\item 
+void \textbf{ close} () override
+\begin{DoxyCompactList}\small\item\em Closes the audio file. \end{DoxyCompactList}\item 
+bool \textbf{ is\+Open} () const override
+\begin{DoxyCompactList}\small\item\em Returns whether or not the audio file is open. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Next\+Sample\+\_\+int64} (std\+::int64\+\_\+t \&p\+Audio\+Sample) override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ write\+Sample\+\_\+int64} (std\+::int64\+\_\+t p\+Audio\+Sample) override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Highest\+Sample\+Value\+\_\+int64} (std\+::int64\+\_\+t \&p\+Highest\+Audio\+Sample) override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ go\+To\+Audio\+Data\+Pos} () override
+\begin{DoxyCompactList}\small\item\em Goes to the audio data position in the audio file. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \textbf{ num\+Samples} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of audio samples in the audio file. \end{DoxyCompactList}\item 
+std\+::int64\+\_\+t \textbf{ max\+Value\+For\+Sample\+Size} () const override
+\begin{DoxyCompactList}\small\item\em Returns the maximum possible positive value of the audio file\textquotesingle{}s sample size. \end{DoxyCompactList}\item 
+void \textbf{ seek\+Output\+To\+Sample\+Num} (std\+::size\+\_\+t p\+Sample\+Num) override
+\item 
+\textbf{ Audio\+File\+Info} \textbf{ get\+Audio\+File\+Info} () const override
+\begin{DoxyCompactList}\small\item\em Returns an \doxyref{Audio\+File}{p.}{classEOUtils_1_1AudioFile} object with information about the audio file. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Title} (const std\+::string \&p\+Title) override
+\begin{DoxyCompactList}\small\item\em Sets the title metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Artist} (const std\+::string \&p\+Artist) override
+\begin{DoxyCompactList}\small\item\em Sets the artist metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Album} (const std\+::string \&p\+Album) override
+\begin{DoxyCompactList}\small\item\em Sets the album metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Genre} (const std\+::string \&p\+Genre) override
+\begin{DoxyCompactList}\small\item\em Sets the genre metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Track\+Number} (std\+::uint32\+\_\+t p\+Track\+Number, std\+::uint32\+\_\+t p\+Total\+Tracks=0) override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Year} (const std\+::string \&p\+Year) override
+\begin{DoxyCompactList}\small\item\em Sets the year/date metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Comment} (const std\+::string \&p\+Comment) override
+\begin{DoxyCompactList}\small\item\em Sets the comment metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Title} (std\+::string \&p\+Title) const override
+\begin{DoxyCompactList}\small\item\em Gets the title metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Artist} (std\+::string \&p\+Artist) const override
+\begin{DoxyCompactList}\small\item\em Gets the artist metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Album} (std\+::string \&p\+Album) const override
+\begin{DoxyCompactList}\small\item\em Gets the album metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Genre} (std\+::string \&p\+Genre) const override
+\begin{DoxyCompactList}\small\item\em Gets the genre metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Track\+Number} (std\+::uint32\+\_\+t \&p\+Track\+Number, std\+::uint32\+\_\+t \&p\+Total\+Tracks) const override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Year} (std\+::string \&p\+Year) const override
+\begin{DoxyCompactList}\small\item\em Gets the year/date metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Comment} (std\+::string \&p\+Comment) const override
+\begin{DoxyCompactList}\small\item\em Gets the comment metadata tag. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Snd\+File\+Backed\+Metadata\+Audio\+File} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ EOUtils\+::\+Metadata\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Metadata\+Audio\+File} (const std\+::string \&p\+Filename)
+\item 
+\textbf{ Metadata\+Audio\+File} (const std\+::string \&p\+Filename, \textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\item 
+\textbf{ Metadata\+Audio\+File} (const Metadata\+Audio\+File \&p\+Other)
+\item 
+virtual \textbf{ $\sim$\+Metadata\+Audio\+File} ()
+\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Track\+Number} (uint32\+\_\+t p\+Track\+Number, uint32\+\_\+t p\+Total\+Tracks=0)=0
+\begin{DoxyCompactList}\small\item\em Sets the track number metadata tag. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Track\+Number} (uint32\+\_\+t \&p\+Track\+Number, uint32\+\_\+t \&p\+Total\+Tracks) const =0
+\begin{DoxyCompactList}\small\item\em Gets the track number metadata tag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ EOUtils\+::\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File} (const std\+::string \&p\+Filename)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File} (const std\+::string \&p\+Filename, \textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\item 
+\textbf{ Audio\+File} (const \textbf{ Audio\+File} \&p\+Audio\+File)
+\item 
+virtual \textbf{ $\sim$\+Audio\+File} ()
+\item 
+virtual bool \textbf{ Bitrate\+Is\+Adjustable} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether or not the audio file bitrate is adjustable. \end{DoxyCompactList}\item 
+virtual bool \textbf{ has\+Read\+Mode} () const
+\begin{DoxyCompactList}\small\item\em Returns whether or not read mode is enabled for the file. \end{DoxyCompactList}\item 
+virtual bool \textbf{ has\+Write\+Mode} () const
+\begin{DoxyCompactList}\small\item\em Returns whether or not write mode is enabled for the file. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Next\+Sample\+\_\+int64} (int64\+\_\+t \&p\+Audio\+Sample)=0
+\begin{DoxyCompactList}\small\item\em Gets the next sample from the file, cast to a 64-\/bit integer. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ write\+Sample\+\_\+int64} (int64\+\_\+t p\+Audio\+Sample)=0
+\begin{DoxyCompactList}\small\item\em Writes an audio sample to the file. The parameter is a 64-\/bit integer but will be cast to the bitness of the audio samples in the file. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Highest\+Sample\+Value\+\_\+int64} (int64\+\_\+t \&p\+Highest\+Audio\+Sample)=0
+\begin{DoxyCompactList}\small\item\em Gets the highest audio sample value from the file, cast to a 64-\/bit integer. \end{DoxyCompactList}\item 
+const std\+::string \& \textbf{ Filename} () const
+\begin{DoxyCompactList}\small\item\em Gets the filename of the audio file. \end{DoxyCompactList}\item 
+void \textbf{ Filename} (const std\+::string \&p\+Filename)
+\begin{DoxyCompactList}\small\item\em Setter for the filename of the audio file. \end{DoxyCompactList}\item 
+void \textbf{ set\+Metadata} (const std\+::string \&p\+Name, const std\+::string \&p\+Value)
+\begin{DoxyCompactList}\small\item\em Adds a piece of metadata for the audio file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \textbf{ set\+Metadata\+From\+Val} (const std\+::string \&p\+Name, const T \&p\+Value)
+\begin{DoxyCompactList}\small\item\em Adds a piece of metadata for the audio file. Templatized for any value type. The value will be converted to a string to store in the metadata. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Metadata} (const std\+::string \&p\+Name, std\+::string \&p\+Value) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value as a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name, T \&p\+Value) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. Templatized to capture the value as any type. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Metadata} (const std\+::string \&p\+Name) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\T \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name) const
+\item 
+{\footnotesize template$<$typename T$>$ }\\T \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name, const T \&p\+Default\+Val) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. Templatized to return it as any type. \end{DoxyCompactList}\item 
+bool \textbf{ has\+Metadata} (const std\+::string \&p\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns whether or not a metadata item exists. \end{DoxyCompactList}\item 
+virtual void \textbf{ seek\+Output\+To\+Sample\+Num} (size\+\_\+t p\+Sample\+Num)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ read\+Format\+Matches} (int p\+Sf\+Full\+Format) const override
+\item 
+int \textbf{ new\+File\+Sf\+Format\+Mask} () const override
+\item 
+const char $\ast$ \textbf{ format\+Label} () const override
+\item 
+void \textbf{ configure\+Sndfile\+Encoder\+For\+Write} (SNDFILE $\ast$p\+Snd) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File} (const std\+::string \&p\+Filename)
+\item 
+\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File} (const std\+::string \&p\+Filename, \textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\item 
+\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File} (const Snd\+File\+Backed\+Metadata\+Audio\+File \&p\+Other)
+\item 
+\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File} (Snd\+File\+Backed\+Metadata\+Audio\+File \&\&p\+Other) noexcept
+\item 
+\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File} (const std\+::string \&p\+Filename, const \textbf{ Audio\+File\+Info} \&p\+Layout\+Hint)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \textbf{ EOUtils\+::\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::streampos \textbf{ file\+Size\+According\+To\+Stream} ()
+\item 
+virtual void \textbf{ set\+File\+Mode} (\textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File\+Info} \textbf{ m\+File\+Layout}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \textbf{ EOUtils\+::\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \textbf{ m\+Filename}
+\item 
+std\+::fstream \textbf{ m\+File\+Stream}
+\item 
+std\+::ios\+\_\+base\+::openmode \textbf{ m\+File\+Open\+Mode}
+\item 
+size\+\_\+t \textbf{ m\+Data\+Size\+Bytes}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \textbf{ m\+Metadata}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{EOUtils::OggFile@{EOUtils::OggFile}!OggFile@{OggFile}}
+\index{OggFile@{OggFile}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{OggFile()\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_a182630b07b35dd3c5e4afbce7ab8c73e} 
+EOUtils\+::\+Ogg\+File\+::\+Ogg\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+References \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::m\+File\+Layout}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File()}.
+
+
+
+Referenced by \textbf{ Ogg\+File()}, and \textbf{ Ogg\+File()}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!OggFile@{OggFile}}
+\index{OggFile@{OggFile}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{OggFile()\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_a11dfaf6249a63533f9d8ef50df53cdc3} 
+EOUtils\+::\+Ogg\+File\+::\+Ogg\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{, }\item[{const \textbf{ Ogg\+File\+Info} \&}]{p\+File\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+References \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File()}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!OggFile@{OggFile}}
+\index{OggFile@{OggFile}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{OggFile()\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_a9b41de38ca10b8c4ffe4ae4d51635ff2} 
+EOUtils\+::\+Ogg\+File\+::\+Ogg\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{, }\item[{\textbf{ Audio\+File\+Modes}}]{p\+File\+Mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+References \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::m\+File\+Layout}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File()}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!OggFile@{OggFile}}
+\index{OggFile@{OggFile}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{OggFile()\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_ad9a82fb2a1c2c3dfa428c71fb4ac0d3e} 
+EOUtils\+::\+Ogg\+File\+::\+Ogg\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{, }\item[{\textbf{ Ogg\+Write\+Quality}}]{p\+Quality}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+References \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::m\+File\+Layout}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File()}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!OggFile@{OggFile}}
+\index{OggFile@{OggFile}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{OggFile()\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_a601373f019f9a39c29b952840d6c7abd} 
+EOUtils\+::\+Ogg\+File\+::\+Ogg\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{, }\item[{\textbf{ Ogg\+Write\+Approx\+Bitrate\+Kbps}}]{p\+Approx\+Bitrate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+References \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::m\+File\+Layout}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File()}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!OggFile@{OggFile}}
+\index{OggFile@{OggFile}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{OggFile()\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_ad7b75f336d3abe3fbd7454a9ccae0e21} 
+EOUtils\+::\+Ogg\+File\+::\+Ogg\+File (\begin{DoxyParamCaption}\item[{const Ogg\+File \&}]{p\+Other}{}\end{DoxyParamCaption})}
+
+
+
+References \textbf{ Ogg\+File()}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File()}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!OggFile@{OggFile}}
+\index{OggFile@{OggFile}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{OggFile()\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_ad9af5c781f6e3f2feec120a2b4b899de} 
+EOUtils\+::\+Ogg\+File\+::\+Ogg\+File (\begin{DoxyParamCaption}\item[{Ogg\+File \&\&}]{p\+Other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+References \textbf{ Ogg\+File()}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File()}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!````~OggFile@{$\sim$OggFile}}
+\index{````~OggFile@{$\sim$OggFile}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{$\sim$OggFile()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_ad9db2fac6abf2e88d3185c59715d9b61} 
+EOUtils\+::\+Ogg\+File\+::$\sim$\+Ogg\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{EOUtils::OggFile@{EOUtils::OggFile}!clearOggWriteEncodingOverrides@{clearOggWriteEncodingOverrides}}
+\index{clearOggWriteEncodingOverrides@{clearOggWriteEncodingOverrides}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{clearOggWriteEncodingOverrides()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_ae9efa38ec5a76246e8e50e297772611b} 
+void EOUtils\+::\+Ogg\+File\+::clear\+Ogg\+Write\+Encoding\+Overrides (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!configureSndfileEncoderForWrite@{configureSndfileEncoderForWrite}}
+\index{configureSndfileEncoderForWrite@{configureSndfileEncoderForWrite}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{configureSndfileEncoderForWrite()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_add950d3dd5e3892f931130fd183a94fd} 
+void EOUtils\+::\+Ogg\+File\+::configure\+Sndfile\+Encoder\+For\+Write (\begin{DoxyParamCaption}\item[{SNDFILE $\ast$}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+After a successful SFM\+\_\+\+WRITE open, codecs may tweak the encoder via sf\+\_\+command. Default\+: no-\/op. 
+
+Reimplemented from \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_a9d6a9bf52f6167e7245edba64fd53070}.
+
+
+
+References \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::m\+File\+Layout}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!formatLabel@{formatLabel}}
+\index{formatLabel@{formatLabel}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{formatLabel()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_ae93d873d3e7a19e4680b8ac3f36908ce} 
+const char $\ast$ EOUtils\+::\+Ogg\+File\+::format\+Label (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_a8c417c6986f90ded3964e483ec00753e}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!getFileInfo@{getFileInfo}}
+\index{getFileInfo@{getFileInfo}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{getFileInfo()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_ae28c5ee141724ce304a124c52433038b} 
+const \textbf{ Ogg\+File\+Info} \& EOUtils\+::\+Ogg\+File\+::get\+File\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!newFileSfFormatMask@{newFileSfFormatMask}}
+\index{newFileSfFormatMask@{newFileSfFormatMask}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{newFileSfFormatMask()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_a2876012be4ac06751bd55334ef4766fd} 
+int EOUtils\+::\+Ogg\+File\+::new\+File\+Sf\+Format\+Mask (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_a9d4543b5c26b8881a281ddd3bf0de7b6}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!open@{open}}
+\index{open@{open}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{open()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_a16436218fdd8af3038000ec7f6b9500a} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Ogg\+File\+::open (\begin{DoxyParamCaption}\item[{\textbf{ Audio\+File\+Modes}}]{p\+Open\+Mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a74bb4950fa5e2455afb4813585bca4c6}.
+
+
+
+References \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::m\+File\+Layout}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::open()}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!readFormatMatches@{readFormatMatches}}
+\index{readFormatMatches@{readFormatMatches}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{readFormatMatches()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_aa89063b86c0a015e5c62d8741c3fb14e} 
+bool EOUtils\+::\+Ogg\+File\+::read\+Format\+Matches (\begin{DoxyParamCaption}\item[{int}]{p\+Sf\+Full\+Format}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_a3f040f277c0e76c9411defa7b386cd38}.
+
+
+
+References \textbf{ EOUtils\+::sndfile\+\_\+detail\+::format\+Has\+Major\+Minor()}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!setAudioFileInfo@{setAudioFileInfo}}
+\index{setAudioFileInfo@{setAudioFileInfo}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{setAudioFileInfo()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_a25ae99134bfbff58471418527d20dbd0} 
+void EOUtils\+::\+Ogg\+File\+::set\+Audio\+File\+Info (\begin{DoxyParamCaption}\item[{const \textbf{ Audio\+File\+Info} \&}]{p\+Audio\+File\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a2801f28e7658576fb6ae96f91ced6f92}.
+
+
+
+References \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::set\+Audio\+File\+Info()}.
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!setOggWriteApproxNominalBitrateKbps@{setOggWriteApproxNominalBitrateKbps}}
+\index{setOggWriteApproxNominalBitrateKbps@{setOggWriteApproxNominalBitrateKbps}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{setOggWriteApproxNominalBitrateKbps()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_af573d6d575a227906b02c344d54330b3} 
+void EOUtils\+::\+Ogg\+File\+::set\+Ogg\+Write\+Approx\+Nominal\+Bitrate\+Kbps (\begin{DoxyParamCaption}\item[{std\+::uint32\+\_\+t}]{p\+Kbps}{}\end{DoxyParamCaption})}
+
+\index{EOUtils::OggFile@{EOUtils::OggFile}!setOggWriteQualityBestOneWorstZero@{setOggWriteQualityBestOneWorstZero}}
+\index{setOggWriteQualityBestOneWorstZero@{setOggWriteQualityBestOneWorstZero}!EOUtils::OggFile@{EOUtils::OggFile}}
+\doxysubsubsection{setOggWriteQualityBestOneWorstZero()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1OggFile_a7127839171d52c8843f604cf29170e29} 
+void EOUtils\+::\+Ogg\+File\+::set\+Ogg\+Write\+Quality\+Best\+One\+Worst\+Zero (\begin{DoxyParamCaption}\item[{double}]{p\+Quality}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Ogg\+File.\+h}\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Ogg\+File.\+cpp}\end{DoxyCompactItemize}

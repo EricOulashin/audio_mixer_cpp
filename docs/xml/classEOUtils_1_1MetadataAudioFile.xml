@@ -1,0 +1,741 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classEOUtils_1_1MetadataAudioFile" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>EOUtils::MetadataAudioFile</compoundname>
+    <basecompoundref refid="classEOUtils_1_1AudioFile" prot="public" virt="non-virtual">EOUtils::AudioFile</basecompoundref>
+    <derivedcompoundref refid="classEOUtils_1_1FLACFile" prot="public" virt="non-virtual">EOUtils::FLACFile</derivedcompoundref>
+    <derivedcompoundref refid="classEOUtils_1_1SndFileBackedMetadataAudioFile" prot="public" virt="non-virtual">EOUtils::SndFileBackedMetadataAudioFile</derivedcompoundref>
+    <includes refid="MetadataAudioFile_8h" local="no">MetadataAudioFile.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::MetadataAudioFile::MetadataAudioFile</definition>
+        <argsstring>(const std::string &amp;pFilename)</argsstring>
+        <name>MetadataAudioFile</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::MetadataAudioFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="20" column="10"/>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a1ab449b1e691db5d7481884b75b71ea3" compoundref="FLACFile_8cpp" startline="173" endline="180">EOUtils::FLACFile::FLACFile</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1ad4b9b7175d3def12da99c48f2e883b3e" compoundref="FLACFile_8cpp" startline="182" endline="195">EOUtils::FLACFile::FLACFile</referencedby>
+        <referencedby refid="classEOUtils_1_1MetadataAudioFile_1a097c2697ff13926740a76063de122cb6" compoundref="MetadataAudioFile_8cpp" startline="17" endline="20">MetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1MetadataAudioFile_1a4b979898316007867c1721e9823738cf">MetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a1778198551e223d0d3bfa83b8dcbac77" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="99" endline="103">EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="73" endline="80">EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a12124ab04a2c7b42865611f800383a76" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="82" endline="89">EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1aff3cc98c3785aeae129472b484bfcb64" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="91" endline="97">EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af55a4cf92b361107109307c56281efd6" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="105" endline="117">EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1a4b979898316007867c1721e9823738cf" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::MetadataAudioFile::MetadataAudioFile</definition>
+        <argsstring>(const std::string &amp;pFilename, AudioFileModes pFileMode)</argsstring>
+        <name>MetadataAudioFile</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::MetadataAudioFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758c" kindref="member">AudioFileModes</ref></type>
+          <declname>pFileMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="21" column="10"/>
+        <references refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f">MetadataAudioFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1a097c2697ff13926740a76063de122cb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::MetadataAudioFile::MetadataAudioFile</definition>
+        <argsstring>(const MetadataAudioFile &amp;pOther)</argsstring>
+        <name>MetadataAudioFile</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::MetadataAudioFile</qualifiedname>
+        <param>
+          <type>const MetadataAudioFile &amp;</type>
+          <declname>pOther</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="22" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.cpp" bodystart="17" bodyend="20"/>
+        <references refid="classEOUtils_1_1AudioFile_1a8ad604ab1ec13becdf8b2659e61c9c3d">EOUtils::AudioFile::AudioFile</references>
+        <references refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f">MetadataAudioFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1ab78858553941cba26740fc69f926b569" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>EOUtils::MetadataAudioFile::~MetadataAudioFile</definition>
+        <argsstring>()</argsstring>
+        <name>~MetadataAudioFile</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::~MetadataAudioFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="23" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1a33c4eecf35d0febcec189e27b8caf98a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::setTitle</definition>
+        <argsstring>(const std::string &amp;pTitle)=0</argsstring>
+        <name>setTitle</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::setTitle</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a788c88ceef07cdb70319fece43ea39d2">setTitle</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9e83638df759da359e7024e493cd1301">setTitle</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a788c88ceef07cdb70319fece43ea39d2">setTitle</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pTitle</declname>
+        </param>
+        <briefdescription>
+<para>Sets the title metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pTitle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="32" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1adae18656bf60b5e8e81f484f672db1bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::setArtist</definition>
+        <argsstring>(const std::string &amp;pArtist)=0</argsstring>
+        <name>setArtist</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::setArtist</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a8f306ba3900116c94f2f3caa5a51dd67">setArtist</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a13a905679e51af831810eff6a15b9524">setArtist</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a8f306ba3900116c94f2f3caa5a51dd67">setArtist</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pArtist</declname>
+        </param>
+        <briefdescription>
+<para>Sets the artist metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pArtist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The artist string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="41" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1ae5b899c9d5b6f8942cfe181e29272afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::setAlbum</definition>
+        <argsstring>(const std::string &amp;pAlbum)=0</argsstring>
+        <name>setAlbum</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::setAlbum</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1af91ffac30914ad8b25aad1113fc368ae">setAlbum</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1adb1c8cfe8ff0ecc8d0159871c9245a18">setAlbum</reimplementedby>
+        <reimplementedby refid="classFLACFile_1af91ffac30914ad8b25aad1113fc368ae">setAlbum</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pAlbum</declname>
+        </param>
+        <briefdescription>
+<para>Sets the album metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pAlbum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The album string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="50" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1acc7942dfb3e61cd54127aabdd2862093" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::setGenre</definition>
+        <argsstring>(const std::string &amp;pGenre)=0</argsstring>
+        <name>setGenre</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::setGenre</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a8af69d28dea1df607e1c22bb415599ea">setGenre</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab315502e2dc380bd6ff616dfa2521716">setGenre</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a8af69d28dea1df607e1c22bb415599ea">setGenre</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pGenre</declname>
+        </param>
+        <briefdescription>
+<para>Sets the genre metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pGenre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The genre string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="59" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1aab2746c19dca62fe5a27bd12d936fa46" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::setTrackNumber</definition>
+        <argsstring>(uint32_t pTrackNumber, uint32_t pTotalTracks=0)=0</argsstring>
+        <name>setTrackNumber</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::setTrackNumber</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a85a2c6d8c254e0cb7edce0ae24e7988b">setTrackNumber</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a85a2c6d8c254e0cb7edce0ae24e7988b">setTrackNumber</reimplementedby>
+        <param>
+          <type>uint32_t</type>
+          <declname>pTrackNumber</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>pTotalTracks</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Sets the track number metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pTrackNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The track number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pTotalTracks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total number of tracks (0 means not specified, stores only the track number)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="69" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1a596dd3b2b993afc0a2c3a2ff68d47a13" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::setYear</definition>
+        <argsstring>(const std::string &amp;pYear)=0</argsstring>
+        <name>setYear</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::setYear</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1ad7051aad9a2b2ccf8643ed552e1477f6">setYear</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1aa32686ba35238da9794c7133589bf01e">setYear</reimplementedby>
+        <reimplementedby refid="classFLACFile_1ad7051aad9a2b2ccf8643ed552e1477f6">setYear</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pYear</declname>
+        </param>
+        <briefdescription>
+<para>Sets the year/date metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pYear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The year string (e.g., &quot;2024&quot;)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="78" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1aa367019cbde49d7f23c60c646c6954f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::setComment</definition>
+        <argsstring>(const std::string &amp;pComment)=0</argsstring>
+        <name>setComment</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::setComment</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a4ec2ca4e85f29bd5b54e4755b2f55eb6">setComment</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a05761942c1d69d5afe4ae82a7f7b91fc">setComment</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a4ec2ca4e85f29bd5b54e4755b2f55eb6">setComment</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pComment</declname>
+        </param>
+        <briefdescription>
+<para>Sets the comment metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pComment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The comment string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="87" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1abd1812a1b5957f74618d4018a3acc40f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::getTitle</definition>
+        <argsstring>(std::string &amp;pTitle) const =0</argsstring>
+        <name>getTitle</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::getTitle</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a682e2d4e9d802902c829cc78d07a28bd">getTitle</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a684645d427b4002fc62c8fc23cd0a141">getTitle</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a682e2d4e9d802902c829cc78d07a28bd">getTitle</reimplementedby>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pTitle</declname>
+        </param>
+        <briefdescription>
+<para>Gets the title metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pTitle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the title string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="96" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1a1700387c5e5663c5acafbaf37173a88b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::getArtist</definition>
+        <argsstring>(std::string &amp;pArtist) const =0</argsstring>
+        <name>getArtist</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::getArtist</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a2e9ab8eced8b37ccf292b13c85333d4e">getArtist</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a74491b1431583e61361ed3fc2b958722">getArtist</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a2e9ab8eced8b37ccf292b13c85333d4e">getArtist</reimplementedby>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pArtist</declname>
+        </param>
+        <briefdescription>
+<para>Gets the artist metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pArtist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the artist string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="105" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1a077014bfc235676d6a6a602876e568c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::getAlbum</definition>
+        <argsstring>(std::string &amp;pAlbum) const =0</argsstring>
+        <name>getAlbum</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::getAlbum</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a1a1d150b221252fb88b9933de631a817">getAlbum</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a597832cb68f37962e65d9af4a4daca76">getAlbum</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a1a1d150b221252fb88b9933de631a817">getAlbum</reimplementedby>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pAlbum</declname>
+        </param>
+        <briefdescription>
+<para>Gets the album metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pAlbum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the album string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="114" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1a761cb9b8167c290c09c5c12c2bcb1eb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::getGenre</definition>
+        <argsstring>(std::string &amp;pGenre) const =0</argsstring>
+        <name>getGenre</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::getGenre</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a948ea6ac939a76fdc85f90ee81e55d0e">getGenre</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a623f3a0ddfb0ae89e87d5c0868d0dfcc">getGenre</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a948ea6ac939a76fdc85f90ee81e55d0e">getGenre</reimplementedby>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pGenre</declname>
+        </param>
+        <briefdescription>
+<para>Gets the genre metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pGenre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the genre string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="123" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1ae43dcd8ce45042c99e66d7a858c9d074" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::getTrackNumber</definition>
+        <argsstring>(uint32_t &amp;pTrackNumber, uint32_t &amp;pTotalTracks) const =0</argsstring>
+        <name>getTrackNumber</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::getTrackNumber</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1ac390e92ea5bcf4942f573f29a4a7aaa2">getTrackNumber</reimplementedby>
+        <reimplementedby refid="classFLACFile_1ac390e92ea5bcf4942f573f29a4a7aaa2">getTrackNumber</reimplementedby>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>pTrackNumber</declname>
+        </param>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>pTotalTracks</declname>
+        </param>
+        <briefdescription>
+<para>Gets the track number metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pTrackNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the track number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pTotalTracks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the total number of tracks (0 if not specified in the metadata)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="133" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1ad23e6e0b25b00e498929b598b43285a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::getYear</definition>
+        <argsstring>(std::string &amp;pYear) const =0</argsstring>
+        <name>getYear</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::getYear</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1af11cbc03945c3a95deabfaf8d94edcad">getYear</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a6cc1dca0322a5945225c7cf82a504226">getYear</reimplementedby>
+        <reimplementedby refid="classFLACFile_1af11cbc03945c3a95deabfaf8d94edcad">getYear</reimplementedby>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pYear</declname>
+        </param>
+        <briefdescription>
+<para>Gets the year/date metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pYear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the year string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="142" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1MetadataAudioFile_1ae4934841335acc0e23f1e2df73e58964" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::MetadataAudioFile::getComment</definition>
+        <argsstring>(std::string &amp;pComment) const =0</argsstring>
+        <name>getComment</name>
+        <qualifiedname>EOUtils::MetadataAudioFile::getComment</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a210be766390b234b3d392a8c23710757">getComment</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a788bfd7f1e24f8d7ebd5e4c67660513f">getComment</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a210be766390b234b3d392a8c23710757">getComment</reimplementedby>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pComment</declname>
+        </param>
+        <briefdescription>
+<para>Gets the comment metadata tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pComment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the comment string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> with errors on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="151" column="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Abstract class that extends <ref refid="classEOUtils_1_1AudioFile" kindref="compound">AudioFile</ref> with pure virtual methods for adding/updating common audio metadata (tags). Derived classes for audio formats that support metadata (e.g., FLAC, Ogg Vorbis) should inherit from this class and implement the metadata operations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>EOUtils::AiffFile</label>
+        <link refid="classEOUtils_1_1AiffFile"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EOUtils::AudioFile</label>
+        <link refid="classEOUtils_1_1AudioFile"/>
+      </node>
+      <node id="3">
+        <label>EOUtils::FLACFile</label>
+        <link refid="classEOUtils_1_1FLACFile"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>EOUtils::MP3File</label>
+        <link refid="classEOUtils_1_1MP3File"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EOUtils::MetadataAudioFile</label>
+        <link refid="classEOUtils_1_1MetadataAudioFile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>EOUtils::OggFile</label>
+        <link refid="classEOUtils_1_1OggFile"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>EOUtils::SndFileBackedMetadataAudioFile</label>
+        <link refid="classEOUtils_1_1SndFileBackedMetadataAudioFile"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>EOUtils::AudioFile</label>
+        <link refid="classEOUtils_1_1AudioFile"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#mFilename</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#mFileStream</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#mFileOpenMode</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#mDataSizeBytes</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#mMetadata</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EOUtils::MetadataAudioFile</label>
+        <link refid="classEOUtils_1_1MetadataAudioFile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>size_t</label>
+      </node>
+      <node id="4">
+        <label>fstream</label>
+      </node>
+      <node id="5">
+        <label>openmode</label>
+      </node>
+      <node id="7">
+        <label>map&lt; std::string, std::string &gt;</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" line="17" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h" bodystart="18" bodyend="152"/>
+    <listofallmembers>
+      <member refid="classEOUtils_1_1AudioFile_1a8ad604ab1ec13becdf8b2659e61c9c3d" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a7dd053155e5498f9603b2a232158d1dc" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a929e0fbe28b29242d228331212e89336" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a683fdacc6a09b3a22d5c438c8559a054" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>BitrateIsAdjustable</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a4be2573c17b87c092a3f367989d82722" prot="public" virt="virtual"><scope>EOUtils::MetadataAudioFile</scope><name>close</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ad6281b62a2270d05ba8ab3d643837caa" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>Filename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aab5a60cd510028e984f06f3cad3ba196" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>Filename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1abff45a0857ea7ac45920ce200c9c2f42" prot="protected" virt="virtual"><scope>EOUtils::MetadataAudioFile</scope><name>fileSizeAccordingToStream</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a077014bfc235676d6a6a602876e568c0" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getAlbum</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a1700387c5e5663c5acafbaf37173a88b" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getArtist</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1afa9106be5e7602616779070043bc2252" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getAudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1ae4934841335acc0e23f1e2df73e58964" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getComment</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a761cb9b8167c290c09c5c12c2bcb1eb6" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getGenre</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1780a021a151729a1a7eaa0d02a2fa01" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getHighestSampleValue_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a3e4f535ca55f141bf8145665b5881bd9" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1414f518e301c5ca00132f3b4d726d67" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a80b9e185e791079450429706ca9ef91e" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a5c3e338b5d9b22e3e16ddb5b2d87a533" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ab867a5930c81e792f4116f62df0f8298" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a99c362d4f3f1417e88a29e20e1a569b5" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getNextSample_int64</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1abd1812a1b5957f74618d4018a3acc40f" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getTitle</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1ae43dcd8ce45042c99e66d7a858c9d074" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getTrackNumber</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1ad23e6e0b25b00e498929b598b43285a1" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>getYear</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ae747456aaffc54186bf27d40d2b6619c" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>goToAudioDataPos</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aedf6b1305b5cfd321bedd7790ef7c8e4" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>hasMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" prot="public" virt="virtual"><scope>EOUtils::MetadataAudioFile</scope><name>hasReadMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" prot="public" virt="virtual"><scope>EOUtils::MetadataAudioFile</scope><name>hasWriteMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aadb1e2576c96134c0e146735c8aea1f1" prot="public" virt="virtual"><scope>EOUtils::MetadataAudioFile</scope><name>isOpen</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a04453bb2912c38bb59448756a7773835" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>maxValueForSampleSize</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" prot="protected" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>mDataSizeBytes</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a4b979898316007867c1721e9823738cf" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a097c2697ff13926740a76063de122cb6" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" prot="protected" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>mFilename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" prot="protected" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>mFileOpenMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" prot="protected" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>mFileStream</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" prot="protected" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>mMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a9323d827fd3a5cd95c02c90b07c33552" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>numSamples</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" prot="public" virt="virtual"><scope>EOUtils::MetadataAudioFile</scope><name>open</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1af30b9f5c0bd6f6eb670976c5872aacdd" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>seekOutputToSampleNum</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1ae5b899c9d5b6f8942cfe181e29272afe" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>setAlbum</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1adae18656bf60b5e8e81f484f672db1bf" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>setArtist</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a2801f28e7658576fb6ae96f91ced6f92" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>setAudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1aa367019cbde49d7f23c60c646c6954f0" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>setComment</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a376cef8c69f91ed84ea84026075a4df2" prot="protected" virt="virtual"><scope>EOUtils::MetadataAudioFile</scope><name>setFileMode</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1acc7942dfb3e61cd54127aabdd2862093" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>setGenre</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a7c9c44e7d515e2281736219609d785ed" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>setMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a877560d2344ca9a2c38700e2f11f1224" prot="public" virt="non-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>setMetadataFromVal</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a33c4eecf35d0febcec189e27b8caf98a" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>setTitle</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1aab2746c19dca62fe5a27bd12d936fa46" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>setTrackNumber</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a596dd3b2b993afc0a2c3a2ff68d47a13" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>setYear</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a901b6f6818ae604841592537a278507d" prot="public" virt="pure-virtual"><scope>EOUtils::MetadataAudioFile</scope><name>writeSample_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1af6b8d50765277b330bc63e57dcc4f0c3" prot="public" virt="virtual"><scope>EOUtils::MetadataAudioFile</scope><name>~AudioFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1ab78858553941cba26740fc69f926b569" prot="public" virt="virtual"><scope>EOUtils::MetadataAudioFile</scope><name>~MetadataAudioFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

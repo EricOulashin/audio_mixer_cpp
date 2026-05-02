@@ -1,0 +1,713 @@
+\doxysection{EOUtils\+::Audio\+File Class Reference}
+\label{classEOUtils_1_1AudioFile}\index{EOUtils::AudioFile@{EOUtils::AudioFile}}
+
+
+{\ttfamily \#include $<$Audio\+File.\+h$>$}
+
+
+
+Inheritance diagram for EOUtils\+::Audio\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEOUtils_1_1AudioFile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for EOUtils\+::Audio\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEOUtils_1_1AudioFile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File} (const std\+::string \&p\+Filename)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File} (const std\+::string \&p\+Filename, \textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\item 
+\textbf{ Audio\+File} (const \textbf{ Audio\+File} \&p\+Audio\+File)
+\item 
+virtual \textbf{ $\sim$\+Audio\+File} ()
+\item 
+virtual void \textbf{ set\+Audio\+File\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info)=0
+\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ open} (\textbf{ Audio\+File\+Modes} p\+Open\+Mode)
+\item 
+virtual bool \textbf{ Bitrate\+Is\+Adjustable} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether or not the audio file bitrate is adjustable. \end{DoxyCompactList}\item 
+virtual bool \textbf{ is\+Open} () const
+\begin{DoxyCompactList}\small\item\em Returns whether or not the audio file is open. \end{DoxyCompactList}\item 
+virtual bool \textbf{ has\+Read\+Mode} () const
+\begin{DoxyCompactList}\small\item\em Returns whether or not read mode is enabled for the file. \end{DoxyCompactList}\item 
+virtual bool \textbf{ has\+Write\+Mode} () const
+\begin{DoxyCompactList}\small\item\em Returns whether or not write mode is enabled for the file. \end{DoxyCompactList}\item 
+virtual void \textbf{ close} ()
+\begin{DoxyCompactList}\small\item\em Closes the audio file. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Next\+Sample\+\_\+int64} (int64\+\_\+t \&p\+Audio\+Sample)=0
+\begin{DoxyCompactList}\small\item\em Gets the next sample from the file, cast to a 64-\/bit integer. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ write\+Sample\+\_\+int64} (int64\+\_\+t p\+Audio\+Sample)=0
+\begin{DoxyCompactList}\small\item\em Writes an audio sample to the file. The parameter is a 64-\/bit integer but will be cast to the bitness of the audio samples in the file. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Highest\+Sample\+Value\+\_\+int64} (int64\+\_\+t \&p\+Highest\+Audio\+Sample)=0
+\begin{DoxyCompactList}\small\item\em Gets the highest audio sample value from the file, cast to a 64-\/bit integer. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ go\+To\+Audio\+Data\+Pos} ()=0
+\begin{DoxyCompactList}\small\item\em Goes to the audio data position in the audio file. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \textbf{ num\+Samples} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the number of audio samples in the audio file. \end{DoxyCompactList}\item 
+virtual int64\+\_\+t \textbf{ max\+Value\+For\+Sample\+Size} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the maximum possible positive value of the audio file\textquotesingle{}s sample size. \end{DoxyCompactList}\item 
+const std\+::string \& \textbf{ Filename} () const
+\begin{DoxyCompactList}\small\item\em Gets the filename of the audio file. \end{DoxyCompactList}\item 
+void \textbf{ Filename} (const std\+::string \&p\+Filename)
+\begin{DoxyCompactList}\small\item\em Setter for the filename of the audio file. \end{DoxyCompactList}\item 
+void \textbf{ set\+Metadata} (const std\+::string \&p\+Name, const std\+::string \&p\+Value)
+\begin{DoxyCompactList}\small\item\em Adds a piece of metadata for the audio file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \textbf{ set\+Metadata\+From\+Val} (const std\+::string \&p\+Name, const T \&p\+Value)
+\begin{DoxyCompactList}\small\item\em Adds a piece of metadata for the audio file. Templatized for any value type. The value will be converted to a string to store in the metadata. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Metadata} (const std\+::string \&p\+Name, std\+::string \&p\+Value) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value as a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name, T \&p\+Value) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. Templatized to capture the value as any type. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Metadata} (const std\+::string \&p\+Name) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\T \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name) const
+\item 
+{\footnotesize template$<$typename T$>$ }\\T \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name, const T \&p\+Default\+Val) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. Templatized to return it as any type. \end{DoxyCompactList}\item 
+bool \textbf{ has\+Metadata} (const std\+::string \&p\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns whether or not a metadata item exists. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Info} \textbf{ get\+Audio\+File\+Info} () const =0
+\begin{DoxyCompactList}\small\item\em Returns an \doxyref{Audio\+File}{p.}{classEOUtils_1_1AudioFile} object with information about the audio file. \end{DoxyCompactList}\item 
+virtual void \textbf{ seek\+Output\+To\+Sample\+Num} (size\+\_\+t p\+Sample\+Num)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::streampos \textbf{ file\+Size\+According\+To\+Stream} ()
+\item 
+virtual void \textbf{ set\+File\+Mode} (\textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \textbf{ m\+Filename}
+\item 
+std\+::fstream \textbf{ m\+File\+Stream}
+\item 
+std\+::ios\+\_\+base\+::openmode \textbf{ m\+File\+Open\+Mode}
+\item 
+size\+\_\+t \textbf{ m\+Data\+Size\+Bytes}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \textbf{ m\+Metadata}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!AudioFile@{AudioFile}}
+\index{AudioFile@{AudioFile}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{AudioFile()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a8ad604ab1ec13becdf8b2659e61c9c3d} 
+EOUtils\+::\+Audio\+File\+::\+Audio\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Filename} & The name of the audio file \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \textbf{ Audio\+File()}, \textbf{ Audio\+File()}, \textbf{ EOUtils\+::\+Metadata\+Audio\+File\+::\+Metadata\+Audio\+File()}, and \textbf{ EOUtils\+::\+WAVFile\+::\+WAVFile()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!AudioFile@{AudioFile}}
+\index{AudioFile@{AudioFile}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{AudioFile()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a7dd053155e5498f9603b2a232158d1dc} 
+EOUtils\+::\+Audio\+File\+::\+Audio\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{, }\item[{\textbf{ Audio\+File\+Modes}}]{p\+File\+Mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+References \textbf{ Audio\+File()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!AudioFile@{AudioFile}}
+\index{AudioFile@{AudioFile}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{AudioFile()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a929e0fbe28b29242d228331212e89336} 
+EOUtils\+::\+Audio\+File\+::\+Audio\+File (\begin{DoxyParamCaption}\item[{const \textbf{ Audio\+File} \&}]{p\+Audio\+File}{}\end{DoxyParamCaption})}
+
+
+
+References \textbf{ Audio\+File()}, \textbf{ m\+Data\+Size\+Bytes}, \textbf{ m\+Filename}, and \textbf{ m\+File\+Open\+Mode}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!````~AudioFile@{$\sim$AudioFile}}
+\index{````~AudioFile@{$\sim$AudioFile}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{$\sim$AudioFile()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_af6b8d50765277b330bc63e57dcc4f0c3} 
+EOUtils\+::\+Audio\+File\+::$\sim$\+Audio\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+References \textbf{ close()}.
+
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!BitrateIsAdjustable@{BitrateIsAdjustable}}
+\index{BitrateIsAdjustable@{BitrateIsAdjustable}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{BitrateIsAdjustable()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a683fdacc6a09b3a22d5c438c8559a054} 
+virtual bool EOUtils\+::\+Audio\+File\+::\+Bitrate\+Is\+Adjustable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether or not the audio file bitrate is adjustable. 
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!close@{close}}
+\index{close@{close}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{close()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a4be2573c17b87c092a3f367989d82722} 
+void EOUtils\+::\+Audio\+File\+::close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Closes the audio file. 
+
+
+
+Reimplemented in \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_a186c57b08fade9564784e5200c1ee055}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_af7608eef3ca48433142025a37bb99033}, \textbf{ EOUtils\+::\+WAVFile} \doxyref{}{p.}{classEOUtils_1_1WAVFile_aa219f7347d8e25f32699f2ebd77494a5}, \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_a186c57b08fade9564784e5200c1ee055}, and \textbf{ WAVFile} \doxyref{}{p.}{classWAVFile_aa219f7347d8e25f32699f2ebd77494a5}.
+
+
+
+References \textbf{ m\+File\+Stream}.
+
+
+
+Referenced by \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::close()}, \textbf{ EOUtils\+::mix\+Audio\+Files()}, and \textbf{ $\sim$\+Audio\+File()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!Filename@{Filename}}
+\index{Filename@{Filename}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{Filename()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_ad6281b62a2270d05ba8ab3d643837caa} 
+const string \& EOUtils\+::\+Audio\+File\+::\+Filename (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the filename of the audio file. 
+
+
+
+References \textbf{ m\+Filename}.
+
+
+
+Referenced by \textbf{ EOUtils\+::mix\+Audio\+Files()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!Filename@{Filename}}
+\index{Filename@{Filename}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{Filename()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_aab5a60cd510028e984f06f3cad3ba196} 
+void EOUtils\+::\+Audio\+File\+::\+Filename (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{}\end{DoxyParamCaption})}
+
+
+
+Setter for the filename of the audio file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Filename} & The new filename \\
+\hline
+\end{DoxyParams}
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!fileSizeAccordingToStream@{fileSizeAccordingToStream}}
+\index{fileSizeAccordingToStream@{fileSizeAccordingToStream}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{fileSizeAccordingToStream()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_abff45a0857ea7ac45920ce200c9c2f42} 
+std\+::streampos EOUtils\+::\+Audio\+File\+::file\+Size\+According\+To\+Stream (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References \textbf{ m\+File\+Stream}.
+
+
+
+Referenced by \textbf{ EOUtils\+::\+WAVFile\+::close()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!getAudioFileInfo@{getAudioFileInfo}}
+\index{getAudioFileInfo@{getAudioFileInfo}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{getAudioFileInfo()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_afa9106be5e7602616779070043bc2252} 
+virtual \textbf{ Audio\+File\+Info} EOUtils\+::\+Audio\+File\+::get\+Audio\+File\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns an \doxyref{Audio\+File}{p.}{classEOUtils_1_1AudioFile} object with information about the audio file. 
+
+
+
+Implemented in \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_a001c2ef8f62f5e2779527e67af4fdfa6}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_a2e91490fab82a495f6cc3244f68a3fe1}, \textbf{ EOUtils\+::\+WAVFile} \doxyref{}{p.}{classEOUtils_1_1WAVFile_abda6bb496e9bdda5fa7e64f3c2747775}, \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_a001c2ef8f62f5e2779527e67af4fdfa6}, and \textbf{ WAVFile} \doxyref{}{p.}{classWAVFile_abda6bb496e9bdda5fa7e64f3c2747775}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!getHighestSampleValue\_int64@{getHighestSampleValue\_int64}}
+\index{getHighestSampleValue\_int64@{getHighestSampleValue\_int64}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{getHighestSampleValue\_int64()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a1780a021a151729a1a7eaa0d02a2fa01} 
+virtual \textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Audio\+File\+::get\+Highest\+Sample\+Value\+\_\+int64 (\begin{DoxyParamCaption}\item[{int64\+\_\+t \&}]{p\+Highest\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the highest audio sample value from the file, cast to a 64-\/bit integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Highest\+Audio\+Sample} & The highest audio sample from the file, cast to a 64-\/bit integer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, or false with error messages on failure 
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_a742be01f59c8bdd485c1bd33dda5bf33}, \textbf{ EOUtils\+::\+WAVFile} \doxyref{}{p.}{classEOUtils_1_1WAVFile_ac839429fe6108881056c3388ec9ebbcf}, \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_a742be01f59c8bdd485c1bd33dda5bf33}, and \textbf{ WAVFile} \doxyref{}{p.}{classWAVFile_ac839429fe6108881056c3388ec9ebbcf}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!getMetadata@{getMetadata}}
+\index{getMetadata@{getMetadata}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{getMetadata()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a1414f518e301c5ca00132f3b4d726d67} 
+std\+::string EOUtils\+::\+Audio\+File\+::get\+Metadata (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Name}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets a metadata value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Name} & The name of the metadata item (string)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The metadata item value, or a blank string if it doesn\textquotesingle{}t exist 
+\end{DoxyReturn}
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!getMetadata@{getMetadata}}
+\index{getMetadata@{getMetadata}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{getMetadata()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a3e4f535ca55f141bf8145665b5881bd9} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Audio\+File\+::get\+Metadata (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Name}{, }\item[{std\+::string \&}]{p\+Value}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets a metadata value as a string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Name} & The name of the metadata item (string) \\
+\hline
+\mbox{\texttt{out}}  & {\em p\+Value} & This variable will store the value of the metadata item as a string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success or false with an error if the item doesn\textquotesingle{}t exist 
+\end{DoxyReturn}
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!getMetadataAs@{getMetadataAs}}
+\index{getMetadataAs@{getMetadataAs}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{getMetadataAs()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a5c3e338b5d9b22e3e16ddb5b2d87a533} 
+template$<$typename T$>$ \\
+T EOUtils\+::\+Audio\+File\+::get\+Metadata\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Name}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+References \textbf{ m\+Metadata}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!getMetadataAs@{getMetadataAs}}
+\index{getMetadataAs@{getMetadataAs}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{getMetadataAs()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_ab867a5930c81e792f4116f62df0f8298} 
+template$<$typename T$>$ \\
+T EOUtils\+::\+Audio\+File\+::get\+Metadata\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Name}{, }\item[{const T \&}]{p\+Default\+Val}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a metadata value. Templatized to return it as any type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Name} & The name of the metadata item (string)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The metadata item value, templatized as the given type 
+\end{DoxyReturn}
+
+
+References \textbf{ m\+Metadata}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!getMetadataAs@{getMetadataAs}}
+\index{getMetadataAs@{getMetadataAs}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{getMetadataAs()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a80b9e185e791079450429706ca9ef91e} 
+template$<$typename T$>$ \\
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Audio\+File\+::get\+Metadata\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Name}{, }\item[{T \&}]{p\+Value}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a metadata value. Templatized to capture the value as any type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Name} & The name of the metadata item (string) \\
+\hline
+\mbox{\texttt{out}}  & {\em p\+Value} & This variable will store the value of the metadata item. Templatized to store the value as any type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success or false with an error if the item doesn\textquotesingle{}t exist 
+\end{DoxyReturn}
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, and \textbf{ m\+Metadata}.
+
+
+
+Referenced by \textbf{ EOUtils\+::\+FLACFile\+::open()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!getNextSample\_int64@{getNextSample\_int64}}
+\index{getNextSample\_int64@{getNextSample\_int64}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{getNextSample\_int64()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a99c362d4f3f1417e88a29e20e1a569b5} 
+virtual \textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Audio\+File\+::get\+Next\+Sample\+\_\+int64 (\begin{DoxyParamCaption}\item[{int64\+\_\+t \&}]{p\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the next sample from the file, cast to a 64-\/bit integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Audio\+Sample} & The next audio sample from the file, cast to a 64-\/bit integer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, or false with error messages on failure 
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_aecd756065217efeff7bcd1ebefaba8b7}, \textbf{ EOUtils\+::\+WAVFile} \doxyref{}{p.}{classEOUtils_1_1WAVFile_a9be010a2ade745512d04232ecdef746d}, \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_aecd756065217efeff7bcd1ebefaba8b7}, and \textbf{ WAVFile} \doxyref{}{p.}{classWAVFile_a9be010a2ade745512d04232ecdef746d}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!goToAudioDataPos@{goToAudioDataPos}}
+\index{goToAudioDataPos@{goToAudioDataPos}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{goToAudioDataPos()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_ae747456aaffc54186bf27d40d2b6619c} 
+virtual \textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Audio\+File\+::go\+To\+Audio\+Data\+Pos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Goes to the audio data position in the audio file. 
+
+
+
+Implemented in \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_ada175c6e4ee3721cabac43f7c2967a97}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_ae71e6cdf5e73980e8a71af7005411111}, \textbf{ EOUtils\+::\+WAVFile} \doxyref{}{p.}{classEOUtils_1_1WAVFile_a1e0a709a874a8fc7cb6404e47476e955}, \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_ada175c6e4ee3721cabac43f7c2967a97}, and \textbf{ WAVFile} \doxyref{}{p.}{classWAVFile_a1e0a709a874a8fc7cb6404e47476e955}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!hasMetadata@{hasMetadata}}
+\index{hasMetadata@{hasMetadata}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{hasMetadata()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_aedf6b1305b5cfd321bedd7790ef7c8e4} 
+bool EOUtils\+::\+Audio\+File\+::has\+Metadata (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Name}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns whether or not a metadata item exists. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Name} & The name of the metadata item to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the item exists, or false if not 
+\end{DoxyReturn}
+
+
+References \textbf{ m\+Metadata}.
+
+
+
+Referenced by \textbf{ EOUtils\+::\+FLACFile\+::open()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!hasReadMode@{hasReadMode}}
+\index{hasReadMode@{hasReadMode}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{hasReadMode()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a8b8e7f8bd8255c4a98cb4eab6baf0230} 
+bool EOUtils\+::\+Audio\+File\+::has\+Read\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns whether or not read mode is enabled for the file. 
+
+
+
+References \textbf{ m\+File\+Open\+Mode}.
+
+
+
+Referenced by \textbf{ EOUtils\+::\+WAVFile\+::get\+Next\+Sample()}, \textbf{ EOUtils\+::\+FLACFile\+::get\+Next\+Sample\+\_\+int64()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Next\+Sample\+\_\+int64()}, \textbf{ open()}, \textbf{ EOUtils\+::\+FLACFile\+::open()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::open()}, and \textbf{ EOUtils\+::\+WAVFile\+::open()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!hasWriteMode@{hasWriteMode}}
+\index{hasWriteMode@{hasWriteMode}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{hasWriteMode()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a819f201a67ba11e9587122e200535df7} 
+bool EOUtils\+::\+Audio\+File\+::has\+Write\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns whether or not write mode is enabled for the file. 
+
+
+
+References \textbf{ m\+File\+Open\+Mode}.
+
+
+
+Referenced by \textbf{ EOUtils\+::\+WAVFile\+::close()}, \textbf{ open()}, \textbf{ EOUtils\+::\+FLACFile\+::open()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::open()}, \textbf{ EOUtils\+::\+WAVFile\+::open()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::seek\+Output\+To\+Sample\+Num()}, \textbf{ EOUtils\+::\+WAVFile\+::write\+Sample()}, \textbf{ EOUtils\+::\+FLACFile\+::write\+Sample\+\_\+int64()}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::write\+Sample\+\_\+int64()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{isOpen()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_aadb1e2576c96134c0e146735c8aea1f1} 
+bool EOUtils\+::\+Audio\+File\+::is\+Open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns whether or not the audio file is open. 
+
+
+
+Reimplemented in \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_ae1fd986a87d029318dac135da4cf2fe8}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_a819cd193fb520477daecc99074244b27}, and \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_ae1fd986a87d029318dac135da4cf2fe8}.
+
+
+
+References \textbf{ m\+File\+Stream}.
+
+
+
+Referenced by \textbf{ EOUtils\+::mix\+Audio\+Files()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!maxValueForSampleSize@{maxValueForSampleSize}}
+\index{maxValueForSampleSize@{maxValueForSampleSize}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{maxValueForSampleSize()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a04453bb2912c38bb59448756a7773835} 
+virtual int64\+\_\+t EOUtils\+::\+Audio\+File\+::max\+Value\+For\+Sample\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the maximum possible positive value of the audio file\textquotesingle{}s sample size. 
+
+
+
+Implemented in \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_a279fa0d38950175dc309eb3d76766f1f}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_a99ac823f1aa365c8876fa35939b61e82}, \textbf{ EOUtils\+::\+WAVFile} \doxyref{}{p.}{classEOUtils_1_1WAVFile_ac84f76e37bafe54e9899c375c35a79f7}, \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_a279fa0d38950175dc309eb3d76766f1f}, and \textbf{ WAVFile} \doxyref{}{p.}{classWAVFile_ac84f76e37bafe54e9899c375c35a79f7}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!numSamples@{numSamples}}
+\index{numSamples@{numSamples}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{numSamples()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a9323d827fd3a5cd95c02c90b07c33552} 
+virtual size\+\_\+t EOUtils\+::\+Audio\+File\+::num\+Samples (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the number of audio samples in the audio file. 
+
+
+
+Implemented in \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_af00f73c62416d28429f91a2b520d5e75}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_a520f77d8c349944e508a6707bc3617ac}, \textbf{ EOUtils\+::\+WAVFile} \doxyref{}{p.}{classEOUtils_1_1WAVFile_ad86f3d692b31831fcf210b0addb8cbf2}, \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_af00f73c62416d28429f91a2b520d5e75}, and \textbf{ WAVFile} \doxyref{}{p.}{classWAVFile_ad86f3d692b31831fcf210b0addb8cbf2}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!open@{open}}
+\index{open@{open}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{open()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a74bb4950fa5e2455afb4813585bca4c6} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Audio\+File\+::open (\begin{DoxyParamCaption}\item[{\textbf{ Audio\+File\+Modes}}]{p\+Open\+Mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \textbf{ EOUtils\+::\+Aiff\+File} \doxyref{}{p.}{classEOUtils_1_1AiffFile_adbf5b1a9feef88138c4ac879c362befe}, \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_a51522e856b01a9180178e3fe298cded2}, \textbf{ EOUtils\+::\+MP3\+File} \doxyref{}{p.}{classEOUtils_1_1MP3File_a1285c6bbb18c976aeb13c39527787c59}, \textbf{ EOUtils\+::\+Ogg\+File} \doxyref{}{p.}{classEOUtils_1_1OggFile_a16436218fdd8af3038000ec7f6b9500a}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_ada954c16d8f5ff5c9a22c39c2f7c316a}, \textbf{ EOUtils\+::\+WAVFile} \doxyref{}{p.}{classEOUtils_1_1WAVFile_a8dc7c592c1ce3f8692b9e61465b9b552}, \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_a51522e856b01a9180178e3fe298cded2}, and \textbf{ WAVFile} \doxyref{}{p.}{classWAVFile_a8dc7c592c1ce3f8692b9e61465b9b552}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ has\+Read\+Mode()}, \textbf{ has\+Write\+Mode()}, \textbf{ m\+Filename}, \textbf{ m\+File\+Open\+Mode}, \textbf{ m\+File\+Stream}, and \textbf{ set\+File\+Mode()}.
+
+
+
+Referenced by \textbf{ EOUtils\+::mix\+Audio\+Files()}, \textbf{ EOUtils\+::\+FLACFile\+::open()}, and \textbf{ EOUtils\+::\+WAVFile\+::open()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!seekOutputToSampleNum@{seekOutputToSampleNum}}
+\index{seekOutputToSampleNum@{seekOutputToSampleNum}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{seekOutputToSampleNum()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_af30b9f5c0bd6f6eb670976c5872aacdd} 
+virtual void EOUtils\+::\+Audio\+File\+::seek\+Output\+To\+Sample\+Num (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p\+Sample\+Num}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_a6f21036c7d2d0bc03fe24cb4eb7d0d9d}, \textbf{ EOUtils\+::\+WAVFile} \doxyref{}{p.}{classEOUtils_1_1WAVFile_a620b40c235b8f702d8a73b4cc428914b}, \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_a6f21036c7d2d0bc03fe24cb4eb7d0d9d}, and \textbf{ WAVFile} \doxyref{}{p.}{classWAVFile_a620b40c235b8f702d8a73b4cc428914b}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!setAudioFileInfo@{setAudioFileInfo}}
+\index{setAudioFileInfo@{setAudioFileInfo}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{setAudioFileInfo()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a2801f28e7658576fb6ae96f91ced6f92} 
+virtual void EOUtils\+::\+Audio\+File\+::set\+Audio\+File\+Info (\begin{DoxyParamCaption}\item[{const \textbf{ Audio\+File\+Info} \&}]{p\+Audio\+File\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ EOUtils\+::\+Aiff\+File} \doxyref{}{p.}{classEOUtils_1_1AiffFile_a594d9c73bcb27941f606b32c009381c7}, \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_a837fc7246b256128abbe2980ad1588d0}, \textbf{ EOUtils\+::\+MP3\+File} \doxyref{}{p.}{classEOUtils_1_1MP3File_a5876a844978007965692a5b59f7dd8e2}, \textbf{ EOUtils\+::\+Ogg\+File} \doxyref{}{p.}{classEOUtils_1_1OggFile_a25ae99134bfbff58471418527d20dbd0}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1SndFileBackedMetadataAudioFile_a5b4ddbc681df5496f355bef551bbddea}, \textbf{ EOUtils\+::\+WAVFile} \doxyref{}{p.}{classEOUtils_1_1WAVFile_aa56b64ce5739633fd2188cfc84e9e783}, \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_a837fc7246b256128abbe2980ad1588d0}, and \textbf{ WAVFile} \doxyref{}{p.}{classWAVFile_aa56b64ce5739633fd2188cfc84e9e783}.
+
+
+
+Referenced by \textbf{ EOUtils\+::mix\+Audio\+Files()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!setFileMode@{setFileMode}}
+\index{setFileMode@{setFileMode}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{setFileMode()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a376cef8c69f91ed84ea84026075a4df2} 
+void EOUtils\+::\+Audio\+File\+::set\+File\+Mode (\begin{DoxyParamCaption}\item[{\textbf{ Audio\+File\+Modes}}]{p\+File\+Mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References \textbf{ EOUtils\+::\+AUDIO\+\_\+\+FILE\+\_\+\+READ}, \textbf{ EOUtils\+::\+AUDIO\+\_\+\+FILE\+\_\+\+READ\+\_\+\+WRITE}, \textbf{ EOUtils\+::\+AUDIO\+\_\+\+FILE\+\_\+\+WRITE}, and \textbf{ m\+File\+Open\+Mode}.
+
+
+
+Referenced by \textbf{ open()}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::open()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!setMetadata@{setMetadata}}
+\index{setMetadata@{setMetadata}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{setMetadata()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a7c9c44e7d515e2281736219609d785ed} 
+void EOUtils\+::\+Audio\+File\+::set\+Metadata (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Name}{, }\item[{const std\+::string \&}]{p\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Adds a piece of metadata for the audio file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Name} & The name of the metadata item (string) \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Value} & The value of the metadata item (string) \\
+\hline
+\end{DoxyParams}
+
+
+References \textbf{ m\+Metadata}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!setMetadataFromVal@{setMetadataFromVal}}
+\index{setMetadataFromVal@{setMetadataFromVal}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{setMetadataFromVal()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a877560d2344ca9a2c38700e2f11f1224} 
+template$<$typename T$>$ \\
+void EOUtils\+::\+Audio\+File\+::set\+Metadata\+From\+Val (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Name}{, }\item[{const T \&}]{p\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a piece of metadata for the audio file. Templatized for any value type. The value will be converted to a string to store in the metadata. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Name} & The name of the metadata item (string) \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Value} & The value of the metadata item (templatized for any type) \\
+\hline
+\end{DoxyParams}
+
+
+References \textbf{ m\+Metadata}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!writeSample\_int64@{writeSample\_int64}}
+\index{writeSample\_int64@{writeSample\_int64}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{writeSample\_int64()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a901b6f6818ae604841592537a278507d} 
+virtual \textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Audio\+File\+::write\+Sample\+\_\+int64 (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{p\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Writes an audio sample to the file. The parameter is a 64-\/bit integer but will be cast to the bitness of the audio samples in the file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Audio\+Sample} & The audio sample to write to the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, or false with error messages on failure 
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ EOUtils\+::\+FLACFile} \doxyref{}{p.}{classEOUtils_1_1FLACFile_aea40fce50b9c489955238f06d2207f8c}, \textbf{ EOUtils\+::\+WAVFile} \doxyref{}{p.}{classEOUtils_1_1WAVFile_ab5d1a09061e68e3c3994e8c46569261a}, \textbf{ FLACFile} \doxyref{}{p.}{classFLACFile_aea40fce50b9c489955238f06d2207f8c}, and \textbf{ WAVFile} \doxyref{}{p.}{classWAVFile_ab5d1a09061e68e3c3994e8c46569261a}.
+
+
+
+Referenced by \textbf{ EOUtils\+::mix\+Audio\+Files()}.
+
+
+
+\label{doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!mDataSizeBytes@{mDataSizeBytes}}
+\index{mDataSizeBytes@{mDataSizeBytes}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{mDataSizeBytes}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a692f3c22c6709d0c6506588d3aa7b218} 
+size\+\_\+t EOUtils\+::\+Audio\+File\+::m\+Data\+Size\+Bytes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by \textbf{ Audio\+File()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::num\+Samples()}, \textbf{ EOUtils\+::\+WAVFile\+::num\+Samples()}, \textbf{ EOUtils\+::\+FLACFile\+::open()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::open()}, \textbf{ EOUtils\+::\+WAVFile\+::open()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::seek\+Output\+To\+Sample\+Num()}, \textbf{ EOUtils\+::\+WAVFile\+::write\+Sample()}, and \textbf{ EOUtils\+::\+WAVFile\+::write\+Sample\+\_\+int64()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!mFilename@{mFilename}}
+\index{mFilename@{mFilename}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{mFilename}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_ae2e83cc4a0d973d368ea693c7a9c003a} 
+std\+::string EOUtils\+::\+Audio\+File\+::m\+Filename\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by \textbf{ Audio\+File()}, \textbf{ Filename()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Next\+Sample\+\_\+int64()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::go\+To\+Audio\+Data\+Pos()}, \textbf{ EOUtils\+::\+FLACFile\+::num\+Samples()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::num\+Samples()}, \textbf{ EOUtils\+::\+WAVFile\+::num\+Samples()}, \textbf{ open()}, \textbf{ EOUtils\+::\+FLACFile\+::open()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::open()}, \textbf{ EOUtils\+::\+WAVFile\+::open()}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::write\+Sample\+\_\+int64()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!mFileOpenMode@{mFileOpenMode}}
+\index{mFileOpenMode@{mFileOpenMode}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{mFileOpenMode}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a1d3f62779198ad88d9fa06944433b69b} 
+std\+::ios\+\_\+base\+::openmode EOUtils\+::\+Audio\+File\+::m\+File\+Open\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by \textbf{ Audio\+File()}, \textbf{ has\+Read\+Mode()}, \textbf{ has\+Write\+Mode()}, \textbf{ open()}, and \textbf{ set\+File\+Mode()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!mFileStream@{mFileStream}}
+\index{mFileStream@{mFileStream}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{mFileStream}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_aeb7d0107b41ae6ee1e8005a1acaf9c0e} 
+std\+::fstream EOUtils\+::\+Audio\+File\+::m\+File\+Stream\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by \textbf{ close()}, \textbf{ EOUtils\+::\+FLACFile\+::close()}, \textbf{ EOUtils\+::\+WAVFile\+::close()}, \textbf{ file\+Size\+According\+To\+Stream()}, \textbf{ EOUtils\+::\+WAVFile\+::get\+Highest\+Sample\+Value()}, \textbf{ EOUtils\+::\+WAVFile\+::get\+Next\+Sample()}, \textbf{ EOUtils\+::\+WAVFile\+::get\+Next\+Sample\+\_\+int64()}, \textbf{ EOUtils\+::\+WAVFile\+::go\+To\+Audio\+Data\+Pos()}, \textbf{ is\+Open()}, \textbf{ EOUtils\+::\+FLACFile\+::is\+Open()}, \textbf{ open()}, \textbf{ EOUtils\+::\+FLACFile\+::open()}, \textbf{ EOUtils\+::\+WAVFile\+::open()}, \textbf{ EOUtils\+::\+WAVFile\+::seek\+Output\+To\+Sample\+Num()}, \textbf{ EOUtils\+::\+WAVFile\+::write\+Sample()}, and \textbf{ EOUtils\+::\+WAVFile\+::write\+Sample\+\_\+int64()}.
+
+\index{EOUtils::AudioFile@{EOUtils::AudioFile}!mMetadata@{mMetadata}}
+\index{mMetadata@{mMetadata}!EOUtils::AudioFile@{EOUtils::AudioFile}}
+\doxysubsubsection{mMetadata}
+{\footnotesize\ttfamily \label{classEOUtils_1_1AudioFile_a894a8ef65825cf7cbec9f9d334e6d29a} 
+std\+::map$<$std\+::string, std\+::string$>$ EOUtils\+::\+Audio\+File\+::m\+Metadata\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by \textbf{ get\+Metadata\+As()}, \textbf{ get\+Metadata\+As()}, \textbf{ get\+Metadata\+As()}, \textbf{ has\+Metadata()}, \textbf{ set\+Metadata()}, and \textbf{ set\+Metadata\+From\+Val()}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Audio\+File.\+h}\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Audio\+File.\+cpp}\end{DoxyCompactItemize}

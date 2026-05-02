@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="namespaceEOUtils_1_1sndfile__detail" kind="namespace" language="C++">
+    <compoundname>EOUtils::sndfile_detail</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceEOUtils_1_1sndfile__detail_1a107e7ae26bbe28f94fdfdfdde385dd15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::sndfile_detail::sfInfoToAudioFileInfo</definition>
+        <argsstring>(const SF_INFO &amp;pSf, std::uintmax_t pFileSizeBytes, AudioFileInfo &amp;pOut)</argsstring>
+        <name>sfInfoToAudioFileInfo</name>
+        <qualifiedname>EOUtils::sndfile_detail::sfInfoToAudioFileInfo</qualifiedname>
+        <param>
+          <type>const SF_INFO &amp;</type>
+          <declname>pSf</declname>
+        </param>
+        <param>
+          <type>std::uintmax_t</type>
+          <declname>pFileSizeBytes</declname>
+        </param>
+        <param>
+          <type><ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref> &amp;</type>
+          <declname>pOut</declname>
+        </param>
+        <briefdescription>
+<para>Fills <ref refid="classEOUtils_1_1AudioFileInfo" kindref="compound">AudioFileInfo</ref> from libsndfile SF_INFO and optional file size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" line="30" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" bodystart="30" bodyend="48" declfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.h" declline="19" declcolumn="6"/>
+        <references refid="classEOUtils_1_1AudioFileInfo_1a251e008ebbbe7b96fa393162ff6dffa8" compoundref="AudioFileInfo_8cpp" startline="110" endline="113">EOUtils::AudioFileInfo::BitsPerSample</references>
+        <references refid="classEOUtils_1_1AudioFileInfo_1a6eae27e84b5551365f18c0e534dffb9a" compoundref="AudioFileInfo_8cpp" startline="100" endline="103">EOUtils::AudioFileInfo::ByteRate</references>
+        <references refid="classEOUtils_1_1AudioFileInfo_1aec253c7d40de4a512c2b2cfd13866ad4" compoundref="AudioFileInfo_8cpp" startline="90" endline="93">EOUtils::AudioFileInfo::BytesPerSecond</references>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1aceebb7d7d356f7425b33cd3fe458fde2" compoundref="SndFileHelpers_8cpp" startline="50" endline="71">effectiveBitsPerSample</references>
+        <references refid="classEOUtils_1_1AudioFileInfo_1ae4ad85c7dec9cea2e1c972fa5363317b" compoundref="AudioFileInfo_8cpp" startline="60" endline="63">EOUtils::AudioFileInfo::FileSize</references>
+        <references refid="classEOUtils_1_1AudioFileInfo_1a06eec6c97330b24756c63267fef967d1" compoundref="AudioFileInfo_8cpp" startline="70" endline="73">EOUtils::AudioFileInfo::NumChannels</references>
+        <references refid="classEOUtils_1_1AudioFileInfo_1a3ebf18af705038e03f640ece3dfd96b3" compoundref="AudioFileInfo_8cpp" startline="80" endline="83">EOUtils::AudioFileInfo::SampleRateHz</references>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">EOUtils::SndFileBackedMetadataAudioFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFileInfo_1ace178edb3472f22ecb709415e41dd4b2" compoundref="AiffFileInfo_8cpp" startline="51" endline="82">EOUtils::AiffFileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3FileInfo_1a0c08fdfa1bd6e4b22bfafeb442b0420c" compoundref="MP3FileInfo_8cpp" startline="34" endline="66">EOUtils::MP3FileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFileInfo_1ac47c8a62eeeb4aabbd409598e9eb63dd" compoundref="OggFileInfo_8cpp" startline="35" endline="65">EOUtils::OggFileInfo::read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceEOUtils_1_1sndfile__detail_1aceebb7d7d356f7425b33cd3fe458fde2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t EOUtils::sndfile_detail::effectiveBitsPerSample</definition>
+        <argsstring>(int pSfFormatFull)</argsstring>
+        <name>effectiveBitsPerSample</name>
+        <qualifiedname>EOUtils::sndfile_detail::effectiveBitsPerSample</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pSfFormatFull</declname>
+        </param>
+        <briefdescription>
+<para>Nominal bits per sample for decoded/interleaved int I/O via libsndfile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" line="50" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" bodystart="50" bodyend="71" declfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.h" declline="24" declcolumn="9"/>
+        <referencedby refid="namespaceEOUtils_1_1sndfile__detail_1a107e7ae26bbe28f94fdfdfdde385dd15" compoundref="SndFileHelpers_8cpp" startline="30" endline="48">sfInfoToAudioFileInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceEOUtils_1_1sndfile__detail_1a5205d4d1f3a23eee2c2728b52256498d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t EOUtils::sndfile_detail::maxSampleValueForFormat</definition>
+        <argsstring>(int16_t pBitsPerSample)</argsstring>
+        <name>maxSampleValueForFormat</name>
+        <qualifiedname>EOUtils::sndfile_detail::maxSampleValueForFormat</qualifiedname>
+        <param>
+          <type>int16_t</type>
+          <declname>pBitsPerSample</declname>
+        </param>
+        <briefdescription>
+<para>Maximum PCM magnitude for clamping ints passed to sf_writef_*. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" line="73" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" bodystart="73" bodyend="84" declfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.h" declline="29" declcolumn="9"/>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a50528a485aeda6e16ab5c3f1558aefd5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="367" endline="401">EOUtils::SndFileBackedMetadataAudioFile::getHighestSampleValue_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1afc4e1a414dc53a1c3112f6a7b93600f0" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="294" endline="330">EOUtils::SndFileBackedMetadataAudioFile::getNextSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a99ac823f1aa365c8876fa35939b61e82" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="429" endline="432">EOUtils::SndFileBackedMetadataAudioFile::maxValueForSampleSize</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acfdd6717c813c6af0a7d8510ab53cd1a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="332" endline="365">EOUtils::SndFileBackedMetadataAudioFile::writeSample_int64</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceEOUtils_1_1sndfile__detail_1af36bfc91c020a30e9627e0e03f29f220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string EOUtils::sndfile_detail::formatErrorSuffix</definition>
+        <argsstring>(SNDFILE *pSndOrNull)</argsstring>
+        <name>formatErrorSuffix</name>
+        <qualifiedname>EOUtils::sndfile_detail::formatErrorSuffix</qualifiedname>
+        <param>
+          <type>SNDFILE *</type>
+          <declname>pSndOrNull</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" line="86" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" bodystart="86" bodyend="94" declfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.h" declline="31" declcolumn="13"/>
+        <referencedby refid="namespaceEOUtils_1a3e9ad64db30373ed7434836296c58b85" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="491" endline="512">EOUtils::sfSetViaRw</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acfdd6717c813c6af0a7d8510ab53cd1a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="332" endline="365">EOUtils::SndFileBackedMetadataAudioFile::writeSample_int64</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceEOUtils_1_1sndfile__detail_1aa585bc7769dfbedf0eecc01ab79e42ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EOUtils::sndfile_detail::formatHasMajorMinor</definition>
+        <argsstring>(int pFullFormat, int pMajorMask, int pMinorMask)</argsstring>
+        <name>formatHasMajorMinor</name>
+        <qualifiedname>EOUtils::sndfile_detail::formatHasMajorMinor</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pFullFormat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pMajorMask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pMinorMask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" line="96" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" bodystart="96" bodyend="100" declfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.h" declline="33" declcolumn="6"/>
+        <referencedby refid="classEOUtils_1_1MP3FileInfo_1a0c08fdfa1bd6e4b22bfafeb442b0420c" compoundref="MP3FileInfo_8cpp" startline="34" endline="66">EOUtils::MP3FileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFileInfo_1ac47c8a62eeeb4aabbd409598e9eb63dd" compoundref="OggFileInfo_8cpp" startline="35" endline="65">EOUtils::OggFileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3File_1acded4b8297cfd6e349cd0a89e8a8e8ee" compoundref="MP3File_8cpp" startline="152" endline="155">EOUtils::MP3File::readFormatMatches</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFile_1aa89063b86c0a015e5c62d8741c3fb14e" compoundref="OggFile_8cpp" startline="126" endline="129">EOUtils::OggFile::readFormatMatches</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceEOUtils_1_1sndfile__detail_1a1f04e2e516d189d0d154be73024c59c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uintmax_t</type>
+        <definition>std::uintmax_t EOUtils::sndfile_detail::safeFileSize</definition>
+        <argsstring>(const std::string &amp;pPath)</argsstring>
+        <name>safeFileSize</name>
+        <qualifiedname>EOUtils::sndfile_detail::safeFileSize</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" line="102" column="16" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" bodystart="102" bodyend="108" declfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.h" declline="35" declcolumn="16"/>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">EOUtils::SndFileBackedMetadataAudioFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFileInfo_1ace178edb3472f22ecb709415e41dd4b2" compoundref="AiffFileInfo_8cpp" startline="51" endline="82">EOUtils::AiffFileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3FileInfo_1a0c08fdfa1bd6e4b22bfafeb442b0420c" compoundref="MP3FileInfo_8cpp" startline="34" endline="66">EOUtils::MP3FileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFileInfo_1ac47c8a62eeeb4aabbd409598e9eb63dd" compoundref="OggFileInfo_8cpp" startline="35" endline="65">EOUtils::OggFileInfo::read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceEOUtils_1_1sndfile__detail_1af47e02b4af37e0d46b90e3c48f252e66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; char &gt;</type>
+        <definition>std::vector&lt; char &gt; EOUtils::sndfile_detail::peekFilePrefix</definition>
+        <argsstring>(const std::string &amp;pPath, std::size_t pMaxLen)</argsstring>
+        <name>peekFilePrefix</name>
+        <qualifiedname>EOUtils::sndfile_detail::peekFilePrefix</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pPath</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>pMaxLen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" line="110" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" bodystart="110" bodyend="121" declfile="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.h" declline="37" declcolumn="13"/>
+        <referencedby refid="classEOUtils_1_1AiffFileInfo_1a916f15228bfb7307a1e7aeb672fd01aa" compoundref="AiffFileInfo_8cpp" startline="107" endline="126">EOUtils::AiffFileInfo::sniffFileHeader</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3FileInfo_1acf185077a6bb783e6e04bc857bd566d0" compoundref="MP3FileInfo_8cpp" startline="89" endline="102">EOUtils::MP3FileInfo::sniffFileHeader</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFileInfo_1a325a0e6f35c4f8ec60829f6eb77fdbf4" compoundref="OggFileInfo_8cpp" startline="90" endline="98">EOUtils::OggFileInfo::sniffFileHeader</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp" line="12" column="1"/>
+  </compounddef>
+</doxygen>

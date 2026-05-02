@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classAudioFileResultType" kind="class" language="C++" prot="public">
+    <compoundname>AudioFileResultType</compoundname>
+    <includes refid="AudioFileResultType_8h" local="no">AudioFileResultType.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classAudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" prot="public" static="no">
+        <type>std::list&lt; std::string &gt;</type>
+        <definition>using EOUtils::AudioFileResultType::errorCollectionType =  std::list&lt;std::string&gt;</definition>
+        <argsstring></argsstring>
+        <name>errorCollectionType</name>
+        <qualifiedname>AudioFileResultType::errorCollectionType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="15" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAudioFileResultType_1a1600f33d8ba5ea5e94e050e300f7aab5" prot="private" static="no" mutable="no">
+        <type><ref refid="classAudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" kindref="member">errorCollectionType</ref></type>
+        <definition>errorCollectionType EOUtils::AudioFileResultType::mErrors</definition>
+        <argsstring></argsstring>
+        <name>mErrors</name>
+        <qualifiedname>AudioFileResultType::mErrors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="38" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAudioFileResultType_1a228d6aeba7d0186edbe6f15e01ec65e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AudioFileResultType::AudioFileResultType</definition>
+        <argsstring>(const std::string &amp;pError=&quot;&quot;)</argsstring>
+        <name>AudioFileResultType</name>
+        <qualifiedname>AudioFileResultType::AudioFileResultType</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pError</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="17" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileResultType_1aaeaa4d2f44e3ae973c85e3f5558b694e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AudioFileResultType::~AudioFileResultType</definition>
+        <argsstring>()</argsstring>
+        <name>~AudioFileResultType</name>
+        <qualifiedname>AudioFileResultType::~AudioFileResultType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="19" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileResultType_1a684c6447da4c85612789a4289b4985a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFileResultType::addError</definition>
+        <argsstring>(const std::string &amp;pError)</argsstring>
+        <name>addError</name>
+        <qualifiedname>AudioFileResultType::addError</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="21" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileResultType_1a614346c7534f05ce9e8de3a42217dfea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classAudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" kindref="member">errorCollectionType</ref> &amp;</type>
+        <definition>const AudioFileResultType::errorCollectionType &amp; EOUtils::AudioFileResultType::getErrors</definition>
+        <argsstring>() const</argsstring>
+        <name>getErrors</name>
+        <qualifiedname>AudioFileResultType::getErrors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="23" column="27" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileResultType_1a4c1c0e01ecfafe5a10b7359929dcf691" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>errorCollectionType::const_iterator</type>
+        <definition>AudioFileResultType::errorCollectionType::const_iterator EOUtils::AudioFileResultType::getErrorsBegin</definition>
+        <argsstring>() const</argsstring>
+        <name>getErrorsBegin</name>
+        <qualifiedname>AudioFileResultType::getErrorsBegin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="25" column="37" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileResultType_1aa67421495c95cff1666f758bd75d7100" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>errorCollectionType::const_iterator</type>
+        <definition>AudioFileResultType::errorCollectionType::const_iterator EOUtils::AudioFileResultType::getErrorsEnd</definition>
+        <argsstring>() const</argsstring>
+        <name>getErrorsEnd</name>
+        <qualifiedname>AudioFileResultType::getErrorsEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="27" column="37" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileResultType_1a30725c5f74f0492d20f9bfa685dcab02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t EOUtils::AudioFileResultType::numErrors</definition>
+        <argsstring>() const</argsstring>
+        <name>numErrors</name>
+        <qualifiedname>AudioFileResultType::numErrors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="29" column="8" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileResultType_1a7cb671fe20ea46e8d4ee3cf4785a7269" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>string EOUtils::AudioFileResultType::getError</definition>
+        <argsstring>() const</argsstring>
+        <name>getError</name>
+        <qualifiedname>AudioFileResultType::getError</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="31" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="44" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileResultType_1ad672a9d8bc0a1cabf55fe4f7d2da864e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AudioFileResultType::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <qualifiedname>AudioFileResultType::operator bool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="33" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="52" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioFileResultType_1aae2b9b567834b1dc1fb8f3f1aaa26cb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFileResultType::outputErrors</definition>
+        <argsstring>(std::ostream &amp;pOutStream) const</argsstring>
+        <name>outputErrors</name>
+        <qualifiedname>AudioFileResultType::outputErrors</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>pOutStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="35" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="63" bodyend="67"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>AudioFileResultType</label>
+        <link refid="classAudioFileResultType"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="12" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" bodystart="13" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classAudioFileResultType_1a684c6447da4c85612789a4289b4985a8" prot="public" virt="non-virtual"><scope>AudioFileResultType</scope><name>addError</name></member>
+      <member refid="classAudioFileResultType_1a228d6aeba7d0186edbe6f15e01ec65e9" prot="public" virt="non-virtual"><scope>AudioFileResultType</scope><name>AudioFileResultType</name></member>
+      <member refid="classAudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" prot="public" virt="non-virtual"><scope>AudioFileResultType</scope><name>errorCollectionType</name></member>
+      <member refid="classAudioFileResultType_1a7cb671fe20ea46e8d4ee3cf4785a7269" prot="public" virt="non-virtual"><scope>AudioFileResultType</scope><name>getError</name></member>
+      <member refid="classAudioFileResultType_1a614346c7534f05ce9e8de3a42217dfea" prot="public" virt="non-virtual"><scope>AudioFileResultType</scope><name>getErrors</name></member>
+      <member refid="classAudioFileResultType_1a4c1c0e01ecfafe5a10b7359929dcf691" prot="public" virt="non-virtual"><scope>AudioFileResultType</scope><name>getErrorsBegin</name></member>
+      <member refid="classAudioFileResultType_1aa67421495c95cff1666f758bd75d7100" prot="public" virt="non-virtual"><scope>AudioFileResultType</scope><name>getErrorsEnd</name></member>
+      <member refid="classAudioFileResultType_1a1600f33d8ba5ea5e94e050e300f7aab5" prot="private" virt="non-virtual"><scope>AudioFileResultType</scope><name>mErrors</name></member>
+      <member refid="classAudioFileResultType_1a30725c5f74f0492d20f9bfa685dcab02" prot="public" virt="non-virtual"><scope>AudioFileResultType</scope><name>numErrors</name></member>
+      <member refid="classAudioFileResultType_1ad672a9d8bc0a1cabf55fe4f7d2da864e" prot="public" virt="non-virtual"><scope>AudioFileResultType</scope><name>operator bool</name></member>
+      <member refid="classAudioFileResultType_1aae2b9b567834b1dc1fb8f3f1aaa26cb2" prot="public" virt="non-virtual"><scope>AudioFileResultType</scope><name>outputErrors</name></member>
+      <member refid="classAudioFileResultType_1aaeaa4d2f44e3ae973c85e3f5558b694e" prot="public" virt="non-virtual"><scope>AudioFileResultType</scope><name>~AudioFileResultType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

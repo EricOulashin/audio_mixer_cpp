@@ -1,0 +1,1129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classEOUtils_1_1AudioFile" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>EOUtils::AudioFile</compoundname>
+    <derivedcompoundref refid="classEOUtils_1_1MetadataAudioFile" prot="public" virt="non-virtual">EOUtils::MetadataAudioFile</derivedcompoundref>
+    <derivedcompoundref refid="classEOUtils_1_1WAVFile" prot="public" virt="non-virtual">EOUtils::WAVFile</derivedcompoundref>
+    <includes refid="AudioFile_8h" local="no">AudioFile.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string EOUtils::AudioFile::mFilename</definition>
+        <argsstring></argsstring>
+        <name>mFilename</name>
+        <qualifiedname>EOUtils::AudioFile::mFilename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="235" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" bodystart="235" bodyend="-1"/>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a929e0fbe28b29242d228331212e89336" compoundref="AudioFile_8cpp" startline="24" endline="30">AudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1ad6281b62a2270d05ba8ab3d643837caa" compoundref="AudioFile_8cpp" startline="75" endline="78">Filename</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1afc4e1a414dc53a1c3112f6a7b93600f0" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="294" endline="330">EOUtils::SndFileBackedMetadataAudioFile::getNextSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ae71e6cdf5e73980e8a71af7005411111" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="403" endline="415">EOUtils::SndFileBackedMetadataAudioFile::goToAudioDataPos</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1af00f73c62416d28429f91a2b520d5e75" compoundref="FLACFile_8cpp" startline="603" endline="617">EOUtils::FLACFile::numSamples</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a520f77d8c349944e508a6707bc3617ac" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="417" endline="427">EOUtils::SndFileBackedMetadataAudioFile::numSamples</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1ad86f3d692b31831fcf210b0addb8cbf2" compoundref="WAVFile_8cpp" startline="309" endline="319">EOUtils::WAVFile::numSamples</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" compoundref="AudioFile_8cpp" startline="38" endline="52">open</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" compoundref="FLACFile_8cpp" startline="217" endline="362">EOUtils::FLACFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">EOUtils::SndFileBackedMetadataAudioFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a8dc7c592c1ce3f8692b9e61465b9b552" compoundref="WAVFile_8cpp" startline="51" endline="117">EOUtils::WAVFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acfdd6717c813c6af0a7d8510ab53cd1a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="332" endline="365">EOUtils::SndFileBackedMetadataAudioFile::writeSample_int64</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" prot="protected" static="no" mutable="no">
+        <type>std::fstream</type>
+        <definition>std::fstream EOUtils::AudioFile::mFileStream</definition>
+        <argsstring></argsstring>
+        <name>mFileStream</name>
+        <qualifiedname>EOUtils::AudioFile::mFileStream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="236" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" bodystart="236" bodyend="-1"/>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a4be2573c17b87c092a3f367989d82722" compoundref="AudioFile_8cpp" startline="69" endline="73">close</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a186c57b08fade9564784e5200c1ee055" compoundref="FLACFile_8cpp" startline="381" endline="408">EOUtils::FLACFile::close</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1aa219f7347d8e25f32699f2ebd77494a5" compoundref="WAVFile_8cpp" startline="119" endline="135">EOUtils::WAVFile::close</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1abff45a0857ea7ac45920ce200c9c2f42" compoundref="AudioFile_8cpp" startline="116" endline="125">fileSizeAccordingToStream</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1aab392d341c24ffad1005c068bb75b1a9" compoundref="WAVFile_8h" startline="180" endline="212">EOUtils::WAVFile::getHighestSampleValue</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1ad1c2ab0a36ac530277e9977832c0d5a9" compoundref="WAVFile_8h" startline="79" endline="120">EOUtils::WAVFile::getNextSample</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a9be010a2ade745512d04232ecdef746d" compoundref="WAVFile_8cpp" startline="142" endline="197">EOUtils::WAVFile::getNextSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a1e0a709a874a8fc7cb6404e47476e955" compoundref="WAVFile_8cpp" startline="293" endline="307">EOUtils::WAVFile::goToAudioDataPos</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1aadb1e2576c96134c0e146735c8aea1f1" compoundref="AudioFile_8cpp" startline="54" endline="57">isOpen</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1ae1fd986a87d029318dac135da4cf2fe8" compoundref="FLACFile_8cpp" startline="364" endline="379">EOUtils::FLACFile::isOpen</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" compoundref="AudioFile_8cpp" startline="38" endline="52">open</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" compoundref="FLACFile_8cpp" startline="217" endline="362">EOUtils::FLACFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a8dc7c592c1ce3f8692b9e61465b9b552" compoundref="WAVFile_8cpp" startline="51" endline="117">EOUtils::WAVFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a620b40c235b8f702d8a73b4cc428914b" compoundref="WAVFile_8cpp" startline="342" endline="346">EOUtils::WAVFile::seekOutputToSampleNum</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a60857e126aee2a5b3fe5bf2331224503" compoundref="WAVFile_8h" startline="131" endline="152">EOUtils::WAVFile::writeSample</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1ab5d1a09061e68e3c3994e8c46569261a" compoundref="WAVFile_8cpp" startline="199" endline="240">EOUtils::WAVFile::writeSample_int64</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" prot="protected" static="no" mutable="no">
+        <type>std::ios_base::openmode</type>
+        <definition>std::ios_base::openmode EOUtils::AudioFile::mFileOpenMode</definition>
+        <argsstring></argsstring>
+        <name>mFileOpenMode</name>
+        <qualifiedname>EOUtils::AudioFile::mFileOpenMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="237" column="25" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" bodystart="237" bodyend="-1"/>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a929e0fbe28b29242d228331212e89336" compoundref="AudioFile_8cpp" startline="24" endline="30">AudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" compoundref="AudioFile_8cpp" startline="59" endline="62">hasReadMode</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" compoundref="AudioFile_8cpp" startline="64" endline="67">hasWriteMode</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" compoundref="AudioFile_8cpp" startline="38" endline="52">open</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a376cef8c69f91ed84ea84026075a4df2" compoundref="AudioFile_8cpp" startline="127" endline="142">setFileMode</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t EOUtils::AudioFile::mDataSizeBytes</definition>
+        <argsstring></argsstring>
+        <name>mDataSizeBytes</name>
+        <qualifiedname>EOUtils::AudioFile::mDataSizeBytes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="238" column="8" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" bodystart="238" bodyend="-1"/>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a929e0fbe28b29242d228331212e89336" compoundref="AudioFile_8cpp" startline="24" endline="30">AudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a520f77d8c349944e508a6707bc3617ac" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="417" endline="427">EOUtils::SndFileBackedMetadataAudioFile::numSamples</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1ad86f3d692b31831fcf210b0addb8cbf2" compoundref="WAVFile_8cpp" startline="309" endline="319">EOUtils::WAVFile::numSamples</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" compoundref="FLACFile_8cpp" startline="217" endline="362">EOUtils::FLACFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">EOUtils::SndFileBackedMetadataAudioFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a8dc7c592c1ce3f8692b9e61465b9b552" compoundref="WAVFile_8cpp" startline="51" endline="117">EOUtils::WAVFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3c569d4cc544c985d81dc131e0da5a32" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="434" endline="453">EOUtils::SndFileBackedMetadataAudioFile::seekOutputToSampleNum</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a60857e126aee2a5b3fe5bf2331224503" compoundref="WAVFile_8h" startline="131" endline="152">EOUtils::WAVFile::writeSample</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1ab5d1a09061e68e3c3994e8c46569261a" compoundref="WAVFile_8cpp" startline="199" endline="240">EOUtils::WAVFile::writeSample_int64</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; EOUtils::AudioFile::mMetadata</definition>
+        <argsstring></argsstring>
+        <name>mMetadata</name>
+        <qualifiedname>EOUtils::AudioFile::mMetadata</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="239" column="10" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" bodystart="239" bodyend="-1"/>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a5c3e338b5d9b22e3e16ddb5b2d87a533" compoundref="AudioFile_8h" startline="186" endline="196">getMetadataAs</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1ab867a5930c81e792f4116f62df0f8298" compoundref="AudioFile_8h" startline="206" endline="216">getMetadataAs</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a80b9e185e791079450429706ca9ef91e" compoundref="AudioFile_8h" startline="162" endline="174">getMetadataAs</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1aedf6b1305b5cfd321bedd7790ef7c8e4" compoundref="AudioFile_8cpp" startline="111" endline="114">hasMetadata</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a7c9c44e7d515e2281736219609d785ed" compoundref="AudioFile_8cpp" startline="85" endline="88">setMetadata</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a877560d2344ca9a2c38700e2f11f1224" compoundref="AudioFile_8h" startline="136" endline="141">setMetadataFromVal</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a8ad604ab1ec13becdf8b2659e61c9c3d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AudioFile::AudioFile</definition>
+        <argsstring>(const std::string &amp;pFilename)</argsstring>
+        <name>AudioFile</name>
+        <qualifiedname>EOUtils::AudioFile::AudioFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the audio file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="28" column="10"/>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a929e0fbe28b29242d228331212e89336" compoundref="AudioFile_8cpp" startline="24" endline="30">AudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a7dd053155e5498f9603b2a232158d1dc">AudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1MetadataAudioFile_1a097c2697ff13926740a76063de122cb6" compoundref="MetadataAudioFile_8cpp" startline="17" endline="20">EOUtils::MetadataAudioFile::MetadataAudioFile</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1aecf5758ffd03cdd68b916a61a5405972" compoundref="WAVFile_8cpp" startline="33" endline="37">EOUtils::WAVFile::WAVFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a7dd053155e5498f9603b2a232158d1dc" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AudioFile::AudioFile</definition>
+        <argsstring>(const std::string &amp;pFilename, AudioFileModes pFileMode)</argsstring>
+        <name>AudioFile</name>
+        <qualifiedname>EOUtils::AudioFile::AudioFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758c" kindref="member">AudioFileModes</ref></type>
+          <declname>pFileMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="30" column="10"/>
+        <references refid="classEOUtils_1_1AudioFile_1a8ad604ab1ec13becdf8b2659e61c9c3d">AudioFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a929e0fbe28b29242d228331212e89336" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AudioFile::AudioFile</definition>
+        <argsstring>(const AudioFile &amp;pAudioFile)</argsstring>
+        <name>AudioFile</name>
+        <qualifiedname>EOUtils::AudioFile::AudioFile</qualifiedname>
+        <param>
+          <type>const <ref refid="classAudioFile" kindref="compound">AudioFile</ref> &amp;</type>
+          <declname>pAudioFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="32" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="24" bodyend="30"/>
+        <references refid="classEOUtils_1_1AudioFile_1a8ad604ab1ec13becdf8b2659e61c9c3d">AudioFile</references>
+        <references refid="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" compoundref="AudioFile_8h" startline="238">mDataSizeBytes</references>
+        <references refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" compoundref="AudioFile_8h" startline="235">mFilename</references>
+        <references refid="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" compoundref="AudioFile_8h" startline="237">mFileOpenMode</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1af6b8d50765277b330bc63e57dcc4f0c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>EOUtils::AudioFile::~AudioFile</definition>
+        <argsstring>()</argsstring>
+        <name>~AudioFile</name>
+        <qualifiedname>EOUtils::AudioFile::~AudioFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="34" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="32" bodyend="36"/>
+        <references refid="classEOUtils_1_1AudioFile_1a4be2573c17b87c092a3f367989d82722" compoundref="AudioFile_8cpp" startline="69" endline="73">close</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a2801f28e7658576fb6ae96f91ced6f92" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void EOUtils::AudioFile::setAudioFileInfo</definition>
+        <argsstring>(const AudioFileInfo &amp;pAudioFileInfo)=0</argsstring>
+        <name>setAudioFileInfo</name>
+        <qualifiedname>EOUtils::AudioFile::setAudioFileInfo</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1AiffFile_1a594d9c73bcb27941f606b32c009381c7">setAudioFileInfo</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a837fc7246b256128abbe2980ad1588d0">setAudioFileInfo</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1MP3File_1a5876a844978007965692a5b59f7dd8e2">setAudioFileInfo</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1OggFile_1a25ae99134bfbff58471418527d20dbd0">setAudioFileInfo</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a5b4ddbc681df5496f355bef551bbddea">setAudioFileInfo</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1WAVFile_1aa56b64ce5739633fd2188cfc84e9e783">setAudioFileInfo</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a837fc7246b256128abbe2980ad1588d0">setAudioFileInfo</reimplementedby>
+        <reimplementedby refid="classWAVFile_1aa56b64ce5739633fd2188cfc84e9e783">setAudioFileInfo</reimplementedby>
+        <param>
+          <type>const <ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref> &amp;</type>
+          <declname>pAudioFileInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="36" column="14"/>
+        <referencedby refid="namespaceEOUtils_1a3fec4b49472aa005139f9394f2eda23d" compoundref="AudioFileTools_8cpp" startline="186" endline="423">EOUtils::mixAudioFiles</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::AudioFile::open</definition>
+        <argsstring>(AudioFileModes pOpenMode)</argsstring>
+        <name>open</name>
+        <qualifiedname>EOUtils::AudioFile::open</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1AiffFile_1adbf5b1a9feef88138c4ac879c362befe">open</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2">open</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1MP3File_1a1285c6bbb18c976aeb13c39527787c59">open</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1OggFile_1a16436218fdd8af3038000ec7f6b9500a">open</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a">open</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1WAVFile_1a8dc7c592c1ce3f8692b9e61465b9b552">open</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a51522e856b01a9180178e3fe298cded2">open</reimplementedby>
+        <reimplementedby refid="classWAVFile_1a8dc7c592c1ce3f8692b9e61465b9b552">open</reimplementedby>
+        <param>
+          <type><ref refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758c" kindref="member">AudioFileModes</ref></type>
+          <declname>pOpenMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="38" column="29" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="38" bodyend="52"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" compoundref="AudioFile_8cpp" startline="59" endline="62">hasReadMode</references>
+        <references refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" compoundref="AudioFile_8cpp" startline="64" endline="67">hasWriteMode</references>
+        <references refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" compoundref="AudioFile_8h" startline="235">mFilename</references>
+        <references refid="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" compoundref="AudioFile_8h" startline="237">mFileOpenMode</references>
+        <references refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" compoundref="AudioFile_8h" startline="236">mFileStream</references>
+        <references refid="classEOUtils_1_1AudioFile_1a376cef8c69f91ed84ea84026075a4df2" compoundref="AudioFile_8cpp" startline="127" endline="142">setFileMode</references>
+        <referencedby refid="namespaceEOUtils_1a3fec4b49472aa005139f9394f2eda23d" compoundref="AudioFileTools_8cpp" startline="186" endline="423">EOUtils::mixAudioFiles</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" compoundref="FLACFile_8cpp" startline="217" endline="362">EOUtils::FLACFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a8dc7c592c1ce3f8692b9e61465b9b552" compoundref="WAVFile_8cpp" startline="51" endline="117">EOUtils::WAVFile::open</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a683fdacc6a09b3a22d5c438c8559a054" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool EOUtils::AudioFile::BitrateIsAdjustable</definition>
+        <argsstring>() const =0</argsstring>
+        <name>BitrateIsAdjustable</name>
+        <qualifiedname>EOUtils::AudioFile::BitrateIsAdjustable</qualifiedname>
+        <briefdescription>
+<para>Returns whether or not the audio file bitrate is adjustable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="43" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1aadb1e2576c96134c0e146735c8aea1f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool EOUtils::AudioFile::isOpen</definition>
+        <argsstring>() const</argsstring>
+        <name>isOpen</name>
+        <qualifiedname>EOUtils::AudioFile::isOpen</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1ae1fd986a87d029318dac135da4cf2fe8">isOpen</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a819cd193fb520477daecc99074244b27">isOpen</reimplementedby>
+        <reimplementedby refid="classFLACFile_1ae1fd986a87d029318dac135da4cf2fe8">isOpen</reimplementedby>
+        <briefdescription>
+<para>Returns whether or not the audio file is open. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="48" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="54" bodyend="57"/>
+        <references refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" compoundref="AudioFile_8h" startline="236">mFileStream</references>
+        <referencedby refid="namespaceEOUtils_1a3fec4b49472aa005139f9394f2eda23d" compoundref="AudioFileTools_8cpp" startline="186" endline="423">EOUtils::mixAudioFiles</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool EOUtils::AudioFile::hasReadMode</definition>
+        <argsstring>() const</argsstring>
+        <name>hasReadMode</name>
+        <qualifiedname>EOUtils::AudioFile::hasReadMode</qualifiedname>
+        <briefdescription>
+<para>Returns whether or not read mode is enabled for the file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="53" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="59" bodyend="62"/>
+        <references refid="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" compoundref="AudioFile_8h" startline="237">mFileOpenMode</references>
+        <referencedby refid="classEOUtils_1_1WAVFile_1ad1c2ab0a36ac530277e9977832c0d5a9" compoundref="WAVFile_8h" startline="79" endline="120">EOUtils::WAVFile::getNextSample</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1aecd756065217efeff7bcd1ebefaba8b7" compoundref="FLACFile_8cpp" startline="415" endline="488">EOUtils::FLACFile::getNextSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1afc4e1a414dc53a1c3112f6a7b93600f0" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="294" endline="330">EOUtils::SndFileBackedMetadataAudioFile::getNextSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" compoundref="AudioFile_8cpp" startline="38" endline="52">open</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" compoundref="FLACFile_8cpp" startline="217" endline="362">EOUtils::FLACFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">EOUtils::SndFileBackedMetadataAudioFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a8dc7c592c1ce3f8692b9e61465b9b552" compoundref="WAVFile_8cpp" startline="51" endline="117">EOUtils::WAVFile::open</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool EOUtils::AudioFile::hasWriteMode</definition>
+        <argsstring>() const</argsstring>
+        <name>hasWriteMode</name>
+        <qualifiedname>EOUtils::AudioFile::hasWriteMode</qualifiedname>
+        <briefdescription>
+<para>Returns whether or not write mode is enabled for the file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="58" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="64" bodyend="67"/>
+        <references refid="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" compoundref="AudioFile_8h" startline="237">mFileOpenMode</references>
+        <referencedby refid="classEOUtils_1_1WAVFile_1aa219f7347d8e25f32699f2ebd77494a5" compoundref="WAVFile_8cpp" startline="119" endline="135">EOUtils::WAVFile::close</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" compoundref="AudioFile_8cpp" startline="38" endline="52">open</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" compoundref="FLACFile_8cpp" startline="217" endline="362">EOUtils::FLACFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">EOUtils::SndFileBackedMetadataAudioFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a8dc7c592c1ce3f8692b9e61465b9b552" compoundref="WAVFile_8cpp" startline="51" endline="117">EOUtils::WAVFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3c569d4cc544c985d81dc131e0da5a32" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="434" endline="453">EOUtils::SndFileBackedMetadataAudioFile::seekOutputToSampleNum</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a60857e126aee2a5b3fe5bf2331224503" compoundref="WAVFile_8h" startline="131" endline="152">EOUtils::WAVFile::writeSample</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1aea40fce50b9c489955238f06d2207f8c" compoundref="FLACFile_8cpp" startline="490" endline="541">EOUtils::FLACFile::writeSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acfdd6717c813c6af0a7d8510ab53cd1a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="332" endline="365">EOUtils::SndFileBackedMetadataAudioFile::writeSample_int64</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a4be2573c17b87c092a3f367989d82722" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFile::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <qualifiedname>EOUtils::AudioFile::close</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a186c57b08fade9564784e5200c1ee055">close</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af7608eef3ca48433142025a37bb99033">close</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1WAVFile_1aa219f7347d8e25f32699f2ebd77494a5">close</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a186c57b08fade9564784e5200c1ee055">close</reimplementedby>
+        <reimplementedby refid="classWAVFile_1aa219f7347d8e25f32699f2ebd77494a5">close</reimplementedby>
+        <briefdescription>
+<para>Closes the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="63" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="69" bodyend="73"/>
+        <references refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" compoundref="AudioFile_8h" startline="236">mFileStream</references>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af7608eef3ca48433142025a37bb99033" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="247" endline="260">EOUtils::SndFileBackedMetadataAudioFile::close</referencedby>
+        <referencedby refid="namespaceEOUtils_1a3fec4b49472aa005139f9394f2eda23d" compoundref="AudioFileTools_8cpp" startline="186" endline="423">EOUtils::mixAudioFiles</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1af6b8d50765277b330bc63e57dcc4f0c3" compoundref="AudioFile_8cpp" startline="32" endline="36">~AudioFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a99c362d4f3f1417e88a29e20e1a569b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::AudioFile::getNextSample_int64</definition>
+        <argsstring>(int64_t &amp;pAudioSample)=0</argsstring>
+        <name>getNextSample_int64</name>
+        <qualifiedname>EOUtils::AudioFile::getNextSample_int64</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1aecd756065217efeff7bcd1ebefaba8b7">getNextSample_int64</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1WAVFile_1a9be010a2ade745512d04232ecdef746d">getNextSample_int64</reimplementedby>
+        <reimplementedby refid="classFLACFile_1aecd756065217efeff7bcd1ebefaba8b7">getNextSample_int64</reimplementedby>
+        <reimplementedby refid="classWAVFile_1a9be010a2ade745512d04232ecdef746d">getNextSample_int64</reimplementedby>
+        <param>
+          <type>int64_t &amp;</type>
+          <declname>pAudioSample</declname>
+        </param>
+        <briefdescription>
+<para>Gets the next sample from the file, cast to a 64-bit integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pAudioSample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The next audio sample from the file, cast to a 64-bit integer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on success, or false with error messages on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="72" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a901b6f6818ae604841592537a278507d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::AudioFile::writeSample_int64</definition>
+        <argsstring>(int64_t pAudioSample)=0</argsstring>
+        <name>writeSample_int64</name>
+        <qualifiedname>EOUtils::AudioFile::writeSample_int64</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1aea40fce50b9c489955238f06d2207f8c">writeSample_int64</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1WAVFile_1ab5d1a09061e68e3c3994e8c46569261a">writeSample_int64</reimplementedby>
+        <reimplementedby refid="classFLACFile_1aea40fce50b9c489955238f06d2207f8c">writeSample_int64</reimplementedby>
+        <reimplementedby refid="classWAVFile_1ab5d1a09061e68e3c3994e8c46569261a">writeSample_int64</reimplementedby>
+        <param>
+          <type>int64_t</type>
+          <declname>pAudioSample</declname>
+        </param>
+        <briefdescription>
+<para>Writes an audio sample to the file. The parameter is a 64-bit integer but will be cast to the bitness of the audio samples in the file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pAudioSample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The audio sample to write to the file</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on success, or false with error messages on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="82" column="29"/>
+        <referencedby refid="namespaceEOUtils_1a3fec4b49472aa005139f9394f2eda23d" compoundref="AudioFileTools_8cpp" startline="186" endline="423">EOUtils::mixAudioFiles</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a1780a021a151729a1a7eaa0d02a2fa01" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::AudioFile::getHighestSampleValue_int64</definition>
+        <argsstring>(int64_t &amp;pHighestAudioSample)=0</argsstring>
+        <name>getHighestSampleValue_int64</name>
+        <qualifiedname>EOUtils::AudioFile::getHighestSampleValue_int64</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a742be01f59c8bdd485c1bd33dda5bf33">getHighestSampleValue_int64</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1WAVFile_1ac839429fe6108881056c3388ec9ebbcf">getHighestSampleValue_int64</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a742be01f59c8bdd485c1bd33dda5bf33">getHighestSampleValue_int64</reimplementedby>
+        <reimplementedby refid="classWAVFile_1ac839429fe6108881056c3388ec9ebbcf">getHighestSampleValue_int64</reimplementedby>
+        <param>
+          <type>int64_t &amp;</type>
+          <declname>pHighestAudioSample</declname>
+        </param>
+        <briefdescription>
+<para>Gets the highest audio sample value from the file, cast to a 64-bit integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pHighestAudioSample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The highest audio sample from the file, cast to a 64-bit integer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on success, or false with error messages on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="91" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1ae747456aaffc54186bf27d40d2b6619c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>virtual AudioFileResultType EOUtils::AudioFile::goToAudioDataPos</definition>
+        <argsstring>()=0</argsstring>
+        <name>goToAudioDataPos</name>
+        <qualifiedname>EOUtils::AudioFile::goToAudioDataPos</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1ada175c6e4ee3721cabac43f7c2967a97">goToAudioDataPos</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ae71e6cdf5e73980e8a71af7005411111">goToAudioDataPos</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1WAVFile_1a1e0a709a874a8fc7cb6404e47476e955">goToAudioDataPos</reimplementedby>
+        <reimplementedby refid="classFLACFile_1ada175c6e4ee3721cabac43f7c2967a97">goToAudioDataPos</reimplementedby>
+        <reimplementedby refid="classWAVFile_1a1e0a709a874a8fc7cb6404e47476e955">goToAudioDataPos</reimplementedby>
+        <briefdescription>
+<para>Goes to the audio data position in the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="96" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a9323d827fd3a5cd95c02c90b07c33552" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t EOUtils::AudioFile::numSamples</definition>
+        <argsstring>() const =0</argsstring>
+        <name>numSamples</name>
+        <qualifiedname>EOUtils::AudioFile::numSamples</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1af00f73c62416d28429f91a2b520d5e75">numSamples</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a520f77d8c349944e508a6707bc3617ac">numSamples</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1WAVFile_1ad86f3d692b31831fcf210b0addb8cbf2">numSamples</reimplementedby>
+        <reimplementedby refid="classFLACFile_1af00f73c62416d28429f91a2b520d5e75">numSamples</reimplementedby>
+        <reimplementedby refid="classWAVFile_1ad86f3d692b31831fcf210b0addb8cbf2">numSamples</reimplementedby>
+        <briefdescription>
+<para>Returns the number of audio samples in the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="101" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a04453bb2912c38bb59448756a7773835" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int64_t</type>
+        <definition>virtual int64_t EOUtils::AudioFile::maxValueForSampleSize</definition>
+        <argsstring>() const =0</argsstring>
+        <name>maxValueForSampleSize</name>
+        <qualifiedname>EOUtils::AudioFile::maxValueForSampleSize</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a279fa0d38950175dc309eb3d76766f1f">maxValueForSampleSize</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a99ac823f1aa365c8876fa35939b61e82">maxValueForSampleSize</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1WAVFile_1ac84f76e37bafe54e9899c375c35a79f7">maxValueForSampleSize</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a279fa0d38950175dc309eb3d76766f1f">maxValueForSampleSize</reimplementedby>
+        <reimplementedby refid="classWAVFile_1ac84f76e37bafe54e9899c375c35a79f7">maxValueForSampleSize</reimplementedby>
+        <briefdescription>
+<para>Returns the maximum possible positive value of the audio file&apos;s sample size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="106" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1ad6281b62a2270d05ba8ab3d643837caa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const string &amp; EOUtils::AudioFile::Filename</definition>
+        <argsstring>() const</argsstring>
+        <name>Filename</name>
+        <qualifiedname>EOUtils::AudioFile::Filename</qualifiedname>
+        <briefdescription>
+<para>Gets the filename of the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="111" column="19" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="75" bodyend="78"/>
+        <references refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" compoundref="AudioFile_8h" startline="235">mFilename</references>
+        <referencedby refid="namespaceEOUtils_1a3fec4b49472aa005139f9394f2eda23d" compoundref="AudioFileTools_8cpp" startline="186" endline="423">EOUtils::mixAudioFiles</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1aab5a60cd510028e984f06f3cad3ba196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFile::Filename</definition>
+        <argsstring>(const std::string &amp;pFilename)</argsstring>
+        <name>Filename</name>
+        <qualifiedname>EOUtils::AudioFile::Filename</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <briefdescription>
+<para>Setter for the filename of the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new filename </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="118" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a7c9c44e7d515e2281736219609d785ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFile::setMetadata</definition>
+        <argsstring>(const std::string &amp;pName, const std::string &amp;pValue)</argsstring>
+        <name>setMetadata</name>
+        <qualifiedname>EOUtils::AudioFile::setMetadata</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+<para>Adds a piece of metadata for the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the metadata item (string) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the metadata item (string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="126" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="85" bodyend="88"/>
+        <references refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" compoundref="AudioFile_8h" startline="239">mMetadata</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a877560d2344ca9a2c38700e2f11f1224" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void EOUtils::AudioFile::setMetadataFromVal</definition>
+        <argsstring>(const std::string &amp;pName, const T &amp;pValue)</argsstring>
+        <name>setMetadataFromVal</name>
+        <qualifiedname>EOUtils::AudioFile::setMetadataFromVal</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pName</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+<para>Adds a piece of metadata for the audio file. Templatized for any value type. The value will be converted to a string to store in the metadata. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the metadata item (string) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the metadata item (templatized for any type) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="136" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" bodystart="136" bodyend="141"/>
+        <references refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" compoundref="AudioFile_8h" startline="239">mMetadata</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a3e4f535ca55f141bf8145665b5881bd9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::AudioFile::getMetadata</definition>
+        <argsstring>(const std::string &amp;pName, std::string &amp;pValue) const</argsstring>
+        <name>getMetadata</name>
+        <qualifiedname>EOUtils::AudioFile::getMetadata</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pName</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+<para>Gets a metadata value as a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the metadata item (string) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This variable will store the value of the metadata item as a string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on success or false with an error if the item doesn&apos;t exist </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="151" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a80b9e185e791079450429706ca9ef91e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::AudioFile::getMetadataAs</definition>
+        <argsstring>(const std::string &amp;pName, T &amp;pValue) const</argsstring>
+        <name>getMetadataAs</name>
+        <qualifiedname>EOUtils::AudioFile::getMetadataAs</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pName</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+<para>Gets a metadata value. Templatized to capture the value as any type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the metadata item (string) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This variable will store the value of the metadata item. Templatized to store the value as any type.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on success or false with an error if the item doesn&apos;t exist </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="162" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" bodystart="162" bodyend="174"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" compoundref="AudioFile_8h" startline="239">mMetadata</references>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" compoundref="FLACFile_8cpp" startline="217" endline="362">EOUtils::FLACFile::open</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a1414f518e301c5ca00132f3b4d726d67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string EOUtils::AudioFile::getMetadata</definition>
+        <argsstring>(const std::string &amp;pName) const</argsstring>
+        <name>getMetadata</name>
+        <qualifiedname>EOUtils::AudioFile::getMetadata</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pName</declname>
+        </param>
+        <briefdescription>
+<para>Gets a metadata value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the metadata item (string)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The metadata item value, or a blank string if it doesn&apos;t exist </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="183" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a5c3e338b5d9b22e3e16ddb5b2d87a533" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T EOUtils::AudioFile::getMetadataAs</definition>
+        <argsstring>(const std::string &amp;pName) const</argsstring>
+        <name>getMetadataAs</name>
+        <qualifiedname>EOUtils::AudioFile::getMetadataAs</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="186" column="3" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" bodystart="186" bodyend="196"/>
+        <references refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" compoundref="AudioFile_8h" startline="239">mMetadata</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1ab867a5930c81e792f4116f62df0f8298" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T EOUtils::AudioFile::getMetadataAs</definition>
+        <argsstring>(const std::string &amp;pName, const T &amp;pDefaultVal) const</argsstring>
+        <name>getMetadataAs</name>
+        <qualifiedname>EOUtils::AudioFile::getMetadataAs</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pName</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>pDefaultVal</declname>
+        </param>
+        <briefdescription>
+<para>Gets a metadata value. Templatized to return it as any type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the metadata item (string)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The metadata item value, templatized as the given type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="206" column="3" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" bodystart="206" bodyend="216"/>
+        <references refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" compoundref="AudioFile_8h" startline="239">mMetadata</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1aedf6b1305b5cfd321bedd7790ef7c8e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EOUtils::AudioFile::hasMetadata</definition>
+        <argsstring>(const std::string &amp;pName) const</argsstring>
+        <name>hasMetadata</name>
+        <qualifiedname>EOUtils::AudioFile::hasMetadata</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pName</declname>
+        </param>
+        <briefdescription>
+<para>Returns whether or not a metadata item exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the metadata item to check</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the item exists, or false if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="225" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="111" bodyend="114"/>
+        <references refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" compoundref="AudioFile_8h" startline="239">mMetadata</references>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" compoundref="FLACFile_8cpp" startline="217" endline="362">EOUtils::FLACFile::open</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1afa9106be5e7602616779070043bc2252" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref></type>
+        <definition>virtual AudioFileInfo EOUtils::AudioFile::getAudioFileInfo</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getAudioFileInfo</name>
+        <qualifiedname>EOUtils::AudioFile::getAudioFileInfo</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a001c2ef8f62f5e2779527e67af4fdfa6">getAudioFileInfo</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a2e91490fab82a495f6cc3244f68a3fe1">getAudioFileInfo</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1WAVFile_1abda6bb496e9bdda5fa7e64f3c2747775">getAudioFileInfo</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a001c2ef8f62f5e2779527e67af4fdfa6">getAudioFileInfo</reimplementedby>
+        <reimplementedby refid="classWAVFile_1abda6bb496e9bdda5fa7e64f3c2747775">getAudioFileInfo</reimplementedby>
+        <briefdescription>
+<para>Returns an <ref refid="classEOUtils_1_1AudioFile" kindref="compound">AudioFile</ref> object with information about the audio file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="230" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1af30b9f5c0bd6f6eb670976c5872aacdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void EOUtils::AudioFile::seekOutputToSampleNum</definition>
+        <argsstring>(size_t pSampleNum)=0</argsstring>
+        <name>seekOutputToSampleNum</name>
+        <qualifiedname>EOUtils::AudioFile::seekOutputToSampleNum</qualifiedname>
+        <reimplementedby refid="classEOUtils_1_1FLACFile_1a6f21036c7d2d0bc03fe24cb4eb7d0d9d">seekOutputToSampleNum</reimplementedby>
+        <reimplementedby refid="classEOUtils_1_1WAVFile_1a620b40c235b8f702d8a73b4cc428914b">seekOutputToSampleNum</reimplementedby>
+        <reimplementedby refid="classFLACFile_1a6f21036c7d2d0bc03fe24cb4eb7d0d9d">seekOutputToSampleNum</reimplementedby>
+        <reimplementedby refid="classWAVFile_1a620b40c235b8f702d8a73b4cc428914b">seekOutputToSampleNum</reimplementedby>
+        <param>
+          <type>size_t</type>
+          <declname>pSampleNum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="232" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1abff45a0857ea7ac45920ce200c9c2f42" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::streampos</type>
+        <definition>std::streampos EOUtils::AudioFile::fileSizeAccordingToStream</definition>
+        <argsstring>()</argsstring>
+        <name>fileSizeAccordingToStream</name>
+        <qualifiedname>EOUtils::AudioFile::fileSizeAccordingToStream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="241" column="24" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="116" bodyend="125"/>
+        <references refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" compoundref="AudioFile_8h" startline="236">mFileStream</references>
+        <referencedby refid="classEOUtils_1_1WAVFile_1aa219f7347d8e25f32699f2ebd77494a5" compoundref="WAVFile_8cpp" startline="119" endline="135">EOUtils::WAVFile::close</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFile_1a376cef8c69f91ed84ea84026075a4df2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFile::setFileMode</definition>
+        <argsstring>(AudioFileModes pFileMode)</argsstring>
+        <name>setFileMode</name>
+        <qualifiedname>EOUtils::AudioFile::setFileMode</qualifiedname>
+        <param>
+          <type><ref refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758c" kindref="member">AudioFileModes</ref></type>
+          <declname>pFileMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="243" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp" bodystart="127" bodyend="142"/>
+        <references refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758ca39a8bc0bab4d52bf4c92d06000ced732" compoundref="AudioFile_8h" startline="16">EOUtils::AUDIO_FILE_READ</references>
+        <references refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758ca74915559a4710751277737aad2aae766" compoundref="AudioFile_8h" startline="18">EOUtils::AUDIO_FILE_READ_WRITE</references>
+        <references refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758ca225414ff556c80deec668ca52089010d" compoundref="AudioFile_8h" startline="17">EOUtils::AUDIO_FILE_WRITE</references>
+        <references refid="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" compoundref="AudioFile_8h" startline="237">mFileOpenMode</references>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" compoundref="AudioFile_8cpp" startline="38" endline="52">open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">EOUtils::SndFileBackedMetadataAudioFile::open</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>EOUtils::AiffFile</label>
+        <link refid="classEOUtils_1_1AiffFile"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EOUtils::AudioFile</label>
+        <link refid="classEOUtils_1_1AudioFile"/>
+      </node>
+      <node id="3">
+        <label>EOUtils::FLACFile</label>
+        <link refid="classEOUtils_1_1FLACFile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>EOUtils::MP3File</label>
+        <link refid="classEOUtils_1_1MP3File"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EOUtils::MetadataAudioFile</label>
+        <link refid="classEOUtils_1_1MetadataAudioFile"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>EOUtils::OggFile</label>
+        <link refid="classEOUtils_1_1OggFile"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>EOUtils::SndFileBackedMetadataAudioFile</label>
+        <link refid="classEOUtils_1_1SndFileBackedMetadataAudioFile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>EOUtils::WAVFile</label>
+        <link refid="classEOUtils_1_1WAVFile"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>EOUtils::AudioFile</label>
+        <link refid="classEOUtils_1_1AudioFile"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#mFilename</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#mFileStream</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#mFileOpenMode</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#mDataSizeBytes</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#mMetadata</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>size_t</label>
+      </node>
+      <node id="3">
+        <label>fstream</label>
+      </node>
+      <node id="4">
+        <label>openmode</label>
+      </node>
+      <node id="6">
+        <label>map&lt; std::string, std::string &gt;</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" line="21" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h" bodystart="22" bodyend="244"/>
+    <listofallmembers>
+      <member refid="classEOUtils_1_1AudioFile_1a8ad604ab1ec13becdf8b2659e61c9c3d" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a7dd053155e5498f9603b2a232158d1dc" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a929e0fbe28b29242d228331212e89336" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a683fdacc6a09b3a22d5c438c8559a054" prot="public" virt="pure-virtual"><scope>EOUtils::AudioFile</scope><name>BitrateIsAdjustable</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a4be2573c17b87c092a3f367989d82722" prot="public" virt="virtual"><scope>EOUtils::AudioFile</scope><name>close</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ad6281b62a2270d05ba8ab3d643837caa" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>Filename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aab5a60cd510028e984f06f3cad3ba196" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>Filename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1abff45a0857ea7ac45920ce200c9c2f42" prot="protected" virt="virtual"><scope>EOUtils::AudioFile</scope><name>fileSizeAccordingToStream</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1afa9106be5e7602616779070043bc2252" prot="public" virt="pure-virtual"><scope>EOUtils::AudioFile</scope><name>getAudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1780a021a151729a1a7eaa0d02a2fa01" prot="public" virt="pure-virtual"><scope>EOUtils::AudioFile</scope><name>getHighestSampleValue_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a3e4f535ca55f141bf8145665b5881bd9" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>getMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1414f518e301c5ca00132f3b4d726d67" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>getMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a80b9e185e791079450429706ca9ef91e" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a5c3e338b5d9b22e3e16ddb5b2d87a533" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ab867a5930c81e792f4116f62df0f8298" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a99c362d4f3f1417e88a29e20e1a569b5" prot="public" virt="pure-virtual"><scope>EOUtils::AudioFile</scope><name>getNextSample_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ae747456aaffc54186bf27d40d2b6619c" prot="public" virt="pure-virtual"><scope>EOUtils::AudioFile</scope><name>goToAudioDataPos</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aedf6b1305b5cfd321bedd7790ef7c8e4" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>hasMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" prot="public" virt="virtual"><scope>EOUtils::AudioFile</scope><name>hasReadMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" prot="public" virt="virtual"><scope>EOUtils::AudioFile</scope><name>hasWriteMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aadb1e2576c96134c0e146735c8aea1f1" prot="public" virt="virtual"><scope>EOUtils::AudioFile</scope><name>isOpen</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a04453bb2912c38bb59448756a7773835" prot="public" virt="pure-virtual"><scope>EOUtils::AudioFile</scope><name>maxValueForSampleSize</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" prot="protected" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>mDataSizeBytes</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" prot="protected" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>mFilename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" prot="protected" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>mFileOpenMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" prot="protected" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>mFileStream</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" prot="protected" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>mMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a9323d827fd3a5cd95c02c90b07c33552" prot="public" virt="pure-virtual"><scope>EOUtils::AudioFile</scope><name>numSamples</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" prot="public" virt="virtual"><scope>EOUtils::AudioFile</scope><name>open</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1af30b9f5c0bd6f6eb670976c5872aacdd" prot="public" virt="pure-virtual"><scope>EOUtils::AudioFile</scope><name>seekOutputToSampleNum</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a2801f28e7658576fb6ae96f91ced6f92" prot="public" virt="pure-virtual"><scope>EOUtils::AudioFile</scope><name>setAudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a376cef8c69f91ed84ea84026075a4df2" prot="protected" virt="virtual"><scope>EOUtils::AudioFile</scope><name>setFileMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a7c9c44e7d515e2281736219609d785ed" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>setMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a877560d2344ca9a2c38700e2f11f1224" prot="public" virt="non-virtual"><scope>EOUtils::AudioFile</scope><name>setMetadataFromVal</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a901b6f6818ae604841592537a278507d" prot="public" virt="pure-virtual"><scope>EOUtils::AudioFile</scope><name>writeSample_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1af6b8d50765277b330bc63e57dcc4f0c3" prot="public" virt="virtual"><scope>EOUtils::AudioFile</scope><name>~AudioFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

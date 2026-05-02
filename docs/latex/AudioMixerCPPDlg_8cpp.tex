@@ -1,0 +1,117 @@
+\doxysection{/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/\+Audio\+Mixer\+CPP\+\_\+\+Win\+\_\+\+Visual\+Studio/\+Audio\+Mixer\+CPPDlg.cpp File Reference}
+\label{AudioMixerCPPDlg_8cpp}\index{/home/erico/projects/audio\_mixer\_cpp/code/AudioMixerCPP\_Win\_VisualStudio/AudioMixerCPPDlg.cpp@{/home/erico/projects/audio\_mixer\_cpp/code/AudioMixerCPP\_Win\_VisualStudio/AudioMixerCPPDlg.cpp}}
+{\ttfamily \#include "{}stdafx.\+h"{}}\newline
+{\ttfamily \#include "{}Audio\+Mixer\+CPP.\+h"{}}\newline
+{\ttfamily \#include "{}Audio\+Mixer\+CPPDlg.\+h"{}}\newline
+{\ttfamily \#include "{}afxdialogex.\+h"{}}\newline
+{\ttfamily \#include "{}GUITools.\+h"{}}\newline
+{\ttfamily \#include "{}Audio\+File\+Tools.\+h"{}}\newline
+{\ttfamily \#include "{}WAVFile.\+h"{}}\newline
+{\ttfamily \#include "{}String\+Utils.\+h"{}}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Include dependency graph for Audio\+Mixer\+CPPDlg.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AudioMixerCPPDlg_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ CAbout\+Dlg}
+\item 
+class \textbf{ Audio\+File}
+\item 
+class \textbf{ Audio\+File\+Result\+Type}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ WM\+\_\+\+MIX\+\_\+\+DONE\+\_\+\+MESSAGE}~(WM\+\_\+\+USER + 100)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \textbf{ CString\+To\+Std\+String} (const CString \&p\+CStr)
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ mix\+Audio\+Files} (const std\+::vector$<$ std\+::string $>$ \&p\+Filenames, const std\+::string \&p\+Output\+Filename)
+\begin{DoxyCompactList}\small\item\em Mixes (merges) multiple audio files into a single file. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ Audio\+File} $>$ \textbf{ create\+Audio\+File\+Obj\+For\+New\+File} (const char $\ast$p\+Filename)
+\begin{DoxyCompactList}\small\item\em Creates a shared pointer to an audio\+File object for a new (non-\/existing) audio file -\/ Creates the appropriate subclass object, depending on the filename extension. If the format isn\textquotesingle{}t recognized, returns a null pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\index{AudioMixerCPPDlg.cpp@{AudioMixerCPPDlg.cpp}!WM\_MIX\_DONE\_MESSAGE@{WM\_MIX\_DONE\_MESSAGE}}
+\index{WM\_MIX\_DONE\_MESSAGE@{WM\_MIX\_DONE\_MESSAGE}!AudioMixerCPPDlg.cpp@{AudioMixerCPPDlg.cpp}}
+\doxysubsubsection{WM\_MIX\_DONE\_MESSAGE}
+{\footnotesize\ttfamily \label{AudioMixerCPPDlg_8cpp_ab3b0357589c6a30e89a5bb74fdb3b91f} 
+\#define WM\+\_\+\+MIX\+\_\+\+DONE\+\_\+\+MESSAGE~(WM\+\_\+\+USER + 100)}
+
+
+
+Referenced by \textbf{ CAudio\+Mixer\+CPPDlg\+::\+On\+Bn\+Clicked\+Button\+Mix\+Audio\+Files()}.
+
+
+
+\label{doc-func-members}
+\doxysubsection{Function Documentation}
+\index{AudioMixerCPPDlg.cpp@{AudioMixerCPPDlg.cpp}!createAudioFileObjForNewFile@{createAudioFileObjForNewFile}}
+\index{createAudioFileObjForNewFile@{createAudioFileObjForNewFile}!AudioMixerCPPDlg.cpp@{AudioMixerCPPDlg.cpp}}
+\doxysubsubsection{createAudioFileObjForNewFile()}
+{\footnotesize\ttfamily \label{AudioMixerCPPDlg_8cpp_a669d98e89f0bbc2652a05cb73a6aca76} 
+shared\+\_\+ptr$<$ \textbf{ Audio\+File} $>$ \textbf{ EOUtils\+::create\+Audio\+File\+Obj\+For\+New\+File} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename}{}\end{DoxyParamCaption})}
+
+
+
+Creates a shared pointer to an audio\+File object for a new (non-\/existing) audio file -\/ Creates the appropriate subclass object, depending on the filename extension. If the format isn\textquotesingle{}t recognized, returns a null pointer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Filename} & The name of the audio file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to an \doxyref{Audio\+File}{p.}{classAudioFile} object, which will be an instance of the appropriate subclass for the file, or a null pointer if it is not a recognized format. 
+\end{DoxyReturn}
+
+
+Referenced by \textbf{ CAudio\+Mixer\+CPPDlg\+::\+On\+Bn\+Clicked\+Button\+Mix\+Audio\+Files()}.
+
+\index{AudioMixerCPPDlg.cpp@{AudioMixerCPPDlg.cpp}!CStringToStdString@{CStringToStdString}}
+\index{CStringToStdString@{CStringToStdString}!AudioMixerCPPDlg.cpp@{AudioMixerCPPDlg.cpp}}
+\doxysubsubsection{CStringToStdString()}
+{\footnotesize\ttfamily \label{AudioMixerCPPDlg_8cpp_aa563006566b28a288ca4643dbc914db5} 
+std\+::string \textbf{ EOUtils\+::\+CString\+To\+Std\+String} (\begin{DoxyParamCaption}\item[{const CString \&}]{p\+CStr}{}\end{DoxyParamCaption})}
+
+
+
+Referenced by \textbf{ CAudio\+Mixer\+CPPDlg\+::\+On\+Bn\+Clicked\+Button\+Mix\+Audio\+Files()}.
+
+\index{AudioMixerCPPDlg.cpp@{AudioMixerCPPDlg.cpp}!mixAudioFiles@{mixAudioFiles}}
+\index{mixAudioFiles@{mixAudioFiles}!AudioMixerCPPDlg.cpp@{AudioMixerCPPDlg.cpp}}
+\doxysubsubsection{mixAudioFiles()}
+{\footnotesize\ttfamily \label{AudioMixerCPPDlg_8cpp_a36829f33264df3b55d08a964555c9c7f} 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::mix\+Audio\+Files} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{p\+Filenames}{, }\item[{const std\+::string \&}]{p\+Output\+Filename}{}\end{DoxyParamCaption})}
+
+
+
+Mixes (merges) multiple audio files into a single file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Filenames} & A collection of filenames of audio files to mix \\
+\hline
+\mbox{\texttt{out}}  & {\em p\+Output\+Filename} & The filename for the resulting mixed audio file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, or false with error messages on failure 
+\end{DoxyReturn}
+
+
+Referenced by \textbf{ EOUtils\+::mix\+Audio\+Files()}, and \textbf{ CAudio\+Mixer\+CPPDlg\+::\+On\+Bn\+Clicked\+Button\+Mix\+Audio\+Files()}.
+

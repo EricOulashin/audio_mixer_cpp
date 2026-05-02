@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classCCustomEditListBox" kind="class" language="C++" prot="public">
+    <compoundname>CCustomEditListBox</compoundname>
+    <basecompoundref refid="classCVSListBox" prot="public" virt="non-virtual">CVSListBox</basecompoundref>
+    <includes refid="CCustomEditListBox_8h" local="no">CCustomEditListBox.h</includes>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classCCustomEditListBox_1a7bb950b0e32bd2a956ceb26fcea4d696" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CCustomEditListBox::OnBrowse</definition>
+        <argsstring>() override</argsstring>
+        <name>OnBrowse</name>
+        <qualifiedname>CCustomEditListBox::OnBrowse</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/CCustomEditListBox.h" line="15" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/CCustomEditListBox.cpp" bodystart="5" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CCustomEditListBox</label>
+        <link refid="classCCustomEditListBox"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CVSListBox</label>
+        <link refid="classCVSListBox"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CCustomEditListBox</label>
+        <link refid="classCCustomEditListBox"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CVSListBox</label>
+        <link refid="classCVSListBox"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/CCustomEditListBox.h" line="12" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/CCustomEditListBox.h" bodystart="13" bodyend="16"/>
+    <listofallmembers>
+      <member refid="classCCustomEditListBox_1a7bb950b0e32bd2a956ceb26fcea4d696" prot="private" virt="non-virtual"><scope>CCustomEditListBox</scope><name>OnBrowse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

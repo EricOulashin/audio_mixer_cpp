@@ -1,0 +1,36 @@
+\doxysection{Audio\+File\+Tools.\+h}
+\label{AudioFileTools_8h_source}\index{/home/erico/projects/audio\_mixer\_cpp/code/common/AudioFileTools.h@{/home/erico/projects/audio\_mixer\_cpp/code/common/AudioFileTools.h}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_AUDIO\_FILE\_TOOLS\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_AUDIO\_FILE\_TOOLS\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}AudioFile.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}AudioFileInfo.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}AudioFileResultType.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }EOUtils}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::shared\_ptr<AudioFile>\ createAudioFileObjForExistingFile(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pFilename);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ std::shared\_ptr<AudioFile>\ createAudioFileObjForNewFile(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pFilename);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::string\ getFileExtensionUpper(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pFilename);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ AudioFileResultType\ getAudioFileInfo(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pFilename,\ AudioFileInfo\&\ pAudioFileInfo);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ AudioFileResultType\ mixAudioFiles(\textcolor{keyword}{const}\ std::vector<std::string>\&\ pFilenames,\ \textcolor{keyword}{const}\ std::string\&\ pOutputFilename);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ AudioFileResultType\ mixAudioFiles(\textcolor{keyword}{const}\ std::vector<std::string>\&\ pFilenames,\ std::shared\_ptr<AudioFile>\&\ pOutputAudioFile);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ AudioFileResultType\ mixAudioFiles(\textcolor{keyword}{const}\ std::vector<std::string>\&\ pFilenames,\ EOUtils::AudioFile\&\ pOutputAudioFile);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ AudioFileResultType\ getHighestSampleValue\_64bit(\textcolor{keyword}{const}\ std::vector<std::string>\&\ pFilenames,\ int64\_t\&\ pHighestAudioSample);}
+\DoxyCodeLine{00085\ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -149,6 +149,10 @@ namespace EOUtils
 			 * @return An AudioFileResultType with errors on failure
 			 */
 			virtual AudioFileResultType getComment(std::string& pComment) const = 0;
+
+			/** Default: codecs without lossy target-bitrate control (covers FLAC lossless baseline; subclasses may override). */
+			bool BitrateIsAdjustable() const override;
+
 	};
 }
 

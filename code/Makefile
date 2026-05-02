@@ -1,6 +1,6 @@
 # This is a makefile that will build a command-line application and library
 # files for Linux, macOS, BSD, and similar operating systems.
-# Requires libflac-dev (or equivalent) to be installed.
+# Requires libflac-dev, libsndfile1-dev (or equivalent) for MP3/Ogg Vorbis/AIFF support.
 
 # Detect the operating system
 OS := $(shell uname)
@@ -14,13 +14,24 @@ CXX := g++
 # Dynamic library is .dylib on macOS, .so on Linux/BSD/etc.
 ifeq ($(OS),Darwin)
 	BREW_PREFIX := $(shell brew --prefix)
-	CXXFLAGS := -std=c++17 -O2 -Wall -Wextra -fPIC -I$(BREW_PREFIX)/include
-	LDFLAGS := -L$(BREW_PREFIX)/lib -lFLAC
+	PKG_CF := PKG_CONFIG_PATH=$(BREW_PREFIX)/lib/pkg-config pkg-config
+	SNDFILE_CFLAGS := $(shell $(PKG_CF) --silence-errors --cflags sndfile 2>/dev/null)
+	SNDFILE_LIBS := $(shell $(PKG_CF) --silence-errors --libs sndfile 2>/dev/null)
+ifeq ($(strip $(SNDFILE_LIBS)),)
+	SNDFILE_LIBS := -L$(BREW_PREFIX)/lib -lsndfile
+endif
+	CXXFLAGS := -std=c++17 -O2 -Wall -Wextra -fPIC -I$(BREW_PREFIX)/include $(SNDFILE_CFLAGS)
+	LDFLAGS := -L$(BREW_PREFIX)/lib -lFLAC $(SNDFILE_LIBS)
 	DYNAMIC_LIB := libaudiomixer.dylib
 	DYNAMIC_LDFLAGS := -dynamiclib -install_name $(DYNAMIC_LIB)
 else
-	CXXFLAGS := -std=c++17 -O2 -Wall -Wextra -fPIC -fno-aggressive-loop-optimizations
-	LDFLAGS := -lFLAC
+	SNDFILE_CFLAGS := $(shell pkg-config --silence-errors --cflags sndfile 2>/dev/null)
+	SNDFILE_LIBS := $(shell pkg-config --silence-errors --libs sndfile 2>/dev/null)
+ifeq ($(strip $(SNDFILE_LIBS)),)
+	SNDFILE_LIBS := -lsndfile
+endif
+	CXXFLAGS := -std=c++17 -O2 -Wall -Wextra -fPIC -fno-aggressive-loop-optimizations $(SNDFILE_CFLAGS)
+	LDFLAGS := -lFLAC $(SNDFILE_LIBS)
 	DYNAMIC_LIB := libaudiomixer.so
 	DYNAMIC_LDFLAGS := -shared -Wl,-soname,$(DYNAMIC_LIB)
 endif
@@ -34,10 +45,18 @@ SOURCES := \
  	$(SRC_DIR)/AudioFileInfo.cpp \
  	$(SRC_DIR)/AudioFileResultType.cpp \
  	$(SRC_DIR)/AudioFileTools.cpp \
+ 	$(SRC_DIR)/AiffFile.cpp \
+ 	$(SRC_DIR)/AiffFileInfo.cpp \
  	$(SRC_DIR)/EOUtils.cpp \
  	$(SRC_DIR)/FLACFile.cpp \
  	$(SRC_DIR)/FLACFileInfo.cpp \
  	$(SRC_DIR)/MetadataAudioFile.cpp \
+ 	$(SRC_DIR)/MP3File.cpp \
+ 	$(SRC_DIR)/MP3FileInfo.cpp \
+ 	$(SRC_DIR)/OggFile.cpp \
+ 	$(SRC_DIR)/OggFileInfo.cpp \
+ 	$(SRC_DIR)/SndFileBackedMetadataAudioFile.cpp \
+ 	$(SRC_DIR)/SndFileHelpers.cpp \
  	$(SRC_DIR)/utilFunctions.cpp \
  	$(SRC_DIR)/WAVFile.cpp \
  	$(SRC_DIR)/WAVFileInfo.cpp

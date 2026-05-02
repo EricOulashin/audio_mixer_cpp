@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="GUITools_8cpp" kind="file" language="C++">
+    <compoundname>GUITools.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <includes refid="GUITools_8h" local="yes">GUITools.h</includes>
+    <includes local="yes">afxdlgs.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.cpp</label>
+        <link refid="GUITools_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>GUITools.h</label>
+        <link refid="GUITools_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+      </node>
+      <node id="5">
+        <label>afxdlgs.h</label>
+      </node>
+      <node id="4">
+        <label>atlstr.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="GUITools_8cpp_1a67560c4b88e8fe6ee37b2fadd4e5acda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>INT_PTR</type>
+        <definition>INT_PTR letUserBrowseForOneFile</definition>
+        <argsstring>(const CString &amp;pFileFilter, CString &amp;pSelectedFile, CWnd *pParentWnd)</argsstring>
+        <name>letUserBrowseForOneFile</name>
+        <param>
+          <type>const CString &amp;</type>
+          <declname>pFileFilter</declname>
+        </param>
+        <param>
+          <type>CString &amp;</type>
+          <declname>pSelectedFile</declname>
+        </param>
+        <param>
+          <type>CWnd *</type>
+          <declname>pParentWnd</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Lets the user select a single file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pFileFilter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename filter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pSelectedFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This will be populated with the selected filename, if the user selected one </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pParentWnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the parent window. Defaults to nullptr. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The status code from the file dialog </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.cpp" line="5" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.cpp" bodystart="5" bodyend="19"/>
+        <referencedby refid="classCAudioMixerCPPDlg_1a6372aa0e41bfc9ce3eefaf5754c36830" compoundref="AudioMixerCPPDlg_8cpp" startline="243" endline="248">CAudioMixerCPPDlg::OnClickedButtonSelectOutputFile</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="GUITools_8h" kindref="compound">GUITools.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;afxdlgs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="GUITools_8cpp_1a67560c4b88e8fe6ee37b2fadd4e5acda" refkind="member"><highlight class="normal">INT_PTR<sp/><ref refid="GUITools_8cpp_1a67560c4b88e8fe6ee37b2fadd4e5acda" kindref="member">letUserBrowseForOneFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CString&amp;<sp/>pFileFilter,<sp/>CString&amp;<sp/>pSelectedFile,<sp/>CWnd*<sp/>pParentWnd)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pSelectedFile<sp/>=<sp/>_T(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFileDialog<sp/>fd(TRUE,<sp/>_T(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),<sp/>_T(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),<sp/>OFN_HIDEREADONLY,<sp/>pFileFilter,<sp/>pParentWnd);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fd.m_ofn.Flags<sp/>|=<sp/>OFN_ENABLETEMPLATE;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fd.m_ofn.hInstance<sp/>=<sp/>AfxGetInstanceHandle();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fd.m_ofn.lpTemplateName<sp/>=<sp/>_T(</highlight><highlight class="stringliteral">&quot;DIALOG_PREVIEW&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INT_PTR<sp/>statusCode<sp/>=<sp/>fd.DoModal();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(statusCode<sp/>==<sp/>IDOK)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pSelectedFile<sp/>=<sp/>fd.GetPathName();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>statusCode;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/GUITools.cpp"/>
+  </compounddef>
+</doxygen>

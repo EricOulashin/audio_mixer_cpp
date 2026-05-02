@@ -1,0 +1,1400 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 14.1.2 (0)
+%%Title: /home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 1322 432
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 1286 396 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% Node1
+gsave
+0 0 0.6 nodecolor
+newpath 427.906 388 moveto
+311.406 388 lineto
+311.406 344 lineto
+427.906 344 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 427.906 388 moveto
+311.406 388 lineto
+311.406 344 lineto
+427.906 344 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+319.406 374.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+319.406 362.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+323.531 350.5 moveto 92.25 (/common/AudioFile.h) alignedtext
+grestore
+% Node2
+gsave
+[ /Rect [ 204.281 264 323.031 308 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($AudioFile_8cpp.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 323.031 308 moveto
+204.281 308 lineto
+204.281 264 lineto
+323.031 264 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 323.031 308 moveto
+204.281 308 lineto
+204.281 264 lineto
+323.031 264 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+212.281 294.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+212.281 282.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+212.281 270.5 moveto 102.75 (/common/AudioFile.cpp) alignedtext
+grestore
+% Node1->Node2
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 331.605 337 moveto
+318.75 327.541 304.618 317.141 292.586 308.288 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 329.343 339.681 moveto
+339.472 342.789 lineto
+333.492 334.043 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 329.343 339.681 moveto
+339.472 342.789 lineto
+333.492 334.043 lineto
+closepath stroke
+grestore
+% Node3
+gsave
+[ /Rect [ 101.906 178 233.406 222 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($AudioFileTools_8h.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 233.406 222 moveto
+101.906 222 lineto
+101.906 178 lineto
+233.406 178 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 233.406 222 moveto
+101.906 222 lineto
+101.906 178 lineto
+233.406 178 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+109.906 208.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+109.906 196.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+109.906 184.5 moveto 115.5 (/common/AudioFileTools.h) alignedtext
+grestore
+% Node1->Node3
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 364.6 332.58 moveto
+359.635 310.672 350.009 282.48 331.656 264 curveto
+305.435 237.597 266.96 222.051 233.865 213.011 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 361.134 333.1 moveto
+366.549 342.206 lineto
+367.995 331.711 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 361.134 333.1 moveto
+366.549 342.206 lineto
+367.995 331.711 lineto
+closepath stroke
+grestore
+% Node7
+gsave
+[ /Rect [ 630.281 264 779.031 308 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($MetadataAudioFile_8h.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 779.031 308 moveto
+630.281 308 lineto
+630.281 264 lineto
+779.031 264 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 779.031 308 moveto
+630.281 308 lineto
+630.281 264 lineto
+779.031 264 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+638.281 294.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+638.281 282.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+638.281 270.5 moveto 132.75 (/common/MetadataAudioFile.h) alignedtext
+grestore
+% Node1->Node7
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 439.565 348.723 moveto
+495.213 335.766 572.928 317.671 629.826 304.423 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 438.812 345.304 moveto
+429.866 350.981 lineto
+440.399 352.122 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 438.812 345.304 moveto
+429.866 350.981 lineto
+440.399 352.122 lineto
+closepath stroke
+grestore
+% Node19
+gsave
+[ /Rect [ 330.406 178 446.906 222 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($WAVFile_8h.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 446.906 222 moveto
+330.406 222 lineto
+330.406 178 lineto
+446.906 178 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 446.906 222 moveto
+330.406 222 lineto
+330.406 178 lineto
+446.906 178 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+338.406 208.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+338.406 196.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+344.406 184.5 moveto 88.5 (/common/WAVFile.h) alignedtext
+grestore
+% Node1->Node19
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 373.438 332.354 moveto
+377.221 299.708 382.928 250.441 386.172 222.445 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 369.989 331.72 moveto
+372.314 342.056 lineto
+376.942 332.526 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 369.989 331.72 moveto
+372.314 342.056 lineto
+376.942 332.526 lineto
+closepath stroke
+grestore
+% Node4
+gsave
+[ /Rect [ 21.031 80 192.281 136 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($AudioMixerCPPDlg_8cpp.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 192.281 136 moveto
+21.031 136 lineto
+21.031 80 lineto
+192.281 80 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 192.281 136 moveto
+21.031 136 lineto
+21.031 80 lineto
+192.281 80 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+29.031 122.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+29.031 110.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+29.031 98.5 moveto 155.25 (/AudioMixerCPP_Win_VisualStudio) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+53.406 86.5 moveto 106.5 (/AudioMixerCPPDlg.cpp) alignedtext
+grestore
+% Node3->Node4
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 146.765 168.177 moveto
+139.755 157.834 131.99 146.378 125.174 136.322 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 143.843 170.104 moveto
+152.351 176.418 lineto
+149.638 166.177 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 143.843 170.104 moveto
+152.351 176.418 lineto
+149.638 166.177 lineto
+closepath stroke
+grestore
+% Node5
+gsave
+[ /Rect [ 510.656 0 652.656 44 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($AudioFileTools_8cpp.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 652.656 44 moveto
+510.656 44 lineto
+510.656 0 lineto
+652.656 0 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 652.656 44 moveto
+510.656 44 lineto
+510.656 0 lineto
+652.656 0 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+518.656 30.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+518.656 18.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+518.656 6.5 moveto 126 (/common/AudioFileTools.cpp) alignedtext
+grestore
+% Node3->Node5
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 90.838 186.887 moveto
+60.95 178.01 29.624 162.633 11.656 136 curveto
+-2.263 115.367 -5.044 98.454 11.656 80 curveto
+44.543 43.661 364.753 29.488 510.298 24.892 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 89.729 190.212 moveto
+100.298 189.473 lineto
+91.575 183.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 89.729 190.212 moveto
+100.298 189.473 lineto
+91.575 183.46 lineto
+closepath stroke
+grestore
+% Node6
+gsave
+[ /Rect [ 344.531 86 476.781 130 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($cmdLineApp_8cpp.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 476.781 130 moveto
+344.531 130 lineto
+344.531 86 lineto
+476.781 86 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 476.781 130 moveto
+344.531 130 lineto
+344.531 86 lineto
+476.781 86 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+352.531 116.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+352.531 104.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+352.531 92.5 moveto 116.25 (/common/cmdLineApp.cpp) alignedtext
+grestore
+% Node3->Node6
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 236.189 173.618 moveto
+272.96 159.999 317.779 143.399 352.783 130.434 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 235.133 170.276 moveto
+226.971 177.031 lineto
+237.565 176.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 235.133 170.276 moveto
+226.971 177.031 lineto
+237.565 176.84 lineto
+closepath stroke
+grestore
+% Node8
+gsave
+[ /Rect [ 505.406 178 621.906 222 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($FLACFile_8h.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 621.906 222 moveto
+505.406 222 lineto
+505.406 178 lineto
+621.906 178 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 621.906 222 moveto
+505.406 222 lineto
+505.406 178 lineto
+621.906 178 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+513.406 208.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+513.406 196.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+517.156 184.5 moveto 93 (/common/FLACFile.h) alignedtext
+grestore
+% Node7->Node8
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 658.934 257.761 moveto
+639.676 246.288 617.591 233.131 599.536 222.375 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 657.029 260.7 moveto
+667.411 262.811 lineto
+660.611 254.686 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 657.029 260.7 moveto
+667.411 262.811 lineto
+660.611 254.686 lineto
+closepath stroke
+grestore
+% Node10
+gsave
+[ /Rect [ 947.031 178 1106.281 222 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($MetadataAudioFile_8cpp.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 1106.281 222 moveto
+947.031 222 lineto
+947.031 178 lineto
+1106.281 178 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 1106.281 222 moveto
+947.031 222 lineto
+947.031 178 lineto
+1106.281 178 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+955.031 208.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+955.031 196.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+955.031 184.5 moveto 143.25 (/common/MetadataAudioFile.cpp) alignedtext
+grestore
+% Node7->Node10
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 790.414 265.204 moveto
+834.556 254.716 889.149 241.28 937.656 228 curveto
+944.041 226.252 950.664 224.371 957.285 222.445 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 789.824 261.747 moveto
+780.899 267.457 lineto
+791.437 268.559 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 789.824 261.747 moveto
+780.899 267.457 lineto
+791.437 268.559 lineto
+closepath stroke
+grestore
+% Node11
+gsave
+[ /Rect [ 762.656 172 928.656 228 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($SndFileBackedMetadataAudioFile_8h.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 928.656 228 moveto
+762.656 228 lineto
+762.656 172 lineto
+928.656 172 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 928.656 228 moveto
+762.656 228 lineto
+762.656 172 lineto
+928.656 172 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+770.656 214.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+770.656 202.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+770.656 190.5 moveto 150 (/common/SndFileBackedMetadata) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+821.281 178.5 moveto 48.75 (AudioFile.h) alignedtext
+grestore
+% Node7->Node11
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 750.175 257.883 moveto
+766.005 248.452 783.766 237.871 799.637 228.416 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 748.701 254.686 moveto
+741.902 262.811 lineto
+752.284 260.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 748.701 254.686 moveto
+741.902 262.811 lineto
+752.284 260.7 lineto
+closepath stroke
+grestore
+% Node8->Node5
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 559.889 166.434 moveto
+557.883 142.378 556.729 108.926 561.656 80 curveto
+563.717 67.904 568.071 54.959 572.193 44.467 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 556.391 166.62 moveto
+560.811 176.248 lineto
+563.36 165.965 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 556.391 166.62 moveto
+560.811 176.248 lineto
+563.36 165.965 lineto
+closepath stroke
+grestore
+% Node8->Node6
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 517.691 171.962 moveto
+495.128 158.689 468.325 142.923 447.185 130.488 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 515.699 174.85 moveto
+526.093 176.904 lineto
+519.248 168.817 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 515.699 174.85 moveto
+526.093 176.904 lineto
+519.248 168.817 lineto
+closepath stroke
+grestore
+% Node9
+gsave
+[ /Rect [ 570.906 86 690.406 130 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($FLACFile_8cpp.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 690.406 130 moveto
+570.906 130 lineto
+570.906 86 lineto
+690.406 86 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 690.406 130 moveto
+570.906 130 lineto
+570.906 86 lineto
+690.406 86 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+578.906 116.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+578.906 104.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+578.906 92.5 moveto 103.5 (/common/FLACFile.cpp) alignedtext
+grestore
+% Node8->Node9
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 586.348 168.518 moveto
+595.647 156.027 606.191 141.863 614.66 130.488 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 583.602 166.346 moveto
+580.438 176.457 lineto
+589.217 170.526 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 583.602 166.346 moveto
+580.438 176.457 lineto
+589.217 170.526 lineto
+closepath stroke
+grestore
+% Node12
+gsave
+[ /Rect [ 1161.406 86 1277.906 130 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($AiffFile_8h.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 1277.906 130 moveto
+1161.406 130 lineto
+1161.406 86 lineto
+1277.906 86 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 1277.906 130 moveto
+1161.406 130 lineto
+1161.406 86 lineto
+1277.906 86 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+1169.406 116.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+1169.406 104.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+1178.406 92.5 moveto 82.5 (/common/AiffFile.h) alignedtext
+grestore
+% Node11->Node12
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 939.93 171.622 moveto
+1033.753 151.188 1062.21 160.978 1151.656 136 curveto
+1157.406 134.394 1163.337 132.468 1169.188 130.393 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 939.252 168.187 moveto
+930.261 173.792 lineto
+940.785 175.017 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 939.252 168.187 moveto
+930.261 173.792 lineto
+940.785 175.017 lineto
+closepath stroke
+grestore
+% Node14
+gsave
+[ /Rect [ 708.406 86 824.906 130 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($MP3File_8h.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 824.906 130 moveto
+708.406 130 lineto
+708.406 86 lineto
+824.906 86 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 824.906 130 moveto
+708.406 130 lineto
+708.406 86 lineto
+824.906 86 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+716.406 116.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+716.406 104.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+722.781 92.5 moveto 87.75 (/common/MP3File.h) alignedtext
+grestore
+% Node11->Node14
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 813.94 162.868 moveto
+804.251 151.829 793.91 140.049 785.378 130.329 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 811.299 165.164 moveto
+820.526 170.371 lineto
+816.559 160.546 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 811.299 165.164 moveto
+820.526 170.371 lineto
+816.559 160.546 lineto
+closepath stroke
+grestore
+% Node16
+gsave
+[ /Rect [ 1026.406 86 1142.906 130 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($OggFile_8h.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 1142.906 130 moveto
+1026.406 130 lineto
+1026.406 86 lineto
+1142.906 86 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 1142.906 130 moveto
+1026.406 130 lineto
+1026.406 86 lineto
+1142.906 86 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+1034.406 116.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+1034.406 104.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+1041.906 92.5 moveto 85.5 (/common/OggFile.h) alignedtext
+grestore
+% Node11->Node16
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 932.746 167.714 moveto
+960.002 157.758 990.142 146.58 1017.656 136 curveto
+1022.338 134.2 1027.193 132.303 1032.052 130.383 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 931.675 164.378 moveto
+923.479 171.091 lineto
+934.072 170.955 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 931.675 164.378 moveto
+923.479 171.091 lineto
+934.072 170.955 lineto
+closepath stroke
+grestore
+% Node18
+gsave
+[ /Rect [ 842.656 80 1008.656 136 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($SndFileBackedMetadataAudioFile_8cpp.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 1008.656 136 moveto
+842.656 136 lineto
+842.656 80 lineto
+1008.656 80 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 1008.656 136 moveto
+842.656 136 lineto
+842.656 80 lineto
+1008.656 80 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+850.656 122.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+850.656 110.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+850.656 98.5 moveto 150 (/common/SndFileBackedMetadata) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+896.031 86.5 moveto 59.25 (AudioFile.cpp) alignedtext
+grestore
+% Node11->Node18
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 877.528 163.144 moveto
+885.47 154.209 893.859 144.772 901.369 136.324 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 875.127 160.577 moveto
+871.099 170.377 lineto
+880.359 165.228 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 875.127 160.577 moveto
+871.099 170.377 lineto
+880.359 165.228 lineto
+closepath stroke
+grestore
+% Node12->Node5
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 1160.016 82.186 moveto
+1157.212 81.378 1154.417 80.643 1151.656 80 curveto
+955.38 34.307 899.538 69.685 699.656 44 curveto
+684.487 42.051 668.301 39.49 652.933 36.829 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 1158.782 85.466 moveto
+1169.372 85.156 lineto
+1160.9 78.794 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 1158.782 85.466 moveto
+1169.372 85.156 lineto
+1160.9 78.794 lineto
+closepath stroke
+grestore
+% Node13
+gsave
+[ /Rect [ 1161.406 0 1277.906 44 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($AiffFile_8cpp.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 1277.906 44 moveto
+1161.406 44 lineto
+1161.406 0 lineto
+1277.906 0 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 1277.906 44 moveto
+1161.406 44 lineto
+1161.406 0 lineto
+1277.906 0 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+1169.406 30.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+1169.406 18.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+1173.156 6.5 moveto 93 (/common/AiffFile.cpp) alignedtext
+grestore
+% Node12->Node13
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 1219.656 74.492 moveto
+1219.656 64.43 1219.656 53.601 1219.656 44.482 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 1216.156 74.29 moveto
+1219.656 84.29 lineto
+1223.156 74.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 1216.156 74.29 moveto
+1219.656 84.29 lineto
+1223.156 74.29 lineto
+closepath stroke
+grestore
+% Node14->Node5
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 709.089 80.861 moveto
+683.264 69.136 653.182 55.477 628.732 44.375 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 707.564 84.013 moveto
+718.116 84.96 lineto
+710.458 77.639 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 707.564 84.013 moveto
+718.116 84.96 lineto
+710.458 77.639 lineto
+closepath stroke
+grestore
+% Node15
+gsave
+[ /Rect [ 708.406 0 824.906 44 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($MP3File_8cpp.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 824.906 44 moveto
+708.406 44 lineto
+708.406 0 lineto
+824.906 0 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 824.906 44 moveto
+708.406 44 lineto
+708.406 0 lineto
+824.906 0 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+716.406 30.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+716.406 18.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+717.531 6.5 moveto 98.25 (/common/MP3File.cpp) alignedtext
+grestore
+% Node14->Node15
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 766.656 74.492 moveto
+766.656 64.43 766.656 53.601 766.656 44.482 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 763.156 74.29 moveto
+766.656 84.29 lineto
+770.156 74.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 763.156 74.29 moveto
+766.656 84.29 lineto
+770.156 74.29 lineto
+closepath stroke
+grestore
+% Node16->Node5
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 1024.984 82.027 moveto
+1022.525 81.293 1020.076 80.613 1017.656 80 curveto
+879.768 45.099 840.412 64.471 699.656 44 curveto
+684.522 41.799 668.351 39.131 652.986 36.445 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 1023.734 85.301 moveto
+1034.327 85.077 lineto
+1025.906 78.647 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 1023.734 85.301 moveto
+1034.327 85.077 lineto
+1025.906 78.647 lineto
+closepath stroke
+grestore
+% Node17
+gsave
+[ /Rect [ 1026.406 0 1142.906 44 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($OggFile_8cpp.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 1142.906 44 moveto
+1026.406 44 lineto
+1026.406 0 lineto
+1142.906 0 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 1142.906 44 moveto
+1026.406 44 lineto
+1026.406 0 lineto
+1142.906 0 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+1034.406 30.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+1034.406 18.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+1036.656 6.5 moveto 96 (/common/OggFile.cpp) alignedtext
+grestore
+% Node16->Node17
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 1084.656 74.492 moveto
+1084.656 64.43 1084.656 53.601 1084.656 44.482 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 1081.156 74.29 moveto
+1084.656 84.29 lineto
+1088.156 74.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 1081.156 74.29 moveto
+1084.656 84.29 lineto
+1088.156 74.29 lineto
+closepath stroke
+grestore
+% Node19->Node4
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 319.688 176.989 moveto
+281.363 164.757 233.331 149.428 192.58 136.423 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 318.193 180.186 moveto
+328.784 179.892 lineto
+320.321 173.517 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 318.193 180.186 moveto
+328.784 179.892 lineto
+320.321 173.517 lineto
+closepath stroke
+grestore
+% Node19->Node5
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 436.276 171.939 moveto
+452.666 161.643 470.656 149.191 485.656 136 curveto
+517.939 107.612 548.956 68.174 566.621 44.184 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 434.818 168.726 moveto
+428.135 176.948 lineto
+438.486 174.689 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 434.818 168.726 moveto
+428.135 176.948 lineto
+438.486 174.689 lineto
+closepath stroke
+grestore
+% Node19->Node6
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 396.559 166.67 moveto
+399.499 154.645 402.759 141.306 405.404 130.488 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 393.204 165.656 moveto
+394.229 176.201 lineto
+400.004 167.318 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 393.204 165.656 moveto
+394.229 176.201 lineto
+400.004 167.318 lineto
+closepath stroke
+grestore
+% Node20
+gsave
+[ /Rect [ 210.406 86 326.906 130 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($WAVFile_8cpp.html) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 326.906 130 moveto
+210.406 130 lineto
+210.406 86 lineto
+326.906 86 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.4 nodecolor
+newpath 326.906 130 moveto
+210.406 130 lineto
+210.406 86 lineto
+326.906 86 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+218.406 116.5 moveto 88.5 (/home/erico/projects) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+218.406 104.5 moveto 100.5 (/audio_mixer_cpp/code) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+219.156 92.5 moveto 99 (/common/WAVFile.cpp) alignedtext
+grestore
+% Node19->Node20
+gsave
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 351.41 171.065 moveto
+333.968 157.984 313.515 142.644 297.306 130.488 curveto
+stroke
+0.57255 0.61176 1 edgecolor
+newpath 348.907 173.563 moveto
+359.007 176.763 lineto
+353.107 167.963 lineto
+closepath fill
+1 setlinewidth
+solid
+0.57255 0.61176 1 edgecolor
+newpath 348.907 173.563 moveto
+359.007 176.763 lineto
+353.107 167.963 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 1322 432
+end
+restore
+%%EOF

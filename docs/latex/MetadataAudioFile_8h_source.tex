@@ -1,0 +1,55 @@
+\doxysection{Metadata\+Audio\+File.\+h}
+\label{MetadataAudioFile_8h_source}\index{/home/erico/projects/audio\_mixer\_cpp/code/common/MetadataAudioFile.h@{/home/erico/projects/audio\_mixer\_cpp/code/common/MetadataAudioFile.h}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_EO\_UTILS\_METADATA\_AUDIO\_FILE\_H\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_EO\_UTILS\_METADATA\_AUDIO\_FILE\_H\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}AudioFile.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }EOUtils}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }MetadataAudioFile\ :\ \textcolor{keyword}{public}\ AudioFile}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ MetadataAudioFile(\textcolor{keyword}{const}\ std::string\&\ pFilename);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ MetadataAudioFile(\textcolor{keyword}{const}\ std::string\&\ pFilename,\ AudioFileModes\ pFileMode);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MetadataAudioFile(\textcolor{keyword}{const}\ MetadataAudioFile\&\ pOther);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \string~MetadataAudioFile();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ setTitle(\textcolor{keyword}{const}\ std::string\&\ pTitle)\ =\ 0;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ setArtist(\textcolor{keyword}{const}\ std::string\&\ pArtist)\ =\ 0;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ setAlbum(\textcolor{keyword}{const}\ std::string\&\ pAlbum)\ =\ 0;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ setGenre(\textcolor{keyword}{const}\ std::string\&\ pGenre)\ =\ 0;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ setTrackNumber(uint32\_t\ pTrackNumber,\ uint32\_t\ pTotalTracks\ =\ 0)\ =\ 0;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ setYear(\textcolor{keyword}{const}\ std::string\&\ pYear)\ =\ 0;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ setComment(\textcolor{keyword}{const}\ std::string\&\ pComment)\ =\ 0;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ getTitle(std::string\&\ pTitle)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ getArtist(std::string\&\ pArtist)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ getAlbum(std::string\&\ pAlbum)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ getGenre(std::string\&\ pGenre)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ getTrackNumber(uint32\_t\&\ pTrackNumber,\ uint32\_t\&\ pTotalTracks)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ getYear(std::string\&\ pYear)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ AudioFileResultType\ getComment(std::string\&\ pComment)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00153\ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

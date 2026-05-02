@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classEOUtils_1_1OggFileInfo" kind="class" language="C++" prot="public">
+    <compoundname>EOUtils::OggFileInfo</compoundname>
+    <basecompoundref refid="classEOUtils_1_1AudioFileInfo" prot="public" virt="non-virtual">EOUtils::AudioFileInfo</basecompoundref>
+    <includes refid="OggFileInfo_8h" local="no">OggFileInfo.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEOUtils_1_1OggFileInfo_1a942bc70abbc37bb4725c9b31f5f810ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::OggFileInfo::OggFileInfo</definition>
+        <argsstring>(int16_t pNumChannels=2, int32_t pSampleRateHz=44100, int32_t pBytesPerSecond=0, int16_t pByteRate=0, int16_t pBitsPerSample=16)</argsstring>
+        <name>OggFileInfo</name>
+        <qualifiedname>EOUtils::OggFileInfo::OggFileInfo</qualifiedname>
+        <param>
+          <type>int16_t</type>
+          <declname>pNumChannels</declname>
+          <defval>2</defval>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>pSampleRateHz</declname>
+          <defval>44100</defval>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>pBytesPerSecond</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>pByteRate</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>pBitsPerSample</declname>
+          <defval>16</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.h" line="12" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.cpp" bodystart="17" bodyend="21"/>
+        <references refid="classEOUtils_1_1AudioFileInfo_1a658d1cdbdc856d3171e9eda93bcc4b14" compoundref="AudioFileInfo_8cpp" startline="10" endline="18">EOUtils::AudioFileInfo::AudioFileInfo</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1OggFileInfo_1a3323fa6c1ec18d37131ca50ef4051e5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::OggFileInfo::OggFileInfo</definition>
+        <argsstring>(const AudioFileInfo &amp;pAudioFileInfo)</argsstring>
+        <name>OggFileInfo</name>
+        <qualifiedname>EOUtils::OggFileInfo::OggFileInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref> &amp;</type>
+          <declname>pAudioFileInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.h" line="15" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.cpp" bodystart="23" bodyend="26"/>
+        <references refid="classEOUtils_1_1AudioFileInfo_1a658d1cdbdc856d3171e9eda93bcc4b14" compoundref="AudioFileInfo_8cpp" startline="10" endline="18">EOUtils::AudioFileInfo::AudioFileInfo</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1OggFileInfo_1ac8a0d3729c18a5a0e6f04a18695fe400" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::OggFileInfo::read</definition>
+        <argsstring>(std::fstream &amp;pInFStream) override</argsstring>
+        <name>read</name>
+        <qualifiedname>EOUtils::OggFileInfo::read</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFileInfo_1ae46975f1e0d83c16008c256d283d5c23">read</reimplements>
+        <param>
+          <type>std::fstream &amp;</type>
+          <declname>pInFStream</declname>
+        </param>
+        <briefdescription>
+<para>Reads the info from a file stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pInFStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file stream object to read the information from. This must be already opened in read and binary mode.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> object containing error messages on failure, or no errors on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.h" line="17" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.cpp" bodystart="28" bodyend="33"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1OggFileInfo_1ac47c8a62eeeb4aabbd409598e9eb63dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::OggFileInfo::read</definition>
+        <argsstring>(const char *pFilename) override</argsstring>
+        <name>read</name>
+        <qualifiedname>EOUtils::OggFileInfo::read</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFileInfo_1ab94a417a9ec7ebf2ac1e9b1578f59825">read</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>pFilename</declname>
+        </param>
+        <briefdescription>
+<para>Reads the info from a WAV file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of a WAV file to read from</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> object containing error messages on failure, or no errors on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.h" line="19" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.cpp" bodystart="35" bodyend="65"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1aa585bc7769dfbedf0eecc01ab79e42ee" compoundref="SndFileHelpers_8cpp" startline="96" endline="100">EOUtils::sndfile_detail::formatHasMajorMinor</references>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1a1f04e2e516d189d0d154be73024c59c0" compoundref="SndFileHelpers_8cpp" startline="102" endline="108">EOUtils::sndfile_detail::safeFileSize</references>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1a107e7ae26bbe28f94fdfdfdde385dd15" compoundref="SndFileHelpers_8cpp" startline="30" endline="48">EOUtils::sndfile_detail::sfInfoToAudioFileInfo</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1OggFileInfo_1a42020d5065eeb1bf0418c9819852e54c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::OggFileInfo::write</definition>
+        <argsstring>(std::fstream &amp;pOutFStream) override</argsstring>
+        <name>write</name>
+        <qualifiedname>EOUtils::OggFileInfo::write</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFileInfo_1a35bee862e09314491cc60205fa953b02">write</reimplements>
+        <param>
+          <type>std::fstream &amp;</type>
+          <declname>pOutFStream</declname>
+        </param>
+        <briefdescription>
+<para>Writes the info to a file stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pOutFStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A file stream object to write the information to. This must be already opened in write and binary mode.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classEOUtils_1_1AudioFileResultType" kindref="compound">AudioFileResultType</ref> object containing error messages on failure, or no errors on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.h" line="21" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.cpp" bodystart="67" bodyend="72"/>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" compoundref="AudioFileResultType_8cpp" startline="19" endline="22">EOUtils::AudioFileResultType::addError</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classEOUtils_1_1OggFileInfo_1ab675de19ccd8d9b9bf1dfaadc7a3f39a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EOUtils::OggFileInfo::matchesExtension</definition>
+        <argsstring>(const char *pFilename)</argsstring>
+        <name>matchesExtension</name>
+        <qualifiedname>EOUtils::OggFileInfo::matchesExtension</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>pFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.h" line="23" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.cpp" bodystart="74" bodyend="88"/>
+        <referencedby refid="namespaceEOUtils_1a406754027f5307d846d2ecbf2dd73a18" compoundref="AudioFileTools_8cpp" startline="36" endline="55">EOUtils::createAudioFileObjForExistingFile</referencedby>
+        <referencedby refid="namespaceEOUtils_1a0b15d6d731191ac775ef0e5c01508f06" compoundref="AudioFileTools_8cpp" startline="105" endline="159">EOUtils::getAudioFileInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1OggFileInfo_1a325a0e6f35c4f8ec60829f6eb77fdbf4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EOUtils::OggFileInfo::sniffFileHeader</definition>
+        <argsstring>(const char *pFilename)</argsstring>
+        <name>sniffFileHeader</name>
+        <qualifiedname>EOUtils::OggFileInfo::sniffFileHeader</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>pFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.h" line="25" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.cpp" bodystart="90" bodyend="98"/>
+        <references refid="namespaceEOUtils_1_1sndfile__detail_1af47e02b4af37e0d46b90e3c48f252e66" compoundref="SndFileHelpers_8cpp" startline="110" endline="121">EOUtils::sndfile_detail::peekFilePrefix</references>
+        <referencedby refid="namespaceEOUtils_1a406754027f5307d846d2ecbf2dd73a18" compoundref="AudioFileTools_8cpp" startline="36" endline="55">EOUtils::createAudioFileObjForExistingFile</referencedby>
+        <referencedby refid="namespaceEOUtils_1a0b15d6d731191ac775ef0e5c01508f06" compoundref="AudioFileTools_8cpp" startline="105" endline="159">EOUtils::getAudioFileInfo</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>EOUtils::AudioFileInfo</label>
+        <link refid="classEOUtils_1_1AudioFileInfo"/>
+      </node>
+      <node id="1">
+        <label>EOUtils::OggFileInfo</label>
+        <link refid="classEOUtils_1_1OggFileInfo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>EOUtils::AudioFileInfo</label>
+        <link refid="classEOUtils_1_1AudioFileInfo"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#mBytesPerSecond</edgelabel>
+          <edgelabel>#mFileSize</edgelabel>
+          <edgelabel>#mSampleRateHz</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#mBitsPerSample</edgelabel>
+          <edgelabel>#mByteRate</edgelabel>
+          <edgelabel>#mNumChannels</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EOUtils::OggFileInfo</label>
+        <link refid="classEOUtils_1_1OggFileInfo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>int16_t</label>
+      </node>
+      <node id="3">
+        <label>int32_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.h" line="9" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.h" bodystart="10" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a658d1cdbdc856d3171e9eda93bcc4b14" prot="public" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>AudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a251e008ebbbe7b96fa393162ff6dffa8" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>BitsPerSample</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1abe9beee9f81daab6f8b88a10b97d38f8" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>BitsPerSample</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a6eae27e84b5551365f18c0e534dffb9a" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>ByteRate</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a561210c51ba98733104752dbce0b1dff" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>ByteRate</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a62cab32f6620633f2ae70e89bd8697bd" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>BytesPerSample</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1aec253c7d40de4a512c2b2cfd13866ad4" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>BytesPerSecond</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1af72fc31e0f2e56cf2fcc83121518b4c9" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>BytesPerSecond</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1abc993cfabd7bf5db763072caafed438f" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>copyAudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1ae4ad85c7dec9cea2e1c972fa5363317b" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>FileSize</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a909d37035c78c019104b5eed55a4d4c5" prot="public" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>FileSize</name></member>
+      <member refid="classEOUtils_1_1OggFileInfo_1ab675de19ccd8d9b9bf1dfaadc7a3f39a" prot="public" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>matchesExtension</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a0b3c35133b9afb40a8678061e1e558af" prot="protected" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>mBitsPerSample</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a9307f85fa10c2104f2b11dac26c0d7a9" prot="protected" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>mByteRate</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a57e6bae0181e9d47e37924e99238ba20" prot="protected" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>mBytesPerSecond</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a5d780adb5a915770b5707aee210c15e5" prot="protected" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>mFileSize</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1acad9abe5b454c2d77d06eb6e73192e56" prot="protected" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>mNumChannels</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1adef5201babdec70e8c48f79f622915e2" prot="protected" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>mSampleRateHz</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a06eec6c97330b24756c63267fef967d1" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>NumChannels</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a45f4b006353e74fe3855406019f36800" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>NumChannels</name></member>
+      <member refid="classEOUtils_1_1OggFileInfo_1a942bc70abbc37bb4725c9b31f5f810ae" prot="public" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>OggFileInfo</name></member>
+      <member refid="classEOUtils_1_1OggFileInfo_1a3323fa6c1ec18d37131ca50ef4051e5d" prot="public" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>OggFileInfo</name></member>
+      <member refid="classEOUtils_1_1OggFileInfo_1ac8a0d3729c18a5a0e6f04a18695fe400" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>read</name></member>
+      <member refid="classEOUtils_1_1OggFileInfo_1ac47c8a62eeeb4aabbd409598e9eb63dd" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>read</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a3ebf18af705038e03f640ece3dfd96b3" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>SampleRateHz</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a5a27ec24f55e1f6db76f2690910fd145" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>SampleRateHz</name></member>
+      <member refid="classEOUtils_1_1OggFileInfo_1a325a0e6f35c4f8ec60829f6eb77fdbf4" prot="public" virt="non-virtual"><scope>EOUtils::OggFileInfo</scope><name>sniffFileHeader</name></member>
+      <member refid="classEOUtils_1_1OggFileInfo_1a42020d5065eeb1bf0418c9819852e54c" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>write</name></member>
+      <member refid="classEOUtils_1_1AudioFileInfo_1a68ba83c0b64f8622807d044e43bace65" prot="public" virt="virtual"><scope>EOUtils::OggFileInfo</scope><name>~AudioFileInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -41,6 +41,11 @@ namespace EOUtils
 		// Note: The parent class (AudioFile) destructor will call close()
 	}
 
+	bool WAVFile::BitrateIsAdjustable() const
+	{
+		return false;
+	}
+
 	void WAVFile::setAudioFileInfo(const AudioFileInfo& pAudioFileInfo)
 	{
 		mWAVFileInfo.copyAudioFileInfo(pAudioFileInfo);

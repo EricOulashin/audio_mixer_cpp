@@ -1,0 +1,19 @@
+<map id="FLACFile::DecoderClientData" name="FLACFile::DecoderClientData">
+<area shape="rect" id="Node000001" title="Used by FLAC decoder callbacks (same layout as FLAC client data)." alt="" coords="226,876,411,945"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,617,69,687"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="43,684,59,733,83,781,110,811,142,836,176,857,213,876,208,877,174,862,139,841,106,815,79,784,54,735,43,689"/>
+<area shape="rect" id="Node000003" href="$classEOUtils_1_1FLACFileInfo.html" title="Holds metadata for FLAC audio files." alt="" coords="93,532,235,772"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,769,235,812,260,850,270,864,265,863,256,854,231,814,210,774"/>
+<area shape="rect" id="Node000004" href="$classEOUtils_1_1AudioFileInfo.html" title=" " alt="" coords="94,189,234,472"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="164,484,166,533,161,532,163,490"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="62,5,111,75"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="83,72,85,118,90,165,92,173,87,173,85,166,80,118,83,77"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="216,5,266,75"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="234,72,214,166,212,173,207,172,209,165,233,77"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="258,609,379,695"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="321,693,321,860,316,858,316,696"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="402,617,448,687"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="429,684,430,723,427,766,417,811,398,853,389,866,386,862,394,851,412,809,421,765,425,723,426,689"/>
+<area shape="rect" id="Node000009" href="$classEOUtils_1_1AudioFileResultType.html" title=" " alt="" coords="472,521,656,783"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="551,781,535,821,511,854,473,882,428,899,427,894,470,877,507,850,530,818,546,784"/>
+</map>

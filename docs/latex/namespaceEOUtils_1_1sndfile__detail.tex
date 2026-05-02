@@ -1,0 +1,109 @@
+\doxysection{EOUtils\+::sndfile\+\_\+detail Namespace Reference}
+\label{namespaceEOUtils_1_1sndfile__detail}\index{EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ sf\+Info\+To\+Audio\+File\+Info} (const SF\+\_\+\+INFO \&p\+Sf, std\+::uintmax\+\_\+t p\+File\+Size\+Bytes, \textbf{ Audio\+File\+Info} \&p\+Out)
+\begin{DoxyCompactList}\small\item\em Fills \doxyref{Audio\+File\+Info}{p.}{classEOUtils_1_1AudioFileInfo} from libsndfile SF\+\_\+\+INFO and optional file size. \end{DoxyCompactList}\item 
+int16\+\_\+t \textbf{ effective\+Bits\+Per\+Sample} (int p\+Sf\+Format\+Full)
+\begin{DoxyCompactList}\small\item\em Nominal bits per sample for decoded/interleaved int I/O via libsndfile. \end{DoxyCompactList}\item 
+int64\+\_\+t \textbf{ max\+Sample\+Value\+For\+Format} (int16\+\_\+t p\+Bits\+Per\+Sample)
+\begin{DoxyCompactList}\small\item\em Maximum PCM magnitude for clamping ints passed to sf\+\_\+writef\+\_\+$\ast$. \end{DoxyCompactList}\item 
+std\+::string \textbf{ format\+Error\+Suffix} (SNDFILE $\ast$p\+Snd\+Or\+Null)
+\item 
+bool \textbf{ format\+Has\+Major\+Minor} (int p\+Full\+Format, int p\+Major\+Mask, int p\+Minor\+Mask)
+\item 
+std\+::uintmax\+\_\+t \textbf{ safe\+File\+Size} (const std\+::string \&p\+Path)
+\item 
+std\+::vector$<$ char $>$ \textbf{ peek\+File\+Prefix} (const std\+::string \&p\+Path, std\+::size\+\_\+t p\+Max\+Len)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\doxysubsection{Function Documentation}
+\index{EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}!effectiveBitsPerSample@{effectiveBitsPerSample}}
+\index{effectiveBitsPerSample@{effectiveBitsPerSample}!EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}}
+\doxysubsubsection{effectiveBitsPerSample()}
+{\footnotesize\ttfamily \label{namespaceEOUtils_1_1sndfile__detail_aceebb7d7d356f7425b33cd3fe458fde2} 
+int16\+\_\+t EOUtils\+::sndfile\+\_\+detail\+::effective\+Bits\+Per\+Sample (\begin{DoxyParamCaption}\item[{int}]{p\+Sf\+Format\+Full}{}\end{DoxyParamCaption})}
+
+
+
+Nominal bits per sample for decoded/interleaved int I/O via libsndfile. 
+
+
+
+Referenced by \textbf{ sf\+Info\+To\+Audio\+File\+Info()}.
+
+\index{EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}!formatErrorSuffix@{formatErrorSuffix}}
+\index{formatErrorSuffix@{formatErrorSuffix}!EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}}
+\doxysubsubsection{formatErrorSuffix()}
+{\footnotesize\ttfamily \label{namespaceEOUtils_1_1sndfile__detail_af36bfc91c020a30e9627e0e03f29f220} 
+std\+::string EOUtils\+::sndfile\+\_\+detail\+::format\+Error\+Suffix (\begin{DoxyParamCaption}\item[{SNDFILE $\ast$}]{p\+Snd\+Or\+Null}{}\end{DoxyParamCaption})}
+
+
+
+Referenced by \textbf{ EOUtils\+::sf\+Set\+Via\+Rw()}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::write\+Sample\+\_\+int64()}.
+
+\index{EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}!formatHasMajorMinor@{formatHasMajorMinor}}
+\index{formatHasMajorMinor@{formatHasMajorMinor}!EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}}
+\doxysubsubsection{formatHasMajorMinor()}
+{\footnotesize\ttfamily \label{namespaceEOUtils_1_1sndfile__detail_aa585bc7769dfbedf0eecc01ab79e42ee} 
+bool EOUtils\+::sndfile\+\_\+detail\+::format\+Has\+Major\+Minor (\begin{DoxyParamCaption}\item[{int}]{p\+Full\+Format}{, }\item[{int}]{p\+Major\+Mask}{, }\item[{int}]{p\+Minor\+Mask}{}\end{DoxyParamCaption})}
+
+
+
+Referenced by \textbf{ EOUtils\+::\+MP3\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+Ogg\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+MP3\+File\+::read\+Format\+Matches()}, and \textbf{ EOUtils\+::\+Ogg\+File\+::read\+Format\+Matches()}.
+
+\index{EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}!maxSampleValueForFormat@{maxSampleValueForFormat}}
+\index{maxSampleValueForFormat@{maxSampleValueForFormat}!EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}}
+\doxysubsubsection{maxSampleValueForFormat()}
+{\footnotesize\ttfamily \label{namespaceEOUtils_1_1sndfile__detail_a5205d4d1f3a23eee2c2728b52256498d} 
+int64\+\_\+t EOUtils\+::sndfile\+\_\+detail\+::max\+Sample\+Value\+For\+Format (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{p\+Bits\+Per\+Sample}{}\end{DoxyParamCaption})}
+
+
+
+Maximum PCM magnitude for clamping ints passed to sf\+\_\+writef\+\_\+$\ast$. 
+
+
+
+Referenced by \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Highest\+Sample\+Value\+\_\+int64()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Next\+Sample\+\_\+int64()}, \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::max\+Value\+For\+Sample\+Size()}, and \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::write\+Sample\+\_\+int64()}.
+
+\index{EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}!peekFilePrefix@{peekFilePrefix}}
+\index{peekFilePrefix@{peekFilePrefix}!EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}}
+\doxysubsubsection{peekFilePrefix()}
+{\footnotesize\ttfamily \label{namespaceEOUtils_1_1sndfile__detail_af47e02b4af37e0d46b90e3c48f252e66} 
+std\+::vector$<$ char $>$ EOUtils\+::sndfile\+\_\+detail\+::peek\+File\+Prefix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Path}{, }\item[{std\+::size\+\_\+t}]{p\+Max\+Len}{}\end{DoxyParamCaption})}
+
+
+
+Referenced by \textbf{ EOUtils\+::\+Aiff\+File\+Info\+::sniff\+File\+Header()}, \textbf{ EOUtils\+::\+MP3\+File\+Info\+::sniff\+File\+Header()}, and \textbf{ EOUtils\+::\+Ogg\+File\+Info\+::sniff\+File\+Header()}.
+
+\index{EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}!safeFileSize@{safeFileSize}}
+\index{safeFileSize@{safeFileSize}!EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}}
+\doxysubsubsection{safeFileSize()}
+{\footnotesize\ttfamily \label{namespaceEOUtils_1_1sndfile__detail_a1f04e2e516d189d0d154be73024c59c0} 
+std\+::uintmax\+\_\+t EOUtils\+::sndfile\+\_\+detail\+::safe\+File\+Size (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Referenced by \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::open()}, \textbf{ EOUtils\+::\+Aiff\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+MP3\+File\+Info\+::read()}, and \textbf{ EOUtils\+::\+Ogg\+File\+Info\+::read()}.
+
+\index{EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}!sfInfoToAudioFileInfo@{sfInfoToAudioFileInfo}}
+\index{sfInfoToAudioFileInfo@{sfInfoToAudioFileInfo}!EOUtils::sndfile\_detail@{EOUtils::sndfile\_detail}}
+\doxysubsubsection{sfInfoToAudioFileInfo()}
+{\footnotesize\ttfamily \label{namespaceEOUtils_1_1sndfile__detail_a107e7ae26bbe28f94fdfdfdde385dd15} 
+void EOUtils\+::sndfile\+\_\+detail\+::sf\+Info\+To\+Audio\+File\+Info (\begin{DoxyParamCaption}\item[{const SF\+\_\+\+INFO \&}]{p\+Sf}{, }\item[{std\+::uintmax\+\_\+t}]{p\+File\+Size\+Bytes}{, }\item[{\textbf{ Audio\+File\+Info} \&}]{p\+Out}{}\end{DoxyParamCaption})}
+
+
+
+Fills \doxyref{Audio\+File\+Info}{p.}{classEOUtils_1_1AudioFileInfo} from libsndfile SF\+\_\+\+INFO and optional file size. 
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Bits\+Per\+Sample()}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Byte\+Rate()}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Bytes\+Per\+Second()}, \textbf{ effective\+Bits\+Per\+Sample()}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+File\+Size()}, \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Num\+Channels()}, and \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Sample\+Rate\+Hz()}.
+
+
+
+Referenced by \textbf{ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::open()}, \textbf{ EOUtils\+::\+Aiff\+File\+Info\+::read()}, \textbf{ EOUtils\+::\+MP3\+File\+Info\+::read()}, and \textbf{ EOUtils\+::\+Ogg\+File\+Info\+::read()}.
+

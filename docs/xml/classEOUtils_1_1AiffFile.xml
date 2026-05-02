@@ -1,0 +1,443 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classEOUtils_1_1AiffFile" kind="class" language="C++" prot="public">
+    <compoundname>EOUtils::AiffFile</compoundname>
+    <basecompoundref refid="classEOUtils_1_1SndFileBackedMetadataAudioFile" prot="public" virt="non-virtual">EOUtils::SndFileBackedMetadataAudioFile</basecompoundref>
+    <includes refid="AiffFile_8h" local="no">AiffFile.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEOUtils_1_1AiffFile_1a3a5d01f8d6b90480c22b7f4ddc215ac3" prot="private" static="no" mutable="no">
+        <type><ref refid="classEOUtils_1_1AiffFileInfo" kindref="compound">AiffFileInfo</ref></type>
+        <definition>AiffFileInfo EOUtils::AiffFile::mAiffInfo</definition>
+        <argsstring></argsstring>
+        <name>mAiffInfo</name>
+        <qualifiedname>EOUtils::AiffFile::mAiffInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="41" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1a210eb0320ee1f09793a50573b71514db" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AiffFile::AiffFile</definition>
+        <argsstring>(const std::string &amp;pFilename)</argsstring>
+        <name>AiffFile</name>
+        <qualifiedname>EOUtils::AiffFile::AiffFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="15" column="10" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp" bodystart="25" bodyend="30"/>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">EOUtils::SndFileBackedMetadataAudioFile::mFileLayout</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="73" endline="80">EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</references>
+        <referencedby refid="classEOUtils_1_1AiffFile_1a07a996e7f6879b17322df74c7ed24d80" compoundref="AiffFile_8cpp" startline="51" endline="55">AiffFile</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFile_1ae6b9ba11e02d50bf4fb7dd38710357da" compoundref="AiffFile_8cpp" startline="45" endline="49">AiffFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1a65dadae4594487acb2cf939f696ef0b6" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AiffFile::AiffFile</definition>
+        <argsstring>(const std::string &amp;pFilename, const AiffFileInfo &amp;pFileInfo)</argsstring>
+        <name>AiffFile</name>
+        <qualifiedname>EOUtils::AiffFile::AiffFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classEOUtils_1_1AiffFileInfo" kindref="compound">AiffFileInfo</ref> &amp;</type>
+          <declname>pFileInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="17" column="10" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp" bodystart="32" bodyend="36"/>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="73" endline="80">EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1afe46d0e8eaa56b29932663b7d92fc02d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AiffFile::AiffFile</definition>
+        <argsstring>(const std::string &amp;pFilename, AudioFileModes pFileMode)</argsstring>
+        <name>AiffFile</name>
+        <qualifiedname>EOUtils::AiffFile::AiffFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pFilename</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758c" kindref="member">AudioFileModes</ref></type>
+          <declname>pFileMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="19" column="10" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp" bodystart="38" bodyend="43"/>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">EOUtils::SndFileBackedMetadataAudioFile::mFileLayout</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="73" endline="80">EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1ae6b9ba11e02d50bf4fb7dd38710357da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AiffFile::AiffFile</definition>
+        <argsstring>(const AiffFile &amp;pOther)</argsstring>
+        <name>AiffFile</name>
+        <qualifiedname>EOUtils::AiffFile::AiffFile</qualifiedname>
+        <param>
+          <type>const AiffFile &amp;</type>
+          <declname>pOther</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="21" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp" bodystart="45" bodyend="49"/>
+        <references refid="classEOUtils_1_1AiffFile_1a210eb0320ee1f09793a50573b71514db" compoundref="AiffFile_8cpp" startline="25" endline="30">AiffFile</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="73" endline="80">EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1a07a996e7f6879b17322df74c7ed24d80" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AiffFile::AiffFile</definition>
+        <argsstring>(AiffFile &amp;&amp;pOther) noexcept</argsstring>
+        <name>AiffFile</name>
+        <qualifiedname>EOUtils::AiffFile::AiffFile</qualifiedname>
+        <param>
+          <type>AiffFile &amp;&amp;</type>
+          <declname>pOther</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="23" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp" bodystart="51" bodyend="55"/>
+        <references refid="classEOUtils_1_1AiffFile_1a210eb0320ee1f09793a50573b71514db" compoundref="AiffFile_8cpp" startline="25" endline="30">AiffFile</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="73" endline="80">EOUtils::SndFileBackedMetadataAudioFile::SndFileBackedMetadataAudioFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1a9f23485a37375f43f2cbcc5a6d3e272a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AiffFile::~AiffFile</definition>
+        <argsstring>() override</argsstring>
+        <name>~AiffFile</name>
+        <qualifiedname>EOUtils::AiffFile::~AiffFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1adbf5b1a9feef88138c4ac879c362befe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classAudioFileResultType" kindref="compound">AudioFileResultType</ref></type>
+        <definition>AudioFileResultType EOUtils::AiffFile::open</definition>
+        <argsstring>(AudioFileModes pOpenMode) override</argsstring>
+        <name>open</name>
+        <qualifiedname>EOUtils::AiffFile::open</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6">open</reimplements>
+        <param>
+          <type><ref refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758c" kindref="member">AudioFileModes</ref></type>
+          <declname>pOpenMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="27" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp" bodystart="65" bodyend="71"/>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">EOUtils::SndFileBackedMetadataAudioFile::mFileLayout</references>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">EOUtils::SndFileBackedMetadataAudioFile::open</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1a594d9c73bcb27941f606b32c009381c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EOUtils::AiffFile::setAudioFileInfo</definition>
+        <argsstring>(const AudioFileInfo &amp;pAudioFileInfo) override</argsstring>
+        <name>setAudioFileInfo</name>
+        <qualifiedname>EOUtils::AiffFile::setAudioFileInfo</qualifiedname>
+        <reimplements refid="classEOUtils_1_1AudioFile_1a2801f28e7658576fb6ae96f91ced6f92">setAudioFileInfo</reimplements>
+        <param>
+          <type>const <ref refid="classAudioFileInfo" kindref="compound">AudioFileInfo</ref> &amp;</type>
+          <declname>pAudioFileInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="29" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp" bodystart="59" bodyend="63"/>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a5b4ddbc681df5496f355bef551bbddea" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="124" endline="128">EOUtils::SndFileBackedMetadataAudioFile::setAudioFileInfo</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1a232218eab72c0d3dc74f2bb3a4ad0411" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classEOUtils_1_1AiffFileInfo" kindref="compound">AiffFileInfo</ref> &amp;</type>
+        <definition>const AiffFileInfo &amp; EOUtils::AiffFile::getFileInfo</definition>
+        <argsstring>() const</argsstring>
+        <name>getFileInfo</name>
+        <qualifiedname>EOUtils::AiffFile::getFileInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="31" column="20" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1a3a52e2ce0418a6a496ffcf8463f69632" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool EOUtils::AiffFile::readFormatMatches</definition>
+        <argsstring>(int pSfFullFormat) const override</argsstring>
+        <name>readFormatMatches</name>
+        <qualifiedname>EOUtils::AiffFile::readFormatMatches</qualifiedname>
+        <reimplements refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3f040f277c0e76c9411defa7b386cd38">readFormatMatches</reimplements>
+        <param>
+          <type>int</type>
+          <declname>pSfFullFormat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="34" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp" bodystart="78" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1a310abc99b7aa1799be5fb278d9cf9b9c" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int EOUtils::AiffFile::newFileSfFormatMask</definition>
+        <argsstring>() const override</argsstring>
+        <name>newFileSfFormatMask</name>
+        <qualifiedname>EOUtils::AiffFile::newFileSfFormatMask</qualifiedname>
+        <reimplements refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9d4543b5c26b8881a281ddd3bf0de7b6">newFileSfFormatMask</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="36" column="5" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp" bodystart="87" bodyend="90"/>
+        <references refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" compoundref="SndFileBackedMetadataAudioFile_8h" startline="86">EOUtils::SndFileBackedMetadataAudioFile::mFileLayout</references>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AiffFile_1acc06d9651e0f4a91a17ba825728366f6" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * EOUtils::AiffFile::formatLabel</definition>
+        <argsstring>() const override</argsstring>
+        <name>formatLabel</name>
+        <qualifiedname>EOUtils::AiffFile::formatLabel</qualifiedname>
+        <reimplements refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a8c417c6986f90ded3964e483ec00753e">formatLabel</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="38" column="12" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>EOUtils::AiffFile</label>
+        <link refid="classEOUtils_1_1AiffFile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>EOUtils::AudioFile</label>
+        <link refid="classEOUtils_1_1AudioFile"/>
+      </node>
+      <node id="3">
+        <label>EOUtils::MetadataAudioFile</label>
+        <link refid="classEOUtils_1_1MetadataAudioFile"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EOUtils::SndFileBackedMetadataAudioFile</label>
+        <link refid="classEOUtils_1_1SndFileBackedMetadataAudioFile"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>EOUtils::AiffFile</label>
+        <link refid="classEOUtils_1_1AiffFile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>EOUtils::AudioFile</label>
+        <link refid="classEOUtils_1_1AudioFile"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#mFilename</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#mFileStream</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#mFileOpenMode</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>#mDataSizeBytes</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#mMetadata</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>EOUtils::AudioFileInfo</label>
+        <link refid="classEOUtils_1_1AudioFileInfo"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>#mBytesPerSecond</edgelabel>
+          <edgelabel>#mFileSize</edgelabel>
+          <edgelabel>#mSampleRateHz</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#mBitsPerSample</edgelabel>
+          <edgelabel>#mByteRate</edgelabel>
+          <edgelabel>#mNumChannels</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EOUtils::MetadataAudioFile</label>
+        <link refid="classEOUtils_1_1MetadataAudioFile"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EOUtils::SndFileBackedMetadataAudioFile</label>
+        <link refid="classEOUtils_1_1SndFileBackedMetadataAudioFile"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>#mFileLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>int16_t</label>
+      </node>
+      <node id="11">
+        <label>int32_t</label>
+      </node>
+      <node id="8">
+        <label>size_t</label>
+      </node>
+      <node id="6">
+        <label>fstream</label>
+      </node>
+      <node id="7">
+        <label>openmode</label>
+      </node>
+      <node id="9">
+        <label>map&lt; std::string, std::string &gt;</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" line="12" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h" bodystart="13" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classEOUtils_1_1AiffFile_1a210eb0320ee1f09793a50573b71514db" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>AiffFile</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1a65dadae4594487acb2cf939f696ef0b6" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>AiffFile</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1afe46d0e8eaa56b29932663b7d92fc02d" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>AiffFile</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1ae6b9ba11e02d50bf4fb7dd38710357da" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>AiffFile</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1a07a996e7f6879b17322df74c7ed24d80" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>AiffFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a8ad604ab1ec13becdf8b2659e61c9c3d" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a7dd053155e5498f9603b2a232158d1dc" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a929e0fbe28b29242d228331212e89336" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>AudioFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a683fdacc6a09b3a22d5c438c8559a054" prot="public" virt="pure-virtual"><scope>EOUtils::AiffFile</scope><name>BitrateIsAdjustable</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af7608eef3ca48433142025a37bb99033" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>close</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9d6a9bf52f6167e7245edba64fd53070" prot="protected" virt="virtual"><scope>EOUtils::AiffFile</scope><name>configureSndfileEncoderForWrite</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ad6281b62a2270d05ba8ab3d643837caa" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>Filename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aab5a60cd510028e984f06f3cad3ba196" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>Filename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1abff45a0857ea7ac45920ce200c9c2f42" prot="protected" virt="virtual"><scope>EOUtils::AiffFile</scope><name>fileSizeAccordingToStream</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1acc06d9651e0f4a91a17ba825728366f6" prot="protected" virt="virtual"><scope>EOUtils::AiffFile</scope><name>formatLabel</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a597832cb68f37962e65d9af4a4daca76" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>getAlbum</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a74491b1431583e61361ed3fc2b958722" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>getArtist</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a2e91490fab82a495f6cc3244f68a3fe1" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>getAudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a788bfd7f1e24f8d7ebd5e4c67660513f" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>getComment</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1a232218eab72c0d3dc74f2bb3a4ad0411" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>getFileInfo</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a623f3a0ddfb0ae89e87d5c0868d0dfcc" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>getGenre</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a50528a485aeda6e16ab5c3f1558aefd5" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>getHighestSampleValue_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1780a021a151729a1a7eaa0d02a2fa01" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::AiffFile</scope><name>getHighestSampleValue_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a3e4f535ca55f141bf8145665b5881bd9" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>getMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1414f518e301c5ca00132f3b4d726d67" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>getMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a80b9e185e791079450429706ca9ef91e" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a5c3e338b5d9b22e3e16ddb5b2d87a533" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ab867a5930c81e792f4116f62df0f8298" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>getMetadataAs</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1afc4e1a414dc53a1c3112f6a7b93600f0" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>getNextSample_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a99c362d4f3f1417e88a29e20e1a569b5" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::AiffFile</scope><name>getNextSample_int64</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a684645d427b4002fc62c8fc23cd0a141" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>getTitle</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a79744b85e1f5a071d022d49ce0fb80a6" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>getTrackNumber</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1ae43dcd8ce45042c99e66d7a858c9d074" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::AiffFile</scope><name>getTrackNumber</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a6cc1dca0322a5945225c7cf82a504226" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>getYear</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ae71e6cdf5e73980e8a71af7005411111" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>goToAudioDataPos</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aedf6b1305b5cfd321bedd7790ef7c8e4" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>hasMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>hasReadMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>hasWriteMode</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a819cd193fb520477daecc99074244b27" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>isOpen</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1a3a5d01f8d6b90480c22b7f4ddc215ac3" prot="private" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>mAiffInfo</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a99ac823f1aa365c8876fa35939b61e82" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>maxValueForSampleSize</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" prot="protected" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>mDataSizeBytes</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a4b979898316007867c1721e9823738cf" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1a097c2697ff13926740a76063de122cb6" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" prot="protected" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>mFileLayout</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" prot="protected" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>mFilename</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" prot="protected" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>mFileOpenMode</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" prot="protected" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>mFileStream</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" prot="protected" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>mMetadata</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1a310abc99b7aa1799be5fb278d9cf9b9c" prot="protected" virt="virtual"><scope>EOUtils::AiffFile</scope><name>newFileSfFormatMask</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a520f77d8c349944e508a6707bc3617ac" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>numSamples</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1adbf5b1a9feef88138c4ac879c362befe" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>open</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1a3a52e2ce0418a6a496ffcf8463f69632" prot="protected" virt="virtual"><scope>EOUtils::AiffFile</scope><name>readFormatMatches</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3c569d4cc544c985d81dc131e0da5a32" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>seekOutputToSampleNum</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1af30b9f5c0bd6f6eb670976c5872aacdd" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::AiffFile</scope><name>seekOutputToSampleNum</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1adb1c8cfe8ff0ecc8d0159871c9245a18" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>setAlbum</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a13a905679e51af831810eff6a15b9524" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>setArtist</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1a594d9c73bcb27941f606b32c009381c7" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>setAudioFileInfo</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a05761942c1d69d5afe4ae82a7f7b91fc" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>setComment</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a376cef8c69f91ed84ea84026075a4df2" prot="protected" virt="virtual"><scope>EOUtils::AiffFile</scope><name>setFileMode</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab315502e2dc380bd6ff616dfa2521716" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>setGenre</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a7c9c44e7d515e2281736219609d785ed" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>setMetadata</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a877560d2344ca9a2c38700e2f11f1224" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>setMetadataFromVal</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9e83638df759da359e7024e493cd1301" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>setTitle</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a04ebcd99162fd7421accd0b2f92f2d1b" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>setTrackNumber</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1aab2746c19dca62fe5a27bd12d936fa46" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::AiffFile</scope><name>setTrackNumber</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1aa32686ba35238da9794c7133589bf01e" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>setYear</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" prot="protected" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>SndFileBackedMetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a12124ab04a2c7b42865611f800383a76" prot="protected" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>SndFileBackedMetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a1778198551e223d0d3bfa83b8dcbac77" prot="protected" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>SndFileBackedMetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af55a4cf92b361107109307c56281efd6" prot="protected" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>SndFileBackedMetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1aff3cc98c3785aeae129472b484bfcb64" prot="protected" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>SndFileBackedMetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acfdd6717c813c6af0a7d8510ab53cd1a" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>writeSample_int64</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1a901b6f6818ae604841592537a278507d" prot="public" virt="pure-virtual" ambiguityscope="EOUtils::MetadataAudioFile::"><scope>EOUtils::AiffFile</scope><name>writeSample_int64</name></member>
+      <member refid="classEOUtils_1_1AiffFile_1a9f23485a37375f43f2cbcc5a6d3e272a" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>~AiffFile</name></member>
+      <member refid="classEOUtils_1_1AudioFile_1af6b8d50765277b330bc63e57dcc4f0c3" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>~AudioFile</name></member>
+      <member refid="classEOUtils_1_1MetadataAudioFile_1ab78858553941cba26740fc69f926b569" prot="public" virt="virtual"><scope>EOUtils::AiffFile</scope><name>~MetadataAudioFile</name></member>
+      <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad98e4c6af29f9f31f35e333a75e515c3" prot="public" virt="non-virtual"><scope>EOUtils::AiffFile</scope><name>~SndFileBackedMetadataAudioFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

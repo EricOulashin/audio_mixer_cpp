@@ -66,6 +66,9 @@ namespace EOUtils
 			 */
 			void setAudioFileInfo(const AudioFileInfo& pAudioFileInfo) override;
 
+			/** Lossless format: no target streaming bitrate like lossy codecs (compression level is separate). */
+			bool BitrateIsAdjustable() const override;
+
 			/**
 			 * @brief Returns the compression level currently set for the FLAC file
 			 */

@@ -1,0 +1,310 @@
+\doxysection{Audio\+File\+Info Class Reference}
+\label{classAudioFileInfo}\index{AudioFileInfo@{AudioFileInfo}}
+
+
+{\ttfamily \#include $<$Audio\+File\+Info.\+h$>$}
+
+
+
+Inheritance diagram for Audio\+File\+Info\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAudioFileInfo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Audio\+File\+Info\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classAudioFileInfo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File\+Info} (int16\+\_\+t p\+Num\+Channels=0, int32\+\_\+t p\+Sample\+Rate\+Hz=0, int32\+\_\+t p\+Bytes\+Per\+Second=0, int16\+\_\+t p\+Byte\+Rate=0, int16\+\_\+t p\+Bits\+Per\+Sample=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \textbf{ $\sim$\+Audio\+File\+Info} ()=default
+\item 
+virtual void \textbf{ copy\+Audio\+File\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info)
+\begin{DoxyCompactList}\small\item\em Copies the values from another \doxyref{Audio\+File\+Info}{p.}{classAudioFileInfo} object. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ read} (const char $\ast$p\+Filename)
+\begin{DoxyCompactList}\small\item\em Reads the info from a WAV file. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ read} (std\+::fstream \&p\+In\+FStream)
+\begin{DoxyCompactList}\small\item\em Reads the info from a file stream. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ write} (std\+::fstream \&p\+Out\+FStream)
+\begin{DoxyCompactList}\small\item\em Writes the info to a file stream. \end{DoxyCompactList}\item 
+virtual int32\+\_\+t \textbf{ File\+Size} () const
+\item 
+void \textbf{ File\+Size} (int32\+\_\+t p\+File\+Size)
+\item 
+virtual int16\+\_\+t \textbf{ Num\+Channels} () const
+\item 
+virtual void \textbf{ Num\+Channels} (int16\+\_\+t p\+Num\+Channels)
+\item 
+virtual int32\+\_\+t \textbf{ Sample\+Rate\+Hz} () const
+\item 
+virtual void \textbf{ Sample\+Rate\+Hz} (int32\+\_\+t p\+Sample\+Rate\+Hz)
+\item 
+virtual int32\+\_\+t \textbf{ Bytes\+Per\+Second} () const
+\item 
+virtual void \textbf{ Bytes\+Per\+Second} (int32\+\_\+t p\+Bytes\+Per\+Second)
+\item 
+virtual int16\+\_\+t \textbf{ Byte\+Rate} () const
+\item 
+virtual void \textbf{ Byte\+Rate} (int16\+\_\+t p\+Byte\+Rate)
+\item 
+virtual int16\+\_\+t \textbf{ Bits\+Per\+Sample} () const
+\item 
+virtual void \textbf{ Bits\+Per\+Sample} (int16\+\_\+t p\+Bits\+Per\+Sample)
+\item 
+virtual size\+\_\+t \textbf{ Bytes\+Per\+Sample} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \textbf{ m\+File\+Size}
+\item 
+int16\+\_\+t \textbf{ m\+Num\+Channels}
+\item 
+int32\+\_\+t \textbf{ m\+Sample\+Rate\+Hz}
+\item 
+int32\+\_\+t \textbf{ m\+Bytes\+Per\+Second}
+\item 
+int16\+\_\+t \textbf{ m\+Byte\+Rate}
+\item 
+int16\+\_\+t \textbf{ m\+Bits\+Per\+Sample}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{AudioFileInfo@{AudioFileInfo}!AudioFileInfo@{AudioFileInfo}}
+\index{AudioFileInfo@{AudioFileInfo}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{AudioFileInfo()}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a658d1cdbdc856d3171e9eda93bcc4b14} 
+\textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Audio\+File\+Info} (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{p\+Num\+Channels}{ = {\ttfamily 0}, }\item[{int32\+\_\+t}]{p\+Sample\+Rate\+Hz}{ = {\ttfamily 0}, }\item[{int32\+\_\+t}]{p\+Bytes\+Per\+Second}{ = {\ttfamily 0}, }\item[{int16\+\_\+t}]{p\+Byte\+Rate}{ = {\ttfamily 0}, }\item[{int16\+\_\+t}]{p\+Bits\+Per\+Sample}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Num\+Channels} & The number of channels \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Sample\+Rate\+Hz} & The sample rate (in Hz) \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Bytes\+Per\+Second} & The number of bytes per second \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Byte\+Rate} & The byte rate (number of bytes per sample $\ast$ number of channels) \\
+\hline
+\mbox{\texttt{in}}  & {\em p\+Bits\+Per\+Sample} & The number of bits per sample \\
+\hline
+\end{DoxyParams}
+\index{AudioFileInfo@{AudioFileInfo}!````~AudioFileInfo@{$\sim$AudioFileInfo}}
+\index{````~AudioFileInfo@{$\sim$AudioFileInfo}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{$\sim$AudioFileInfo()}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a68ba83c0b64f8622807d044e43bace65} 
+virtual \textbf{ EOUtils\+::\+Audio\+File\+Info\+::$\sim$\+Audio\+File\+Info} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{AudioFileInfo@{AudioFileInfo}!BitsPerSample@{BitsPerSample}}
+\index{BitsPerSample@{BitsPerSample}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{BitsPerSample()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a251e008ebbbe7b96fa393162ff6dffa8} 
+int16\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Bits\+Per\+Sample} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!BitsPerSample@{BitsPerSample}}
+\index{BitsPerSample@{BitsPerSample}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{BitsPerSample()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_abe9beee9f81daab6f8b88a10b97d38f8} 
+void \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Bits\+Per\+Sample} (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{p\+Bits\+Per\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!ByteRate@{ByteRate}}
+\index{ByteRate@{ByteRate}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{ByteRate()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a6eae27e84b5551365f18c0e534dffb9a} 
+int16\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Byte\+Rate} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!ByteRate@{ByteRate}}
+\index{ByteRate@{ByteRate}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{ByteRate()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a561210c51ba98733104752dbce0b1dff} 
+void \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Byte\+Rate} (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{p\+Byte\+Rate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!BytesPerSample@{BytesPerSample}}
+\index{BytesPerSample@{BytesPerSample}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{BytesPerSample()}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a62cab32f6620633f2ae70e89bd8697bd} 
+size\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Bytes\+Per\+Sample} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!BytesPerSecond@{BytesPerSecond}}
+\index{BytesPerSecond@{BytesPerSecond}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{BytesPerSecond()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_aec253c7d40de4a512c2b2cfd13866ad4} 
+int32\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Bytes\+Per\+Second} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!BytesPerSecond@{BytesPerSecond}}
+\index{BytesPerSecond@{BytesPerSecond}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{BytesPerSecond()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_af72fc31e0f2e56cf2fcc83121518b4c9} 
+void \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Bytes\+Per\+Second} (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{p\+Bytes\+Per\+Second}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!copyAudioFileInfo@{copyAudioFileInfo}}
+\index{copyAudioFileInfo@{copyAudioFileInfo}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{copyAudioFileInfo()}
+{\footnotesize\ttfamily \label{classAudioFileInfo_abc993cfabd7bf5db763072caafed438f} 
+void \textbf{ EOUtils\+::\+Audio\+File\+Info\+::copy\+Audio\+File\+Info} (\begin{DoxyParamCaption}\item[{const \textbf{ Audio\+File\+Info} \&}]{p\+Audio\+File\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Copies the values from another \doxyref{Audio\+File\+Info}{p.}{classAudioFileInfo} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Audio\+File\+Info} & An \doxyref{Audio\+File\+Info}{p.}{classAudioFileInfo} object to copy the values from \\
+\hline
+\end{DoxyParams}
+\index{AudioFileInfo@{AudioFileInfo}!FileSize@{FileSize}}
+\index{FileSize@{FileSize}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{FileSize()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_ae4ad85c7dec9cea2e1c972fa5363317b} 
+int32\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+File\+Size} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!FileSize@{FileSize}}
+\index{FileSize@{FileSize}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{FileSize()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a909d37035c78c019104b5eed55a4d4c5} 
+void \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+File\+Size} (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{p\+File\+Size}{}\end{DoxyParamCaption})}
+
+\index{AudioFileInfo@{AudioFileInfo}!NumChannels@{NumChannels}}
+\index{NumChannels@{NumChannels}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{NumChannels()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a06eec6c97330b24756c63267fef967d1} 
+int16\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Num\+Channels} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!NumChannels@{NumChannels}}
+\index{NumChannels@{NumChannels}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{NumChannels()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a45f4b006353e74fe3855406019f36800} 
+void \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Num\+Channels} (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{p\+Num\+Channels}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!read@{read}}
+\index{read@{read}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_ab94a417a9ec7ebf2ac1e9b1578f59825} 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+Audio\+File\+Info\+::read} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reads the info from a WAV file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Filename} & The name of a WAV file to read from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classAudioFileResultType} object containing error messages on failure, or no errors on success 
+\end{DoxyReturn}
+\index{AudioFileInfo@{AudioFileInfo}!read@{read}}
+\index{read@{read}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_ae46975f1e0d83c16008c256d283d5c23} 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+Audio\+File\+Info\+::read} (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{p\+In\+FStream}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reads the info from a file stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+In\+FStream} & A file stream object to read the information from. This must be already opened in read and binary mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classAudioFileResultType} object containing error messages on failure, or no errors on success 
+\end{DoxyReturn}
+\index{AudioFileInfo@{AudioFileInfo}!SampleRateHz@{SampleRateHz}}
+\index{SampleRateHz@{SampleRateHz}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{SampleRateHz()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a3ebf18af705038e03f640ece3dfd96b3} 
+int32\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Sample\+Rate\+Hz} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!SampleRateHz@{SampleRateHz}}
+\index{SampleRateHz@{SampleRateHz}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{SampleRateHz()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a5a27ec24f55e1f6db76f2690910fd145} 
+void \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Sample\+Rate\+Hz} (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{p\+Sample\+Rate\+Hz}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!write@{write}}
+\index{write@{write}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{write()}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a35bee862e09314491cc60205fa953b02} 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+Audio\+File\+Info\+::write} (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{p\+Out\+FStream}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Writes the info to a file stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Out\+FStream} & A file stream object to write the information to. This must be already opened in write and binary mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classAudioFileResultType} object containing error messages on failure, or no errors on success 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\index{AudioFileInfo@{AudioFileInfo}!mBitsPerSample@{mBitsPerSample}}
+\index{mBitsPerSample@{mBitsPerSample}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{mBitsPerSample}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a0b3c35133b9afb40a8678061e1e558af} 
+int16\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Bits\+Per\+Sample}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!mByteRate@{mByteRate}}
+\index{mByteRate@{mByteRate}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{mByteRate}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a9307f85fa10c2104f2b11dac26c0d7a9} 
+int16\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Byte\+Rate}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!mBytesPerSecond@{mBytesPerSecond}}
+\index{mBytesPerSecond@{mBytesPerSecond}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{mBytesPerSecond}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a57e6bae0181e9d47e37924e99238ba20} 
+int32\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Bytes\+Per\+Second}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!mFileSize@{mFileSize}}
+\index{mFileSize@{mFileSize}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{mFileSize}
+{\footnotesize\ttfamily \label{classAudioFileInfo_a5d780adb5a915770b5707aee210c15e5} 
+int32\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+File\+Size}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!mNumChannels@{mNumChannels}}
+\index{mNumChannels@{mNumChannels}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{mNumChannels}
+{\footnotesize\ttfamily \label{classAudioFileInfo_acad9abe5b454c2d77d06eb6e73192e56} 
+int16\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Num\+Channels}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\index{AudioFileInfo@{AudioFileInfo}!mSampleRateHz@{mSampleRateHz}}
+\index{mSampleRateHz@{mSampleRateHz}!AudioFileInfo@{AudioFileInfo}}
+\doxysubsubsection{mSampleRateHz}
+{\footnotesize\ttfamily \label{classAudioFileInfo_adef5201babdec70e8c48f79f622915e2} 
+int32\+\_\+t \textbf{ EOUtils\+::\+Audio\+File\+Info\+::m\+Sample\+Rate\+Hz}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Audio\+File\+Info.\+h}\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Audio\+File\+Info.\+cpp}\end{DoxyCompactItemize}

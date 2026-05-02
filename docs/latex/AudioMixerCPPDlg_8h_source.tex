@@ -1,0 +1,56 @@
+\doxysection{Audio\+Mixer\+CPPDlg.\+h}
+\label{AudioMixerCPPDlg_8h_source}\index{/home/erico/projects/audio\_mixer\_cpp/code/AudioMixerCPP\_Win\_VisualStudio/AudioMixerCPPDlg.h@{/home/erico/projects/audio\_mixer\_cpp/code/AudioMixerCPP\_Win\_VisualStudio/AudioMixerCPPDlg.h}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ ﻿}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ AudioMixerCPPDlg.h\ :\ header\ file}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}CCustomEditListBox.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ CAudioMixerCPPDlg\ dialog}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }CAudioMixerCPPDlg\ :\ \textcolor{keyword}{public}\ CDialogEx}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Construction}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ CAudioMixerCPPDlg(CWnd*\ pParent\ =\ \textcolor{keyword}{nullptr});\ \ \ \ \ \textcolor{comment}{//\ standard\ constructor}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Dialog\ Data}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifdef\ AFX\_DESIGN\_TIME}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \{\ IDD\ =\ IDD\_AUDIOMIXERCPP\_DIALOG\ \};}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ DoDataExchange(CDataExchange*\ pDX);\ \ \ \ \ \ \ \ \textcolor{comment}{//\ DDX/DDV\ support}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ Implementation}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ HICON\ m\_hIcon;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Generated\ message\ map\ functions}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ OnInitDialog();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnSysCommand(UINT\ nID,\ LPARAM\ lParam);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnPaint();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ afx\_msg\ HCURSOR\ OnQueryDragIcon();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00035\ public:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnBnClickedButtonMixAudioFiles();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnClickedButtonSelectOutputFile();}
+\DoxyCodeLine{00038\ private:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ CCustomEditListBox\ mFilenameListBox;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ CString\ mStatusText;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ CString\ mOutputFilename;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Toggles\ the\ UI\ interactive\ controls\ on/off}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ toggleUIControls(\textcolor{keywordtype}{bool}\ pEnable);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ afx\_msg\ LRESULT\ OnMixDoneMessage(WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00047\ public:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnDropFiles(HDROP\ hDropInfo);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnBnClickedButtonClearInputList();}
+\DoxyCodeLine{00050\ \};}
+
+\end{DoxyCode}

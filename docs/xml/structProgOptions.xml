@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="structProgOptions" kind="struct" language="C++" prot="public">
+    <compoundname>ProgOptions</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structProgOptions_1a0ee6f3748e6a1e9110e9de34bc5d66fa" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ProgOptions::audioFileListFilename</definition>
+        <argsstring></argsstring>
+        <name>audioFileListFilename</name>
+        <qualifiedname>ProgOptions::audioFileListFilename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" line="34" column="8" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" bodystart="34" bodyend="-1"/>
+        <referencedby refid="cmdLineApp_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="cmdLineApp_8cpp" startline="55" endline="126">main</referencedby>
+        <referencedby refid="cmdLineApp_8cpp_1a13003c27cb50f63325ea22ab1a6606fd" compoundref="cmdLineApp_8cpp" startline="140" endline="169">parseCommandLine</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structProgOptions_1a8dc52b95112ad4171c17ea0c2f05b9c4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ProgOptions::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>ProgOptions::verbose</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" line="35" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" bodystart="35" bodyend="-1"/>
+        <referencedby refid="cmdLineApp_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="cmdLineApp_8cpp" startline="55" endline="126">main</referencedby>
+        <referencedby refid="cmdLineApp_8cpp_1a13003c27cb50f63325ea22ab1a6606fd" compoundref="cmdLineApp_8cpp" startline="140" endline="169">parseCommandLine</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ProgOptions</label>
+        <link refid="structProgOptions"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+audioFileListFilename</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+verbose</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>bool</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" line="32" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" bodystart="33" bodyend="36"/>
+    <listofallmembers>
+      <member refid="structProgOptions_1a0ee6f3748e6a1e9110e9de34bc5d66fa" prot="public" virt="non-virtual"><scope>ProgOptions</scope><name>audioFileListFilename</name></member>
+      <member refid="structProgOptions_1a8dc52b95112ad4171c17ea0c2f05b9c4" prot="public" virt="non-virtual"><scope>ProgOptions</scope><name>verbose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

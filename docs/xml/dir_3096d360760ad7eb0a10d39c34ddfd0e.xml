@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_3096d360760ad7eb0a10d39c34ddfd0e" kind="dir">
+    <compoundname>/home/erico/projects/audio_mixer_cpp/code</compoundname>
+    <innerdir refid="dir_82a45b9ad4ca1337b64e4fc6d3de9457">/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio</innerdir>
+    <innerdir refid="dir_e1c5203e63b82559f6b75b85b9869c62">/home/erico/projects/audio_mixer_cpp/code/common</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/"/>
+  </compounddef>
+</doxygen>

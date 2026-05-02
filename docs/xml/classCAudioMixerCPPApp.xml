@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classCAudioMixerCPPApp" kind="class" language="C++" prot="public">
+    <compoundname>CAudioMixerCPPApp</compoundname>
+    <basecompoundref refid="classCWinApp" prot="public" virt="non-virtual">CWinApp</basecompoundref>
+    <includes refid="AudioMixerCPP_8h" local="no">AudioMixerCPP.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCAudioMixerCPPApp_1a5ab25f9cf2e1e539faf3d537b3f06d6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>﻿ CAudioMixerCPPApp::CAudioMixerCPPApp</definition>
+        <argsstring>()</argsstring>
+        <name>CAudioMixerCPPApp</name>
+        <qualifiedname>CAudioMixerCPPApp::CAudioMixerCPPApp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPP.h" line="21" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPP.cpp" bodystart="23" bodyend="30"/>
+        <references refid="classCAudioMixerCPPApp_1a5ab25f9cf2e1e539faf3d537b3f06d6a" compoundref="AudioMixerCPP_8cpp" startline="23" endline="30">CAudioMixerCPPApp</references>
+        <referencedby refid="classCAudioMixerCPPApp_1a5ab25f9cf2e1e539faf3d537b3f06d6a" compoundref="AudioMixerCPP_8cpp" startline="23" endline="30">CAudioMixerCPPApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCAudioMixerCPPApp_1a47eb3cd7f6aebe3299060e66ddb47b80" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL CAudioMixerCPPApp::InitInstance</definition>
+        <argsstring>()</argsstring>
+        <name>InitInstance</name>
+        <qualifiedname>CAudioMixerCPPApp::InitInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPP.h" line="25" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPP.cpp" bodystart="40" bodyend="105"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CAudioMixerCPPApp</label>
+        <link refid="classCAudioMixerCPPApp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CWinApp</label>
+        <link refid="classCWinApp"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CAudioMixerCPPApp</label>
+        <link refid="classCAudioMixerCPPApp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CWinApp</label>
+        <link refid="classCWinApp"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPP.h" line="18" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPP.h" bodystart="19" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classCAudioMixerCPPApp_1a5ab25f9cf2e1e539faf3d537b3f06d6a" prot="public" virt="non-virtual"><scope>CAudioMixerCPPApp</scope><name>CAudioMixerCPPApp</name></member>
+      <member refid="classCAudioMixerCPPApp_1a47eb3cd7f6aebe3299060e66ddb47b80" prot="public" virt="virtual"><scope>CAudioMixerCPPApp</scope><name>InitInstance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

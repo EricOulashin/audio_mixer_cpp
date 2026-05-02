@@ -1,0 +1,231 @@
+\doxysection{EOUtils\+::MP3\+File\+Info Class Reference}
+\label{classEOUtils_1_1MP3FileInfo}\index{EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}}
+
+
+{\ttfamily \#include $<$MP3\+File\+Info.\+h$>$}
+
+
+
+Inheritance diagram for EOUtils\+::MP3\+File\+Info\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classEOUtils_1_1MP3FileInfo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for EOUtils\+::MP3\+File\+Info\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEOUtils_1_1MP3FileInfo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ MP3\+File\+Info} (int16\+\_\+t p\+Num\+Channels=2, int32\+\_\+t p\+Sample\+Rate\+Hz=44100, int32\+\_\+t p\+Bytes\+Per\+Second=0, int16\+\_\+t p\+Byte\+Rate=0, int16\+\_\+t p\+Bits\+Per\+Sample=16)
+\item 
+\textbf{ MP3\+File\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info)
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ read} (std\+::fstream \&p\+In\+FStream) override
+\begin{DoxyCompactList}\small\item\em Reads the info from a file stream. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ read} (const char $\ast$p\+Filename) override
+\begin{DoxyCompactList}\small\item\em Reads the info from a WAV file. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ write} (std\+::fstream \&p\+Out\+FStream) override
+\begin{DoxyCompactList}\small\item\em Writes the info to a file stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ EOUtils\+::\+Audio\+File\+Info}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File\+Info} (int16\+\_\+t p\+Num\+Channels=0, int32\+\_\+t p\+Sample\+Rate\+Hz=0, int32\+\_\+t p\+Bytes\+Per\+Second=0, int16\+\_\+t p\+Byte\+Rate=0, int16\+\_\+t p\+Bits\+Per\+Sample=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \textbf{ $\sim$\+Audio\+File\+Info} ()=default
+\item 
+virtual void \textbf{ copy\+Audio\+File\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info)
+\begin{DoxyCompactList}\small\item\em Copies the values from another \doxyref{Audio\+File\+Info}{p.}{classEOUtils_1_1AudioFileInfo} object. \end{DoxyCompactList}\item 
+virtual int32\+\_\+t \textbf{ File\+Size} () const
+\item 
+void \textbf{ File\+Size} (int32\+\_\+t p\+File\+Size)
+\item 
+virtual int16\+\_\+t \textbf{ Num\+Channels} () const
+\item 
+virtual void \textbf{ Num\+Channels} (int16\+\_\+t p\+Num\+Channels)
+\item 
+virtual int32\+\_\+t \textbf{ Sample\+Rate\+Hz} () const
+\item 
+virtual void \textbf{ Sample\+Rate\+Hz} (int32\+\_\+t p\+Sample\+Rate\+Hz)
+\item 
+virtual int32\+\_\+t \textbf{ Bytes\+Per\+Second} () const
+\item 
+virtual void \textbf{ Bytes\+Per\+Second} (int32\+\_\+t p\+Bytes\+Per\+Second)
+\item 
+virtual int16\+\_\+t \textbf{ Byte\+Rate} () const
+\item 
+virtual void \textbf{ Byte\+Rate} (int16\+\_\+t p\+Byte\+Rate)
+\item 
+virtual int16\+\_\+t \textbf{ Bits\+Per\+Sample} () const
+\item 
+virtual void \textbf{ Bits\+Per\+Sample} (int16\+\_\+t p\+Bits\+Per\+Sample)
+\item 
+virtual size\+\_\+t \textbf{ Bytes\+Per\+Sample} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \textbf{ matches\+Extension} (const char $\ast$p\+Filename)
+\item 
+static bool \textbf{ sniff\+File\+Header} (const char $\ast$p\+Filename)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \textbf{ EOUtils\+::\+Audio\+File\+Info}}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \textbf{ m\+File\+Size}
+\item 
+int16\+\_\+t \textbf{ m\+Num\+Channels}
+\item 
+int32\+\_\+t \textbf{ m\+Sample\+Rate\+Hz}
+\item 
+int32\+\_\+t \textbf{ m\+Bytes\+Per\+Second}
+\item 
+int16\+\_\+t \textbf{ m\+Byte\+Rate}
+\item 
+int16\+\_\+t \textbf{ m\+Bits\+Per\+Sample}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}!MP3FileInfo@{MP3FileInfo}}
+\index{MP3FileInfo@{MP3FileInfo}!EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}}
+\doxysubsubsection{MP3FileInfo()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1MP3FileInfo_a1bf2e830a039d6c36a70a2bd9fa6c43b} 
+EOUtils\+::\+MP3\+File\+Info\+::\+MP3\+File\+Info (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{p\+Num\+Channels}{ = {\ttfamily 2}, }\item[{int32\+\_\+t}]{p\+Sample\+Rate\+Hz}{ = {\ttfamily 44100}, }\item[{int32\+\_\+t}]{p\+Bytes\+Per\+Second}{ = {\ttfamily 0}, }\item[{int16\+\_\+t}]{p\+Byte\+Rate}{ = {\ttfamily 0}, }\item[{int16\+\_\+t}]{p\+Bits\+Per\+Sample}{ = {\ttfamily 16}}\end{DoxyParamCaption})}
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Audio\+File\+Info()}.
+
+\index{EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}!MP3FileInfo@{MP3FileInfo}}
+\index{MP3FileInfo@{MP3FileInfo}!EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}}
+\doxysubsubsection{MP3FileInfo()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1MP3FileInfo_a6da4c9997cb985de1a30b4a6ea7784a6} 
+EOUtils\+::\+MP3\+File\+Info\+::\+MP3\+File\+Info (\begin{DoxyParamCaption}\item[{const \textbf{ Audio\+File\+Info} \&}]{p\+Audio\+File\+Info}{}\end{DoxyParamCaption})}
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Info\+::\+Audio\+File\+Info()}.
+
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}!matchesExtension@{matchesExtension}}
+\index{matchesExtension@{matchesExtension}!EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}}
+\doxysubsubsection{matchesExtension()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1MP3FileInfo_a9007848b548452546bf73d592bf4fb75} 
+bool EOUtils\+::\+MP3\+File\+Info\+::matches\+Extension (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Referenced by \textbf{ EOUtils\+::create\+Audio\+File\+Obj\+For\+Existing\+File()}, and \textbf{ EOUtils\+::get\+Audio\+File\+Info()}.
+
+\index{EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}!read@{read}}
+\index{read@{read}!EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}}
+\doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1MP3FileInfo_a0c08fdfa1bd6e4b22bfafeb442b0420c} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+MP3\+File\+Info\+::read (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads the info from a WAV file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Filename} & The name of a WAV file to read from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} object containing error messages on failure, or no errors on success 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File\+Info} \doxyref{}{p.}{classEOUtils_1_1AudioFileInfo_ab94a417a9ec7ebf2ac1e9b1578f59825}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ EOUtils\+::sndfile\+\_\+detail\+::format\+Has\+Major\+Minor()}, \textbf{ EOUtils\+::sndfile\+\_\+detail\+::safe\+File\+Size()}, and \textbf{ EOUtils\+::sndfile\+\_\+detail\+::sf\+Info\+To\+Audio\+File\+Info()}.
+
+\index{EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}!read@{read}}
+\index{read@{read}!EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}}
+\doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1MP3FileInfo_a8051df5e0505e0ecb7962f77bc151356} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+MP3\+File\+Info\+::read (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{p\+In\+FStream}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads the info from a file stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+In\+FStream} & A file stream object to read the information from. This must be already opened in read and binary mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} object containing error messages on failure, or no errors on success 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File\+Info} \doxyref{}{p.}{classEOUtils_1_1AudioFileInfo_ae46975f1e0d83c16008c256d283d5c23}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}.
+
+\index{EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}!sniffFileHeader@{sniffFileHeader}}
+\index{sniffFileHeader@{sniffFileHeader}!EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}}
+\doxysubsubsection{sniffFileHeader()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1MP3FileInfo_acf185077a6bb783e6e04bc857bd566d0} 
+bool EOUtils\+::\+MP3\+File\+Info\+::sniff\+File\+Header (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+References \textbf{ EOUtils\+::sndfile\+\_\+detail\+::peek\+File\+Prefix()}.
+
+
+
+Referenced by \textbf{ EOUtils\+::create\+Audio\+File\+Obj\+For\+Existing\+File()}, and \textbf{ EOUtils\+::get\+Audio\+File\+Info()}.
+
+\index{EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}!write@{write}}
+\index{write@{write}!EOUtils::MP3FileInfo@{EOUtils::MP3FileInfo}}
+\doxysubsubsection{write()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1MP3FileInfo_a788b3639f70f332eedbb26c825fdff87} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+MP3\+File\+Info\+::write (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{p\+Out\+FStream}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes the info to a file stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Out\+FStream} & A file stream object to write the information to. This must be already opened in write and binary mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} object containing error messages on failure, or no errors on success 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File\+Info} \doxyref{}{p.}{classEOUtils_1_1AudioFileInfo_a35bee862e09314491cc60205fa953b02}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ MP3\+File\+Info.\+h}\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ MP3\+File\+Info.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="structAudioFileMixOptions" kind="struct" language="C++" prot="public">
+    <compoundname>AudioFileMixOptions</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAudioFileMixOptions_1a68fbda6ff717d116f368b98ac7b55e91" prot="public" static="no" mutable="no">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt;string&gt; AudioFileMixOptions::inputFilenames</definition>
+        <argsstring></argsstring>
+        <name>inputFilenames</name>
+        <qualifiedname>AudioFileMixOptions::inputFilenames</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" line="41" column="8" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" bodystart="41" bodyend="-1"/>
+        <referencedby refid="cmdLineApp_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="cmdLineApp_8cpp" startline="55" endline="126">main</referencedby>
+        <referencedby refid="cmdLineApp_8cpp_1a0083949fd77675d48a8c5060d1dcc7b6" compoundref="cmdLineApp_8cpp" startline="171" endline="218">readAudioFileList</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structAudioFileMixOptions_1a61d2df1a76cdd9e8e8cb111a49b50579" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string AudioFileMixOptions::outputFilename</definition>
+        <argsstring></argsstring>
+        <name>outputFilename</name>
+        <qualifiedname>AudioFileMixOptions::outputFilename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" line="42" column="8" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" bodystart="42" bodyend="-1"/>
+        <referencedby refid="cmdLineApp_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="cmdLineApp_8cpp" startline="55" endline="126">main</referencedby>
+        <referencedby refid="cmdLineApp_8cpp_1a0083949fd77675d48a8c5060d1dcc7b6" compoundref="cmdLineApp_8cpp" startline="171" endline="218">readAudioFileList</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>AudioFileMixOptions</label>
+        <link refid="structAudioFileMixOptions"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+inputFilenames</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+outputFilename</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>vector&lt; string &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" line="39" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp" bodystart="40" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structAudioFileMixOptions_1a68fbda6ff717d116f368b98ac7b55e91" prot="public" virt="non-virtual"><scope>AudioFileMixOptions</scope><name>inputFilenames</name></member>
+      <member refid="structAudioFileMixOptions_1a61d2df1a76cdd9e8e8cb111a49b50579" prot="public" virt="non-virtual"><scope>AudioFileMixOptions</scope><name>outputFilename</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

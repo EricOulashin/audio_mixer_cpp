@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="AudioFileResultType_8h" kind="file" language="C++">
+    <compoundname>AudioFileResultType.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">list</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">ostream</includes>
+    <includedby refid="AiffFileInfo_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/AiffFileInfo.h</includedby>
+    <includedby refid="AudioFile_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h</includedby>
+    <includedby refid="AudioFileInfo_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h</includedby>
+    <includedby refid="AudioFileResultType_8cpp" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp</includedby>
+    <includedby refid="AudioFileTools_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/AudioFileTools.h</includedby>
+    <includedby refid="FLACFile_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h</includedby>
+    <includedby refid="FLACFileInfo_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/FLACFileInfo.h</includedby>
+    <includedby refid="MP3FileInfo_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/MP3FileInfo.h</includedby>
+    <includedby refid="OggFileInfo_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.h</includedby>
+    <includedby refid="SndFileBackedMetadataAudioFile_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h</includedby>
+    <includedby refid="SndFileHelpers_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.h</includedby>
+    <includedby refid="WAVFile_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/WAVFile.h</includedby>
+    <includedby refid="WAVFileInfo_8h" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/WAVFileInfo.h</includedby>
+    <includedby refid="cmdLineApp_8cpp" local="yes">/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h</label>
+        <link refid="AudioFileResultType_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>iterator</label>
+      </node>
+      <node id="3">
+        <label>list</label>
+      </node>
+      <node id="5">
+        <label>ostream</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10">
+        <label>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp</label>
+        <link refid="AudioMixerCPPDlg_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.cpp</label>
+        <link refid="AiffFile_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AiffFile.h</label>
+        <link refid="AiffFile_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AiffFileInfo.cpp</label>
+        <link refid="AiffFileInfo_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AiffFileInfo.h</label>
+        <link refid="AiffFileInfo_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.cpp</label>
+        <link refid="AudioFile_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFile.h</label>
+        <link refid="AudioFile_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.cpp</label>
+        <link refid="AudioFileInfo_8cpp"/>
+      </node>
+      <node id="24">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFileInfo.h</label>
+        <link refid="AudioFileInfo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp</label>
+        <link refid="AudioFileResultType_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h</label>
+        <link refid="AudioFileResultType_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFileTools.cpp</label>
+        <link refid="AudioFileTools_8cpp"/>
+      </node>
+      <node id="9">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/AudioFileTools.h</label>
+        <link refid="AudioFileTools_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.cpp</label>
+        <link refid="FLACFile_8cpp"/>
+      </node>
+      <node id="13">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/FLACFile.h</label>
+        <link refid="FLACFile_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/FLACFileInfo.cpp</label>
+        <link refid="FLACFileInfo_8cpp"/>
+      </node>
+      <node id="26">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/FLACFileInfo.h</label>
+        <link refid="FLACFileInfo_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/MP3File.cpp</label>
+        <link refid="MP3File_8cpp"/>
+      </node>
+      <node id="17">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/MP3File.h</label>
+        <link refid="MP3File_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/MP3FileInfo.cpp</label>
+        <link refid="MP3FileInfo_8cpp"/>
+      </node>
+      <node id="28">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/MP3FileInfo.h</label>
+        <link refid="MP3FileInfo_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.cpp</label>
+        <link refid="MetadataAudioFile_8cpp"/>
+      </node>
+      <node id="12">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/MetadataAudioFile.h</label>
+        <link refid="MetadataAudioFile_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/OggFile.cpp</label>
+        <link refid="OggFile_8cpp"/>
+      </node>
+      <node id="19">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/OggFile.h</label>
+        <link refid="OggFile_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.cpp</label>
+        <link refid="OggFileInfo_8cpp"/>
+      </node>
+      <node id="30">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/OggFileInfo.h</label>
+        <link refid="OggFileInfo_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.cpp</label>
+        <link refid="SndFileBackedMetadataAudioFile_8cpp"/>
+      </node>
+      <node id="16">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/SndFileBackedMetadataAudioFile.h</label>
+        <link refid="SndFileBackedMetadataAudioFile_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.cpp</label>
+        <link refid="SndFileHelpers_8cpp"/>
+      </node>
+      <node id="32">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/SndFileHelpers.h</label>
+        <link refid="SndFileHelpers_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/WAVFile.cpp</label>
+        <link refid="WAVFile_8cpp"/>
+      </node>
+      <node id="22">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/WAVFile.h</label>
+        <link refid="WAVFile_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/WAVFileInfo.cpp</label>
+        <link refid="WAVFileInfo_8cpp"/>
+      </node>
+      <node id="34">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/WAVFileInfo.h</label>
+        <link refid="WAVFileInfo_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/erico/projects/audio_mixer_cpp/code/common/cmdLineApp.cpp</label>
+        <link refid="cmdLineApp_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classEOUtils_1_1AudioFileResultType" prot="public">EOUtils::AudioFileResultType</innerclass>
+    <innernamespace refid="namespaceEOUtils">EOUtils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__AUDIO_FILE_RESULT_TYPE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__AUDIO_FILE_RESULT_TYPE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceEOUtils" kindref="compound">EOUtils</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12" refid="classAudioFileResultType" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAudioFileResultType_1a228d6aeba7d0186edbe6f15e01ec65e9" kindref="member">AudioFileResultType</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="classEOUtils_1_1AudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classEOUtils_1_1AudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" kindref="member">errorCollectionType</ref><sp/>=<sp/>std::list&lt;std::string&gt;;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileResultType_1a228d6aeba7d0186edbe6f15e01ec65e9" kindref="member">AudioFileResultType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>pError<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileResultType_1aaeaa4d2f44e3ae973c85e3f5558b694e" kindref="member">~AudioFileResultType</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" kindref="member">addError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>pError);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" kindref="member">errorCollectionType</ref>&amp;<sp/><ref refid="classEOUtils_1_1AudioFileResultType_1a614346c7534f05ce9e8de3a42217dfea" kindref="member">getErrors</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errorCollectionType::const_iterator<sp/><ref refid="classEOUtils_1_1AudioFileResultType_1a4c1c0e01ecfafe5a10b7359929dcf691" kindref="member">getErrorsBegin</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errorCollectionType::const_iterator<sp/><ref refid="classEOUtils_1_1AudioFileResultType_1aa67421495c95cff1666f758bd75d7100" kindref="member">getErrorsEnd</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileResultType_1a30725c5f74f0492d20f9bfa685dcab02" kindref="member">numErrors</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classEOUtils_1_1AudioFileResultType_1a7cb671fe20ea46e8d4ee3cf4785a7269" kindref="member">getError</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>bool()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEOUtils_1_1AudioFileResultType_1aae2b9b567834b1dc1fb8f3f1aaa26cb2" kindref="member">outputErrors</ref>(std::ostream&amp;<sp/>pOutStream)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEOUtils_1_1AudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" kindref="member">errorCollectionType</ref><sp/>mErrors;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h"/>
+  </compounddef>
+</doxygen>

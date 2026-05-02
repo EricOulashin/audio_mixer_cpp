@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_82a45b9ad4ca1337b64e4fc6d3de9457" kind="dir">
+    <compoundname>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio</compoundname>
+    <innerfile refid="AudioMixerCPP_8cpp">AudioMixerCPP.cpp</innerfile>
+    <innerfile refid="AudioMixerCPP_8h">AudioMixerCPP.h</innerfile>
+    <innerfile refid="AudioMixerCPPDlg_8cpp">AudioMixerCPPDlg.cpp</innerfile>
+    <innerfile refid="AudioMixerCPPDlg_8h">AudioMixerCPPDlg.h</innerfile>
+    <innerfile refid="CCustomEditListBox_8cpp">CCustomEditListBox.cpp</innerfile>
+    <innerfile refid="CCustomEditListBox_8h">CCustomEditListBox.h</innerfile>
+    <innerfile refid="GUITools_8cpp">GUITools.cpp</innerfile>
+    <innerfile refid="GUITools_8h">GUITools.h</innerfile>
+    <innerfile refid="resource_8h">resource.h</innerfile>
+    <innerfile refid="stdafx_8cpp">stdafx.cpp</innerfile>
+    <innerfile refid="stdafx_8h">stdafx.h</innerfile>
+    <innerfile refid="StringUtils_8cpp">StringUtils.cpp</innerfile>
+    <innerfile refid="StringUtils_8h">StringUtils.h</innerfile>
+    <innerfile refid="targetver_8h">targetver.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/"/>
+  </compounddef>
+</doxygen>

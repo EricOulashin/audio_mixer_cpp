@@ -1,0 +1,813 @@
+\doxysection{EOUtils\+::Snd\+File\+Backed\+Metadata\+Audio\+File Class Reference}
+\label{classEOUtils_1_1SndFileBackedMetadataAudioFile}\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+
+
+Shared libsndfile-\/backed implementation used by MP3, Ogg Vorbis, and AIFF codecs.  
+
+
+
+
+{\ttfamily \#include $<$Snd\+File\+Backed\+Metadata\+Audio\+File.\+h$>$}
+
+
+
+Inheritance diagram for EOUtils\+::Snd\+File\+Backed\+Metadata\+Audio\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEOUtils_1_1SndFileBackedMetadataAudioFile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for EOUtils\+::Snd\+File\+Backed\+Metadata\+Audio\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEOUtils_1_1SndFileBackedMetadataAudioFile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ set\+Audio\+File\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info) override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ open} (\textbf{ Audio\+File\+Modes} p\+Open\+Mode) override
+\item 
+void \textbf{ close} () override
+\begin{DoxyCompactList}\small\item\em Closes the audio file. \end{DoxyCompactList}\item 
+bool \textbf{ is\+Open} () const override
+\begin{DoxyCompactList}\small\item\em Returns whether or not the audio file is open. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Next\+Sample\+\_\+int64} (std\+::int64\+\_\+t \&p\+Audio\+Sample) override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ write\+Sample\+\_\+int64} (std\+::int64\+\_\+t p\+Audio\+Sample) override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Highest\+Sample\+Value\+\_\+int64} (std\+::int64\+\_\+t \&p\+Highest\+Audio\+Sample) override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ go\+To\+Audio\+Data\+Pos} () override
+\begin{DoxyCompactList}\small\item\em Goes to the audio data position in the audio file. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \textbf{ num\+Samples} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of audio samples in the audio file. \end{DoxyCompactList}\item 
+std\+::int64\+\_\+t \textbf{ max\+Value\+For\+Sample\+Size} () const override
+\begin{DoxyCompactList}\small\item\em Returns the maximum possible positive value of the audio file\textquotesingle{}s sample size. \end{DoxyCompactList}\item 
+void \textbf{ seek\+Output\+To\+Sample\+Num} (std\+::size\+\_\+t p\+Sample\+Num) override
+\item 
+\textbf{ Audio\+File\+Info} \textbf{ get\+Audio\+File\+Info} () const override
+\begin{DoxyCompactList}\small\item\em Returns an \doxyref{Audio\+File}{p.}{classEOUtils_1_1AudioFile} object with information about the audio file. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Title} (const std\+::string \&p\+Title) override
+\begin{DoxyCompactList}\small\item\em Sets the title metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Artist} (const std\+::string \&p\+Artist) override
+\begin{DoxyCompactList}\small\item\em Sets the artist metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Album} (const std\+::string \&p\+Album) override
+\begin{DoxyCompactList}\small\item\em Sets the album metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Genre} (const std\+::string \&p\+Genre) override
+\begin{DoxyCompactList}\small\item\em Sets the genre metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Track\+Number} (std\+::uint32\+\_\+t p\+Track\+Number, std\+::uint32\+\_\+t p\+Total\+Tracks=0) override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Year} (const std\+::string \&p\+Year) override
+\begin{DoxyCompactList}\small\item\em Sets the year/date metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Comment} (const std\+::string \&p\+Comment) override
+\begin{DoxyCompactList}\small\item\em Sets the comment metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Title} (std\+::string \&p\+Title) const override
+\begin{DoxyCompactList}\small\item\em Gets the title metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Artist} (std\+::string \&p\+Artist) const override
+\begin{DoxyCompactList}\small\item\em Gets the artist metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Album} (std\+::string \&p\+Album) const override
+\begin{DoxyCompactList}\small\item\em Gets the album metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Genre} (std\+::string \&p\+Genre) const override
+\begin{DoxyCompactList}\small\item\em Gets the genre metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Track\+Number} (std\+::uint32\+\_\+t \&p\+Track\+Number, std\+::uint32\+\_\+t \&p\+Total\+Tracks) const override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Year} (std\+::string \&p\+Year) const override
+\begin{DoxyCompactList}\small\item\em Gets the year/date metadata tag. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Comment} (std\+::string \&p\+Comment) const override
+\begin{DoxyCompactList}\small\item\em Gets the comment metadata tag. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Snd\+File\+Backed\+Metadata\+Audio\+File} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ EOUtils\+::\+Metadata\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Metadata\+Audio\+File} (const std\+::string \&p\+Filename)
+\item 
+\textbf{ Metadata\+Audio\+File} (const std\+::string \&p\+Filename, \textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\item 
+\textbf{ Metadata\+Audio\+File} (const Metadata\+Audio\+File \&p\+Other)
+\item 
+virtual \textbf{ $\sim$\+Metadata\+Audio\+File} ()
+\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ set\+Track\+Number} (uint32\+\_\+t p\+Track\+Number, uint32\+\_\+t p\+Total\+Tracks=0)=0
+\begin{DoxyCompactList}\small\item\em Sets the track number metadata tag. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Track\+Number} (uint32\+\_\+t \&p\+Track\+Number, uint32\+\_\+t \&p\+Total\+Tracks) const =0
+\begin{DoxyCompactList}\small\item\em Gets the track number metadata tag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ EOUtils\+::\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File} (const std\+::string \&p\+Filename)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File} (const std\+::string \&p\+Filename, \textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\item 
+\textbf{ Audio\+File} (const \textbf{ Audio\+File} \&p\+Audio\+File)
+\item 
+virtual \textbf{ $\sim$\+Audio\+File} ()
+\item 
+virtual bool \textbf{ Bitrate\+Is\+Adjustable} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether or not the audio file bitrate is adjustable. \end{DoxyCompactList}\item 
+virtual bool \textbf{ has\+Read\+Mode} () const
+\begin{DoxyCompactList}\small\item\em Returns whether or not read mode is enabled for the file. \end{DoxyCompactList}\item 
+virtual bool \textbf{ has\+Write\+Mode} () const
+\begin{DoxyCompactList}\small\item\em Returns whether or not write mode is enabled for the file. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Next\+Sample\+\_\+int64} (int64\+\_\+t \&p\+Audio\+Sample)=0
+\begin{DoxyCompactList}\small\item\em Gets the next sample from the file, cast to a 64-\/bit integer. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ write\+Sample\+\_\+int64} (int64\+\_\+t p\+Audio\+Sample)=0
+\begin{DoxyCompactList}\small\item\em Writes an audio sample to the file. The parameter is a 64-\/bit integer but will be cast to the bitness of the audio samples in the file. \end{DoxyCompactList}\item 
+virtual \textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Highest\+Sample\+Value\+\_\+int64} (int64\+\_\+t \&p\+Highest\+Audio\+Sample)=0
+\begin{DoxyCompactList}\small\item\em Gets the highest audio sample value from the file, cast to a 64-\/bit integer. \end{DoxyCompactList}\item 
+const std\+::string \& \textbf{ Filename} () const
+\begin{DoxyCompactList}\small\item\em Gets the filename of the audio file. \end{DoxyCompactList}\item 
+void \textbf{ Filename} (const std\+::string \&p\+Filename)
+\begin{DoxyCompactList}\small\item\em Setter for the filename of the audio file. \end{DoxyCompactList}\item 
+void \textbf{ set\+Metadata} (const std\+::string \&p\+Name, const std\+::string \&p\+Value)
+\begin{DoxyCompactList}\small\item\em Adds a piece of metadata for the audio file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \textbf{ set\+Metadata\+From\+Val} (const std\+::string \&p\+Name, const T \&p\+Value)
+\begin{DoxyCompactList}\small\item\em Adds a piece of metadata for the audio file. Templatized for any value type. The value will be converted to a string to store in the metadata. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Metadata} (const std\+::string \&p\+Name, std\+::string \&p\+Value) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value as a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name, T \&p\+Value) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. Templatized to capture the value as any type. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Metadata} (const std\+::string \&p\+Name) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\T \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name) const
+\item 
+{\footnotesize template$<$typename T$>$ }\\T \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name, const T \&p\+Default\+Val) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. Templatized to return it as any type. \end{DoxyCompactList}\item 
+bool \textbf{ has\+Metadata} (const std\+::string \&p\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns whether or not a metadata item exists. \end{DoxyCompactList}\item 
+virtual void \textbf{ seek\+Output\+To\+Sample\+Num} (size\+\_\+t p\+Sample\+Num)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File} (const std\+::string \&p\+Filename)
+\item 
+\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File} (const std\+::string \&p\+Filename, \textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\item 
+\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File} (const Snd\+File\+Backed\+Metadata\+Audio\+File \&p\+Other)
+\item 
+\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File} (Snd\+File\+Backed\+Metadata\+Audio\+File \&\&p\+Other) noexcept
+\item 
+\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File} (const std\+::string \&p\+Filename, const \textbf{ Audio\+File\+Info} \&p\+Layout\+Hint)
+\item 
+virtual bool \textbf{ read\+Format\+Matches} (int p\+Sf\+Full\+Format) const =0
+\item 
+virtual int \textbf{ new\+File\+Sf\+Format\+Mask} () const =0
+\item 
+virtual const char $\ast$ \textbf{ format\+Label} () const =0
+\item 
+virtual void \textbf{ configure\+Sndfile\+Encoder\+For\+Write} (SNDFILE $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \textbf{ EOUtils\+::\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::streampos \textbf{ file\+Size\+According\+To\+Stream} ()
+\item 
+virtual void \textbf{ set\+File\+Mode} (\textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File\+Info} \textbf{ m\+File\+Layout}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \textbf{ EOUtils\+::\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \textbf{ m\+Filename}
+\item 
+std\+::fstream \textbf{ m\+File\+Stream}
+\item 
+std\+::ios\+\_\+base\+::openmode \textbf{ m\+File\+Open\+Mode}
+\item 
+size\+\_\+t \textbf{ m\+Data\+Size\+Bytes}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \textbf{ m\+Metadata}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Shared libsndfile-\/backed implementation used by MP3, Ogg Vorbis, and AIFF codecs. 
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!````~SndFileBackedMetadataAudioFile@{$\sim$SndFileBackedMetadataAudioFile}}
+\index{````~SndFileBackedMetadataAudioFile@{$\sim$SndFileBackedMetadataAudioFile}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{$\sim$SndFileBackedMetadataAudioFile()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_ad98e4c6af29f9f31f35e333a75e515c3} 
+EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::$\sim$\+Snd\+File\+Backed\+Metadata\+Audio\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+References \textbf{ close()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!SndFileBackedMetadataAudioFile@{SndFileBackedMetadataAudioFile}}
+\index{SndFileBackedMetadataAudioFile@{SndFileBackedMetadataAudioFile}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{SndFileBackedMetadataAudioFile()\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_ab8e5fcde8bfe07409c5d3b4e032c53d5} 
+EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+References \textbf{ EOUtils\+::\+Metadata\+Audio\+File\+::\+Metadata\+Audio\+File()}, and \textbf{ m\+File\+Layout}.
+
+
+
+Referenced by \textbf{ EOUtils\+::\+Aiff\+File\+::\+Aiff\+File()}, \textbf{ EOUtils\+::\+Aiff\+File\+::\+Aiff\+File()}, \textbf{ EOUtils\+::\+Aiff\+File\+::\+Aiff\+File()}, \textbf{ EOUtils\+::\+Aiff\+File\+::\+Aiff\+File()}, \textbf{ EOUtils\+::\+Aiff\+File\+::\+Aiff\+File()}, \textbf{ EOUtils\+::\+MP3\+File\+::\+MP3\+File()}, \textbf{ EOUtils\+::\+MP3\+File\+::\+MP3\+File()}, \textbf{ EOUtils\+::\+MP3\+File\+::\+MP3\+File()}, \textbf{ EOUtils\+::\+MP3\+File\+::\+MP3\+File()}, \textbf{ EOUtils\+::\+MP3\+File\+::\+MP3\+File()}, \textbf{ EOUtils\+::\+MP3\+File\+::\+MP3\+File()}, \textbf{ EOUtils\+::\+MP3\+File\+::\+MP3\+File()}, \textbf{ EOUtils\+::\+Ogg\+File\+::\+Ogg\+File()}, \textbf{ EOUtils\+::\+Ogg\+File\+::\+Ogg\+File()}, \textbf{ EOUtils\+::\+Ogg\+File\+::\+Ogg\+File()}, \textbf{ EOUtils\+::\+Ogg\+File\+::\+Ogg\+File()}, \textbf{ EOUtils\+::\+Ogg\+File\+::\+Ogg\+File()}, \textbf{ EOUtils\+::\+Ogg\+File\+::\+Ogg\+File()}, \textbf{ EOUtils\+::\+Ogg\+File\+::\+Ogg\+File()}, \textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File()}, and \textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!SndFileBackedMetadataAudioFile@{SndFileBackedMetadataAudioFile}}
+\index{SndFileBackedMetadataAudioFile@{SndFileBackedMetadataAudioFile}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{SndFileBackedMetadataAudioFile()\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a12124ab04a2c7b42865611f800383a76} 
+EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{, }\item[{\textbf{ Audio\+File\+Modes}}]{p\+File\+Mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+References \textbf{ EOUtils\+::\+Metadata\+Audio\+File\+::\+Metadata\+Audio\+File()}, and \textbf{ m\+File\+Layout}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!SndFileBackedMetadataAudioFile@{SndFileBackedMetadataAudioFile}}
+\index{SndFileBackedMetadataAudioFile@{SndFileBackedMetadataAudioFile}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{SndFileBackedMetadataAudioFile()\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a1778198551e223d0d3bfa83b8dcbac77} 
+EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File (\begin{DoxyParamCaption}\item[{const Snd\+File\+Backed\+Metadata\+Audio\+File \&}]{p\+Other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+References \textbf{ EOUtils\+::\+Metadata\+Audio\+File\+::\+Metadata\+Audio\+File()}, \textbf{ m\+File\+Layout}, and \textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!SndFileBackedMetadataAudioFile@{SndFileBackedMetadataAudioFile}}
+\index{SndFileBackedMetadataAudioFile@{SndFileBackedMetadataAudioFile}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{SndFileBackedMetadataAudioFile()\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_af55a4cf92b361107109307c56281efd6} 
+EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File (\begin{DoxyParamCaption}\item[{Snd\+File\+Backed\+Metadata\+Audio\+File \&\&}]{p\+Other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [noexcept]}}
+
+
+
+References \textbf{ EOUtils\+::\+Metadata\+Audio\+File\+::\+Metadata\+Audio\+File()}, \textbf{ m\+File\+Layout}, and \textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!SndFileBackedMetadataAudioFile@{SndFileBackedMetadataAudioFile}}
+\index{SndFileBackedMetadataAudioFile@{SndFileBackedMetadataAudioFile}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{SndFileBackedMetadataAudioFile()\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_aff3cc98c3785aeae129472b484bfcb64} 
+EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{, }\item[{const \textbf{ Audio\+File\+Info} \&}]{p\+Layout\+Hint}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+References \textbf{ EOUtils\+::\+Metadata\+Audio\+File\+::\+Metadata\+Audio\+File()}, and \textbf{ m\+File\+Layout}.
+
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!close@{close}}
+\index{close@{close}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{close()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_af7608eef3ca48433142025a37bb99033} 
+void EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Closes the audio file. 
+
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a4be2573c17b87c092a3f367989d82722}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+::close()}.
+
+
+
+Referenced by \textbf{ open()}, and \textbf{ $\sim$\+Snd\+File\+Backed\+Metadata\+Audio\+File()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!configureSndfileEncoderForWrite@{configureSndfileEncoderForWrite}}
+\index{configureSndfileEncoderForWrite@{configureSndfileEncoderForWrite}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{configureSndfileEncoderForWrite()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a9d6a9bf52f6167e7245edba64fd53070} 
+virtual void EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::configure\+Sndfile\+Encoder\+For\+Write (\begin{DoxyParamCaption}\item[{SNDFILE $\ast$}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+After a successful SFM\+\_\+\+WRITE open, codecs may tweak the encoder via sf\+\_\+command. Default\+: no-\/op. 
+
+Reimplemented in \textbf{ EOUtils\+::\+MP3\+File} \doxyref{}{p.}{classEOUtils_1_1MP3File_a0b59260c0e9870d03a136917855f29cc}, and \textbf{ EOUtils\+::\+Ogg\+File} \doxyref{}{p.}{classEOUtils_1_1OggFile_add950d3dd5e3892f931130fd183a94fd}.
+
+
+
+Referenced by \textbf{ open()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!formatLabel@{formatLabel}}
+\index{formatLabel@{formatLabel}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{formatLabel()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a8c417c6986f90ded3964e483ec00753e} 
+virtual const char $\ast$ EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::format\+Label (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ EOUtils\+::\+Aiff\+File} \doxyref{}{p.}{classEOUtils_1_1AiffFile_acc06d9651e0f4a91a17ba825728366f6}, \textbf{ EOUtils\+::\+MP3\+File} \doxyref{}{p.}{classEOUtils_1_1MP3File_a554aaa588cb0e117ea2f1898728b2c03}, and \textbf{ EOUtils\+::\+Ogg\+File} \doxyref{}{p.}{classEOUtils_1_1OggFile_ae93d873d3e7a19e4680b8ac3f36908ce}.
+
+
+
+Referenced by \textbf{ get\+Highest\+Sample\+Value\+\_\+int64()}, \textbf{ get\+Next\+Sample\+\_\+int64()}, \textbf{ go\+To\+Audio\+Data\+Pos()}, \textbf{ open()}, and \textbf{ write\+Sample\+\_\+int64()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!getAlbum@{getAlbum}}
+\index{getAlbum@{getAlbum}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{getAlbum()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a597832cb68f37962e65d9af4a4daca76} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Album (\begin{DoxyParamCaption}\item[{std\+::string \&}]{p\+Album}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the album metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Album} & Will receive the album string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_a077014bfc235676d6a6a602876e568c0}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!getArtist@{getArtist}}
+\index{getArtist@{getArtist}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{getArtist()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a74491b1431583e61361ed3fc2b958722} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Artist (\begin{DoxyParamCaption}\item[{std\+::string \&}]{p\+Artist}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the artist metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Artist} & Will receive the artist string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_a1700387c5e5663c5acafbaf37173a88b}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!getAudioFileInfo@{getAudioFileInfo}}
+\index{getAudioFileInfo@{getAudioFileInfo}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{getAudioFileInfo()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a2e91490fab82a495f6cc3244f68a3fe1} 
+\textbf{ Audio\+File\+Info} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Audio\+File\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns an \doxyref{Audio\+File}{p.}{classEOUtils_1_1AudioFile} object with information about the audio file. 
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_afa9106be5e7602616779070043bc2252}.
+
+
+
+References \textbf{ m\+File\+Layout}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!getComment@{getComment}}
+\index{getComment@{getComment}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{getComment()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a788bfd7f1e24f8d7ebd5e4c67660513f} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Comment (\begin{DoxyParamCaption}\item[{std\+::string \&}]{p\+Comment}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the comment metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Comment} & Will receive the comment string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_ae4934841335acc0e23f1e2df73e58964}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!getGenre@{getGenre}}
+\index{getGenre@{getGenre}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{getGenre()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a623f3a0ddfb0ae89e87d5c0868d0dfcc} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Genre (\begin{DoxyParamCaption}\item[{std\+::string \&}]{p\+Genre}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the genre metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Genre} & Will receive the genre string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_a761cb9b8167c290c09c5c12c2bcb1eb6}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!getHighestSampleValue\_int64@{getHighestSampleValue\_int64}}
+\index{getHighestSampleValue\_int64@{getHighestSampleValue\_int64}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{getHighestSampleValue\_int64()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a50528a485aeda6e16ab5c3f1558aefd5} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Highest\+Sample\+Value\+\_\+int64 (\begin{DoxyParamCaption}\item[{std\+::int64\+\_\+t \&}]{p\+Highest\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ format\+Label()}, \textbf{ go\+To\+Audio\+Data\+Pos()}, \textbf{ EOUtils\+::sndfile\+\_\+detail\+::max\+Sample\+Value\+For\+Format()}, and \textbf{ m\+File\+Layout}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!getNextSample\_int64@{getNextSample\_int64}}
+\index{getNextSample\_int64@{getNextSample\_int64}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{getNextSample\_int64()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_afc4e1a414dc53a1c3112f6a7b93600f0} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Next\+Sample\+\_\+int64 (\begin{DoxyParamCaption}\item[{std\+::int64\+\_\+t \&}]{p\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ format\+Label()}, \textbf{ EOUtils\+::\+Audio\+File\+::has\+Read\+Mode()}, \textbf{ EOUtils\+::sndfile\+\_\+detail\+::max\+Sample\+Value\+For\+Format()}, \textbf{ m\+File\+Layout}, and \textbf{ EOUtils\+::\+Audio\+File\+::m\+Filename}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{getTitle()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a684645d427b4002fc62c8fc23cd0a141} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Title (\begin{DoxyParamCaption}\item[{std\+::string \&}]{p\+Title}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the title metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Title} & Will receive the title string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_abd1812a1b5957f74618d4018a3acc40f}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!getTrackNumber@{getTrackNumber}}
+\index{getTrackNumber@{getTrackNumber}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{getTrackNumber()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a79744b85e1f5a071d022d49ce0fb80a6} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Track\+Number (\begin{DoxyParamCaption}\item[{std\+::uint32\+\_\+t \&}]{p\+Track\+Number}{, }\item[{std\+::uint32\+\_\+t \&}]{p\+Total\+Tracks}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!getYear@{getYear}}
+\index{getYear@{getYear}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{getYear()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a6cc1dca0322a5945225c7cf82a504226} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::get\+Year (\begin{DoxyParamCaption}\item[{std\+::string \&}]{p\+Year}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the year/date metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Year} & Will receive the year string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_ad23e6e0b25b00e498929b598b43285a1}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!goToAudioDataPos@{goToAudioDataPos}}
+\index{goToAudioDataPos@{goToAudioDataPos}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{goToAudioDataPos()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_ae71e6cdf5e73980e8a71af7005411111} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::go\+To\+Audio\+Data\+Pos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Goes to the audio data position in the audio file. 
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_ae747456aaffc54186bf27d40d2b6619c}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ format\+Label()}, and \textbf{ EOUtils\+::\+Audio\+File\+::m\+Filename}.
+
+
+
+Referenced by \textbf{ get\+Highest\+Sample\+Value\+\_\+int64()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{isOpen()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a819cd193fb520477daecc99074244b27} 
+bool EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::is\+Open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether or not the audio file is open. 
+
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_aadb1e2576c96134c0e146735c8aea1f1}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!maxValueForSampleSize@{maxValueForSampleSize}}
+\index{maxValueForSampleSize@{maxValueForSampleSize}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{maxValueForSampleSize()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a99ac823f1aa365c8876fa35939b61e82} 
+std\+::int64\+\_\+t EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::max\+Value\+For\+Sample\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the maximum possible positive value of the audio file\textquotesingle{}s sample size. 
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a04453bb2912c38bb59448756a7773835}.
+
+
+
+References \textbf{ EOUtils\+::sndfile\+\_\+detail\+::max\+Sample\+Value\+For\+Format()}, and \textbf{ m\+File\+Layout}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!newFileSfFormatMask@{newFileSfFormatMask}}
+\index{newFileSfFormatMask@{newFileSfFormatMask}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{newFileSfFormatMask()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a9d4543b5c26b8881a281ddd3bf0de7b6} 
+virtual int EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::new\+File\+Sf\+Format\+Mask (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ EOUtils\+::\+Aiff\+File} \doxyref{}{p.}{classEOUtils_1_1AiffFile_a310abc99b7aa1799be5fb278d9cf9b9c}, \textbf{ EOUtils\+::\+MP3\+File} \doxyref{}{p.}{classEOUtils_1_1MP3File_a1990439c695c59199298dfbeeaa353d8}, and \textbf{ EOUtils\+::\+Ogg\+File} \doxyref{}{p.}{classEOUtils_1_1OggFile_a2876012be4ac06751bd55334ef4766fd}.
+
+
+
+Referenced by \textbf{ open()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!numSamples@{numSamples}}
+\index{numSamples@{numSamples}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{numSamples()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a520f77d8c349944e508a6707bc3617ac} 
+std\+::size\+\_\+t EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::num\+Samples (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of audio samples in the audio file. 
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a9323d827fd3a5cd95c02c90b07c33552}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+::m\+Data\+Size\+Bytes}, \textbf{ m\+File\+Layout}, and \textbf{ EOUtils\+::\+Audio\+File\+::m\+Filename}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!open@{open}}
+\index{open@{open}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{open()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_ada954c16d8f5ff5c9a22c39c2f7c316a} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::open (\begin{DoxyParamCaption}\item[{\textbf{ Audio\+File\+Modes}}]{p\+Open\+Mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a74bb4950fa5e2455afb4813585bca4c6}.
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ close()}, \textbf{ configure\+Sndfile\+Encoder\+For\+Write()}, \textbf{ format\+Label()}, \textbf{ EOUtils\+::\+Audio\+File\+::has\+Read\+Mode()}, \textbf{ EOUtils\+::\+Audio\+File\+::has\+Write\+Mode()}, \textbf{ EOUtils\+::\+Audio\+File\+::m\+Data\+Size\+Bytes}, \textbf{ m\+File\+Layout}, \textbf{ EOUtils\+::\+Audio\+File\+::m\+Filename}, \textbf{ new\+File\+Sf\+Format\+Mask()}, \textbf{ read\+Format\+Matches()}, \textbf{ EOUtils\+::sndfile\+\_\+detail\+::safe\+File\+Size()}, \textbf{ EOUtils\+::\+Audio\+File\+::set\+File\+Mode()}, and \textbf{ EOUtils\+::sndfile\+\_\+detail\+::sf\+Info\+To\+Audio\+File\+Info()}.
+
+
+
+Referenced by \textbf{ EOUtils\+::\+Aiff\+File\+::open()}, \textbf{ EOUtils\+::\+MP3\+File\+::open()}, and \textbf{ EOUtils\+::\+Ogg\+File\+::open()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!readFormatMatches@{readFormatMatches}}
+\index{readFormatMatches@{readFormatMatches}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{readFormatMatches()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a3f040f277c0e76c9411defa7b386cd38} 
+virtual bool EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::read\+Format\+Matches (\begin{DoxyParamCaption}\item[{int}]{p\+Sf\+Full\+Format}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ EOUtils\+::\+Aiff\+File} \doxyref{}{p.}{classEOUtils_1_1AiffFile_a3a52e2ce0418a6a496ffcf8463f69632}, \textbf{ EOUtils\+::\+MP3\+File} \doxyref{}{p.}{classEOUtils_1_1MP3File_acded4b8297cfd6e349cd0a89e8a8e8ee}, and \textbf{ EOUtils\+::\+Ogg\+File} \doxyref{}{p.}{classEOUtils_1_1OggFile_aa89063b86c0a015e5c62d8741c3fb14e}.
+
+
+
+Referenced by \textbf{ open()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!seekOutputToSampleNum@{seekOutputToSampleNum}}
+\index{seekOutputToSampleNum@{seekOutputToSampleNum}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{seekOutputToSampleNum()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a3c569d4cc544c985d81dc131e0da5a32} 
+void EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::seek\+Output\+To\+Sample\+Num (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{p\+Sample\+Num}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+::has\+Write\+Mode()}, \textbf{ EOUtils\+::\+Audio\+File\+::m\+Data\+Size\+Bytes}, and \textbf{ m\+File\+Layout}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!setAlbum@{setAlbum}}
+\index{setAlbum@{setAlbum}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{setAlbum()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_adb1c8cfe8ff0ecc8d0159871c9245a18} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::set\+Album (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Album}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the album metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Album} & The album string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_ae5b899c9d5b6f8942cfe181e29272afe}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!setArtist@{setArtist}}
+\index{setArtist@{setArtist}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{setArtist()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a13a905679e51af831810eff6a15b9524} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::set\+Artist (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Artist}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the artist metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Artist} & The artist string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_adae18656bf60b5e8e81f484f672db1bf}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!setAudioFileInfo@{setAudioFileInfo}}
+\index{setAudioFileInfo@{setAudioFileInfo}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{setAudioFileInfo()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a5b4ddbc681df5496f355bef551bbddea} 
+void EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::set\+Audio\+File\+Info (\begin{DoxyParamCaption}\item[{const \textbf{ Audio\+File\+Info} \&}]{p\+Audio\+File\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a2801f28e7658576fb6ae96f91ced6f92}.
+
+
+
+References \textbf{ m\+File\+Layout}.
+
+
+
+Referenced by \textbf{ EOUtils\+::\+Aiff\+File\+::set\+Audio\+File\+Info()}, \textbf{ EOUtils\+::\+MP3\+File\+::set\+Audio\+File\+Info()}, and \textbf{ EOUtils\+::\+Ogg\+File\+::set\+Audio\+File\+Info()}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!setComment@{setComment}}
+\index{setComment@{setComment}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{setComment()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a05761942c1d69d5afe4ae82a7f7b91fc} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::set\+Comment (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Comment}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the comment metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Comment} & The comment string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_aa367019cbde49d7f23c60c646c6954f0}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!setGenre@{setGenre}}
+\index{setGenre@{setGenre}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{setGenre()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_ab315502e2dc380bd6ff616dfa2521716} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::set\+Genre (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Genre}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the genre metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Genre} & The genre string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_acc7942dfb3e61cd54127aabdd2862093}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{setTitle()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a9e83638df759da359e7024e493cd1301} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::set\+Title (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Title}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the title metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Title} & The title string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_a33c4eecf35d0febcec189e27b8caf98a}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!setTrackNumber@{setTrackNumber}}
+\index{setTrackNumber@{setTrackNumber}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{setTrackNumber()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a04ebcd99162fd7421accd0b2f92f2d1b} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::set\+Track\+Number (\begin{DoxyParamCaption}\item[{std\+::uint32\+\_\+t}]{p\+Track\+Number}{, }\item[{std\+::uint32\+\_\+t}]{p\+Total\+Tracks}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!setYear@{setYear}}
+\index{setYear@{setYear}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{setYear()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_aa32686ba35238da9794c7133589bf01e} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::set\+Year (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Year}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the year/date metadata tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Year} & The year string (e.\+g., "{}2024"{})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxyref{Audio\+File\+Result\+Type}{p.}{classEOUtils_1_1AudioFileResultType} with errors on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Metadata\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1MetadataAudioFile_a596dd3b2b993afc0a2c3a2ff68d47a13}.
+
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!writeSample\_int64@{writeSample\_int64}}
+\index{writeSample\_int64@{writeSample\_int64}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{writeSample\_int64()}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_acfdd6717c813c6af0a7d8510ab53cd1a} 
+\textbf{ Audio\+File\+Result\+Type} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::write\+Sample\+\_\+int64 (\begin{DoxyParamCaption}\item[{std\+::int64\+\_\+t}]{p\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+References \textbf{ EOUtils\+::\+Audio\+File\+Result\+Type\+::add\+Error()}, \textbf{ EOUtils\+::sndfile\+\_\+detail\+::format\+Error\+Suffix()}, \textbf{ format\+Label()}, \textbf{ EOUtils\+::\+Audio\+File\+::has\+Write\+Mode()}, \textbf{ EOUtils\+::sndfile\+\_\+detail\+::max\+Sample\+Value\+For\+Format()}, \textbf{ m\+File\+Layout}, and \textbf{ EOUtils\+::\+Audio\+File\+::m\+Filename}.
+
+
+
+\label{doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\index{EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}!mFileLayout@{mFileLayout}}
+\index{mFileLayout@{mFileLayout}!EOUtils::SndFileBackedMetadataAudioFile@{EOUtils::SndFileBackedMetadataAudioFile}}
+\doxysubsubsection{mFileLayout}
+{\footnotesize\ttfamily \label{classEOUtils_1_1SndFileBackedMetadataAudioFile_a9306ffa00a91221e8e8ea9e53fab2066} 
+\textbf{ Audio\+File\+Info} EOUtils\+::\+Snd\+File\+Backed\+Metadata\+Audio\+File\+::m\+File\+Layout\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by \textbf{ EOUtils\+::\+Aiff\+File\+::\+Aiff\+File()}, \textbf{ EOUtils\+::\+Aiff\+File\+::\+Aiff\+File()}, \textbf{ EOUtils\+::\+MP3\+File\+::configure\+Sndfile\+Encoder\+For\+Write()}, \textbf{ EOUtils\+::\+Ogg\+File\+::configure\+Sndfile\+Encoder\+For\+Write()}, \textbf{ get\+Audio\+File\+Info()}, \textbf{ get\+Highest\+Sample\+Value\+\_\+int64()}, \textbf{ get\+Next\+Sample\+\_\+int64()}, \textbf{ max\+Value\+For\+Sample\+Size()}, \textbf{ EOUtils\+::\+MP3\+File\+::\+MP3\+File()}, \textbf{ EOUtils\+::\+MP3\+File\+::\+MP3\+File()}, \textbf{ EOUtils\+::\+MP3\+File\+::\+MP3\+File()}, \textbf{ EOUtils\+::\+MP3\+File\+::\+MP3\+File()}, \textbf{ EOUtils\+::\+Aiff\+File\+::new\+File\+Sf\+Format\+Mask()}, \textbf{ num\+Samples()}, \textbf{ EOUtils\+::\+Ogg\+File\+::\+Ogg\+File()}, \textbf{ EOUtils\+::\+Ogg\+File\+::\+Ogg\+File()}, \textbf{ EOUtils\+::\+Ogg\+File\+::\+Ogg\+File()}, \textbf{ EOUtils\+::\+Ogg\+File\+::\+Ogg\+File()}, \textbf{ EOUtils\+::\+Aiff\+File\+::open()}, \textbf{ EOUtils\+::\+MP3\+File\+::open()}, \textbf{ EOUtils\+::\+Ogg\+File\+::open()}, \textbf{ open()}, \textbf{ seek\+Output\+To\+Sample\+Num()}, \textbf{ set\+Audio\+File\+Info()}, \textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File()}, \textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File()}, \textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File()}, \textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File()}, \textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File()}, and \textbf{ write\+Sample\+\_\+int64()}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File.\+h}\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ Snd\+File\+Backed\+Metadata\+Audio\+File.\+cpp}\end{DoxyCompactItemize}

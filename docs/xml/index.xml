@@ -1,0 +1,786 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.15.0" xml:lang="en-US">
+  <compound refid="classEOUtils_1_1AiffFile" kind="class"><name>EOUtils::AiffFile</name>
+    <member refid="classEOUtils_1_1AiffFile_1a3a5d01f8d6b90480c22b7f4ddc215ac3" kind="variable"><name>mAiffInfo</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1a210eb0320ee1f09793a50573b71514db" kind="function"><name>AiffFile</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1a65dadae4594487acb2cf939f696ef0b6" kind="function"><name>AiffFile</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1afe46d0e8eaa56b29932663b7d92fc02d" kind="function"><name>AiffFile</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1ae6b9ba11e02d50bf4fb7dd38710357da" kind="function"><name>AiffFile</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1a07a996e7f6879b17322df74c7ed24d80" kind="function"><name>AiffFile</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1a9f23485a37375f43f2cbcc5a6d3e272a" kind="function"><name>~AiffFile</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1adbf5b1a9feef88138c4ac879c362befe" kind="function"><name>open</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1a594d9c73bcb27941f606b32c009381c7" kind="function"><name>setAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1a232218eab72c0d3dc74f2bb3a4ad0411" kind="function"><name>getFileInfo</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1a3a52e2ce0418a6a496ffcf8463f69632" kind="function"><name>readFormatMatches</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1a310abc99b7aa1799be5fb278d9cf9b9c" kind="function"><name>newFileSfFormatMask</name></member>
+    <member refid="classEOUtils_1_1AiffFile_1acc06d9651e0f4a91a17ba825728366f6" kind="function"><name>formatLabel</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1AiffFileInfo" kind="class"><name>EOUtils::AiffFileInfo</name>
+    <member refid="classEOUtils_1_1AiffFileInfo_1a5966d209c4d0bc3787d1f274e6fd3431" kind="function"><name>AiffFileInfo</name></member>
+    <member refid="classEOUtils_1_1AiffFileInfo_1a2213e8c9753aaf97ddb8c47458617c3d" kind="function"><name>AiffFileInfo</name></member>
+    <member refid="classEOUtils_1_1AiffFileInfo_1a33e79af4782d24672bd281fd1a46b4b1" kind="function"><name>read</name></member>
+    <member refid="classEOUtils_1_1AiffFileInfo_1ace178edb3472f22ecb709415e41dd4b2" kind="function"><name>read</name></member>
+    <member refid="classEOUtils_1_1AiffFileInfo_1a45ae9406849b94faba589c1a89e86c74" kind="function"><name>write</name></member>
+    <member refid="classEOUtils_1_1AiffFileInfo_1a9956079d8beadacb8eb93ee94f6c5f16" kind="function"><name>matchesExtension</name></member>
+    <member refid="classEOUtils_1_1AiffFileInfo_1a916f15228bfb7307a1e7aeb672fd01aa" kind="function"><name>sniffFileHeader</name></member>
+  </compound>
+  <compound refid="classAudioFile" kind="class"><name>AudioFile</name>
+    <member refid="classAudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" kind="variable"><name>mFilename</name></member>
+    <member refid="classAudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" kind="variable"><name>mFileStream</name></member>
+    <member refid="classAudioFile_1a1d3f62779198ad88d9fa06944433b69b" kind="variable"><name>mFileOpenMode</name></member>
+    <member refid="classAudioFile_1a692f3c22c6709d0c6506588d3aa7b218" kind="variable"><name>mDataSizeBytes</name></member>
+    <member refid="classAudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" kind="variable"><name>mMetadata</name></member>
+    <member refid="classAudioFile_1a8ad604ab1ec13becdf8b2659e61c9c3d" kind="function"><name>AudioFile</name></member>
+    <member refid="classAudioFile_1a7dd053155e5498f9603b2a232158d1dc" kind="function"><name>AudioFile</name></member>
+    <member refid="classAudioFile_1a929e0fbe28b29242d228331212e89336" kind="function"><name>AudioFile</name></member>
+    <member refid="classAudioFile_1af6b8d50765277b330bc63e57dcc4f0c3" kind="function"><name>~AudioFile</name></member>
+    <member refid="classAudioFile_1a2801f28e7658576fb6ae96f91ced6f92" kind="function"><name>setAudioFileInfo</name></member>
+    <member refid="classAudioFile_1a74bb4950fa5e2455afb4813585bca4c6" kind="function"><name>open</name></member>
+    <member refid="classAudioFile_1aa402993503954e5c687da0558855f706" kind="function"><name>BitrateIsAdjustable</name></member>
+    <member refid="classAudioFile_1aadb1e2576c96134c0e146735c8aea1f1" kind="function"><name>isOpen</name></member>
+    <member refid="classAudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" kind="function"><name>hasReadMode</name></member>
+    <member refid="classAudioFile_1a819f201a67ba11e9587122e200535df7" kind="function"><name>hasWriteMode</name></member>
+    <member refid="classAudioFile_1a4be2573c17b87c092a3f367989d82722" kind="function"><name>close</name></member>
+    <member refid="classAudioFile_1a99c362d4f3f1417e88a29e20e1a569b5" kind="function"><name>getNextSample_int64</name></member>
+    <member refid="classAudioFile_1a901b6f6818ae604841592537a278507d" kind="function"><name>writeSample_int64</name></member>
+    <member refid="classAudioFile_1a1780a021a151729a1a7eaa0d02a2fa01" kind="function"><name>getHighestSampleValue_int64</name></member>
+    <member refid="classAudioFile_1ae747456aaffc54186bf27d40d2b6619c" kind="function"><name>goToAudioDataPos</name></member>
+    <member refid="classAudioFile_1add8fc5ed69971162faa82cdf2118dfc0" kind="function"><name>numSamples</name></member>
+    <member refid="classAudioFile_1a87cb3aeed000723df5d1c9c9d6d221d3" kind="function"><name>maxValueForSampleSize</name></member>
+    <member refid="classAudioFile_1ad6281b62a2270d05ba8ab3d643837caa" kind="function"><name>Filename</name></member>
+    <member refid="classAudioFile_1aab5a60cd510028e984f06f3cad3ba196" kind="function"><name>Filename</name></member>
+    <member refid="classAudioFile_1a7c9c44e7d515e2281736219609d785ed" kind="function"><name>setMetadata</name></member>
+    <member refid="classAudioFile_1a877560d2344ca9a2c38700e2f11f1224" kind="function"><name>setMetadataFromVal</name></member>
+    <member refid="classAudioFile_1a3e4f535ca55f141bf8145665b5881bd9" kind="function"><name>getMetadata</name></member>
+    <member refid="classAudioFile_1a1414f518e301c5ca00132f3b4d726d67" kind="function"><name>getMetadata</name></member>
+    <member refid="classAudioFile_1a80b9e185e791079450429706ca9ef91e" kind="function"><name>getMetadataAs</name></member>
+    <member refid="classAudioFile_1a5c3e338b5d9b22e3e16ddb5b2d87a533" kind="function"><name>getMetadataAs</name></member>
+    <member refid="classAudioFile_1ab867a5930c81e792f4116f62df0f8298" kind="function"><name>getMetadataAs</name></member>
+    <member refid="classAudioFile_1aedf6b1305b5cfd321bedd7790ef7c8e4" kind="function"><name>hasMetadata</name></member>
+    <member refid="classAudioFile_1ac64d871f57a4b64c7841c704900969a5" kind="function"><name>getAudioFileInfo</name></member>
+    <member refid="classAudioFile_1af30b9f5c0bd6f6eb670976c5872aacdd" kind="function"><name>seekOutputToSampleNum</name></member>
+    <member refid="classAudioFile_1abff45a0857ea7ac45920ce200c9c2f42" kind="function"><name>fileSizeAccordingToStream</name></member>
+    <member refid="classAudioFile_1a376cef8c69f91ed84ea84026075a4df2" kind="function"><name>setFileMode</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1AudioFile" kind="class"><name>EOUtils::AudioFile</name>
+    <member refid="classEOUtils_1_1AudioFile_1ae2e83cc4a0d973d368ea693c7a9c003a" kind="variable"><name>mFilename</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1aeb7d0107b41ae6ee1e8005a1acaf9c0e" kind="variable"><name>mFileStream</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a1d3f62779198ad88d9fa06944433b69b" kind="variable"><name>mFileOpenMode</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a692f3c22c6709d0c6506588d3aa7b218" kind="variable"><name>mDataSizeBytes</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a894a8ef65825cf7cbec9f9d334e6d29a" kind="variable"><name>mMetadata</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a8ad604ab1ec13becdf8b2659e61c9c3d" kind="function"><name>AudioFile</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a7dd053155e5498f9603b2a232158d1dc" kind="function"><name>AudioFile</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a929e0fbe28b29242d228331212e89336" kind="function"><name>AudioFile</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1af6b8d50765277b330bc63e57dcc4f0c3" kind="function"><name>~AudioFile</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a2801f28e7658576fb6ae96f91ced6f92" kind="function"><name>setAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" kind="function"><name>open</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a683fdacc6a09b3a22d5c438c8559a054" kind="function"><name>BitrateIsAdjustable</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1aadb1e2576c96134c0e146735c8aea1f1" kind="function"><name>isOpen</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a8b8e7f8bd8255c4a98cb4eab6baf0230" kind="function"><name>hasReadMode</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a819f201a67ba11e9587122e200535df7" kind="function"><name>hasWriteMode</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a4be2573c17b87c092a3f367989d82722" kind="function"><name>close</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a99c362d4f3f1417e88a29e20e1a569b5" kind="function"><name>getNextSample_int64</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a901b6f6818ae604841592537a278507d" kind="function"><name>writeSample_int64</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a1780a021a151729a1a7eaa0d02a2fa01" kind="function"><name>getHighestSampleValue_int64</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1ae747456aaffc54186bf27d40d2b6619c" kind="function"><name>goToAudioDataPos</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a9323d827fd3a5cd95c02c90b07c33552" kind="function"><name>numSamples</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a04453bb2912c38bb59448756a7773835" kind="function"><name>maxValueForSampleSize</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1ad6281b62a2270d05ba8ab3d643837caa" kind="function"><name>Filename</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1aab5a60cd510028e984f06f3cad3ba196" kind="function"><name>Filename</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a7c9c44e7d515e2281736219609d785ed" kind="function"><name>setMetadata</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a877560d2344ca9a2c38700e2f11f1224" kind="function"><name>setMetadataFromVal</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a3e4f535ca55f141bf8145665b5881bd9" kind="function"><name>getMetadata</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a80b9e185e791079450429706ca9ef91e" kind="function"><name>getMetadataAs</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a1414f518e301c5ca00132f3b4d726d67" kind="function"><name>getMetadata</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a5c3e338b5d9b22e3e16ddb5b2d87a533" kind="function"><name>getMetadataAs</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1ab867a5930c81e792f4116f62df0f8298" kind="function"><name>getMetadataAs</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1aedf6b1305b5cfd321bedd7790ef7c8e4" kind="function"><name>hasMetadata</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1afa9106be5e7602616779070043bc2252" kind="function"><name>getAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1af30b9f5c0bd6f6eb670976c5872aacdd" kind="function"><name>seekOutputToSampleNum</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1abff45a0857ea7ac45920ce200c9c2f42" kind="function"><name>fileSizeAccordingToStream</name></member>
+    <member refid="classEOUtils_1_1AudioFile_1a376cef8c69f91ed84ea84026075a4df2" kind="function"><name>setFileMode</name></member>
+  </compound>
+  <compound refid="classAudioFileInfo" kind="class"><name>AudioFileInfo</name>
+    <member refid="classAudioFileInfo_1a5d780adb5a915770b5707aee210c15e5" kind="variable"><name>mFileSize</name></member>
+    <member refid="classAudioFileInfo_1acad9abe5b454c2d77d06eb6e73192e56" kind="variable"><name>mNumChannels</name></member>
+    <member refid="classAudioFileInfo_1adef5201babdec70e8c48f79f622915e2" kind="variable"><name>mSampleRateHz</name></member>
+    <member refid="classAudioFileInfo_1a57e6bae0181e9d47e37924e99238ba20" kind="variable"><name>mBytesPerSecond</name></member>
+    <member refid="classAudioFileInfo_1a9307f85fa10c2104f2b11dac26c0d7a9" kind="variable"><name>mByteRate</name></member>
+    <member refid="classAudioFileInfo_1a0b3c35133b9afb40a8678061e1e558af" kind="variable"><name>mBitsPerSample</name></member>
+    <member refid="classAudioFileInfo_1a658d1cdbdc856d3171e9eda93bcc4b14" kind="function"><name>AudioFileInfo</name></member>
+    <member refid="classAudioFileInfo_1a68ba83c0b64f8622807d044e43bace65" kind="function"><name>~AudioFileInfo</name></member>
+    <member refid="classAudioFileInfo_1abc993cfabd7bf5db763072caafed438f" kind="function"><name>copyAudioFileInfo</name></member>
+    <member refid="classAudioFileInfo_1ab94a417a9ec7ebf2ac1e9b1578f59825" kind="function"><name>read</name></member>
+    <member refid="classAudioFileInfo_1ae46975f1e0d83c16008c256d283d5c23" kind="function"><name>read</name></member>
+    <member refid="classAudioFileInfo_1a35bee862e09314491cc60205fa953b02" kind="function"><name>write</name></member>
+    <member refid="classAudioFileInfo_1ae4ad85c7dec9cea2e1c972fa5363317b" kind="function"><name>FileSize</name></member>
+    <member refid="classAudioFileInfo_1a909d37035c78c019104b5eed55a4d4c5" kind="function"><name>FileSize</name></member>
+    <member refid="classAudioFileInfo_1a06eec6c97330b24756c63267fef967d1" kind="function"><name>NumChannels</name></member>
+    <member refid="classAudioFileInfo_1a45f4b006353e74fe3855406019f36800" kind="function"><name>NumChannels</name></member>
+    <member refid="classAudioFileInfo_1a3ebf18af705038e03f640ece3dfd96b3" kind="function"><name>SampleRateHz</name></member>
+    <member refid="classAudioFileInfo_1a5a27ec24f55e1f6db76f2690910fd145" kind="function"><name>SampleRateHz</name></member>
+    <member refid="classAudioFileInfo_1aec253c7d40de4a512c2b2cfd13866ad4" kind="function"><name>BytesPerSecond</name></member>
+    <member refid="classAudioFileInfo_1af72fc31e0f2e56cf2fcc83121518b4c9" kind="function"><name>BytesPerSecond</name></member>
+    <member refid="classAudioFileInfo_1a6eae27e84b5551365f18c0e534dffb9a" kind="function"><name>ByteRate</name></member>
+    <member refid="classAudioFileInfo_1a561210c51ba98733104752dbce0b1dff" kind="function"><name>ByteRate</name></member>
+    <member refid="classAudioFileInfo_1a251e008ebbbe7b96fa393162ff6dffa8" kind="function"><name>BitsPerSample</name></member>
+    <member refid="classAudioFileInfo_1abe9beee9f81daab6f8b88a10b97d38f8" kind="function"><name>BitsPerSample</name></member>
+    <member refid="classAudioFileInfo_1a62cab32f6620633f2ae70e89bd8697bd" kind="function"><name>BytesPerSample</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1AudioFileInfo" kind="class"><name>EOUtils::AudioFileInfo</name>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a5d780adb5a915770b5707aee210c15e5" kind="variable"><name>mFileSize</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1acad9abe5b454c2d77d06eb6e73192e56" kind="variable"><name>mNumChannels</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1adef5201babdec70e8c48f79f622915e2" kind="variable"><name>mSampleRateHz</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a57e6bae0181e9d47e37924e99238ba20" kind="variable"><name>mBytesPerSecond</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a9307f85fa10c2104f2b11dac26c0d7a9" kind="variable"><name>mByteRate</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a0b3c35133b9afb40a8678061e1e558af" kind="variable"><name>mBitsPerSample</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a658d1cdbdc856d3171e9eda93bcc4b14" kind="function"><name>AudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a68ba83c0b64f8622807d044e43bace65" kind="function"><name>~AudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1abc993cfabd7bf5db763072caafed438f" kind="function"><name>copyAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1ab94a417a9ec7ebf2ac1e9b1578f59825" kind="function"><name>read</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1ae46975f1e0d83c16008c256d283d5c23" kind="function"><name>read</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a35bee862e09314491cc60205fa953b02" kind="function"><name>write</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1ae4ad85c7dec9cea2e1c972fa5363317b" kind="function"><name>FileSize</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a909d37035c78c019104b5eed55a4d4c5" kind="function"><name>FileSize</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a06eec6c97330b24756c63267fef967d1" kind="function"><name>NumChannels</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a45f4b006353e74fe3855406019f36800" kind="function"><name>NumChannels</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a3ebf18af705038e03f640ece3dfd96b3" kind="function"><name>SampleRateHz</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a5a27ec24f55e1f6db76f2690910fd145" kind="function"><name>SampleRateHz</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1aec253c7d40de4a512c2b2cfd13866ad4" kind="function"><name>BytesPerSecond</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1af72fc31e0f2e56cf2fcc83121518b4c9" kind="function"><name>BytesPerSecond</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a6eae27e84b5551365f18c0e534dffb9a" kind="function"><name>ByteRate</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a561210c51ba98733104752dbce0b1dff" kind="function"><name>ByteRate</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a251e008ebbbe7b96fa393162ff6dffa8" kind="function"><name>BitsPerSample</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1abe9beee9f81daab6f8b88a10b97d38f8" kind="function"><name>BitsPerSample</name></member>
+    <member refid="classEOUtils_1_1AudioFileInfo_1a62cab32f6620633f2ae70e89bd8697bd" kind="function"><name>BytesPerSample</name></member>
+  </compound>
+  <compound refid="structAudioFileMixOptions" kind="struct"><name>AudioFileMixOptions</name>
+    <member refid="structAudioFileMixOptions_1a68fbda6ff717d116f368b98ac7b55e91" kind="variable"><name>inputFilenames</name></member>
+    <member refid="structAudioFileMixOptions_1a61d2df1a76cdd9e8e8cb111a49b50579" kind="variable"><name>outputFilename</name></member>
+  </compound>
+  <compound refid="classAudioFileResultType" kind="class"><name>AudioFileResultType</name>
+    <member refid="classAudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" kind="typedef"><name>errorCollectionType</name></member>
+    <member refid="classAudioFileResultType_1a1600f33d8ba5ea5e94e050e300f7aab5" kind="variable"><name>mErrors</name></member>
+    <member refid="classAudioFileResultType_1a228d6aeba7d0186edbe6f15e01ec65e9" kind="function"><name>AudioFileResultType</name></member>
+    <member refid="classAudioFileResultType_1aaeaa4d2f44e3ae973c85e3f5558b694e" kind="function"><name>~AudioFileResultType</name></member>
+    <member refid="classAudioFileResultType_1a684c6447da4c85612789a4289b4985a8" kind="function"><name>addError</name></member>
+    <member refid="classAudioFileResultType_1a614346c7534f05ce9e8de3a42217dfea" kind="function"><name>getErrors</name></member>
+    <member refid="classAudioFileResultType_1a4c1c0e01ecfafe5a10b7359929dcf691" kind="function"><name>getErrorsBegin</name></member>
+    <member refid="classAudioFileResultType_1aa67421495c95cff1666f758bd75d7100" kind="function"><name>getErrorsEnd</name></member>
+    <member refid="classAudioFileResultType_1a30725c5f74f0492d20f9bfa685dcab02" kind="function"><name>numErrors</name></member>
+    <member refid="classAudioFileResultType_1a7cb671fe20ea46e8d4ee3cf4785a7269" kind="function"><name>getError</name></member>
+    <member refid="classAudioFileResultType_1ad672a9d8bc0a1cabf55fe4f7d2da864e" kind="function"><name>operator bool</name></member>
+    <member refid="classAudioFileResultType_1aae2b9b567834b1dc1fb8f3f1aaa26cb2" kind="function"><name>outputErrors</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1AudioFileResultType" kind="class"><name>EOUtils::AudioFileResultType</name>
+    <member refid="classEOUtils_1_1AudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" kind="typedef"><name>errorCollectionType</name></member>
+    <member refid="classEOUtils_1_1AudioFileResultType_1a1600f33d8ba5ea5e94e050e300f7aab5" kind="variable"><name>mErrors</name></member>
+    <member refid="classEOUtils_1_1AudioFileResultType_1a228d6aeba7d0186edbe6f15e01ec65e9" kind="function"><name>AudioFileResultType</name></member>
+    <member refid="classEOUtils_1_1AudioFileResultType_1aaeaa4d2f44e3ae973c85e3f5558b694e" kind="function"><name>~AudioFileResultType</name></member>
+    <member refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" kind="function"><name>addError</name></member>
+    <member refid="classEOUtils_1_1AudioFileResultType_1a614346c7534f05ce9e8de3a42217dfea" kind="function"><name>getErrors</name></member>
+    <member refid="classEOUtils_1_1AudioFileResultType_1a4c1c0e01ecfafe5a10b7359929dcf691" kind="function"><name>getErrorsBegin</name></member>
+    <member refid="classEOUtils_1_1AudioFileResultType_1aa67421495c95cff1666f758bd75d7100" kind="function"><name>getErrorsEnd</name></member>
+    <member refid="classEOUtils_1_1AudioFileResultType_1a30725c5f74f0492d20f9bfa685dcab02" kind="function"><name>numErrors</name></member>
+    <member refid="classEOUtils_1_1AudioFileResultType_1a7cb671fe20ea46e8d4ee3cf4785a7269" kind="function"><name>getError</name></member>
+    <member refid="classEOUtils_1_1AudioFileResultType_1ad672a9d8bc0a1cabf55fe4f7d2da864e" kind="function"><name>operator bool</name></member>
+    <member refid="classEOUtils_1_1AudioFileResultType_1aae2b9b567834b1dc1fb8f3f1aaa26cb2" kind="function"><name>outputErrors</name></member>
+  </compound>
+  <compound refid="classCAboutDlg" kind="class"><name>CAboutDlg</name>
+    <member refid="classCAboutDlg_1a6d1e6a33fef23bee6e75254189d865ce" kind="function"><name>CAboutDlg</name></member>
+    <member refid="classCAboutDlg_1ab83db7484fec957282d7d5a21aed4df4" kind="function"><name>DoDataExchange</name></member>
+  </compound>
+  <compound refid="classCAudioMixerCPPApp" kind="class"><name>CAudioMixerCPPApp</name>
+    <member refid="classCAudioMixerCPPApp_1a5ab25f9cf2e1e539faf3d537b3f06d6a" kind="function"><name>CAudioMixerCPPApp</name></member>
+    <member refid="classCAudioMixerCPPApp_1a47eb3cd7f6aebe3299060e66ddb47b80" kind="function"><name>InitInstance</name></member>
+  </compound>
+  <compound refid="classCAudioMixerCPPDlg" kind="class"><name>CAudioMixerCPPDlg</name>
+    <member refid="classCAudioMixerCPPDlg_1acf8ee4d91e544f5970eaca5c98b34b2a" kind="variable"><name>m_hIcon</name></member>
+    <member refid="classCAudioMixerCPPDlg_1aecbfb2d4975c5456385eaba9cae768f6" kind="variable"><name>mFilenameListBox</name></member>
+    <member refid="classCAudioMixerCPPDlg_1a165f511b493178a1aceaae6553880d7f" kind="variable"><name>mStatusText</name></member>
+    <member refid="classCAudioMixerCPPDlg_1ad05da1544b1e57817c0ecd3a99c7dd23" kind="variable"><name>mOutputFilename</name></member>
+    <member refid="classCAudioMixerCPPDlg_1a8cda873f3281910bf5593aafc5d5af26" kind="function"><name>CAudioMixerCPPDlg</name></member>
+    <member refid="classCAudioMixerCPPDlg_1a872023ad01edcb4403c1cd0c87448d55" kind="function"><name>OnBnClickedButtonMixAudioFiles</name></member>
+    <member refid="classCAudioMixerCPPDlg_1a6372aa0e41bfc9ce3eefaf5754c36830" kind="function"><name>OnClickedButtonSelectOutputFile</name></member>
+    <member refid="classCAudioMixerCPPDlg_1a4cf02def48432d68538d81307a8d0082" kind="function"><name>OnDropFiles</name></member>
+    <member refid="classCAudioMixerCPPDlg_1a4ad8d904fd531d00a20a4d3774baf703" kind="function"><name>OnBnClickedButtonClearInputList</name></member>
+    <member refid="classCAudioMixerCPPDlg_1ae263d828b9c09b0d998ac0d0cf64f7f1" kind="function"><name>DoDataExchange</name></member>
+    <member refid="classCAudioMixerCPPDlg_1a0754f2ee76b5180dd8077b9b8c263a44" kind="function"><name>OnInitDialog</name></member>
+    <member refid="classCAudioMixerCPPDlg_1a6c0991ab95cb6ac8e21859de2eb930e4" kind="function"><name>OnSysCommand</name></member>
+    <member refid="classCAudioMixerCPPDlg_1af4ab34cfb01be826015cb904054cc628" kind="function"><name>OnPaint</name></member>
+    <member refid="classCAudioMixerCPPDlg_1ae95e7c6dce32a812f7f787639847276b" kind="function"><name>OnQueryDragIcon</name></member>
+    <member refid="classCAudioMixerCPPDlg_1a18876845ce273c45e8d719c51713202c" kind="function"><name>toggleUIControls</name></member>
+    <member refid="classCAudioMixerCPPDlg_1a328b2b4b8c5b25d6a94e4bd2d00cc969" kind="function"><name>OnMixDoneMessage</name></member>
+  </compound>
+  <compound refid="classCCustomEditListBox" kind="class"><name>CCustomEditListBox</name>
+    <member refid="classCCustomEditListBox_1a7bb950b0e32bd2a956ceb26fcea4d696" kind="function"><name>OnBrowse</name></member>
+  </compound>
+  <compound refid="classCDialogEx" kind="class"><name>CDialogEx</name>
+  </compound>
+  <compound refid="classCVSListBox" kind="class"><name>CVSListBox</name>
+  </compound>
+  <compound refid="classCWinApp" kind="class"><name>CWinApp</name>
+  </compound>
+  <compound refid="structEOUtils_1_1FLACFile_1_1DecoderClientData" kind="struct"><name>EOUtils::FLACFile::DecoderClientData</name>
+    <member refid="structEOUtils_1_1FLACFile_1_1DecoderClientData_1a75412b7b0f97e2e44a6459de8e719d3d" kind="variable"><name>stream</name></member>
+    <member refid="structEOUtils_1_1FLACFile_1_1DecoderClientData_1ad75afc326b69eafefab2aad7da49df34" kind="variable"><name>fileInfo</name></member>
+    <member refid="structEOUtils_1_1FLACFile_1_1DecoderClientData_1a2cdaaa324a06037be0c7f5aa4d245a7f" kind="variable"><name>readBuffer</name></member>
+    <member refid="structEOUtils_1_1FLACFile_1_1DecoderClientData_1a2369a7ee8ec8dcd52b9d15798adf02f5" kind="variable"><name>readChannel</name></member>
+    <member refid="structEOUtils_1_1FLACFile_1_1DecoderClientData_1a36dfc6d0bde803ae4eabbe347023e4be" kind="variable"><name>readSample</name></member>
+    <member refid="structEOUtils_1_1FLACFile_1_1DecoderClientData_1a166d54daf41908a69aac123897cbcfa8" kind="variable"><name>result</name></member>
+  </compound>
+  <compound refid="structFLACFile_1_1DecoderClientData" kind="struct"><name>FLACFile::DecoderClientData</name>
+    <member refid="structFLACFile_1_1DecoderClientData_1a75412b7b0f97e2e44a6459de8e719d3d" kind="variable"><name>stream</name></member>
+    <member refid="structFLACFile_1_1DecoderClientData_1ad75afc326b69eafefab2aad7da49df34" kind="variable"><name>fileInfo</name></member>
+    <member refid="structFLACFile_1_1DecoderClientData_1a2cdaaa324a06037be0c7f5aa4d245a7f" kind="variable"><name>readBuffer</name></member>
+    <member refid="structFLACFile_1_1DecoderClientData_1a2369a7ee8ec8dcd52b9d15798adf02f5" kind="variable"><name>readChannel</name></member>
+    <member refid="structFLACFile_1_1DecoderClientData_1a36dfc6d0bde803ae4eabbe347023e4be" kind="variable"><name>readSample</name></member>
+    <member refid="structFLACFile_1_1DecoderClientData_1a166d54daf41908a69aac123897cbcfa8" kind="variable"><name>result</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1FLACFile" kind="class"><name>EOUtils::FLACFile</name>
+    <member refid="classEOUtils_1_1FLACFile_1a8a9ddfb801a7732a9ef6202768618a5e" kind="variable"><name>mFLACFileInfo</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1ad9732e41ec3be7eba34ed240131c24c9" kind="variable"><name>mDecoder</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a378c8ce997acd6b8edc8d46db1cb01cd" kind="variable"><name>mEncoder</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1ae01d2569dd15a320d5d418497d72c733" kind="variable"><name>mReadBuffer</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1ad13e750c6b8596b15dd96453780f6ded" kind="variable"><name>mReadBufferChannel</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1aba1d648ac37e00333348f3788a037b18" kind="variable"><name>mReadBufferSample</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1abaf90574b628fff036f0f51fa4360274" kind="variable"><name>mWriteBuffer</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a0b40cea48921b0a94e4ab80d77ac8c71" kind="variable"><name>mDecodePosition</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a13f134df6f19c435afa6f89654d209ce" kind="variable"><name>mDecoderClientData</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a103ca48a11951261ed8583f6aa0f9453" kind="function"><name>FLACFile</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a3eb257712343b021d5210a0511371d3e" kind="function"><name>FLACFile</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1aa3f19ba9d5383cb8f6ad640a85ff0245" kind="function"><name>FLACFile</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1ae06baf4bb1f6b91457687e424ae8745a" kind="function"><name>FLACFile</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a1ab449b1e691db5d7481884b75b71ea3" kind="function"><name>FLACFile</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1ad4b9b7175d3def12da99c48f2e883b3e" kind="function"><name>FLACFile</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1abdb4e6b197a2fcf29ced24ef07d79d1f" kind="function"><name>~FLACFile</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a837fc7246b256128abbe2980ad1588d0" kind="function"><name>setAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a1521b31dabbc176622c880a18f822659" kind="function"><name>CompressionLevel</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1ac5b3d74e85d3b99d16c32e49b133fc47" kind="function"><name>CompressionLevel</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" kind="function"><name>open</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a186c57b08fade9564784e5200c1ee055" kind="function"><name>close</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1ae1fd986a87d029318dac135da4cf2fe8" kind="function"><name>isOpen</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a482bf351365ec1b561a43f27342ef6dd" kind="function"><name>getFileInfo</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1aecd756065217efeff7bcd1ebefaba8b7" kind="function"><name>getNextSample_int64</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1aea40fce50b9c489955238f06d2207f8c" kind="function"><name>writeSample_int64</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a742be01f59c8bdd485c1bd33dda5bf33" kind="function"><name>getHighestSampleValue_int64</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1ada175c6e4ee3721cabac43f7c2967a97" kind="function"><name>goToAudioDataPos</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1af00f73c62416d28429f91a2b520d5e75" kind="function"><name>numSamples</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a279fa0d38950175dc309eb3d76766f1f" kind="function"><name>maxValueForSampleSize</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a6f21036c7d2d0bc03fe24cb4eb7d0d9d" kind="function"><name>seekOutputToSampleNum</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a001c2ef8f62f5e2779527e67af4fdfa6" kind="function"><name>getAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a788c88ceef07cdb70319fece43ea39d2" kind="function"><name>setTitle</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a8f306ba3900116c94f2f3caa5a51dd67" kind="function"><name>setArtist</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1af91ffac30914ad8b25aad1113fc368ae" kind="function"><name>setAlbum</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a8af69d28dea1df607e1c22bb415599ea" kind="function"><name>setGenre</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a85a2c6d8c254e0cb7edce0ae24e7988b" kind="function"><name>setTrackNumber</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1ad7051aad9a2b2ccf8643ed552e1477f6" kind="function"><name>setYear</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a4ec2ca4e85f29bd5b54e4755b2f55eb6" kind="function"><name>setComment</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a682e2d4e9d802902c829cc78d07a28bd" kind="function"><name>getTitle</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a2e9ab8eced8b37ccf292b13c85333d4e" kind="function"><name>getArtist</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a1a1d150b221252fb88b9933de631a817" kind="function"><name>getAlbum</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a948ea6ac939a76fdc85f90ee81e55d0e" kind="function"><name>getGenre</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1ac390e92ea5bcf4942f573f29a4a7aaa2" kind="function"><name>getTrackNumber</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1af11cbc03945c3a95deabfaf8d94edcad" kind="function"><name>getYear</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a210be766390b234b3d392a8c23710757" kind="function"><name>getComment</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1a48c4304b8f70e56d0d2bff3c7a308333" kind="function"><name>setVorbisComment</name></member>
+    <member refid="classEOUtils_1_1FLACFile_1ab9ba70d5f7769db604abff297c4eb82d" kind="function"><name>getVorbisComment</name></member>
+  </compound>
+  <compound refid="classFLACFile" kind="class"><name>FLACFile</name>
+    <member refid="classFLACFile_1a8a9ddfb801a7732a9ef6202768618a5e" kind="variable"><name>mFLACFileInfo</name></member>
+    <member refid="classFLACFile_1ad9732e41ec3be7eba34ed240131c24c9" kind="variable"><name>mDecoder</name></member>
+    <member refid="classFLACFile_1a378c8ce997acd6b8edc8d46db1cb01cd" kind="variable"><name>mEncoder</name></member>
+    <member refid="classFLACFile_1ae01d2569dd15a320d5d418497d72c733" kind="variable"><name>mReadBuffer</name></member>
+    <member refid="classFLACFile_1ad13e750c6b8596b15dd96453780f6ded" kind="variable"><name>mReadBufferChannel</name></member>
+    <member refid="classFLACFile_1aba1d648ac37e00333348f3788a037b18" kind="variable"><name>mReadBufferSample</name></member>
+    <member refid="classFLACFile_1abaf90574b628fff036f0f51fa4360274" kind="variable"><name>mWriteBuffer</name></member>
+    <member refid="classFLACFile_1a0b40cea48921b0a94e4ab80d77ac8c71" kind="variable"><name>mDecodePosition</name></member>
+    <member refid="classFLACFile_1a13f134df6f19c435afa6f89654d209ce" kind="variable"><name>mDecoderClientData</name></member>
+    <member refid="classFLACFile_1a103ca48a11951261ed8583f6aa0f9453" kind="function"><name>FLACFile</name></member>
+    <member refid="classFLACFile_1a3eb257712343b021d5210a0511371d3e" kind="function"><name>FLACFile</name></member>
+    <member refid="classFLACFile_1aa3f19ba9d5383cb8f6ad640a85ff0245" kind="function"><name>FLACFile</name></member>
+    <member refid="classFLACFile_1ae06baf4bb1f6b91457687e424ae8745a" kind="function"><name>FLACFile</name></member>
+    <member refid="classFLACFile_1a1ab449b1e691db5d7481884b75b71ea3" kind="function"><name>FLACFile</name></member>
+    <member refid="classFLACFile_1ad4b9b7175d3def12da99c48f2e883b3e" kind="function"><name>FLACFile</name></member>
+    <member refid="classFLACFile_1abdb4e6b197a2fcf29ced24ef07d79d1f" kind="function"><name>~FLACFile</name></member>
+    <member refid="classFLACFile_1a837fc7246b256128abbe2980ad1588d0" kind="function"><name>setAudioFileInfo</name></member>
+    <member refid="classFLACFile_1a1521b31dabbc176622c880a18f822659" kind="function"><name>CompressionLevel</name></member>
+    <member refid="classFLACFile_1ac5b3d74e85d3b99d16c32e49b133fc47" kind="function"><name>CompressionLevel</name></member>
+    <member refid="classFLACFile_1a51522e856b01a9180178e3fe298cded2" kind="function"><name>open</name></member>
+    <member refid="classFLACFile_1a186c57b08fade9564784e5200c1ee055" kind="function"><name>close</name></member>
+    <member refid="classFLACFile_1ae1fd986a87d029318dac135da4cf2fe8" kind="function"><name>isOpen</name></member>
+    <member refid="classFLACFile_1a482bf351365ec1b561a43f27342ef6dd" kind="function"><name>getFileInfo</name></member>
+    <member refid="classFLACFile_1aecd756065217efeff7bcd1ebefaba8b7" kind="function"><name>getNextSample_int64</name></member>
+    <member refid="classFLACFile_1aea40fce50b9c489955238f06d2207f8c" kind="function"><name>writeSample_int64</name></member>
+    <member refid="classFLACFile_1a742be01f59c8bdd485c1bd33dda5bf33" kind="function"><name>getHighestSampleValue_int64</name></member>
+    <member refid="classFLACFile_1ada175c6e4ee3721cabac43f7c2967a97" kind="function"><name>goToAudioDataPos</name></member>
+    <member refid="classFLACFile_1af00f73c62416d28429f91a2b520d5e75" kind="function"><name>numSamples</name></member>
+    <member refid="classFLACFile_1a279fa0d38950175dc309eb3d76766f1f" kind="function"><name>maxValueForSampleSize</name></member>
+    <member refid="classFLACFile_1a6f21036c7d2d0bc03fe24cb4eb7d0d9d" kind="function"><name>seekOutputToSampleNum</name></member>
+    <member refid="classFLACFile_1a001c2ef8f62f5e2779527e67af4fdfa6" kind="function"><name>getAudioFileInfo</name></member>
+    <member refid="classFLACFile_1a788c88ceef07cdb70319fece43ea39d2" kind="function"><name>setTitle</name></member>
+    <member refid="classFLACFile_1a8f306ba3900116c94f2f3caa5a51dd67" kind="function"><name>setArtist</name></member>
+    <member refid="classFLACFile_1af91ffac30914ad8b25aad1113fc368ae" kind="function"><name>setAlbum</name></member>
+    <member refid="classFLACFile_1a8af69d28dea1df607e1c22bb415599ea" kind="function"><name>setGenre</name></member>
+    <member refid="classFLACFile_1a85a2c6d8c254e0cb7edce0ae24e7988b" kind="function"><name>setTrackNumber</name></member>
+    <member refid="classFLACFile_1ad7051aad9a2b2ccf8643ed552e1477f6" kind="function"><name>setYear</name></member>
+    <member refid="classFLACFile_1a4ec2ca4e85f29bd5b54e4755b2f55eb6" kind="function"><name>setComment</name></member>
+    <member refid="classFLACFile_1a682e2d4e9d802902c829cc78d07a28bd" kind="function"><name>getTitle</name></member>
+    <member refid="classFLACFile_1a2e9ab8eced8b37ccf292b13c85333d4e" kind="function"><name>getArtist</name></member>
+    <member refid="classFLACFile_1a1a1d150b221252fb88b9933de631a817" kind="function"><name>getAlbum</name></member>
+    <member refid="classFLACFile_1a948ea6ac939a76fdc85f90ee81e55d0e" kind="function"><name>getGenre</name></member>
+    <member refid="classFLACFile_1ac390e92ea5bcf4942f573f29a4a7aaa2" kind="function"><name>getTrackNumber</name></member>
+    <member refid="classFLACFile_1af11cbc03945c3a95deabfaf8d94edcad" kind="function"><name>getYear</name></member>
+    <member refid="classFLACFile_1a210be766390b234b3d392a8c23710757" kind="function"><name>getComment</name></member>
+    <member refid="classFLACFile_1a48c4304b8f70e56d0d2bff3c7a308333" kind="function"><name>setVorbisComment</name></member>
+    <member refid="classFLACFile_1ab9ba70d5f7769db604abff297c4eb82d" kind="function"><name>getVorbisComment</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1FLACFileInfo" kind="class"><name>EOUtils::FLACFileInfo</name>
+    <member refid="classEOUtils_1_1FLACFileInfo_1a6288a0859cba56350959939e54c8f5c4" kind="variable"><name>mCompressionLevel</name></member>
+    <member refid="classEOUtils_1_1FLACFileInfo_1abf79e4399f094f85ad7146734ad2736d" kind="function"><name>FLACFileInfo</name></member>
+    <member refid="classEOUtils_1_1FLACFileInfo_1a30cd963ac223cc94ae42b7c79d1b128e" kind="function"><name>FLACFileInfo</name></member>
+    <member refid="classEOUtils_1_1FLACFileInfo_1ac87b1738f79c83cd15ee165bc3a4beea" kind="function"><name>FLACFileInfo</name></member>
+    <member refid="classEOUtils_1_1FLACFileInfo_1a2c888b427c1fb23aa2d8e7e1f11bb0c2" kind="function"><name>read</name></member>
+    <member refid="classEOUtils_1_1FLACFileInfo_1a7a4feab4d15f2635e225ce41e52f50dd" kind="function"><name>write</name></member>
+    <member refid="classEOUtils_1_1FLACFileInfo_1afa9ecafbcc6267355a603620a2dfd6f3" kind="function"><name>read</name></member>
+    <member refid="classEOUtils_1_1FLACFileInfo_1a9adb9da8978af776c6915cbb88bf7062" kind="function"><name>CompressionLevel</name></member>
+    <member refid="classEOUtils_1_1FLACFileInfo_1a4b8cdc4e36ba701a2cf4b466503ac7c3" kind="function"><name>CompressionLevel</name></member>
+    <member refid="classEOUtils_1_1FLACFileInfo_1a6542e2a5ee03140200cccb48eaf4622c" kind="function"><name>isFLACFile</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1MetadataAudioFile" kind="class"><name>EOUtils::MetadataAudioFile</name>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1a755dd3b1c06cfc3a2c22aabe0ec2cc3f" kind="function"><name>MetadataAudioFile</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1a4b979898316007867c1721e9823738cf" kind="function"><name>MetadataAudioFile</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1a097c2697ff13926740a76063de122cb6" kind="function"><name>MetadataAudioFile</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1ab78858553941cba26740fc69f926b569" kind="function"><name>~MetadataAudioFile</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1a33c4eecf35d0febcec189e27b8caf98a" kind="function"><name>setTitle</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1adae18656bf60b5e8e81f484f672db1bf" kind="function"><name>setArtist</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1ae5b899c9d5b6f8942cfe181e29272afe" kind="function"><name>setAlbum</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1acc7942dfb3e61cd54127aabdd2862093" kind="function"><name>setGenre</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1aab2746c19dca62fe5a27bd12d936fa46" kind="function"><name>setTrackNumber</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1a596dd3b2b993afc0a2c3a2ff68d47a13" kind="function"><name>setYear</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1aa367019cbde49d7f23c60c646c6954f0" kind="function"><name>setComment</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1abd1812a1b5957f74618d4018a3acc40f" kind="function"><name>getTitle</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1a1700387c5e5663c5acafbaf37173a88b" kind="function"><name>getArtist</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1a077014bfc235676d6a6a602876e568c0" kind="function"><name>getAlbum</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1a761cb9b8167c290c09c5c12c2bcb1eb6" kind="function"><name>getGenre</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1ae43dcd8ce45042c99e66d7a858c9d074" kind="function"><name>getTrackNumber</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1ad23e6e0b25b00e498929b598b43285a1" kind="function"><name>getYear</name></member>
+    <member refid="classEOUtils_1_1MetadataAudioFile_1ae4934841335acc0e23f1e2df73e58964" kind="function"><name>getComment</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1MP3File" kind="class"><name>EOUtils::MP3File</name>
+    <member refid="classEOUtils_1_1MP3File_1a3cb0e4d3f56a8f75692b9069f717d023" kind="variable"><name>mMp3Info</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a8d2241c531b7bd90ed6dbe0e99f7a154" kind="variable"><name>mMp3CustomizeWriteEncoding</name></member>
+    <member refid="classEOUtils_1_1MP3File_1ad4453f61b3e9b0a862785fa58cd9aae2" kind="variable"><name>mMp3WriteMode</name></member>
+    <member refid="classEOUtils_1_1MP3File_1ab85f88db49e0ada2089836f6e85d05ff" kind="variable"><name>mMp3NominalBitrateKbps</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a5ed67426ac866cd2907ee65cb156c05c" kind="variable"><name>mMp3VariableCompression</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a08c9a296bee88c12716a1bf021523bee" kind="function"><name>MP3File</name></member>
+    <member refid="classEOUtils_1_1MP3File_1afb608ef241e4c0f818586aedf67a5cfe" kind="function"><name>MP3File</name></member>
+    <member refid="classEOUtils_1_1MP3File_1ab4fb87b05ea1d0cc6f6e50f514db2daa" kind="function"><name>MP3File</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a1ab1c2de33f9ee84e0e4f3e90ed20863" kind="function"><name>MP3File</name></member>
+    <member refid="classEOUtils_1_1MP3File_1af4285270a52f6b3da08ddcc9e786b7a9" kind="function"><name>MP3File</name></member>
+    <member refid="classEOUtils_1_1MP3File_1ad3221fabe03375bd2f6e0c173b3387ca" kind="function"><name>MP3File</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a429b1a6138c437d59dcb84e5bdbfa617" kind="function"><name>MP3File</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a12bf84197c3d347b267ed315446e5dc6" kind="function"><name>~MP3File</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a1285c6bbb18c976aeb13c39527787c59" kind="function"><name>open</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a5876a844978007965692a5b59f7dd8e2" kind="function"><name>setAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a84433d72c0ec0e5f06d4d9c70e299879" kind="function"><name>getFileInfo</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a46bd5065d32f1c346a4d42d65cbe1cdc" kind="function"><name>setMp3WriteBitrateMode</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a17ed90f15eec8bda850d5d01cdc6ebc5" kind="function"><name>setMp3WriteNominalBitrateKbps</name></member>
+    <member refid="classEOUtils_1_1MP3File_1af600f2ce7d88e899051f266235917064" kind="function"><name>setMp3WriteVariableBitrateCompression</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a84c49f4965981c3b4ee183e56d7e9351" kind="function"><name>clearMp3WriteEncodingOverrides</name></member>
+    <member refid="classEOUtils_1_1MP3File_1acded4b8297cfd6e349cd0a89e8a8e8ee" kind="function"><name>readFormatMatches</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a1990439c695c59199298dfbeeaa353d8" kind="function"><name>newFileSfFormatMask</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a554aaa588cb0e117ea2f1898728b2c03" kind="function"><name>formatLabel</name></member>
+    <member refid="classEOUtils_1_1MP3File_1a0b59260c0e9870d03a136917855f29cc" kind="function"><name>configureSndfileEncoderForWrite</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1MP3FileInfo" kind="class"><name>EOUtils::MP3FileInfo</name>
+    <member refid="classEOUtils_1_1MP3FileInfo_1a1bf2e830a039d6c36a70a2bd9fa6c43b" kind="function"><name>MP3FileInfo</name></member>
+    <member refid="classEOUtils_1_1MP3FileInfo_1a6da4c9997cb985de1a30b4a6ea7784a6" kind="function"><name>MP3FileInfo</name></member>
+    <member refid="classEOUtils_1_1MP3FileInfo_1a8051df5e0505e0ecb7962f77bc151356" kind="function"><name>read</name></member>
+    <member refid="classEOUtils_1_1MP3FileInfo_1a0c08fdfa1bd6e4b22bfafeb442b0420c" kind="function"><name>read</name></member>
+    <member refid="classEOUtils_1_1MP3FileInfo_1a788b3639f70f332eedbb26c825fdff87" kind="function"><name>write</name></member>
+    <member refid="classEOUtils_1_1MP3FileInfo_1a9007848b548452546bf73d592bf4fb75" kind="function"><name>matchesExtension</name></member>
+    <member refid="classEOUtils_1_1MP3FileInfo_1acf185077a6bb783e6e04bc857bd566d0" kind="function"><name>sniffFileHeader</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1OggFile" kind="class"><name>EOUtils::OggFile</name>
+    <member refid="classEOUtils_1_1OggFile_1a8535f5a6ebdc362a6ad61677ecc10724" kind="enum"><name>OggWriteEncodeStyle</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a8535f5a6ebdc362a6ad61677ecc10724ae61e6466005b6f341efda1319cd4bc71" kind="enumvalue"><name>LibsndfileDefault</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a8535f5a6ebdc362a6ad61677ecc10724a8f2b3d8fce39e539434109c3fa8211cd" kind="enumvalue"><name>QualityVbr</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a8535f5a6ebdc362a6ad61677ecc10724a64c84088bd114b70d37379762ee9b8c1" kind="enumvalue"><name>ApproxBitrateHeuristic</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a54b90ea2c4ecf00946cd62f8a7c28ca5" kind="variable"><name>mOggInfo</name></member>
+    <member refid="classEOUtils_1_1OggFile_1ae548e69f0f3a8cdac897c01e3dd22ea0" kind="variable"><name>mOggWriteEncodeStyle</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a3a94616eac6ba660ae3cbd5e1221c7b8" kind="variable"><name>mOggWriteQualityBestOne</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a0dd08154d6bf48d7b6e3ad246a8b2a75" kind="variable"><name>mOggWriteApproxKbps</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a182630b07b35dd3c5e4afbce7ab8c73e" kind="function"><name>OggFile</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a11dfaf6249a63533f9d8ef50df53cdc3" kind="function"><name>OggFile</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a9b41de38ca10b8c4ffe4ae4d51635ff2" kind="function"><name>OggFile</name></member>
+    <member refid="classEOUtils_1_1OggFile_1ad9a82fb2a1c2c3dfa428c71fb4ac0d3e" kind="function"><name>OggFile</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a601373f019f9a39c29b952840d6c7abd" kind="function"><name>OggFile</name></member>
+    <member refid="classEOUtils_1_1OggFile_1ad7b75f336d3abe3fbd7454a9ccae0e21" kind="function"><name>OggFile</name></member>
+    <member refid="classEOUtils_1_1OggFile_1ad9af5c781f6e3f2feec120a2b4b899de" kind="function"><name>OggFile</name></member>
+    <member refid="classEOUtils_1_1OggFile_1ad9db2fac6abf2e88d3185c59715d9b61" kind="function"><name>~OggFile</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a16436218fdd8af3038000ec7f6b9500a" kind="function"><name>open</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a25ae99134bfbff58471418527d20dbd0" kind="function"><name>setAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1OggFile_1ae28c5ee141724ce304a124c52433038b" kind="function"><name>getFileInfo</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a7127839171d52c8843f604cf29170e29" kind="function"><name>setOggWriteQualityBestOneWorstZero</name></member>
+    <member refid="classEOUtils_1_1OggFile_1af573d6d575a227906b02c344d54330b3" kind="function"><name>setOggWriteApproxNominalBitrateKbps</name></member>
+    <member refid="classEOUtils_1_1OggFile_1ae9efa38ec5a76246e8e50e297772611b" kind="function"><name>clearOggWriteEncodingOverrides</name></member>
+    <member refid="classEOUtils_1_1OggFile_1aa89063b86c0a015e5c62d8741c3fb14e" kind="function"><name>readFormatMatches</name></member>
+    <member refid="classEOUtils_1_1OggFile_1a2876012be4ac06751bd55334ef4766fd" kind="function"><name>newFileSfFormatMask</name></member>
+    <member refid="classEOUtils_1_1OggFile_1ae93d873d3e7a19e4680b8ac3f36908ce" kind="function"><name>formatLabel</name></member>
+    <member refid="classEOUtils_1_1OggFile_1add950d3dd5e3892f931130fd183a94fd" kind="function"><name>configureSndfileEncoderForWrite</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1OggFileInfo" kind="class"><name>EOUtils::OggFileInfo</name>
+    <member refid="classEOUtils_1_1OggFileInfo_1a942bc70abbc37bb4725c9b31f5f810ae" kind="function"><name>OggFileInfo</name></member>
+    <member refid="classEOUtils_1_1OggFileInfo_1a3323fa6c1ec18d37131ca50ef4051e5d" kind="function"><name>OggFileInfo</name></member>
+    <member refid="classEOUtils_1_1OggFileInfo_1ac8a0d3729c18a5a0e6f04a18695fe400" kind="function"><name>read</name></member>
+    <member refid="classEOUtils_1_1OggFileInfo_1ac47c8a62eeeb4aabbd409598e9eb63dd" kind="function"><name>read</name></member>
+    <member refid="classEOUtils_1_1OggFileInfo_1a42020d5065eeb1bf0418c9819852e54c" kind="function"><name>write</name></member>
+    <member refid="classEOUtils_1_1OggFileInfo_1ab675de19ccd8d9b9bf1dfaadc7a3f39a" kind="function"><name>matchesExtension</name></member>
+    <member refid="classEOUtils_1_1OggFileInfo_1a325a0e6f35c4f8ec60829f6eb77fdbf4" kind="function"><name>sniffFileHeader</name></member>
+  </compound>
+  <compound refid="structEOUtils_1_1OggWriteApproxBitrateKbps" kind="struct"><name>EOUtils::OggWriteApproxBitrateKbps</name>
+    <member refid="structEOUtils_1_1OggWriteApproxBitrateKbps_1a95b31987b5c161106c31768d2399ae53" kind="variable"><name>ApproxNominalBitrateKbps</name></member>
+    <member refid="structEOUtils_1_1OggWriteApproxBitrateKbps_1af8ab5334a341c8e07bf3eab972ca4bc4" kind="function"><name>OggWriteApproxBitrateKbps</name></member>
+  </compound>
+  <compound refid="structEOUtils_1_1OggWriteQuality" kind="struct"><name>EOUtils::OggWriteQuality</name>
+    <member refid="structEOUtils_1_1OggWriteQuality_1aede25451ee9bc5e4d8bbff1f817a2a6e" kind="variable"><name>QualityBestOneWorstZero</name></member>
+    <member refid="structEOUtils_1_1OggWriteQuality_1a88e3828e881b811f420efa3111f201e2" kind="function"><name>OggWriteQuality</name></member>
+  </compound>
+  <compound refid="structProgOptions" kind="struct"><name>ProgOptions</name>
+    <member refid="structProgOptions_1a0ee6f3748e6a1e9110e9de34bc5d66fa" kind="variable"><name>audioFileListFilename</name></member>
+    <member refid="structProgOptions_1a8dc52b95112ad4171c17ea0c2f05b9c4" kind="variable"><name>verbose</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1SndFileBackedMetadataAudioFile" kind="class"><name>EOUtils::SndFileBackedMetadataAudioFile</name>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9306ffa00a91221e8e8ea9e53fab2066" kind="variable"><name>mFileLayout</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acb0156e754d20dea7ef210bd1adcfbc5" kind="variable"><name>mSnd</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af91ed2005716d130ef65998c880bc279" kind="variable"><name>mSf</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab5ad29f94444e2e054ffc0bda82f1d69" kind="variable"><name>mFrameBuf</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a6715e23ce598df722ad507ce6141006f" kind="variable"><name>mChannelIndexInPump</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad234d06578622968dcccd39b2cbbb95b" kind="variable"><name>mWriteAccum</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a5b4ddbc681df5496f355bef551bbddea" kind="function"><name>setAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" kind="function"><name>open</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af7608eef3ca48433142025a37bb99033" kind="function"><name>close</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a819cd193fb520477daecc99074244b27" kind="function"><name>isOpen</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1afc4e1a414dc53a1c3112f6a7b93600f0" kind="function"><name>getNextSample_int64</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acfdd6717c813c6af0a7d8510ab53cd1a" kind="function"><name>writeSample_int64</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a50528a485aeda6e16ab5c3f1558aefd5" kind="function"><name>getHighestSampleValue_int64</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ae71e6cdf5e73980e8a71af7005411111" kind="function"><name>goToAudioDataPos</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a520f77d8c349944e508a6707bc3617ac" kind="function"><name>numSamples</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a99ac823f1aa365c8876fa35939b61e82" kind="function"><name>maxValueForSampleSize</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3c569d4cc544c985d81dc131e0da5a32" kind="function"><name>seekOutputToSampleNum</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a2e91490fab82a495f6cc3244f68a3fe1" kind="function"><name>getAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9e83638df759da359e7024e493cd1301" kind="function"><name>setTitle</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a13a905679e51af831810eff6a15b9524" kind="function"><name>setArtist</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1adb1c8cfe8ff0ecc8d0159871c9245a18" kind="function"><name>setAlbum</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab315502e2dc380bd6ff616dfa2521716" kind="function"><name>setGenre</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a04ebcd99162fd7421accd0b2f92f2d1b" kind="function"><name>setTrackNumber</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1aa32686ba35238da9794c7133589bf01e" kind="function"><name>setYear</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a05761942c1d69d5afe4ae82a7f7b91fc" kind="function"><name>setComment</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a684645d427b4002fc62c8fc23cd0a141" kind="function"><name>getTitle</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a74491b1431583e61361ed3fc2b958722" kind="function"><name>getArtist</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a597832cb68f37962e65d9af4a4daca76" kind="function"><name>getAlbum</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a623f3a0ddfb0ae89e87d5c0868d0dfcc" kind="function"><name>getGenre</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a79744b85e1f5a071d022d49ce0fb80a6" kind="function"><name>getTrackNumber</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a6cc1dca0322a5945225c7cf82a504226" kind="function"><name>getYear</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a788bfd7f1e24f8d7ebd5e4c67660513f" kind="function"><name>getComment</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad98e4c6af29f9f31f35e333a75e515c3" kind="function"><name>~SndFileBackedMetadataAudioFile</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ab8e5fcde8bfe07409c5d3b4e032c53d5" kind="function"><name>SndFileBackedMetadataAudioFile</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a12124ab04a2c7b42865611f800383a76" kind="function"><name>SndFileBackedMetadataAudioFile</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a1778198551e223d0d3bfa83b8dcbac77" kind="function"><name>SndFileBackedMetadataAudioFile</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1af55a4cf92b361107109307c56281efd6" kind="function"><name>SndFileBackedMetadataAudioFile</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1aff3cc98c3785aeae129472b484bfcb64" kind="function"><name>SndFileBackedMetadataAudioFile</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a3f040f277c0e76c9411defa7b386cd38" kind="function"><name>readFormatMatches</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9d4543b5c26b8881a281ddd3bf0de7b6" kind="function"><name>newFileSfFormatMask</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a8c417c6986f90ded3964e483ec00753e" kind="function"><name>formatLabel</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9d6a9bf52f6167e7245edba64fd53070" kind="function"><name>configureSndfileEncoderForWrite</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a9bb15e4fbbf1caeda87028eed71072f6" kind="function"><name>finalizePartialWriteFrames</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a98ddca957866f617b40e26427e0b1b53" kind="function"><name>getSfStringField</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad045177f4dd9d78b1631aadc7074af6e" kind="function"><name>setSfStringField</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a15871650afca97c6bb93dbfc6b3a3034" kind="function"><name>syncLayoutBytesFromSf</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a94eaba56c5d9acf842da425b62b78ec1" kind="function"><name>bumpDataSizeEstimate</name></member>
+    <member refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ad792ce3b4a9f66e3985c10ace062d9b9" kind="function"><name>resetReadPump</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1WAVFile" kind="class"><name>EOUtils::WAVFile</name>
+    <member refid="classEOUtils_1_1WAVFile_1a8a8f24d01f81c1427dbfac4ad5974bde" kind="variable"><name>mWAVFileInfo</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1a08ff9b8c4da3efffcbd6c09ebb44d646" kind="function"><name>WAVFile</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1add252d71db66767bd28aef85dad72346" kind="function"><name>WAVFile</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1a4bee72a9311cc4e9f679845dff036425" kind="function"><name>WAVFile</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1aecf5758ffd03cdd68b916a61a5405972" kind="function"><name>WAVFile</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1a878733aacd141f4aaf3a378528e75838" kind="function"><name>~WAVFile</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1aa56b64ce5739633fd2188cfc84e9e783" kind="function"><name>setAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1a8dc7c592c1ce3f8692b9e61465b9b552" kind="function"><name>open</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1aa219f7347d8e25f32699f2ebd77494a5" kind="function"><name>close</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1a320f3edcea7c8adccd1c86a6808acceb" kind="function"><name>getFileInfo</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1a9be010a2ade745512d04232ecdef746d" kind="function"><name>getNextSample_int64</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1ab5d1a09061e68e3c3994e8c46569261a" kind="function"><name>writeSample_int64</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1ac839429fe6108881056c3388ec9ebbcf" kind="function"><name>getHighestSampleValue_int64</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1ad1c2ab0a36ac530277e9977832c0d5a9" kind="function"><name>getNextSample</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1a60857e126aee2a5b3fe5bf2331224503" kind="function"><name>writeSample</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1a1e0a709a874a8fc7cb6404e47476e955" kind="function"><name>goToAudioDataPos</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1ad86f3d692b31831fcf210b0addb8cbf2" kind="function"><name>numSamples</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1ac84f76e37bafe54e9899c375c35a79f7" kind="function"><name>maxValueForSampleSize</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1a620b40c235b8f702d8a73b4cc428914b" kind="function"><name>seekOutputToSampleNum</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1aab392d341c24ffad1005c068bb75b1a9" kind="function"><name>getHighestSampleValue</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1abda6bb496e9bdda5fa7e64f3c2747775" kind="function"><name>getAudioFileInfo</name></member>
+    <member refid="classEOUtils_1_1WAVFile_1a8b9e8118306e559a4920581919b64992" kind="function"><name>getHighestSampleValue</name></member>
+  </compound>
+  <compound refid="classWAVFile" kind="class"><name>WAVFile</name>
+    <member refid="classWAVFile_1a8a8f24d01f81c1427dbfac4ad5974bde" kind="variable"><name>mWAVFileInfo</name></member>
+    <member refid="classWAVFile_1a08ff9b8c4da3efffcbd6c09ebb44d646" kind="function"><name>WAVFile</name></member>
+    <member refid="classWAVFile_1add252d71db66767bd28aef85dad72346" kind="function"><name>WAVFile</name></member>
+    <member refid="classWAVFile_1a4bee72a9311cc4e9f679845dff036425" kind="function"><name>WAVFile</name></member>
+    <member refid="classWAVFile_1aecf5758ffd03cdd68b916a61a5405972" kind="function"><name>WAVFile</name></member>
+    <member refid="classWAVFile_1a878733aacd141f4aaf3a378528e75838" kind="function"><name>~WAVFile</name></member>
+    <member refid="classWAVFile_1aa56b64ce5739633fd2188cfc84e9e783" kind="function"><name>setAudioFileInfo</name></member>
+    <member refid="classWAVFile_1a8dc7c592c1ce3f8692b9e61465b9b552" kind="function"><name>open</name></member>
+    <member refid="classWAVFile_1aa219f7347d8e25f32699f2ebd77494a5" kind="function"><name>close</name></member>
+    <member refid="classWAVFile_1a320f3edcea7c8adccd1c86a6808acceb" kind="function"><name>getFileInfo</name></member>
+    <member refid="classWAVFile_1a9be010a2ade745512d04232ecdef746d" kind="function"><name>getNextSample_int64</name></member>
+    <member refid="classWAVFile_1ab5d1a09061e68e3c3994e8c46569261a" kind="function"><name>writeSample_int64</name></member>
+    <member refid="classWAVFile_1ac839429fe6108881056c3388ec9ebbcf" kind="function"><name>getHighestSampleValue_int64</name></member>
+    <member refid="classWAVFile_1ad1c2ab0a36ac530277e9977832c0d5a9" kind="function"><name>getNextSample</name></member>
+    <member refid="classWAVFile_1a60857e126aee2a5b3fe5bf2331224503" kind="function"><name>writeSample</name></member>
+    <member refid="classWAVFile_1a1e0a709a874a8fc7cb6404e47476e955" kind="function"><name>goToAudioDataPos</name></member>
+    <member refid="classWAVFile_1ad86f3d692b31831fcf210b0addb8cbf2" kind="function"><name>numSamples</name></member>
+    <member refid="classWAVFile_1ac84f76e37bafe54e9899c375c35a79f7" kind="function"><name>maxValueForSampleSize</name></member>
+    <member refid="classWAVFile_1a620b40c235b8f702d8a73b4cc428914b" kind="function"><name>seekOutputToSampleNum</name></member>
+    <member refid="classWAVFile_1aab392d341c24ffad1005c068bb75b1a9" kind="function"><name>getHighestSampleValue</name></member>
+    <member refid="classWAVFile_1abda6bb496e9bdda5fa7e64f3c2747775" kind="function"><name>getAudioFileInfo</name></member>
+    <member refid="classWAVFile_1a8b9e8118306e559a4920581919b64992" kind="function"><name>getHighestSampleValue</name></member>
+  </compound>
+  <compound refid="classEOUtils_1_1WAVFileInfo" kind="class"><name>EOUtils::WAVFileInfo</name>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a296f4a746a54d31b86fd1f09780859d7" kind="variable"><name>mWAVHeader</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a6b416eeb5ec6c3243eeae3caa8b5ecc9" kind="variable"><name>mRIFFType</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1afe6e7ec1d438d4d653548792cb3d4418" kind="variable"><name>mSubchunk2ID</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1ab055c6277bf9b9e67f947ead500dc6aa" kind="variable"><name>mSubchunk2Size</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1acfd2666f1e1fef87dd5c3d01c7831433" kind="variable"><name>mDataSizeBytes</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a9ffd14575d3b7108cb3c8d076dd07a54" kind="variable"><name>mAudioDataOffset</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a533190a5b42a240e15622e5cbb5ba067" kind="function"><name>WAVFileInfo</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a4c54a90b33d923ce1ccd346fa22957d0" kind="function"><name>WAVFileInfo</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a3ea420f4e58f22d9a61ebfc6444b769b" kind="function"><name>read</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a19e432d3926053a8c40a03d06e26a237" kind="function"><name>write</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1ae618a681f3b16ec6b1f83f0894ae118e" kind="function"><name>updateFileSizeSizeInFile</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a2e24c98872bf837b409680d27526ec49" kind="function"><name>updateDataSizeSizeInFile</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a1e959e91b87c297a147eb3a2046825ea" kind="function"><name>WAVHeader</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a607d418c5bfc2117a0715156e6c6b36b" kind="function"><name>RIFFType</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1ac6fdcdbb49e1ddaa4ecbb2d6a70d5cda" kind="function"><name>Subchunk2ID</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1ad8239e8d342a111622543b33e0879411" kind="function"><name>Subchunk2Size</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1aba75849541f154341f553c881b954a49" kind="function"><name>DataSizeBytes</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a928f6117e9491082cb7caa316caf8550" kind="function"><name>BitsPerSample</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a68aafa7e2189ef546a76f39cfc3fa83d" kind="function"><name>BitsPerSample</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a1c4c81ce56e7398d393fbf857f03d88c" kind="function"><name>SetWAVHeaderAndRIFFType</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1ad652a8c18316b2a5394fa63e9905bccd" kind="function"><name>SetSubchunk2IDAndSize</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1ae38a7177f6cd5a06367649f77af0ada8" kind="function"><name>AudioDataOffset</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a908934cdc311faa2bac6837bb8e73fdc" kind="function"><name>WAVFileHdrSize</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a9eda15956af7951b425d55c911eaae76" kind="function"><name>BitsPerSample</name></member>
+    <member refid="classEOUtils_1_1WAVFileInfo_1a4a8b3d88c25b22c3d9319fb9c29a7ebe" kind="function"><name>isWAVFile</name></member>
+  </compound>
+  <compound refid="namespaceEOUtils" kind="namespace"><name>EOUtils</name>
+    <member refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758c" kind="enum"><name>AudioFileModes</name></member>
+    <member refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758ca39a8bc0bab4d52bf4c92d06000ced732" kind="enumvalue"><name>AUDIO_FILE_READ</name></member>
+    <member refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758ca225414ff556c80deec668ca52089010d" kind="enumvalue"><name>AUDIO_FILE_WRITE</name></member>
+    <member refid="namespaceEOUtils_1a99c9a00d147b4e0412285252ab88758ca74915559a4710751277737aad2aae766" kind="enumvalue"><name>AUDIO_FILE_READ_WRITE</name></member>
+    <member refid="namespaceEOUtils_1a9b111f5dc877393e6fba567691ed5974" kind="enum"><name>Mp3BitrateMode</name></member>
+    <member refid="namespaceEOUtils_1a9b111f5dc877393e6fba567691ed5974acb17869fe51048b5a5c4c6106551a255" kind="enumvalue"><name>Constant</name></member>
+    <member refid="namespaceEOUtils_1a9b111f5dc877393e6fba567691ed5974ab1897515d548a960afe49ecf66a29021" kind="enumvalue"><name>Average</name></member>
+    <member refid="namespaceEOUtils_1a9b111f5dc877393e6fba567691ed5974a47c14840d8e15331fa420b9b2f757cd9" kind="enumvalue"><name>Variable</name></member>
+    <member refid="namespaceEOUtils_1afbf98608a59e80f37845f299beab3f22" kind="variable"><name>machineIsBigEndian</name></member>
+    <member refid="namespaceEOUtils_1aa563006566b28a288ca4643dbc914db5" kind="function"><name>CStringToStdString</name></member>
+    <member refid="namespaceEOUtils_1ae1c0a91960a13a6ca65fe3dd855350fa" kind="function"><name>stdStringToCString</name></member>
+    <member refid="namespaceEOUtils_1aa5cea5a5cc7390a2c38493606cfb9f1b" kind="function"><name>stdStringToCString</name></member>
+    <member refid="namespaceEOUtils_1a406754027f5307d846d2ecbf2dd73a18" kind="function"><name>createAudioFileObjForExistingFile</name></member>
+    <member refid="namespaceEOUtils_1a669d98e89f0bbc2652a05cb73a6aca76" kind="function"><name>createAudioFileObjForNewFile</name></member>
+    <member refid="namespaceEOUtils_1ae478c6d6ea7254a943dd5825fae11613" kind="function"><name>getFileExtensionUpper</name></member>
+    <member refid="namespaceEOUtils_1a0b15d6d731191ac775ef0e5c01508f06" kind="function"><name>getAudioFileInfo</name></member>
+    <member refid="namespaceEOUtils_1a36829f33264df3b55d08a964555c9c7f" kind="function"><name>mixAudioFiles</name></member>
+    <member refid="namespaceEOUtils_1ae51bf6690f933ae10065722043e1d8d3" kind="function"><name>mixAudioFiles</name></member>
+    <member refid="namespaceEOUtils_1a3fec4b49472aa005139f9394f2eda23d" kind="function"><name>mixAudioFiles</name></member>
+    <member refid="namespaceEOUtils_1aa3b3576d92ae15a2627eaa1385725de1" kind="function"><name>getHighestSampleValue_64bit</name></member>
+    <member refid="namespaceEOUtils_1af2c3f00553c53ab2242e70efc948dbcf" kind="function"><name>isBigEndian</name></member>
+    <member refid="namespaceEOUtils_1a7aaa860cae2d39f10d1e630c9c3dec0e" kind="function"><name>reverseBytes</name></member>
+    <member refid="namespaceEOUtils_1a8739921e2c1cb5efa3a996719a8ebd85" kind="function"><name>getFileSize</name></member>
+    <member refid="namespaceEOUtils_1a281fba20cbe824b51ce8ad4ce77e8478" kind="function"><name>sfGetViaTempRead</name></member>
+    <member refid="namespaceEOUtils_1a3e9ad64db30373ed7434836296c58b85" kind="function"><name>sfSetViaRw</name></member>
+    <member refid="namespaceEOUtils_1ab75513be550984f7118723a1973d9cb4" kind="function"><name>maxValue</name></member>
+    <member refid="namespaceEOUtils_1ad7fa0215b59853f1ad8a6f82f4b6adfe" kind="function"><name>minValue</name></member>
+  </compound>
+  <compound refid="namespaceEOUtils_1_1_0d011154314141000006165021256165167164144033342007" kind="namespace"><name>EOUtils::@011154314141000006165021256165167164144033342007</name>
+  </compound>
+  <compound refid="namespaceEOUtils_1_1_0d022376213306212026010230121235356104301337012142" kind="namespace"><name>EOUtils::@022376213306212026010230121235356104301337012142</name>
+  </compound>
+  <compound refid="namespaceEOUtils_1_1_0d036216037150021341234157114001274145175241204151" kind="namespace"><name>EOUtils::@036216037150021341234157114001274145175241204151</name>
+  </compound>
+  <compound refid="namespaceEOUtils_1_1_0d047330306270003332275372111376037322054370275271" kind="namespace"><name>EOUtils::@047330306270003332275372111376037322054370275271</name>
+  </compound>
+  <compound refid="namespaceEOUtils_1_1_0d175254356321256043263241200156347204002350033021" kind="namespace"><name>EOUtils::@175254356321256043263241200156347204002350033021</name>
+  </compound>
+  <compound refid="namespaceEOUtils_1_1_0d260071013337360251377167011344376154235366160310" kind="namespace"><name>EOUtils::@260071013337360251377167011344376154235366160310</name>
+  </compound>
+  <compound refid="namespaceEOUtils_1_1_0d351077323246222345053240332002201121151137076203" kind="namespace"><name>EOUtils::@351077323246222345053240332002201121151137076203</name>
+  </compound>
+  <compound refid="namespaceEOUtils_1_1sndfile__detail" kind="namespace"><name>EOUtils::sndfile_detail</name>
+    <member refid="namespaceEOUtils_1_1sndfile__detail_1a107e7ae26bbe28f94fdfdfdde385dd15" kind="function"><name>sfInfoToAudioFileInfo</name></member>
+    <member refid="namespaceEOUtils_1_1sndfile__detail_1aceebb7d7d356f7425b33cd3fe458fde2" kind="function"><name>effectiveBitsPerSample</name></member>
+    <member refid="namespaceEOUtils_1_1sndfile__detail_1a5205d4d1f3a23eee2c2728b52256498d" kind="function"><name>maxSampleValueForFormat</name></member>
+    <member refid="namespaceEOUtils_1_1sndfile__detail_1af36bfc91c020a30e9627e0e03f29f220" kind="function"><name>formatErrorSuffix</name></member>
+    <member refid="namespaceEOUtils_1_1sndfile__detail_1aa585bc7769dfbedf0eecc01ab79e42ee" kind="function"><name>formatHasMajorMinor</name></member>
+    <member refid="namespaceEOUtils_1_1sndfile__detail_1a1f04e2e516d189d0d154be73024c59c0" kind="function"><name>safeFileSize</name></member>
+    <member refid="namespaceEOUtils_1_1sndfile__detail_1af47e02b4af37e0d46b90e3c48f252e66" kind="function"><name>peekFilePrefix</name></member>
+  </compound>
+  <compound refid="namespaceEOUtils_1_1sndfile__detail_1_1_0d143243304136264172065005033052212305154236140216" kind="namespace"><name>EOUtils::sndfile_detail::@143243304136264172065005033052212305154236140216</name>
+  </compound>
+  <compound refid="AudioMixerCPP_8cpp" kind="file"><name>AudioMixerCPP.cpp</name>
+    <member refid="AudioMixerCPP_8cpp_1ad788e4eb2a8c321796965a4ac499144d" kind="variable"><name>theApp</name></member>
+  </compound>
+  <compound refid="AudioMixerCPP_8h" kind="file"><name>AudioMixerCPP.h</name>
+    <member refid="AudioMixerCPP_8h_1ad788e4eb2a8c321796965a4ac499144d" kind="variable"><name>theApp</name></member>
+  </compound>
+  <compound refid="AudioMixerCPPDlg_8cpp" kind="file"><name>AudioMixerCPPDlg.cpp</name>
+    <member refid="AudioMixerCPPDlg_8cpp_1ab3b0357589c6a30e89a5bb74fdb3b91f" kind="define"><name>WM_MIX_DONE_MESSAGE</name></member>
+    <member refid="AudioMixerCPPDlg_8cpp_1aa563006566b28a288ca4643dbc914db5" kind="function"><name>CStringToStdString</name></member>
+    <member refid="AudioMixerCPPDlg_8cpp_1a36829f33264df3b55d08a964555c9c7f" kind="function"><name>mixAudioFiles</name></member>
+    <member refid="AudioMixerCPPDlg_8cpp_1a669d98e89f0bbc2652a05cb73a6aca76" kind="function"><name>createAudioFileObjForNewFile</name></member>
+  </compound>
+  <compound refid="AudioMixerCPPDlg_8h" kind="file"><name>AudioMixerCPPDlg.h</name>
+  </compound>
+  <compound refid="CCustomEditListBox_8cpp" kind="file"><name>CCustomEditListBox.cpp</name>
+  </compound>
+  <compound refid="CCustomEditListBox_8h" kind="file"><name>CCustomEditListBox.h</name>
+  </compound>
+  <compound refid="GUITools_8cpp" kind="file"><name>GUITools.cpp</name>
+    <member refid="GUITools_8cpp_1a67560c4b88e8fe6ee37b2fadd4e5acda" kind="function"><name>letUserBrowseForOneFile</name></member>
+  </compound>
+  <compound refid="GUITools_8h" kind="file"><name>GUITools.h</name>
+    <member refid="GUITools_8h_1a61047631edbd6b20a4983eefa61f14aa" kind="function"><name>letUserBrowseForOneFile</name></member>
+  </compound>
+  <compound refid="resource_8h" kind="file"><name>resource.h</name>
+    <member refid="resource_8h_1a74b41adc6435c09e5393739d1ebeace4" kind="define"><name>IDM_ABOUTBOX</name></member>
+    <member refid="resource_8h_1a77a06326b569136edbb6c766bc98c33c" kind="define"><name>IDD_ABOUTBOX</name></member>
+    <member refid="resource_8h_1a912ee15244eed3e0f75c2fc1ef9719eb" kind="define"><name>IDS_ABOUTBOX</name></member>
+    <member refid="resource_8h_1a356556ed96435a3fe6a0aca91f1a47dd" kind="define"><name>IDD_AUDIOMIXERCPP_DIALOG</name></member>
+    <member refid="resource_8h_1a9772c84d39896ad00b9aeb34b15d324d" kind="define"><name>IDR_MAINFRAME</name></member>
+    <member refid="resource_8h_1a212d2c4f456c21cdebf8141370db9e57" kind="define"><name>IDC_MFCVSLISTBOX_SOUND_FILENAMES</name></member>
+    <member refid="resource_8h_1a2bb3e7fdd36ddcaf951a4b803b74199a" kind="define"><name>IDC_BUTTON_MIX_AUDIO_FILES</name></member>
+    <member refid="resource_8h_1a49fb3015667f19f5523069907b5a32d5" kind="define"><name>IDC_MFCVSLISTBOX2</name></member>
+    <member refid="resource_8h_1aec1569be5e665c14c815a0e601f6aafb" kind="define"><name>IDC_STATIC_STATUS</name></member>
+    <member refid="resource_8h_1a9e1edce4bcfa8441ad8569ac29726288" kind="define"><name>IDC_BUTTON_SELECT_OUTPUT_FILE</name></member>
+    <member refid="resource_8h_1ad123446cb35c803caf42a339fc842813" kind="define"><name>IDC_EDIT1</name></member>
+    <member refid="resource_8h_1afa33d864844f8f52b4b14e17c82186ff" kind="define"><name>IDC_EDIT_OUTPUT_FILENAME</name></member>
+    <member refid="resource_8h_1af2558e6fac609b3bfbf2c990c69e9a67" kind="define"><name>IDC_BUTTON_CLEAR_INPUT_LIST</name></member>
+  </compound>
+  <compound refid="stdafx_8cpp" kind="file"><name>stdafx.cpp</name>
+  </compound>
+  <compound refid="stdafx_8h" kind="file"><name>stdafx.h</name>
+  </compound>
+  <compound refid="StringUtils_8cpp" kind="file"><name>StringUtils.cpp</name>
+  </compound>
+  <compound refid="StringUtils_8h" kind="file"><name>StringUtils.h</name>
+  </compound>
+  <compound refid="targetver_8h" kind="file"><name>targetver.h</name>
+  </compound>
+  <compound refid="AiffFile_8cpp" kind="file"><name>AiffFile.cpp</name>
+  </compound>
+  <compound refid="AiffFile_8h" kind="file"><name>AiffFile.h</name>
+  </compound>
+  <compound refid="AiffFileInfo_8cpp" kind="file"><name>AiffFileInfo.cpp</name>
+  </compound>
+  <compound refid="AiffFileInfo_8h" kind="file"><name>AiffFileInfo.h</name>
+  </compound>
+  <compound refid="AudioFile_8cpp" kind="file"><name>AudioFile.cpp</name>
+  </compound>
+  <compound refid="AudioFile_8h" kind="file"><name>AudioFile.h</name>
+  </compound>
+  <compound refid="AudioFileInfo_8cpp" kind="file"><name>AudioFileInfo.cpp</name>
+  </compound>
+  <compound refid="AudioFileInfo_8h" kind="file"><name>AudioFileInfo.h</name>
+    <member refid="AudioFileInfo_8h_1a369ecd38b3ab077fc235f892354bb46f" kind="define"><name>BITS_PER_BYTE</name></member>
+  </compound>
+  <compound refid="AudioFileResultType_8cpp" kind="file"><name>AudioFileResultType.cpp</name>
+  </compound>
+  <compound refid="AudioFileResultType_8h" kind="file"><name>AudioFileResultType.h</name>
+  </compound>
+  <compound refid="AudioFileTools_8cpp" kind="file"><name>AudioFileTools.cpp</name>
+  </compound>
+  <compound refid="AudioFileTools_8h" kind="file"><name>AudioFileTools.h</name>
+  </compound>
+  <compound refid="cmdLineApp_8cpp" kind="file"><name>cmdLineApp.cpp</name>
+    <member refid="cmdLineApp_8cpp_1a27a8684e906ead61867f426da8010650" kind="function"><name>showProgramHelp</name></member>
+    <member refid="cmdLineApp_8cpp_1a13003c27cb50f63325ea22ab1a6606fd" kind="function"><name>parseCommandLine</name></member>
+    <member refid="cmdLineApp_8cpp_1a0083949fd77675d48a8c5060d1dcc7b6" kind="function"><name>readAudioFileList</name></member>
+    <member refid="cmdLineApp_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+    <member refid="cmdLineApp_8cpp_1a669d98e89f0bbc2652a05cb73a6aca76" kind="function"><name>createAudioFileObjForNewFile</name></member>
+    <member refid="cmdLineApp_8cpp_1a36829f33264df3b55d08a964555c9c7f" kind="function"><name>mixAudioFiles</name></member>
+  </compound>
+  <compound refid="EOUtils_8cpp" kind="file"><name>EOUtils.cpp</name>
+  </compound>
+  <compound refid="EOUtils_8h" kind="file"><name>EOUtils.h</name>
+  </compound>
+  <compound refid="FLACFile_8cpp" kind="file"><name>FLACFile.cpp</name>
+  </compound>
+  <compound refid="FLACFile_8h" kind="file"><name>FLACFile.h</name>
+  </compound>
+  <compound refid="FLACFileInfo_8cpp" kind="file"><name>FLACFileInfo.cpp</name>
+  </compound>
+  <compound refid="FLACFileInfo_8h" kind="file"><name>FLACFileInfo.h</name>
+  </compound>
+  <compound refid="MetadataAudioFile_8cpp" kind="file"><name>MetadataAudioFile.cpp</name>
+  </compound>
+  <compound refid="MetadataAudioFile_8h" kind="file"><name>MetadataAudioFile.h</name>
+  </compound>
+  <compound refid="MP3File_8cpp" kind="file"><name>MP3File.cpp</name>
+  </compound>
+  <compound refid="MP3File_8h" kind="file"><name>MP3File.h</name>
+  </compound>
+  <compound refid="MP3FileInfo_8cpp" kind="file"><name>MP3FileInfo.cpp</name>
+  </compound>
+  <compound refid="MP3FileInfo_8h" kind="file"><name>MP3FileInfo.h</name>
+  </compound>
+  <compound refid="OggFile_8cpp" kind="file"><name>OggFile.cpp</name>
+  </compound>
+  <compound refid="OggFile_8h" kind="file"><name>OggFile.h</name>
+  </compound>
+  <compound refid="OggFileInfo_8cpp" kind="file"><name>OggFileInfo.cpp</name>
+  </compound>
+  <compound refid="OggFileInfo_8h" kind="file"><name>OggFileInfo.h</name>
+  </compound>
+  <compound refid="SndFileBackedMetadataAudioFile_8cpp" kind="file"><name>SndFileBackedMetadataAudioFile.cpp</name>
+  </compound>
+  <compound refid="SndFileBackedMetadataAudioFile_8h" kind="file"><name>SndFileBackedMetadataAudioFile.h</name>
+  </compound>
+  <compound refid="SndFileHelpers_8cpp" kind="file"><name>SndFileHelpers.cpp</name>
+  </compound>
+  <compound refid="SndFileHelpers_8h" kind="file"><name>SndFileHelpers.h</name>
+  </compound>
+  <compound refid="utilFunctions_8cpp" kind="file"><name>utilFunctions.cpp</name>
+  </compound>
+  <compound refid="utilFunctions_8h" kind="file"><name>utilFunctions.h</name>
+  </compound>
+  <compound refid="WAVFile_8cpp" kind="file"><name>WAVFile.cpp</name>
+  </compound>
+  <compound refid="WAVFile_8h" kind="file"><name>WAVFile.h</name>
+  </compound>
+  <compound refid="WAVFileInfo_8cpp" kind="file"><name>WAVFileInfo.cpp</name>
+  </compound>
+  <compound refid="WAVFileInfo_8h" kind="file"><name>WAVFileInfo.h</name>
+    <member refid="WAVFileInfo_8h_1a369ecd38b3ab077fc235f892354bb46f" kind="define"><name>BITS_PER_BYTE</name></member>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="dir_e5e3f23d6ea7d499b7aca049751c4d64" kind="dir"><name>/home/erico/projects/audio_mixer_cpp</name>
+  </compound>
+  <compound refid="dir_82a45b9ad4ca1337b64e4fc6d3de9457" kind="dir"><name>/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio</name>
+  </compound>
+  <compound refid="dir_3096d360760ad7eb0a10d39c34ddfd0e" kind="dir"><name>/home/erico/projects/audio_mixer_cpp/code</name>
+  </compound>
+  <compound refid="dir_e1c5203e63b82559f6b75b85b9869c62" kind="dir"><name>/home/erico/projects/audio_mixer_cpp/code/common</name>
+  </compound>
+  <compound refid="dir_c3f9134e6d85d1bfde25d95ebe3b72fe" kind="dir"><name>/home/erico</name>
+  </compound>
+  <compound refid="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2" kind="dir"><name>/home</name>
+  </compound>
+  <compound refid="dir_676040d2d674e417c4eec3872f5f88b5" kind="dir"><name>/home/erico/projects</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

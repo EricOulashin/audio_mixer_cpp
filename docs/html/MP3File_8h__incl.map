@@ -1,0 +1,51 @@
+<map id="/home/erico/projects/audio_mixer_cpp/code/common/MP3File.h" name="/home/erico/projects/audio_mixer_cpp/code/common/MP3File.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="30,5,186,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="43,277,104,304"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,67,80,88,72,113,66,153,65,193,71,262,66,262,60,193,61,152,67,111,76,86,90,62"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="191,501,244,528"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="78,67,57,95,33,131,15,171,8,215,8,366,13,395,25,419,45,440,69,458,124,485,178,504,173,505,122,490,66,462,41,444,21,422,8,396,3,367,3,214,10,170,29,128,53,92,80,62"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="82,120,134,147"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="108,62,111,105,105,104,108,67"/>
+<area shape="rect" id="Node000005" href="$SndFileBackedMetadataAudioFile_8h.html" title=" " alt="" coords="174,112,370,155"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="156,62,226,102,221,105,157,67"/>
+<area shape="rect" id="Node000019" href="$MP3FileInfo_8h.html" title=" " alt="" coords="717,277,819,304"/>
+<area shape="poly" id="edge28_Node000001_Node000019" title=" " alt="" coords="185,40,294,56,427,85,498,106,568,132,636,163,700,201,732,230,756,265,751,263,728,234,697,205,634,168,566,137,496,111,426,90,293,61,187,45"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="198,157,159,177,121,205,99,233,84,264,79,262,94,231,117,201,156,173,202,153"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="215,157,188,177,165,204,151,241,145,280,147,320,154,360,178,432,205,488,200,488,173,434,149,361,141,320,140,279,145,239,160,201,185,173,219,153"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="174,203,239,229"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="254,157,229,192,224,189,257,153"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="263,203,321,229"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="278,153,288,188,283,187,276,158"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="345,203,415,229"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="300,153,353,192,348,194,300,158"/>
+<area shape="rect" id="Node000009" href="$MetadataAudioFile_8h.html" title=" " alt="" coords="439,203,580,229"/>
+<area shape="poly" id="edge10_Node000005_Node000009" title=" " alt="" coords="333,153,460,196,455,198,333,158"/>
+<area shape="rect" id="Node000014" href="$AudioFileResultType_8h.html" title=" " alt="" coords="562,427,715,453"/>
+<area shape="poly" id="edge27_Node000005_Node000014" title=" " alt="" coords="370,142,500,164,556,180,594,201,614,223,628,250,638,278,644,308,648,365,645,413,640,410,643,365,639,309,633,280,623,252,609,227,590,205,554,185,499,169,371,147"/>
+<area shape="poly" id="edge12_Node000009_Node000002" title=" " alt="" coords="438,232,120,284,118,279,440,226"/>
+<area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="472,231,431,251,380,277,327,312,281,354,255,388,239,428,223,488,219,485,233,426,251,385,277,350,324,307,377,273,429,246,476,229"/>
+<area shape="rect" id="Node000010" href="$AudioFile_8h.html" title=" " alt="" coords="392,277,478,304"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="498,228,460,269,457,265,494,231"/>
+<area shape="poly" id="edge14_Node000010_Node000003" title=" " alt="" coords="390,306,351,326,310,354,282,386,259,422,228,488,224,485,254,419,278,383,306,350,348,321,395,303"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="317,427,382,453"/>
+<area shape="poly" id="edge15_Node000010_Node000011" title=" " alt="" coords="389,304,352,323,335,337,321,353,316,368,318,383,332,415,327,413,313,384,311,367,316,351,331,333,350,319,393,301"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="330,352,376,379"/>
+<area shape="poly" id="edge16_Node000010_Node000012" title=" " alt="" coords="423,303,380,344,377,340,418,306"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="400,352,469,379"/>
+<area shape="poly" id="edge17_Node000010_Node000013" title=" " alt="" coords="436,302,437,338,432,335,433,307"/>
+<area shape="poly" id="edge18_Node000010_Node000014" title=" " alt="" coords="478,293,512,299,549,309,584,326,615,350,633,380,639,413,635,410,628,382,611,354,581,331,547,314,511,304,478,298"/>
+<area shape="rect" id="Node000018" href="$AudioFileInfo_8h.html" title=" " alt="" coords="492,352,601,379"/>
+<area shape="poly" id="edge23_Node000010_Node000018" title=" " alt="" coords="455,302,517,343,512,343,454,307"/>
+<area shape="poly" id="edge19_Node000014_Node000003" title=" " alt="" coords="566,456,260,509,259,504,564,451"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="546,501,585,528"/>
+<area shape="poly" id="edge20_Node000014_Node000015" title=" " alt="" coords="628,453,590,493,588,488,623,455"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="608,501,669,528"/>
+<area shape="poly" id="edge21_Node000014_Node000016" title=" " alt="" coords="641,452,641,487,637,484,637,456"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="694,501,762,528"/>
+<area shape="poly" id="edge22_Node000014_Node000017" title=" " alt="" coords="655,451,703,492,698,491,653,456"/>
+<area shape="poly" id="edge24_Node000018_Node000003" title=" " alt="" coords="530,378,471,417,396,456,324,484,260,504,258,499,323,479,394,451,468,412,525,380"/>
+<area shape="poly" id="edge25_Node000018_Node000011" title=" " alt="" coords="515,378,397,424,396,419,510,380"/>
+<area shape="poly" id="edge26_Node000018_Node000014" title=" " alt="" coords="563,377,614,417,608,417,562,382"/>
+<area shape="poly" id="edge30_Node000019_Node000014" title=" " alt="" coords="763,303,741,341,710,380,668,419,666,415,706,377,736,338,759,306"/>
+<area shape="poly" id="edge29_Node000019_Node000018" title=" " alt="" coords="732,304,601,349,599,344,727,305"/>
+</map>

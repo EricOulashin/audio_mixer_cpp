@@ -29,6 +29,8 @@ namespace EOUtils
 
 			AudioFileResultType open(AudioFileModes pOpenMode) override;
 
+			bool BitrateIsAdjustable() const override;
+
 			/**
 			 * @brief Closes the WAV file
 			 */

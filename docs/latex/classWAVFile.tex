@@ -1,0 +1,418 @@
+\doxysection{WAVFile Class Reference}
+\label{classWAVFile}\index{WAVFile@{WAVFile}}
+
+
+{\ttfamily \#include $<$WAVFile.\+h$>$}
+
+
+
+Inheritance diagram for WAVFile\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classWAVFile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for WAVFile\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWAVFile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ WAVFile} (const std\+::string \&p\+Filename)
+\item 
+\textbf{ WAVFile} (const std\+::string \&p\+Filename, const WAVFile\+Info \&p\+WAVFile\+Info)
+\item 
+\textbf{ WAVFile} (const std\+::string \&p\+Filename, Audio\+File\+Modes p\+File\+Mode)
+\item 
+\textbf{ WAVFile} (const \textbf{ WAVFile} \&p\+WAVFile)
+\item 
+\textbf{ $\sim$\+WAVFile} ()
+\item 
+void \textbf{ set\+Audio\+File\+Info} (const \textbf{ Audio\+File\+Info} \&p\+Audio\+File\+Info) override
+\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ open} (Audio\+File\+Modes p\+Open\+Mode) override
+\item 
+void \textbf{ close} () override
+\begin{DoxyCompactList}\small\item\em Closes the WAV file. \end{DoxyCompactList}\item 
+const WAVFile\+Info \& \textbf{ get\+File\+Info} () const
+\begin{DoxyCompactList}\small\item\em Returns a WAVFile\+Info object with information about the WAV file. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Next\+Sample\+\_\+int64} (int64\+\_\+t \&p\+Audio\+Sample) override
+\begin{DoxyCompactList}\small\item\em Gets the next sample from the file, cast to a 64-\/bit integer. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ write\+Sample\+\_\+int64} (int64\+\_\+t p\+Audio\+Sample) override
+\begin{DoxyCompactList}\small\item\em Writes an audio sample to the file. The parameter is a 64-\/bit integer but will be cast to the bitness of the audio samples in the file. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Highest\+Sample\+Value\+\_\+int64} (int64\+\_\+t \&p\+Highest\+Audio\+Sample) override
+\begin{DoxyCompactList}\small\item\em Gets the highest audio sample value from the file, cast to a 64-\/bit integer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Sample\+Type$>$ }\\\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Next\+Sample} (Sample\+Type \&p\+Audio\+Sample)
+\begin{DoxyCompactList}\small\item\em Gets the next audio sample from the file. This is templated so that the proper variable type can be used to store the audio sample value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Sample\+Type$>$ }\\\textbf{ Audio\+File\+Result\+Type} \textbf{ write\+Sample} (Sample\+Type p\+Audio\+Sample)
+\begin{DoxyCompactList}\small\item\em Writes an audio sample to the file. This is templated so that the proper variable type can be used for the audio sample value. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ go\+To\+Audio\+Data\+Pos} () override
+\begin{DoxyCompactList}\small\item\em Goes to the audio data position in the WAV file. \end{DoxyCompactList}\item 
+size\+\_\+t \textbf{ num\+Samples} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of audio samples in the WAV file. \end{DoxyCompactList}\item 
+int64\+\_\+t \textbf{ max\+Value\+For\+Sample\+Size} () const override
+\begin{DoxyCompactList}\small\item\em Returns the maximum possible positive value of the audio file\textquotesingle{}s sample size. \end{DoxyCompactList}\item 
+void \textbf{ seek\+Output\+To\+Sample\+Num} (size\+\_\+t p\+Sample\+Num) override
+\item 
+{\footnotesize template$<$class Sample\+Type$>$ }\\\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Highest\+Sample\+Value} (Sample\+Type \&p\+Audio\+Sample)
+\begin{DoxyCompactList}\small\item\em Gets the highest audio sample value from the file. This is templated so that the proper variable type can be used to store the audio sample value. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Info} \textbf{ get\+Audio\+File\+Info} () const override
+\begin{DoxyCompactList}\small\item\em Returns an \doxyref{Audio\+File}{p.}{classAudioFile} object with information about the audio file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ EOUtils\+::\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Audio\+File} (const std\+::string \&p\+Filename)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File} (const std\+::string \&p\+Filename, \textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\item 
+\textbf{ Audio\+File} (const \textbf{ Audio\+File} \&p\+Audio\+File)
+\item 
+virtual \textbf{ $\sim$\+Audio\+File} ()
+\item 
+virtual bool \textbf{ Bitrate\+Is\+Adjustable} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether or not the audio file bitrate is adjustable. \end{DoxyCompactList}\item 
+virtual bool \textbf{ is\+Open} () const
+\begin{DoxyCompactList}\small\item\em Returns whether or not the audio file is open. \end{DoxyCompactList}\item 
+virtual bool \textbf{ has\+Read\+Mode} () const
+\begin{DoxyCompactList}\small\item\em Returns whether or not read mode is enabled for the file. \end{DoxyCompactList}\item 
+virtual bool \textbf{ has\+Write\+Mode} () const
+\begin{DoxyCompactList}\small\item\em Returns whether or not write mode is enabled for the file. \end{DoxyCompactList}\item 
+const std\+::string \& \textbf{ Filename} () const
+\begin{DoxyCompactList}\small\item\em Gets the filename of the audio file. \end{DoxyCompactList}\item 
+void \textbf{ Filename} (const std\+::string \&p\+Filename)
+\begin{DoxyCompactList}\small\item\em Setter for the filename of the audio file. \end{DoxyCompactList}\item 
+void \textbf{ set\+Metadata} (const std\+::string \&p\+Name, const std\+::string \&p\+Value)
+\begin{DoxyCompactList}\small\item\em Adds a piece of metadata for the audio file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \textbf{ set\+Metadata\+From\+Val} (const std\+::string \&p\+Name, const T \&p\+Value)
+\begin{DoxyCompactList}\small\item\em Adds a piece of metadata for the audio file. Templatized for any value type. The value will be converted to a string to store in the metadata. \end{DoxyCompactList}\item 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Metadata} (const std\+::string \&p\+Name, std\+::string \&p\+Value) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value as a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\\textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name, T \&p\+Value) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. Templatized to capture the value as any type. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Metadata} (const std\+::string \&p\+Name) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\T \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name) const
+\item 
+{\footnotesize template$<$typename T$>$ }\\T \textbf{ get\+Metadata\+As} (const std\+::string \&p\+Name, const T \&p\+Default\+Val) const
+\begin{DoxyCompactList}\small\item\em Gets a metadata value. Templatized to return it as any type. \end{DoxyCompactList}\item 
+bool \textbf{ has\+Metadata} (const std\+::string \&p\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns whether or not a metadata item exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Sample\+Type$>$ }\\static \textbf{ Audio\+File\+Result\+Type} \textbf{ get\+Highest\+Sample\+Value} (const char $\ast$p\+Filename, Sample\+Type \&p\+Audio\+Sample)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \textbf{ EOUtils\+::\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::streampos \textbf{ file\+Size\+According\+To\+Stream} ()
+\item 
+virtual void \textbf{ set\+File\+Mode} (\textbf{ Audio\+File\+Modes} p\+File\+Mode)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \textbf{ EOUtils\+::\+Audio\+File}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \textbf{ m\+Filename}
+\item 
+std\+::fstream \textbf{ m\+File\+Stream}
+\item 
+std\+::ios\+\_\+base\+::openmode \textbf{ m\+File\+Open\+Mode}
+\item 
+size\+\_\+t \textbf{ m\+Data\+Size\+Bytes}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \textbf{ m\+Metadata}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{WAVFile@{WAVFile}!WAVFile@{WAVFile}}
+\index{WAVFile@{WAVFile}!WAVFile@{WAVFile}}
+\doxysubsubsection{WAVFile()\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classWAVFile_a08ff9b8c4da3efffcbd6c09ebb44d646} 
+\textbf{ EOUtils\+::\+WAVFile\+::\+WAVFile} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{}\end{DoxyParamCaption})}
+
+\index{WAVFile@{WAVFile}!WAVFile@{WAVFile}}
+\index{WAVFile@{WAVFile}!WAVFile@{WAVFile}}
+\doxysubsubsection{WAVFile()\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classWAVFile_add252d71db66767bd28aef85dad72346} 
+\textbf{ EOUtils\+::\+WAVFile\+::\+WAVFile} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{, }\item[{const WAVFile\+Info \&}]{p\+WAVFile\+Info}{}\end{DoxyParamCaption})}
+
+\index{WAVFile@{WAVFile}!WAVFile@{WAVFile}}
+\index{WAVFile@{WAVFile}!WAVFile@{WAVFile}}
+\doxysubsubsection{WAVFile()\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classWAVFile_a4bee72a9311cc4e9f679845dff036425} 
+\textbf{ EOUtils\+::\+WAVFile\+::\+WAVFile} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+Filename}{, }\item[{Audio\+File\+Modes}]{p\+File\+Mode}{}\end{DoxyParamCaption})}
+
+\index{WAVFile@{WAVFile}!WAVFile@{WAVFile}}
+\index{WAVFile@{WAVFile}!WAVFile@{WAVFile}}
+\doxysubsubsection{WAVFile()\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classWAVFile_aecf5758ffd03cdd68b916a61a5405972} 
+\textbf{ EOUtils\+::\+WAVFile\+::\+WAVFile} (\begin{DoxyParamCaption}\item[{const \textbf{ WAVFile} \&}]{p\+WAVFile}{}\end{DoxyParamCaption})}
+
+\index{WAVFile@{WAVFile}!````~WAVFile@{$\sim$WAVFile}}
+\index{````~WAVFile@{$\sim$WAVFile}!WAVFile@{WAVFile}}
+\doxysubsubsection{$\sim$WAVFile()}
+{\footnotesize\ttfamily \label{classWAVFile_a878733aacd141f4aaf3a378528e75838} 
+\textbf{ EOUtils\+::\+WAVFile\+::$\sim$\+WAVFile} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{WAVFile@{WAVFile}!close@{close}}
+\index{close@{close}!WAVFile@{WAVFile}}
+\doxysubsubsection{close()}
+{\footnotesize\ttfamily \label{classWAVFile_aa219f7347d8e25f32699f2ebd77494a5} 
+void \textbf{ EOUtils\+::\+WAVFile\+::close} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Closes the WAV file. 
+
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a4be2573c17b87c092a3f367989d82722}.
+
+\index{WAVFile@{WAVFile}!getAudioFileInfo@{getAudioFileInfo}}
+\index{getAudioFileInfo@{getAudioFileInfo}!WAVFile@{WAVFile}}
+\doxysubsubsection{getAudioFileInfo()}
+{\footnotesize\ttfamily \label{classWAVFile_abda6bb496e9bdda5fa7e64f3c2747775} 
+\textbf{ Audio\+File\+Info} \textbf{ EOUtils\+::\+WAVFile\+::get\+Audio\+File\+Info} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns an \doxyref{Audio\+File}{p.}{classAudioFile} object with information about the audio file. 
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_afa9106be5e7602616779070043bc2252}.
+
+\index{WAVFile@{WAVFile}!getFileInfo@{getFileInfo}}
+\index{getFileInfo@{getFileInfo}!WAVFile@{WAVFile}}
+\doxysubsubsection{getFileInfo()}
+{\footnotesize\ttfamily \label{classWAVFile_a320f3edcea7c8adccd1c86a6808acceb} 
+const WAVFile\+Info \& \textbf{ EOUtils\+::\+WAVFile\+::get\+File\+Info} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns a WAVFile\+Info object with information about the WAV file. 
+
+\index{WAVFile@{WAVFile}!getHighestSampleValue@{getHighestSampleValue}}
+\index{getHighestSampleValue@{getHighestSampleValue}!WAVFile@{WAVFile}}
+\doxysubsubsection{getHighestSampleValue()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classWAVFile_a8b9e8118306e559a4920581919b64992} 
+template$<$class Sample\+Type$>$ \\
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+WAVFile\+::get\+Highest\+Sample\+Value} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename}{, }\item[{Sample\+Type \&}]{p\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\index{WAVFile@{WAVFile}!getHighestSampleValue@{getHighestSampleValue}}
+\index{getHighestSampleValue@{getHighestSampleValue}!WAVFile@{WAVFile}}
+\doxysubsubsection{getHighestSampleValue()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classWAVFile_aab392d341c24ffad1005c068bb75b1a9} 
+template$<$class Sample\+Type$>$ \\
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+WAVFile\+::get\+Highest\+Sample\+Value} (\begin{DoxyParamCaption}\item[{Sample\+Type \&}]{p\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the highest audio sample value from the file. This is templated so that the proper variable type can be used to store the audio sample value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Audio\+Sample} & Templatized variable to store the highest audio sample read from the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, or false with error messages on failure 
+\end{DoxyReturn}
+\index{WAVFile@{WAVFile}!getHighestSampleValue\_int64@{getHighestSampleValue\_int64}}
+\index{getHighestSampleValue\_int64@{getHighestSampleValue\_int64}!WAVFile@{WAVFile}}
+\doxysubsubsection{getHighestSampleValue\_int64()}
+{\footnotesize\ttfamily \label{classWAVFile_ac839429fe6108881056c3388ec9ebbcf} 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+WAVFile\+::get\+Highest\+Sample\+Value\+\_\+int64} (\begin{DoxyParamCaption}\item[{int64\+\_\+t \&}]{p\+Highest\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the highest audio sample value from the file, cast to a 64-\/bit integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Highest\+Audio\+Sample} & The highest audio sample from the file, cast to a 64-\/bit integer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, or false with error messages on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a1780a021a151729a1a7eaa0d02a2fa01}.
+
+\index{WAVFile@{WAVFile}!getNextSample@{getNextSample}}
+\index{getNextSample@{getNextSample}!WAVFile@{WAVFile}}
+\doxysubsubsection{getNextSample()}
+{\footnotesize\ttfamily \label{classWAVFile_ad1c2ab0a36ac530277e9977832c0d5a9} 
+template$<$class Sample\+Type$>$ \\
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+WAVFile\+::get\+Next\+Sample} (\begin{DoxyParamCaption}\item[{Sample\+Type \&}]{p\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the next audio sample from the file. This is templated so that the proper variable type can be used to store the audio sample value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Audio\+Sample} & Templatized variable to store the next audio sample read from the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, or false with error messages on failure 
+\end{DoxyReturn}
+\index{WAVFile@{WAVFile}!getNextSample\_int64@{getNextSample\_int64}}
+\index{getNextSample\_int64@{getNextSample\_int64}!WAVFile@{WAVFile}}
+\doxysubsubsection{getNextSample\_int64()}
+{\footnotesize\ttfamily \label{classWAVFile_a9be010a2ade745512d04232ecdef746d} 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+WAVFile\+::get\+Next\+Sample\+\_\+int64} (\begin{DoxyParamCaption}\item[{int64\+\_\+t \&}]{p\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the next sample from the file, cast to a 64-\/bit integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{out}}  & {\em p\+Audio\+Sample} & The next audio sample from the file, cast to a 64-\/bit integer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, or false with error messages on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a99c362d4f3f1417e88a29e20e1a569b5}.
+
+\index{WAVFile@{WAVFile}!goToAudioDataPos@{goToAudioDataPos}}
+\index{goToAudioDataPos@{goToAudioDataPos}!WAVFile@{WAVFile}}
+\doxysubsubsection{goToAudioDataPos()}
+{\footnotesize\ttfamily \label{classWAVFile_a1e0a709a874a8fc7cb6404e47476e955} 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+WAVFile\+::go\+To\+Audio\+Data\+Pos} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Goes to the audio data position in the WAV file. 
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_ae747456aaffc54186bf27d40d2b6619c}.
+
+\index{WAVFile@{WAVFile}!maxValueForSampleSize@{maxValueForSampleSize}}
+\index{maxValueForSampleSize@{maxValueForSampleSize}!WAVFile@{WAVFile}}
+\doxysubsubsection{maxValueForSampleSize()}
+{\footnotesize\ttfamily \label{classWAVFile_ac84f76e37bafe54e9899c375c35a79f7} 
+int64\+\_\+t \textbf{ EOUtils\+::\+WAVFile\+::max\+Value\+For\+Sample\+Size} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the maximum possible positive value of the audio file\textquotesingle{}s sample size. 
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a04453bb2912c38bb59448756a7773835}.
+
+\index{WAVFile@{WAVFile}!numSamples@{numSamples}}
+\index{numSamples@{numSamples}!WAVFile@{WAVFile}}
+\doxysubsubsection{numSamples()}
+{\footnotesize\ttfamily \label{classWAVFile_ad86f3d692b31831fcf210b0addb8cbf2} 
+size\+\_\+t \textbf{ EOUtils\+::\+WAVFile\+::num\+Samples} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of audio samples in the WAV file. 
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a9323d827fd3a5cd95c02c90b07c33552}.
+
+\index{WAVFile@{WAVFile}!open@{open}}
+\index{open@{open}!WAVFile@{WAVFile}}
+\doxysubsubsection{open()}
+{\footnotesize\ttfamily \label{classWAVFile_a8dc7c592c1ce3f8692b9e61465b9b552} 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+WAVFile\+::open} (\begin{DoxyParamCaption}\item[{Audio\+File\+Modes}]{p\+Open\+Mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a74bb4950fa5e2455afb4813585bca4c6}.
+
+\index{WAVFile@{WAVFile}!seekOutputToSampleNum@{seekOutputToSampleNum}}
+\index{seekOutputToSampleNum@{seekOutputToSampleNum}!WAVFile@{WAVFile}}
+\doxysubsubsection{seekOutputToSampleNum()}
+{\footnotesize\ttfamily \label{classWAVFile_a620b40c235b8f702d8a73b4cc428914b} 
+void \textbf{ EOUtils\+::\+WAVFile\+::seek\+Output\+To\+Sample\+Num} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p\+Sample\+Num}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_af30b9f5c0bd6f6eb670976c5872aacdd}.
+
+\index{WAVFile@{WAVFile}!setAudioFileInfo@{setAudioFileInfo}}
+\index{setAudioFileInfo@{setAudioFileInfo}!WAVFile@{WAVFile}}
+\doxysubsubsection{setAudioFileInfo()}
+{\footnotesize\ttfamily \label{classWAVFile_aa56b64ce5739633fd2188cfc84e9e783} 
+void \textbf{ EOUtils\+::\+WAVFile\+::set\+Audio\+File\+Info} (\begin{DoxyParamCaption}\item[{const \textbf{ Audio\+File\+Info} \&}]{p\+Audio\+File\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a2801f28e7658576fb6ae96f91ced6f92}.
+
+\index{WAVFile@{WAVFile}!writeSample@{writeSample}}
+\index{writeSample@{writeSample}!WAVFile@{WAVFile}}
+\doxysubsubsection{writeSample()}
+{\footnotesize\ttfamily \label{classWAVFile_a60857e126aee2a5b3fe5bf2331224503} 
+template$<$class Sample\+Type$>$ \\
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+WAVFile\+::write\+Sample} (\begin{DoxyParamCaption}\item[{Sample\+Type}]{p\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes an audio sample to the file. This is templated so that the proper variable type can be used for the audio sample value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Audio\+Sample} & Templatized variable containing the audio sample value to write to the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, or false with error messages on failure 
+\end{DoxyReturn}
+\index{WAVFile@{WAVFile}!writeSample\_int64@{writeSample\_int64}}
+\index{writeSample\_int64@{writeSample\_int64}!WAVFile@{WAVFile}}
+\doxysubsubsection{writeSample\_int64()}
+{\footnotesize\ttfamily \label{classWAVFile_ab5d1a09061e68e3c3994e8c46569261a} 
+\textbf{ Audio\+File\+Result\+Type} \textbf{ EOUtils\+::\+WAVFile\+::write\+Sample\+\_\+int64} (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{p\+Audio\+Sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes an audio sample to the file. The parameter is a 64-\/bit integer but will be cast to the bitness of the audio samples in the file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em p\+Audio\+Sample} & The audio sample to write to the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, or false with error messages on failure 
+\end{DoxyReturn}
+
+
+Implements \textbf{ EOUtils\+::\+Audio\+File} \doxyref{}{p.}{classEOUtils_1_1AudioFile_a901b6f6818ae604841592537a278507d}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ WAVFile.\+h}\item 
+/home/erico/projects/audio\+\_\+mixer\+\_\+cpp/code/common/\textbf{ WAVFile.\+cpp}\end{DoxyCompactItemize}

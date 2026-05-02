@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classCAudioMixerCPPDlg" kind="class" language="C++" prot="public">
+    <compoundname>CAudioMixerCPPDlg</compoundname>
+    <basecompoundref refid="classCDialogEx" prot="public" virt="non-virtual">CDialogEx</basecompoundref>
+    <includes refid="AudioMixerCPPDlg_8h" local="no">AudioMixerCPPDlg.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classCAudioMixerCPPDlg_1acf8ee4d91e544f5970eaca5c98b34b2a" prot="protected" static="no" mutable="no">
+        <type>HICON</type>
+        <definition>HICON CAudioMixerCPPDlg::m_hIcon</definition>
+        <argsstring></argsstring>
+        <name>m_hIcon</name>
+        <qualifiedname>CAudioMixerCPPDlg::m_hIcon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="27" column="7" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classCAudioMixerCPPDlg_1a8cda873f3281910bf5593aafc5d5af26" compoundref="AudioMixerCPPDlg_8cpp" startline="67" endline="73">CAudioMixerCPPDlg</referencedby>
+        <referencedby refid="classCAudioMixerCPPDlg_1a0754f2ee76b5180dd8077b9b8c263a44" compoundref="AudioMixerCPPDlg_8cpp" startline="100" endline="134">OnInitDialog</referencedby>
+        <referencedby refid="classCAudioMixerCPPDlg_1af4ab34cfb01be826015cb904054cc628" compoundref="AudioMixerCPPDlg_8cpp" startline="153" endline="176">OnPaint</referencedby>
+        <referencedby refid="classCAudioMixerCPPDlg_1ae95e7c6dce32a812f7f787639847276b" compoundref="AudioMixerCPPDlg_8cpp" startline="180" endline="183">OnQueryDragIcon</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCAudioMixerCPPDlg_1aecbfb2d4975c5456385eaba9cae768f6" prot="private" static="no" mutable="no">
+        <type><ref refid="classCCustomEditListBox" kindref="compound">CCustomEditListBox</ref></type>
+        <definition>CCustomEditListBox CAudioMixerCPPDlg::mFilenameListBox</definition>
+        <argsstring></argsstring>
+        <name>mFilenameListBox</name>
+        <qualifiedname>CAudioMixerCPPDlg::mFilenameListBox</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="39" column="20" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCAudioMixerCPPDlg_1a165f511b493178a1aceaae6553880d7f" prot="private" static="no" mutable="no">
+        <type>CString</type>
+        <definition>CString CAudioMixerCPPDlg::mStatusText</definition>
+        <argsstring></argsstring>
+        <name>mStatusText</name>
+        <qualifiedname>CAudioMixerCPPDlg::mStatusText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="40" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCAudioMixerCPPDlg_1ad05da1544b1e57817c0ecd3a99c7dd23" prot="private" static="no" mutable="no">
+        <type>CString</type>
+        <definition>CString CAudioMixerCPPDlg::mOutputFilename</definition>
+        <argsstring></argsstring>
+        <name>mOutputFilename</name>
+        <qualifiedname>CAudioMixerCPPDlg::mOutputFilename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="41" column="9" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1a8cda873f3281910bf5593aafc5d5af26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CAudioMixerCPPDlg::CAudioMixerCPPDlg</definition>
+        <argsstring>(CWnd *pParent=nullptr)</argsstring>
+        <name>CAudioMixerCPPDlg</name>
+        <qualifiedname>CAudioMixerCPPDlg::CAudioMixerCPPDlg</qualifiedname>
+        <param>
+          <type>CWnd *</type>
+          <declname>pParent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="14" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="67" bodyend="73"/>
+        <references refid="classCAudioMixerCPPDlg_1a8cda873f3281910bf5593aafc5d5af26" compoundref="AudioMixerCPPDlg_8cpp" startline="67" endline="73">CAudioMixerCPPDlg</references>
+        <references refid="resource_8h_1a356556ed96435a3fe6a0aca91f1a47dd" compoundref="resource_8h" startline="8">IDD_AUDIOMIXERCPP_DIALOG</references>
+        <references refid="resource_8h_1a9772c84d39896ad00b9aeb34b15d324d" compoundref="resource_8h" startline="9">IDR_MAINFRAME</references>
+        <references refid="classCAudioMixerCPPDlg_1acf8ee4d91e544f5970eaca5c98b34b2a" compoundref="AudioMixerCPPDlg_8h" startline="27">m_hIcon</references>
+        <referencedby refid="classCAudioMixerCPPDlg_1a8cda873f3281910bf5593aafc5d5af26" compoundref="AudioMixerCPPDlg_8cpp" startline="67" endline="73">CAudioMixerCPPDlg</referencedby>
+        <referencedby refid="classCAudioMixerCPPDlg_1a0754f2ee76b5180dd8077b9b8c263a44" compoundref="AudioMixerCPPDlg_8cpp" startline="100" endline="134">OnInitDialog</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1a872023ad01edcb4403c1cd0c87448d55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void CAudioMixerCPPDlg::OnBnClickedButtonMixAudioFiles</definition>
+        <argsstring>()</argsstring>
+        <name>OnBnClickedButtonMixAudioFiles</name>
+        <qualifiedname>CAudioMixerCPPDlg::OnBnClickedButtonMixAudioFiles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="36" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="187" bodyend="240"/>
+        <references refid="AudioMixerCPPDlg_8cpp_1a669d98e89f0bbc2652a05cb73a6aca76" compoundref="AudioFileTools_8cpp" startline="57" endline="78">createAudioFileObjForNewFile</references>
+        <references refid="AudioMixerCPPDlg_8cpp_1aa563006566b28a288ca4643dbc914db5" compoundref="StringUtils_8cpp" startline="7" endline="11">CStringToStdString</references>
+        <references refid="classEOUtils_1_1AudioFileResultType_1a7cb671fe20ea46e8d4ee3cf4785a7269" compoundref="AudioFileResultType_8cpp" startline="44" endline="50">EOUtils::AudioFileResultType::getError</references>
+        <references refid="AudioMixerCPPDlg_8cpp_1a36829f33264df3b55d08a964555c9c7f">mixAudioFiles</references>
+        <references refid="AudioMixerCPPDlg_8cpp_1ab3b0357589c6a30e89a5bb74fdb3b91f" compoundref="AudioMixerCPPDlg_8cpp" startline="84">WM_MIX_DONE_MESSAGE</references>
+      </memberdef>
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1a6372aa0e41bfc9ce3eefaf5754c36830" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void CAudioMixerCPPDlg::OnClickedButtonSelectOutputFile</definition>
+        <argsstring>()</argsstring>
+        <name>OnClickedButtonSelectOutputFile</name>
+        <qualifiedname>CAudioMixerCPPDlg::OnClickedButtonSelectOutputFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="37" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="243" bodyend="248"/>
+        <references refid="GUITools_8cpp_1a67560c4b88e8fe6ee37b2fadd4e5acda" compoundref="GUITools_8cpp" startline="5" endline="19">letUserBrowseForOneFile</references>
+      </memberdef>
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1a4cf02def48432d68538d81307a8d0082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void CAudioMixerCPPDlg::OnDropFiles</definition>
+        <argsstring>(HDROP hDropInfo)</argsstring>
+        <name>OnDropFiles</name>
+        <qualifiedname>CAudioMixerCPPDlg::OnDropFiles</qualifiedname>
+        <param>
+          <type>HDROP</type>
+          <declname>hDropInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="48" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="251" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1a4ad8d904fd531d00a20a4d3774baf703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void CAudioMixerCPPDlg::OnBnClickedButtonClearInputList</definition>
+        <argsstring>()</argsstring>
+        <name>OnBnClickedButtonClearInputList</name>
+        <qualifiedname>CAudioMixerCPPDlg::OnBnClickedButtonClearInputList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="49" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="306" bodyend="311"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1ae263d828b9c09b0d998ac0d0cf64f7f1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CAudioMixerCPPDlg::DoDataExchange</definition>
+        <argsstring>(CDataExchange *pDX)</argsstring>
+        <name>DoDataExchange</name>
+        <qualifiedname>CAudioMixerCPPDlg::DoDataExchange</qualifiedname>
+        <param>
+          <type>CDataExchange *</type>
+          <declname>pDX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="22" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="75" bodyend="82"/>
+        <references refid="resource_8h_1afa33d864844f8f52b4b14e17c82186ff" compoundref="resource_8h" startline="16">IDC_EDIT_OUTPUT_FILENAME</references>
+        <references refid="resource_8h_1a212d2c4f456c21cdebf8141370db9e57" compoundref="resource_8h" startline="10">IDC_MFCVSLISTBOX_SOUND_FILENAMES</references>
+        <references refid="resource_8h_1aec1569be5e665c14c815a0e601f6aafb" compoundref="resource_8h" startline="13">IDC_STATIC_STATUS</references>
+      </memberdef>
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1a0754f2ee76b5180dd8077b9b8c263a44" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL CAudioMixerCPPDlg::OnInitDialog</definition>
+        <argsstring>()</argsstring>
+        <name>OnInitDialog</name>
+        <qualifiedname>CAudioMixerCPPDlg::OnInitDialog</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="30" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="100" bodyend="134"/>
+        <references refid="classCAudioMixerCPPDlg_1a8cda873f3281910bf5593aafc5d5af26" compoundref="AudioMixerCPPDlg_8cpp" startline="67" endline="73">CAudioMixerCPPDlg</references>
+        <references refid="resource_8h_1a74b41adc6435c09e5393739d1ebeace4" compoundref="resource_8h" startline="5">IDM_ABOUTBOX</references>
+        <references refid="resource_8h_1a912ee15244eed3e0f75c2fc1ef9719eb" compoundref="resource_8h" startline="7">IDS_ABOUTBOX</references>
+        <references refid="classCAudioMixerCPPDlg_1acf8ee4d91e544f5970eaca5c98b34b2a" compoundref="AudioMixerCPPDlg_8h" startline="27">m_hIcon</references>
+        <references refid="classCAudioMixerCPPDlg_1a0754f2ee76b5180dd8077b9b8c263a44" compoundref="AudioMixerCPPDlg_8cpp" startline="100" endline="134">OnInitDialog</references>
+        <referencedby refid="classCAudioMixerCPPDlg_1a0754f2ee76b5180dd8077b9b8c263a44" compoundref="AudioMixerCPPDlg_8cpp" startline="100" endline="134">OnInitDialog</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1a6c0991ab95cb6ac8e21859de2eb930e4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void CAudioMixerCPPDlg::OnSysCommand</definition>
+        <argsstring>(UINT nID, LPARAM lParam)</argsstring>
+        <name>OnSysCommand</name>
+        <qualifiedname>CAudioMixerCPPDlg::OnSysCommand</qualifiedname>
+        <param>
+          <type>UINT</type>
+          <declname>nID</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="31" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="136" bodyend="147"/>
+        <references refid="resource_8h_1a74b41adc6435c09e5393739d1ebeace4" compoundref="resource_8h" startline="5">IDM_ABOUTBOX</references>
+      </memberdef>
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1af4ab34cfb01be826015cb904054cc628" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void CAudioMixerCPPDlg::OnPaint</definition>
+        <argsstring>()</argsstring>
+        <name>OnPaint</name>
+        <qualifiedname>CAudioMixerCPPDlg::OnPaint</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="32" column="14" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="153" bodyend="176"/>
+        <references refid="classCAudioMixerCPPDlg_1acf8ee4d91e544f5970eaca5c98b34b2a" compoundref="AudioMixerCPPDlg_8h" startline="27">m_hIcon</references>
+      </memberdef>
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1ae95e7c6dce32a812f7f787639847276b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg HCURSOR</type>
+        <definition>HCURSOR CAudioMixerCPPDlg::OnQueryDragIcon</definition>
+        <argsstring>()</argsstring>
+        <name>OnQueryDragIcon</name>
+        <qualifiedname>CAudioMixerCPPDlg::OnQueryDragIcon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="33" column="17" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="180" bodyend="183"/>
+        <references refid="classCAudioMixerCPPDlg_1acf8ee4d91e544f5970eaca5c98b34b2a" compoundref="AudioMixerCPPDlg_8h" startline="27">m_hIcon</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1a18876845ce273c45e8d719c51713202c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CAudioMixerCPPDlg::toggleUIControls</definition>
+        <argsstring>(bool pEnable)</argsstring>
+        <name>toggleUIControls</name>
+        <qualifiedname>CAudioMixerCPPDlg::toggleUIControls</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>pEnable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="44" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="267" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classCAudioMixerCPPDlg_1a328b2b4b8c5b25d6a94e4bd2d00cc969" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg LRESULT</type>
+        <definition>LRESULT CAudioMixerCPPDlg::OnMixDoneMessage</definition>
+        <argsstring>(WPARAM wParam, LPARAM lParam)</argsstring>
+        <name>OnMixDoneMessage</name>
+        <qualifiedname>CAudioMixerCPPDlg::OnMixDoneMessage</qualifiedname>
+        <param>
+          <type>WPARAM</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="46" column="17" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.cpp" bodystart="281" bodyend="303"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CAudioMixerCPPDlg</label>
+        <link refid="classCAudioMixerCPPDlg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CDialogEx</label>
+        <link refid="classCDialogEx"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CAudioMixerCPPDlg</label>
+        <link refid="classCAudioMixerCPPDlg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#m_hIcon</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CDialogEx</label>
+        <link refid="classCDialogEx"/>
+      </node>
+      <node id="3">
+        <label>HICON</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" line="10" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/AudioMixerCPP_Win_VisualStudio/AudioMixerCPPDlg.h" bodystart="11" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classCAudioMixerCPPDlg_1a8cda873f3281910bf5593aafc5d5af26" prot="public" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>CAudioMixerCPPDlg</name></member>
+      <member refid="classCAudioMixerCPPDlg_1ae263d828b9c09b0d998ac0d0cf64f7f1" prot="protected" virt="virtual"><scope>CAudioMixerCPPDlg</scope><name>DoDataExchange</name></member>
+      <member refid="classCAudioMixerCPPDlg_1acf8ee4d91e544f5970eaca5c98b34b2a" prot="protected" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>m_hIcon</name></member>
+      <member refid="classCAudioMixerCPPDlg_1aecbfb2d4975c5456385eaba9cae768f6" prot="private" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>mFilenameListBox</name></member>
+      <member refid="classCAudioMixerCPPDlg_1ad05da1544b1e57817c0ecd3a99c7dd23" prot="private" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>mOutputFilename</name></member>
+      <member refid="classCAudioMixerCPPDlg_1a165f511b493178a1aceaae6553880d7f" prot="private" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>mStatusText</name></member>
+      <member refid="classCAudioMixerCPPDlg_1a4ad8d904fd531d00a20a4d3774baf703" prot="public" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>OnBnClickedButtonClearInputList</name></member>
+      <member refid="classCAudioMixerCPPDlg_1a872023ad01edcb4403c1cd0c87448d55" prot="public" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>OnBnClickedButtonMixAudioFiles</name></member>
+      <member refid="classCAudioMixerCPPDlg_1a6372aa0e41bfc9ce3eefaf5754c36830" prot="public" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>OnClickedButtonSelectOutputFile</name></member>
+      <member refid="classCAudioMixerCPPDlg_1a4cf02def48432d68538d81307a8d0082" prot="public" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>OnDropFiles</name></member>
+      <member refid="classCAudioMixerCPPDlg_1a0754f2ee76b5180dd8077b9b8c263a44" prot="protected" virt="virtual"><scope>CAudioMixerCPPDlg</scope><name>OnInitDialog</name></member>
+      <member refid="classCAudioMixerCPPDlg_1a328b2b4b8c5b25d6a94e4bd2d00cc969" prot="private" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>OnMixDoneMessage</name></member>
+      <member refid="classCAudioMixerCPPDlg_1af4ab34cfb01be826015cb904054cc628" prot="protected" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>OnPaint</name></member>
+      <member refid="classCAudioMixerCPPDlg_1ae95e7c6dce32a812f7f787639847276b" prot="protected" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>OnQueryDragIcon</name></member>
+      <member refid="classCAudioMixerCPPDlg_1a6c0991ab95cb6ac8e21859de2eb930e4" prot="protected" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>OnSysCommand</name></member>
+      <member refid="classCAudioMixerCPPDlg_1a18876845ce273c45e8d719c51713202c" prot="private" virt="non-virtual"><scope>CAudioMixerCPPDlg</scope><name>toggleUIControls</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

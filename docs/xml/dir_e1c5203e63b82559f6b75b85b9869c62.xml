@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="dir_e1c5203e63b82559f6b75b85b9869c62" kind="dir">
+    <compoundname>/home/erico/projects/audio_mixer_cpp/code/common</compoundname>
+    <innerfile refid="AiffFile_8cpp">AiffFile.cpp</innerfile>
+    <innerfile refid="AiffFile_8h">AiffFile.h</innerfile>
+    <innerfile refid="AiffFileInfo_8cpp">AiffFileInfo.cpp</innerfile>
+    <innerfile refid="AiffFileInfo_8h">AiffFileInfo.h</innerfile>
+    <innerfile refid="AudioFile_8cpp">AudioFile.cpp</innerfile>
+    <innerfile refid="AudioFile_8h">AudioFile.h</innerfile>
+    <innerfile refid="AudioFileInfo_8cpp">AudioFileInfo.cpp</innerfile>
+    <innerfile refid="AudioFileInfo_8h">AudioFileInfo.h</innerfile>
+    <innerfile refid="AudioFileResultType_8cpp">AudioFileResultType.cpp</innerfile>
+    <innerfile refid="AudioFileResultType_8h">AudioFileResultType.h</innerfile>
+    <innerfile refid="AudioFileTools_8cpp">AudioFileTools.cpp</innerfile>
+    <innerfile refid="AudioFileTools_8h">AudioFileTools.h</innerfile>
+    <innerfile refid="cmdLineApp_8cpp">cmdLineApp.cpp</innerfile>
+    <innerfile refid="EOUtils_8cpp">EOUtils.cpp</innerfile>
+    <innerfile refid="EOUtils_8h">EOUtils.h</innerfile>
+    <innerfile refid="FLACFile_8cpp">FLACFile.cpp</innerfile>
+    <innerfile refid="FLACFile_8h">FLACFile.h</innerfile>
+    <innerfile refid="FLACFileInfo_8cpp">FLACFileInfo.cpp</innerfile>
+    <innerfile refid="FLACFileInfo_8h">FLACFileInfo.h</innerfile>
+    <innerfile refid="MetadataAudioFile_8cpp">MetadataAudioFile.cpp</innerfile>
+    <innerfile refid="MetadataAudioFile_8h">MetadataAudioFile.h</innerfile>
+    <innerfile refid="MP3File_8cpp">MP3File.cpp</innerfile>
+    <innerfile refid="MP3File_8h">MP3File.h</innerfile>
+    <innerfile refid="MP3FileInfo_8cpp">MP3FileInfo.cpp</innerfile>
+    <innerfile refid="MP3FileInfo_8h">MP3FileInfo.h</innerfile>
+    <innerfile refid="OggFile_8cpp">OggFile.cpp</innerfile>
+    <innerfile refid="OggFile_8h">OggFile.h</innerfile>
+    <innerfile refid="OggFileInfo_8cpp">OggFileInfo.cpp</innerfile>
+    <innerfile refid="OggFileInfo_8h">OggFileInfo.h</innerfile>
+    <innerfile refid="SndFileBackedMetadataAudioFile_8cpp">SndFileBackedMetadataAudioFile.cpp</innerfile>
+    <innerfile refid="SndFileBackedMetadataAudioFile_8h">SndFileBackedMetadataAudioFile.h</innerfile>
+    <innerfile refid="SndFileHelpers_8cpp">SndFileHelpers.cpp</innerfile>
+    <innerfile refid="SndFileHelpers_8h">SndFileHelpers.h</innerfile>
+    <innerfile refid="utilFunctions_8cpp">utilFunctions.cpp</innerfile>
+    <innerfile refid="utilFunctions_8h">utilFunctions.h</innerfile>
+    <innerfile refid="WAVFile_8cpp">WAVFile.cpp</innerfile>
+    <innerfile refid="WAVFile_8h">WAVFile.h</innerfile>
+    <innerfile refid="WAVFileInfo_8cpp">WAVFileInfo.cpp</innerfile>
+    <innerfile refid="WAVFileInfo_8h">WAVFileInfo.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/"/>
+  </compounddef>
+</doxygen>

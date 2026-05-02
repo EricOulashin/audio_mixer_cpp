@@ -1,0 +1,17 @@
+<map id="AudioFile" name="AudioFile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="210,5,399,416"/>
+<area shape="rect" id="Node000002" href="$classEOUtils_1_1MetadataAudioFile.html" title="Abstract class that extends AudioFile with pure virtual methods for adding/updating common audio meta..." alt="" coords="120,475,293,757"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,433,243,476,238,475,252,428"/>
+<area shape="rect" id="Node000008" href="$classEOUtils_1_1WAVFile.html" title=" " alt="" coords="317,464,488,768"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="358,428,369,464,363,464,358,433"/>
+<area shape="rect" id="Node000003" href="$classEOUtils_1_1FLACFile.html" title=" " alt="" coords="38,976,178,1259"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="176,775,138,976,133,976,177,769"/>
+<area shape="rect" id="Node000004" href="$classEOUtils_1_1SndFileBackedMetadataAudioFile.html" title="Shared libsndfile&#45;backed implementation used by MP3, Ogg Vorbis, and AIFF codecs." alt="" coords="202,816,409,1419"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="237,769,249,816,243,816,237,774"/>
+<area shape="rect" id="Node000005" href="$classEOUtils_1_1AiffFile.html" title=" " alt="" coords="5,1565,168,1869"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="196,1418,144,1567,139,1565,198,1413"/>
+<area shape="rect" id="Node000006" href="$classEOUtils_1_1MP3File.html" title=" " alt="" coords="193,1467,418,1968"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="306,1431,308,1468,303,1466,305,1436"/>
+<area shape="rect" id="Node000007" href="$classEOUtils_1_1OggFile.html" title=" " alt="" coords="442,1477,666,1957"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="415,1379,457,1478,452,1477,414,1384"/>
+</map>

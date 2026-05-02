@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
+  <compounddef id="classEOUtils_1_1AudioFileResultType" kind="class" language="C++" prot="public">
+    <compoundname>EOUtils::AudioFileResultType</compoundname>
+    <includes refid="AudioFileResultType_8h" local="no">AudioFileResultType.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classEOUtils_1_1AudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" prot="public" static="no">
+        <type>std::list&lt; std::string &gt;</type>
+        <definition>using EOUtils::AudioFileResultType::errorCollectionType =  std::list&lt;std::string&gt;</definition>
+        <argsstring></argsstring>
+        <name>errorCollectionType</name>
+        <qualifiedname>EOUtils::AudioFileResultType::errorCollectionType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="15" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEOUtils_1_1AudioFileResultType_1a1600f33d8ba5ea5e94e050e300f7aab5" prot="private" static="no" mutable="no">
+        <type><ref refid="classEOUtils_1_1AudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" kindref="member">errorCollectionType</ref></type>
+        <definition>errorCollectionType EOUtils::AudioFileResultType::mErrors</definition>
+        <argsstring></argsstring>
+        <name>mErrors</name>
+        <qualifiedname>EOUtils::AudioFileResultType::mErrors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="38" column="21" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEOUtils_1_1AudioFileResultType_1a228d6aeba7d0186edbe6f15e01ec65e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AudioFileResultType::AudioFileResultType</definition>
+        <argsstring>(const std::string &amp;pError=&quot;&quot;)</argsstring>
+        <name>AudioFileResultType</name>
+        <qualifiedname>EOUtils::AudioFileResultType::AudioFileResultType</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pError</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="17" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFileResultType_1aaeaa4d2f44e3ae973c85e3f5558b694e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AudioFileResultType::~AudioFileResultType</definition>
+        <argsstring>()</argsstring>
+        <name>~AudioFileResultType</name>
+        <qualifiedname>EOUtils::AudioFileResultType::~AudioFileResultType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="19" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFileResultType::addError</definition>
+        <argsstring>(const std::string &amp;pError)</argsstring>
+        <name>addError</name>
+        <qualifiedname>EOUtils::AudioFileResultType::addError</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pError</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="21" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="19" bodyend="22"/>
+        <referencedby refid="namespaceEOUtils_1a0b15d6d731191ac775ef0e5c01508f06" compoundref="AudioFileTools_8cpp" startline="105" endline="159">EOUtils::getAudioFileInfo</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1aab392d341c24ffad1005c068bb75b1a9" compoundref="WAVFile_8h" startline="180" endline="212">EOUtils::WAVFile::getHighestSampleValue</referencedby>
+        <referencedby refid="namespaceEOUtils_1aa3b3576d92ae15a2627eaa1385725de1" compoundref="AudioFileTools_8cpp" startline="425" endline="448">EOUtils::getHighestSampleValue_64bit</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a742be01f59c8bdd485c1bd33dda5bf33" compoundref="FLACFile_8cpp" startline="543" endline="577">EOUtils::FLACFile::getHighestSampleValue_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a50528a485aeda6e16ab5c3f1558aefd5" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="367" endline="401">EOUtils::SndFileBackedMetadataAudioFile::getHighestSampleValue_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1ac839429fe6108881056c3388ec9ebbcf" compoundref="WAVFile_8cpp" startline="242" endline="291">EOUtils::WAVFile::getHighestSampleValue_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a80b9e185e791079450429706ca9ef91e" compoundref="AudioFile_8h" startline="162" endline="174">EOUtils::AudioFile::getMetadataAs</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1ad1c2ab0a36ac530277e9977832c0d5a9" compoundref="WAVFile_8h" startline="79" endline="120">EOUtils::WAVFile::getNextSample</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1aecd756065217efeff7bcd1ebefaba8b7" compoundref="FLACFile_8cpp" startline="415" endline="488">EOUtils::FLACFile::getNextSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1afc4e1a414dc53a1c3112f6a7b93600f0" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="294" endline="330">EOUtils::SndFileBackedMetadataAudioFile::getNextSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a9be010a2ade745512d04232ecdef746d" compoundref="WAVFile_8cpp" startline="142" endline="197">EOUtils::WAVFile::getNextSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1ac390e92ea5bcf4942f573f29a4a7aaa2" compoundref="FLACFile_8cpp" startline="877" endline="904">EOUtils::FLACFile::getTrackNumber</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1a79744b85e1f5a071d022d49ce0fb80a6" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="620" endline="648">EOUtils::SndFileBackedMetadataAudioFile::getTrackNumber</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1ada175c6e4ee3721cabac43f7c2967a97" compoundref="FLACFile_8cpp" startline="579" endline="601">EOUtils::FLACFile::goToAudioDataPos</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ae71e6cdf5e73980e8a71af7005411111" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="403" endline="415">EOUtils::SndFileBackedMetadataAudioFile::goToAudioDataPos</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a1e0a709a874a8fc7cb6404e47476e955" compoundref="WAVFile_8cpp" startline="293" endline="307">EOUtils::WAVFile::goToAudioDataPos</referencedby>
+        <referencedby refid="namespaceEOUtils_1a3fec4b49472aa005139f9394f2eda23d" compoundref="AudioFileTools_8cpp" startline="186" endline="423">EOUtils::mixAudioFiles</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFile_1a74bb4950fa5e2455afb4813585bca4c6" compoundref="AudioFile_8cpp" startline="38" endline="52">EOUtils::AudioFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" compoundref="FLACFile_8cpp" startline="217" endline="362">EOUtils::FLACFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1ada954c16d8f5ff5c9a22c39c2f7c316a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="130" endline="226">EOUtils::SndFileBackedMetadataAudioFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a8dc7c592c1ce3f8692b9e61465b9b552" compoundref="WAVFile_8cpp" startline="51" endline="117">EOUtils::WAVFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFileInfo_1ace178edb3472f22ecb709415e41dd4b2" compoundref="AiffFileInfo_8cpp" startline="51" endline="82">EOUtils::AiffFileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFileInfo_1a33e79af4782d24672bd281fd1a46b4b1" compoundref="AiffFileInfo_8cpp" startline="44" endline="49">EOUtils::AiffFileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFileInfo_1ab94a417a9ec7ebf2ac1e9b1578f59825" compoundref="AudioFileInfo_8cpp" startline="30" endline="42">EOUtils::AudioFileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFileInfo_1ae46975f1e0d83c16008c256d283d5c23" compoundref="AudioFileInfo_8cpp" startline="45" endline="50">EOUtils::AudioFileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFileInfo_1afa9ecafbcc6267355a603620a2dfd6f3" compoundref="FLACFileInfo_8cpp" startline="210" endline="222">EOUtils::FLACFileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFileInfo_1a2c888b427c1fb23aa2d8e7e1f11bb0c2" compoundref="FLACFileInfo_8cpp" startline="135" endline="201">EOUtils::FLACFileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3FileInfo_1a0c08fdfa1bd6e4b22bfafeb442b0420c" compoundref="MP3FileInfo_8cpp" startline="34" endline="66">EOUtils::MP3FileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3FileInfo_1a8051df5e0505e0ecb7962f77bc151356" compoundref="MP3FileInfo_8cpp" startline="27" endline="32">EOUtils::MP3FileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFileInfo_1ac47c8a62eeeb4aabbd409598e9eb63dd" compoundref="OggFileInfo_8cpp" startline="35" endline="65">EOUtils::OggFileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFileInfo_1ac8a0d3729c18a5a0e6f04a18695fe400" compoundref="OggFileInfo_8cpp" startline="28" endline="33">EOUtils::OggFileInfo::read</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFileInfo_1a3ea420f4e58f22d9a61ebfc6444b769b" compoundref="WAVFileInfo_8cpp" startline="33" endline="171">EOUtils::WAVFileInfo::read</referencedby>
+        <referencedby refid="namespaceEOUtils_1a281fba20cbe824b51ce8ad4ce77e8478" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="460" endline="489">EOUtils::sfGetViaTempRead</referencedby>
+        <referencedby refid="namespaceEOUtils_1a3e9ad64db30373ed7434836296c58b85" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="491" endline="512">EOUtils::sfSetViaRw</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFileInfo_1a2e24c98872bf837b409680d27526ec49" compoundref="WAVFileInfo_8cpp" startline="264" endline="280">EOUtils::WAVFileInfo::updateDataSizeSizeInFile</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFileInfo_1ae618a681f3b16ec6b1f83f0894ae118e" compoundref="WAVFileInfo_8cpp" startline="246" endline="262">EOUtils::WAVFileInfo::updateFileSizeSizeInFile</referencedby>
+        <referencedby refid="classEOUtils_1_1AiffFileInfo_1a45ae9406849b94faba589c1a89e86c74" compoundref="AiffFileInfo_8cpp" startline="84" endline="89">EOUtils::AiffFileInfo::write</referencedby>
+        <referencedby refid="classEOUtils_1_1AudioFileInfo_1a35bee862e09314491cc60205fa953b02" compoundref="AudioFileInfo_8cpp" startline="53" endline="58">EOUtils::AudioFileInfo::write</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFileInfo_1a7a4feab4d15f2635e225ce41e52f50dd" compoundref="FLACFileInfo_8cpp" startline="203" endline="208">EOUtils::FLACFileInfo::write</referencedby>
+        <referencedby refid="classEOUtils_1_1MP3FileInfo_1a788b3639f70f332eedbb26c825fdff87" compoundref="MP3FileInfo_8cpp" startline="68" endline="73">EOUtils::MP3FileInfo::write</referencedby>
+        <referencedby refid="classEOUtils_1_1OggFileInfo_1a42020d5065eeb1bf0418c9819852e54c" compoundref="OggFileInfo_8cpp" startline="67" endline="72">EOUtils::OggFileInfo::write</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFileInfo_1a19e432d3926053a8c40a03d06e26a237" compoundref="WAVFileInfo_8cpp" startline="173" endline="244">EOUtils::WAVFileInfo::write</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1a60857e126aee2a5b3fe5bf2331224503" compoundref="WAVFile_8h" startline="131" endline="152">EOUtils::WAVFile::writeSample</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1aea40fce50b9c489955238f06d2207f8c" compoundref="FLACFile_8cpp" startline="490" endline="541">EOUtils::FLACFile::writeSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1SndFileBackedMetadataAudioFile_1acfdd6717c813c6af0a7d8510ab53cd1a" compoundref="SndFileBackedMetadataAudioFile_8cpp" startline="332" endline="365">EOUtils::SndFileBackedMetadataAudioFile::writeSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1WAVFile_1ab5d1a09061e68e3c3994e8c46569261a" compoundref="WAVFile_8cpp" startline="199" endline="240">EOUtils::WAVFile::writeSample_int64</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFileResultType_1a614346c7534f05ce9e8de3a42217dfea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classEOUtils_1_1AudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" kindref="member">errorCollectionType</ref> &amp;</type>
+        <definition>const AudioFileResultType::errorCollectionType &amp; EOUtils::AudioFileResultType::getErrors</definition>
+        <argsstring>() const</argsstring>
+        <name>getErrors</name>
+        <qualifiedname>EOUtils::AudioFileResultType::getErrors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="23" column="27" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="24" bodyend="27"/>
+        <referencedby refid="namespaceEOUtils_1a3fec4b49472aa005139f9394f2eda23d" compoundref="AudioFileTools_8cpp" startline="186" endline="423">EOUtils::mixAudioFiles</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFileResultType_1a4c1c0e01ecfafe5a10b7359929dcf691" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>errorCollectionType::const_iterator</type>
+        <definition>AudioFileResultType::errorCollectionType::const_iterator EOUtils::AudioFileResultType::getErrorsBegin</definition>
+        <argsstring>() const</argsstring>
+        <name>getErrorsBegin</name>
+        <qualifiedname>EOUtils::AudioFileResultType::getErrorsBegin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="25" column="37" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFileResultType_1aa67421495c95cff1666f758bd75d7100" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>errorCollectionType::const_iterator</type>
+        <definition>AudioFileResultType::errorCollectionType::const_iterator EOUtils::AudioFileResultType::getErrorsEnd</definition>
+        <argsstring>() const</argsstring>
+        <name>getErrorsEnd</name>
+        <qualifiedname>EOUtils::AudioFileResultType::getErrorsEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="27" column="37" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFileResultType_1a30725c5f74f0492d20f9bfa685dcab02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t EOUtils::AudioFileResultType::numErrors</definition>
+        <argsstring>() const</argsstring>
+        <name>numErrors</name>
+        <qualifiedname>EOUtils::AudioFileResultType::numErrors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="29" column="8" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="39" bodyend="42"/>
+        <referencedby refid="namespaceEOUtils_1a0b15d6d731191ac775ef0e5c01508f06" compoundref="AudioFileTools_8cpp" startline="105" endline="159">EOUtils::getAudioFileInfo</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1aecd756065217efeff7bcd1ebefaba8b7" compoundref="FLACFile_8cpp" startline="415" endline="488">EOUtils::FLACFile::getNextSample_int64</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFile_1a51522e856b01a9180178e3fe298cded2" compoundref="FLACFile_8cpp" startline="217" endline="362">EOUtils::FLACFile::open</referencedby>
+        <referencedby refid="classEOUtils_1_1FLACFileInfo_1a2c888b427c1fb23aa2d8e7e1f11bb0c2" compoundref="FLACFileInfo_8cpp" startline="135" endline="201">EOUtils::FLACFileInfo::read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFileResultType_1a7cb671fe20ea46e8d4ee3cf4785a7269" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>string EOUtils::AudioFileResultType::getError</definition>
+        <argsstring>() const</argsstring>
+        <name>getError</name>
+        <qualifiedname>EOUtils::AudioFileResultType::getError</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="31" column="13" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="44" bodyend="50"/>
+        <referencedby refid="cmdLineApp_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="cmdLineApp_8cpp" startline="55" endline="126">main</referencedby>
+        <referencedby refid="classCAudioMixerCPPDlg_1a872023ad01edcb4403c1cd0c87448d55" compoundref="AudioMixerCPPDlg_8cpp" startline="187" endline="240">CAudioMixerCPPDlg::OnBnClickedButtonMixAudioFiles</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFileResultType_1ad672a9d8bc0a1cabf55fe4f7d2da864e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EOUtils::AudioFileResultType::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <qualifiedname>EOUtils::AudioFileResultType::operator bool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="33" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="52" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classEOUtils_1_1AudioFileResultType_1aae2b9b567834b1dc1fb8f3f1aaa26cb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EOUtils::AudioFileResultType::outputErrors</definition>
+        <argsstring>(std::ostream &amp;pOutStream) const</argsstring>
+        <name>outputErrors</name>
+        <qualifiedname>EOUtils::AudioFileResultType::outputErrors</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>pOutStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="35" column="6" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.cpp" bodystart="63" bodyend="67"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>EOUtils::AudioFileResultType</label>
+        <link refid="classEOUtils_1_1AudioFileResultType"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" line="12" column="1" bodyfile="/home/erico/projects/audio_mixer_cpp/code/common/AudioFileResultType.h" bodystart="13" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classEOUtils_1_1AudioFileResultType_1a684c6447da4c85612789a4289b4985a8" prot="public" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>addError</name></member>
+      <member refid="classEOUtils_1_1AudioFileResultType_1a228d6aeba7d0186edbe6f15e01ec65e9" prot="public" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>AudioFileResultType</name></member>
+      <member refid="classEOUtils_1_1AudioFileResultType_1a7f065eef66f8578c52a7a989b6689e81" prot="public" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>errorCollectionType</name></member>
+      <member refid="classEOUtils_1_1AudioFileResultType_1a7cb671fe20ea46e8d4ee3cf4785a7269" prot="public" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>getError</name></member>
+      <member refid="classEOUtils_1_1AudioFileResultType_1a614346c7534f05ce9e8de3a42217dfea" prot="public" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>getErrors</name></member>
+      <member refid="classEOUtils_1_1AudioFileResultType_1a4c1c0e01ecfafe5a10b7359929dcf691" prot="public" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>getErrorsBegin</name></member>
+      <member refid="classEOUtils_1_1AudioFileResultType_1aa67421495c95cff1666f758bd75d7100" prot="public" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>getErrorsEnd</name></member>
+      <member refid="classEOUtils_1_1AudioFileResultType_1a1600f33d8ba5ea5e94e050e300f7aab5" prot="private" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>mErrors</name></member>
+      <member refid="classEOUtils_1_1AudioFileResultType_1a30725c5f74f0492d20f9bfa685dcab02" prot="public" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>numErrors</name></member>
+      <member refid="classEOUtils_1_1AudioFileResultType_1ad672a9d8bc0a1cabf55fe4f7d2da864e" prot="public" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>operator bool</name></member>
+      <member refid="classEOUtils_1_1AudioFileResultType_1aae2b9b567834b1dc1fb8f3f1aaa26cb2" prot="public" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>outputErrors</name></member>
+      <member refid="classEOUtils_1_1AudioFileResultType_1aaeaa4d2f44e3ae973c85e3f5558b694e" prot="public" virt="non-virtual"><scope>EOUtils::AudioFileResultType</scope><name>~AudioFileResultType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

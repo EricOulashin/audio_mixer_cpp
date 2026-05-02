@@ -1,0 +1,140 @@
+\chapter{Audio Mixer (C++) }
+\label{index}\index{Audio Mixer (C++)@{Audio Mixer (C++)}}
+\label{index_md__2home_2erico_2projects_2audio__mixer__cpp_2README}%
+
+
+One of my interests and hobbies is music. This project is able to mix multiple audio files into a single output file, so that the audio from each source will be heard simultaneously. Source files may be WAV, FLAC, AIFF ({\ttfamily .aiff}, {\ttfamily .aif}, {\ttfamily .aifc}), Ogg Vorbis ({\ttfamily .ogg}, {\ttfamily .oga}), or MP3—subject to successful decode support in your toolchain.
+
+The code uses modern C++ features, such as std\+::thread, a lambda function, std\+::shared\+\_\+ptr, and a modern way of iterating through a collection.
+
+This project includes C++ classes that can be used to open, read, and write {\bfseries{WAV}} and {\bfseries{FLAC}} audio files. I wrote the \doxyref{WAVFile}{p.}{classWAVFile} class from scratch, and I used AI (Cursor) to create the \doxyref{FLACFile}{p.}{classFLACFile} class. Currently, the \doxyref{FLACFile}{p.}{classFLACFile} class defaults to maximum FLAC compression.
+
+{\bfseries{MP3 (MPEG layer III), Ogg Vorbis (in Ogg container),}} and {\bfseries{AIFF}} PCM are implemented in {\ttfamily code/common} via {\bfseries{libsndfile}}\+: {\ttfamily MP3\+File}, {\ttfamily Ogg\+File}, and {\ttfamily Aiff\+File} derive from {\ttfamily Metadata\+Audio\+File}, through a shared {\ttfamily sndfile}-\/backed base class ({\ttfamily Snd\+File\+Backed\+Metadata\+Audio\+File}). Encoding quality for MP3 and Ogg writes can be configured on those types (constant / average bitrate and VBR for MP3; Vorbis-\/quality or approximate nominal bitrate for Ogg). AIFF reads and writes uncompressed PCM comparable to WAV.
+
+Derived types ({\ttfamily \doxyref{WAVFile}{p.}{classWAVFile}}, {\ttfamily \doxyref{FLACFile}{p.}{classFLACFile}}, {\ttfamily MP3\+File}, …) conform to {\ttfamily \doxyref{Audio\+File}{p.}{classAudioFile}} / {\ttfamily Metadata\+Audio\+File} so the mixer logic can treat different formats uniformly. For mixing audio files, the source audio files will need to match on sample rate and channel count; the mixer also expects compatible nominal PCM layout across sources (where reported), so keep inputs consistent similar to stacking raw WAV clips.
+
+The following libraries are required to build this project\+:
+
+{\bfseries{FLAC}}
+
+
+\begin{DoxyItemize}
+\item On Linux, the library is typically {\ttfamily libflac-\/dev} via your package manager. There is also {\ttfamily libflac++-\/dev} for C++; this codebase does not use the C++ wrapper. 
+\item For Windows, you can download the FLAC project {\texttt{from Git\+Hub}}; the header files are included, though the library files require building. You can build them with Visual Studio and CMake. 
+\end{DoxyItemize}
+
+If you want to build the Windows GUI application, set the environment variable {\ttfamily FLAC\+\_\+\+LIB\+\_\+\+DIR} to the directory where the FLAC project (as cloned from Git\+Hub) lives on your machine.
+
+{\bfseries{libsndfile}} (for MP3 / Ogg / AIFF support in {\ttfamily code/common})
+
+
+\begin{DoxyItemize}
+\item On Debian-\/style Linux distributions, installing {\ttfamily libsndfile1-\/dev} (name may vary) provides headers and linkage for {\ttfamily -\/lsndfile}. The project\textquotesingle{}s {\ttfamily code/\+Makefile} already links FLAC and sndfile together. 
+\item MP3 {\itshape writing} normally requires libsndfile to have been built with {\bfseries{LAME}} support; distribution packages often include this—if encoder open fails at runtime for {\ttfamily .mp3} output, rebuild or reinstall a full-\/featured libsndfile. 
+\item The checked-\/in Visual Studio solution under {\ttfamily Audio\+Mixer\+CPP\+\_\+\+Win\+\_\+\+Visual\+Studio} currently wires {\bfseries{FLAC}} only; extending it to compile the sndfile-\/backed sources would mean adding libsndfile (and LAME-\/as-\/used-\/by-\/sndfile) to the linker settings similarly to FLAC. 
+\end{DoxyItemize}\doxysubsection{MP3, Ogg Vorbis, and AIFF (overview)}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item {\bfseries{MP3}} — {\ttfamily MP3\+File} / {\ttfamily MP3\+File\+Info}; typical extension {\ttfamily .mp3}. Reading and writing go through libsndfile (LAME-\/backed encoding when enabled in your sndfile build). Write-\/time bitrate control uses {\ttfamily Mp3\+Bitrate\+Mode} {\bfseries{Constant}} (CBR), {\bfseries{Average}} (ABR), or {\bfseries{Variable}} (VBR). Use the {\ttfamily MP3\+File(path, Mp3\+Bitrate\+Mode, nominal\+Kbps)} constructor for CBR/\+ABR, or {\ttfamily MP3\+File(path, double)} for VBR (libsndfile scale\+: 0 = best quality, 1 = lowest). Equivalent setters clear or override encoder defaults unless you call {\ttfamily clear\+Mp3\+Write\+Encoding\+Overrides()}. 
+\item {\bfseries{Ogg Vorbis}} — {\ttfamily Ogg\+File} / {\ttfamily Ogg\+File\+Info}; extensions {\ttfamily .ogg}, {\ttfamily .oga}. libsndfile only exposes quality-\/style Vorbis encoding via {\ttfamily SFC\+\_\+\+SET\+\_\+\+COMPRESSION\+\_\+\+LEVEL}. This project wraps that as {\ttfamily Ogg\+Write\+Quality} (1 = best perceived quality down to 0) or as {\ttfamily Ogg\+Write\+Approx\+Bitrate\+Kbps} ("{}nominally about $<$code$>$\+N$<$/code$>$ kb/s"{}) using a heuristic; treat the latter as approximate, not guaranteed CBR. Setters mirror these options; {\ttfamily clear\+Ogg\+Write\+Encoding\+Overrides()} restores libsndfile\textquotesingle{}s internal defaults on the next encode open. 
+\item {\bfseries{AIFF}} — {\ttfamily Aiff\+File} / {\ttfamily Aiff\+File\+Info}; PCM in classic AIFF variants with extensions such as {\ttfamily .aiff}, {\ttfamily .aif}, and {\ttfamily .aifc}. No extra bitrate knobs compared to WAV—this is uncompressed PCM surfaced through libsndfile. 
+\end{DoxyItemize}
+
+There are {\texttt{Doxygen}} comments in the source in order to provide documentation; there is also a Doxyfile available for building Doxygen-\/based documentation. {\texttt{HTML documentation}} for the C++ code has been added in the {\texttt{docs/html directory}}. If you want to generate documentation, you can run {\ttfamily doxygen} from the directory that contains the Doxyfile (project root), and it will output documentation into the docs directory.
+
+In addition to the audio file classes in {\ttfamily code/common}, there are applications for mixing (a GUI for Windows and a command-\/line tool for Linux). The Linux command-\/line mixer uses extensions and optional sniffing to recognise WAV/\+FLAC/\+AIFF/\+Ogg/\+MP3 and can write {\ttfamily .wav}, {\ttfamily .flac}, {\ttfamily .mp3}, {\ttfamily .ogg}/{\ttfamily .oga}, or {\ttfamily .aiff}/ {\ttfamily .aif}/{\ttfamily .aifc} outputs based on the output filename extension.
+
+The Windows GUI app builds in Visual Studio 2017 (I used the free Community edition). For Visual Studio, note that you will need to have the C++ toolset installed, along with MFC. As for the command-\/line application, I\textquotesingle{}ve verified it builds with g++ in Linux (I\textquotesingle{}ve tested it on Kubuntu 25.\+10).
+
+Visual Studio can be downloaded {\texttt{here}}. As of this writing (January 2, 2026), that page has versions of Visual Studio from 2015 to 2022.\doxysection{Code notes}\label{index_autotoc_md2}
+In the \textquotesingle{}code\textquotesingle{} directory, there are the following items\+: 
+\begin{DoxyItemize}
+\item {\bfseries{Audio\+Mixer\+CPP\+\_\+\+Win\+\_\+\+Visual\+Studio\+:}} Windows-\/specific source \& project files (for use with Visual Studio) 
+\item {\bfseries{common\+:}} Common source files (contains the core audio \& mixer code) 
+\item {\bfseries{Audio\+Mixer\+CPP.\+sln\+:}} The solution file for use with Visual Studio 
+\item {\bfseries{Makefile\+:}} A makefile for building a command-\/line executable for Linux 
+\end{DoxyItemize}\doxysection{Included Applications}\label{index_autotoc_md3}
+The source code includes 2 applications\+: 
+\begin{DoxyItemize}
+\item A GUI application (written in MFC, for Windows) centred on WAV file selection (see filters in the VS project). 
+\item A command-\/line application ({\ttfamily \doxyref{cmd\+Line\+App.\+cpp}{p.}{cmdLineApp_8cpp}}) aimed at Linux\+: it mixes the formats recognised in {\ttfamily Audio\+File\+Tools}, not only WAV. 
+\end{DoxyItemize}\doxysubsection{GUI application (Windows)}\label{index_autotoc_md4}
+The following is a screenshot of the application\+:
+
+ 
+
+To add WAV files to the list, you can drag \& drop files onto the GUI, or for each line in the list, there will be a "{}..."{} button that lets you browse and choose a WAV file to add.\doxysubsection{Command-\/line application}\label{index_autotoc_md5}
+The command-\/line application source is \doxyref{cmd\+Line\+App.\+cpp}{p.}{cmdLineApp_8cpp}, and there is a makefile to help build everything in Linux (g++ is used as the compiler). The command-\/line application takes a command-\/line option which specifies a filename containing a list of audio filenames to mix (and the last line is the output filename to use). The command-\/line also accepts another parameter, -\/v, to enable verbose output.\doxysection{Background}\label{index_autotoc_md6}
+A WAV audio file consists of a header at the beginning of the file, which contains strings to identify the file type ("{}\+RIFF"{} and "{}\+WAVE"{}), as well as information about the audio contained in the file (number of channels, sample rate, number of bits per channel, size of the data, etc.). Following the header is all of the audio data. Digital audio data is numeric\+: each sample is an integer that represents the level of the audio signal at that point in time.
+
+The general idea behind digital audio mixing is fairly simple\+: Until there are no more audio samples, the next audio sample from each audio file is read, then they\textquotesingle{}re added together and saved to the output file. A bit more needs to be done, though, to deal with digital audio clipping. Digital audio clipping is caused by numeric range limitations of the values due to the sample size (i.\+e., 8 or 16 bits)\+: When audio sample values are added together (or if the volume is increased), it\textquotesingle{}s possible for the resulting values to go beyond the numeric range of the values. When that happens, the result is (often loud) pops and clicks in the audio, which is undesirable. So, in order to mix WAV files together, \doxyref{mix\+Audio\+Files()}{p.}{AudioMixerCPPDlg_8cpp_a36829f33264df3b55d08a964555c9c7f} (in \doxyref{Audio\+File\+Tools.\+h}{p.}{AudioFileTools_8h} and .cpp) will first analyze each audio file to determine the highest audio sample, then reduce the volume of all the samples while mixing them to avoid digital audio clipping.
+
+Wikipedia has {\texttt{an article on audio clipping}} that describes it in more detail.\doxysubsection{Using the code}\label{index_autotoc_md7}
+The \doxyref{Audio\+File}{p.}{classAudioFile} class is a parent class for working with audio files, with some pure virtual methods to be implemented in derived classes, such as the included \doxyref{WAVFile}{p.}{classWAVFile} class. The \doxyref{WAVFile}{p.}{classWAVFile} class can open, read, and write WAV audio. Most of the class methods return an \doxyref{Audio\+File\+Result\+Type}{p.}{classAudioFileResultType}, which can be used as if it was a bool (in an \textquotesingle{}if\textquotesingle{} statement, for instance), and if it\textquotesingle{}s false, it contains error messages in the form of std\+::string.
+
+The following are some of the more important methods in the \doxyref{WAVFile}{p.}{classWAVFile} class\+:
+
+
+\begin{DoxyTable}{2}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Method  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Description  \\
+\doxyref{WAVFile(const std\+::string\& p\+Filename)}{p.}{classWAVFile}  &Constructor that takes a filename  \\
+\doxyref{WAVFile(const std\+::string\& p\+Filename, const WAVFile\+Info\& p\+WAVFile\+Info)}{p.}{classWAVFile}  &Constructor that takes a filename and a WAVFile\+Info objecct specifying the desired properties of the WAV file (sample rate, bit rate, number of channels, etc.)  \\
+\doxyref{WAVFile(const std\+::string\& p\+Filename, Audio\+File\+Modes p\+File\+Mode)}{p.}{classWAVFile}  &Constructor that takes a filename and a file mode (read, write, read/write)  \\
+template $<$class Sample\+Type$>$ \doxyref{Audio\+File\+Result\+Type}{p.}{classAudioFileResultType} get\+Next\+Sample(\+Sample\+Type\& p\+Audio\+Sample)  &A templatized method that reads the next sample from the audio file (if it\textquotesingle{}s open in read or read/write mode). For the template, the proper data type must be used (for instance, for 16-\/bit audio, you can use uint16\+\_\+t.  \\
+template $<$class Sample\+Type$>$ \doxyref{Audio\+File\+Result\+Type}{p.}{classAudioFileResultType} write\+Sample(\+Sample\+Type p\+Audio\+Sample)  &A templated method that writes an audio sample to the WAV file (if it\textquotesingle{}s open in write or read/write mode). For the template, the proper data type must be used (for instance, for 16-\/bit audio, you can use uint16\+\_\+t.  \\
+\end{DoxyTable}
+
+
+These are some important methods in the \doxyref{Audio\+File}{p.}{classAudioFile} class, which are pure virtual\+:
+
+
+\begin{DoxyTable}{2}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Method  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Description  \\
+virtual \doxyref{Audio\+File\+Result\+Type}{p.}{classAudioFileResultType} get\+Next\+Sample\+\_\+int64(int64\+\_\+t\& p\+Audio\+Sample)  &Reads the next audio sample from the audio file (if in read or read/write mode). The audio sample is cast to an int64 so that it can be used in generic algorithms -\/ Whether the audio data is 8-\/bit, 16-\/bit, or another bitness, the audio sample is cast to 64-\/bit.  \\
+virtual \doxyref{Audio\+File\+Result\+Type}{p.}{classAudioFileResultType} write\+Sample\+\_\+int64(int64\+\_\+t p\+Audio\+Sample)  &Writes an audio sample to the audio file (if in write or read/write mode). The sample parameter is an int64\+\_\+t but will be cast down to the appropriate type when writing the sampel to the audio file. This is to make generic audio algorithms simpler -\/ Whether the audio data is 8-\/bit, 16-\/bit, or another bitness, the audio sample is cast down to the appropriate type.  \\
+\end{DoxyTable}
+
+
+\doxyref{Audio\+File\+Tools.\+h}{p.}{AudioFileTools_8h} and \doxyref{Audio\+File\+Tools.\+cpp}{p.}{AudioFileTools_8cpp} defines the following function (among others)\+:
+
+
+\begin{DoxyTable}{2}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Method  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Description  \\
+Various {\ttfamily \doxyref{mix\+Audio\+Files}{p.}{AudioMixerCPPDlg_8cpp_a36829f33264df3b55d08a964555c9c7f}} overloads  &Combine many inputs into one {\ttfamily \doxyref{Audio\+File}{p.}{classAudioFile}}-\/backed output. Decoding uses WAV/\+FLAC/sndfile classes as appropriate; helpers such as {\ttfamily \doxyref{create\+Audio\+File\+Obj\+For\+New\+File}{p.}{AudioMixerCPPDlg_8cpp_a669d98e89f0bbc2652a05cb73a6aca76}} pick the writer from the output extension ({\ttfamily .wav}, {\ttfamily .flac}, {\ttfamily .mp3}, {\ttfamily .ogg}/{\ttfamily .oga}, {\ttfamily .aiff}/{\ttfamily .aif}/{\ttfamily .aifc}). Inputs must agree on channel count and sample rate. Mixing can take noticeable time—keep heavy work off the GUI thread.  \\
+\end{DoxyTable}
+
+
+The WAVFile\+Info and \doxyref{Audio\+File\+Info}{p.}{classAudioFileInfo} classes contain information about the audio files, such as bitness, number of channels, sample rate, etc.
+
+An example of opening a WAV file and looping through to get each audio sample (assuming the audio file contains 16-\/bit audio)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{WAVFile\ audioFile(\textcolor{stringliteral}{"{}someAudioFile.wav"{}});}
+\DoxyCodeLine{AudioFileResultType\ result\ =\ audioFile.open(AUDIO\_FILE\_READ);}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (result)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{size\_t}\ numSamples\ =\ audioFile.numSamples();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ (i\ <\ numSamples)\ \&\&\ result;\ ++i)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ int16\_t\ audioSample\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ result\ =\ audioFile.getNextSample(audioSample);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{else}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Error(s)\ getting\ audio\ samples:"{}}\ <<\ endl;}
+\DoxyCodeLine{\ \ \ \ result.outputErrors(cerr);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{audioFile.close();}
+
+\end{DoxyCode}
+\doxysubsection{Points of Interest}\label{index_autotoc_md8}
+One interesting thing to note is that data in a WAV audio file is always little-\/endian, per the specification. On big-\/endian systems, the byte order must be reversed before manipulating the audio data, and the byte order for a sample must be reversed before saving it to a WAV file. My \doxyref{WAVFile}{p.}{classWAVFile} class handles this automatically; for example, if the system is big-\/endian, then when retrieving audio samples from a WAV file or adding a 16-\/bit sample to a WAV file, the byte order will be automatically reversed so that the data is in the proper order.
+
+In creating the \doxyref{WAVFile}{p.}{classWAVFile} class, it was necessary to look up the WAV file format specification. I found many web pages describing the WAV file format. There were 4 URLs I had referenced when I originally wrote this, but only one still exists today\+: 
+\begin{DoxyItemize}
+\item {\texttt{http\+://www.\+ringthis.\+com/dev/wave\+\_\+format.\+htm}} 
+\end{DoxyItemize}
+
+I also have {\texttt{a C\# version of this}} which I originally wrote in April 2009.
+
+I originally posted this project {\texttt{on Code\+Project}}. 

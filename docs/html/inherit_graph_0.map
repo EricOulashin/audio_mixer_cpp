@@ -1,3 +1,20 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structAudioFileMixOptions.html" title=" " alt="" coords="5,5,148,31"/>
+<area shape="rect" id="Node000000" href="$classAudioFile.html" title=" " alt="" coords="32,35,108,61"/>
+<area shape="rect" id="Node000001" href="$classEOUtils_1_1MetadataAudioFile.html" title="Abstract class that extends AudioFile with pure virtual methods for adding/updating common audio meta..." alt="" coords="183,35,366,61"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="123,45,185,47,180,49,124,51"/>
+<area shape="rect" id="Node000008" href="$classEOUtils_1_1WAVFile.html" title=" " alt="" coords="212,85,336,112"/>
+<area shape="poly" id="edge7_Node000000_Node000008" title=" " alt="" coords="123,58,220,83,215,86,123,64"/>
+<area shape="rect" id="Node000002" href="$classEOUtils_1_1FLACFile.html" title=" " alt="" coords="458,5,588,32"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="381,33,460,26,454,27,382,38"/>
+<area shape="rect" id="Node000003" href="$classEOUtils_1_1SndFileBackedMetadataAudioFile.html" title="Shared libsndfile&#45;backed implementation used by MP3, Ogg Vorbis, and AIFF codecs." alt="" coords="414,56,631,99"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="381,58,416,64,411,65,381,63"/>
+<area shape="rect" id="Node000004" href="$classEOUtils_1_1AiffFile.html" title=" " alt="" coords="683,13,799,40"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="631,49,680,41,685,40,632,55"/>
+<area shape="rect" id="Node000005" href="$classEOUtils_1_1MP3File.html" title=" " alt="" coords="679,64,803,91"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="647,75,682,77,676,77,647,80"/>
+<area shape="rect" id="Node000006" href="$classEOUtils_1_1OggFile.html" title=" " alt="" coords="681,115,801,141"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="632,100,683,114,678,114,632,105"/>
+<area shape="rect" id="Node000007" href="$classEOUtils_1_1AudioFile.html" title=" " alt="" coords="5,85,135,112"/>
+<area shape="poly" id="edge8_Node000007_Node000001" title=" " alt="" coords="141,78,220,61,215,63,142,84"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="150,96,214,98,209,99,151,101"/>
 </map>
